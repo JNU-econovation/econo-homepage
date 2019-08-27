@@ -10,11 +10,12 @@ const router = express.Router();
 
 //설정
 app.set("port", process.env.PORT || 3000);
+app.use(express.static(__dirname+ '/front'))
 
 app.get('/', (req, res)=>{
   console.log('get(/) 실행됨.');
   
-  fs.readFile('./public/index.html', (err, data)=>{
+  fs.readFile('./front/index.html', (err, data)=>{
     res.writeHead(200, {'Content-Type':'text/html;charset=utf-8'});
     res.end(data);
   });
