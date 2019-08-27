@@ -24,7 +24,7 @@ app.get('/', (req, res)=>{
 //에러 처리
 var errorHandler = expressErrorHandler({
   static: {
-    "404": "public/index.html"
+    "404": "./front/erroor.html"
   }
 });
 
