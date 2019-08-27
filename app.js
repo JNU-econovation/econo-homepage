@@ -20,31 +20,19 @@ app.use("/", static(path.join(__dirname, "views/page")));
 app.get("/", (req, res) => {
   console.log("get(/) 실행됨.");
 
-  try {
-    res.render("page/main");
-  } catch (err) {
-    console.log(err);
-  }
+  res.render("page/main");
 });
 
-app.get("/portfolio", (req, res)=>{
+app.get("/portfolio", (req, res) => {
   console.log("get(portfolio) 실행됨.");
 
-  try {
-    res.render("page/portfolio");
-  } catch (err) {
-    console.log(err);
-  }
-})
-app.get("/qna", (req, res)=>{
-  console.log("get(qna) 실행됨.");
+  res.render("page/portfolio");
+});
+app.get("/fnq", (req, res) => {
+  console.log("get(fnq) 실행됨.");
 
-  try {
-    res.render("page/qna");
-  } catch (err) {
-    console.log(err);
-  }
-})
+  res.render("page/fnq");
+});
 
 //에러 처리
 var errorHandler = expressErrorHandler({

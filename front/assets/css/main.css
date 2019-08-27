@@ -23,7 +23,7 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: middle;}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
@@ -2471,7 +2471,7 @@ input, select, textarea {
 
 		.icon.major {
 			background: #272833;
-			border-radius: 100%;
+			border-radius: 20%;
 			cursor: default;
 			display: inline-block;
 			height: 6em;
@@ -2483,6 +2483,7 @@ input, select, textarea {
 
 			.icon.major:before {
 				font-size: 2.25em;
+				vertical-align: middle;
 			}
 
 			.icon.major.alt {
@@ -4112,3 +4113,22 @@ input, select, textarea {
 					}
 
 	}
+
+	@media ( min-width: 800px ) {
+		#prize-left{
+			float: left;
+		}
+		#prize-right{
+			float: right;
+		}
+	  }
+	  @media ( min-width: 950px ) {
+		#description{
+			float: right;
+			margin-right: 40px;
+		}
+	  }
+
+	  #description{
+		  margin-top: 20px;
+	  }
