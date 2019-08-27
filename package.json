@@ -18,9 +18,12 @@
   },
   "homepage": "https://github.com/jbj616/econo-website#readme",
   "dependencies": {
+    "ejs": "^2.6.2",
     "express": "^4.17.1",
     "express-error-handler": "^1.1.0",
     "fs": "0.0.1-security",
-    "http": "0.0.0"
+    "http": "0.0.0",
+    "path": "^0.12.7",
+    "serve-static": "^1.14.1"
   }
 }
