@@ -1,0 +1,25 @@
+{
+  "name": "econo-website",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jbj616/econo-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jbj616/econo-website/issues"
+  },
+  "homepage": "https://github.com/jbj616/econo-website#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-error-handler": "^1.1.0",
+    "fs": "0.0.1-security",
+    "http": "0.0.0"
+  }
+}
