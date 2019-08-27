@@ -27,6 +27,25 @@ app.get("/", (req, res) => {
   }
 });
 
+app.get("/portfolio", (req, res)=>{
+  console.log("get(portfolio) 실행됨.");
+
+  try {
+    res.render("page/portfolio");
+  } catch (err) {
+    console.log(err);
+  }
+})
+app.get("/qna", (req, res)=>{
+  console.log("get(qna) 실행됨.");
+
+  try {
+    res.render("page/qna");
+  } catch (err) {
+    console.log(err);
+  }
+})
+
 //에러 처리
 var errorHandler = expressErrorHandler({
   static: {
