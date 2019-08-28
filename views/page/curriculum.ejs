@@ -9,28 +9,36 @@
 <html>
 	<head>
 		<% include ../include/header.ejs %>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" 
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" 
+        crossorigin="anonymous">
+</script> 
+		<link rel="stylesheet" href="/assets/css/curriculum.css">
 	</head>
 	<body class="is-preload">
 		<div id="page-wrapper">
 
 			<% include ../include/navigation.ejs %>
 			<!-- Main -->
+			<!-- Main -->
 			<div id="main" class="wrapper style1">
-				<div class="container">
-					<header class="major">
-						<h2>Portfolio</h2>
-						<p>2019-1학기 에코노베이션이 개발한 프로젝트</p>
-					</header>
-					<section >
-						<h3 >[2019 1학기] 최종발표 - 1</h3>
-					
-					</section>
+					<div class="container">
+						<header class="major">
+							<h2>커리큘럼</h2>
+							<p>2019-2학기 커리큘럼</p>
+						</header>
+							
+						<div class="card-carousel">
+								<div class="my-card"></div>
+								<div class="my-card"></div>
+								<div class="my-card"></div>
+								<div class="my-card"></div>
+								<div class="my-card"></div>
+						</div>
+					</div>
 				</div>
-			</div>
 			<% include ../include/footer %>
-			<script>
-
-				
-			</script>
-	</body>
+			
+			<script src="/assets/js/curriculum.js"></script>
+		</body>
 </html>

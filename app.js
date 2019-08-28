@@ -35,6 +35,12 @@ app.get("/faq", (req, res) => {
   res.render("page/faq");
 });
 
+app.get("/curriculum", (req, res)=>{
+  console.log("get(curriculum) 실행됨.");
+  
+  res.render("page/curriculum");
+})
+
 //에러 처리
 var errorHandler = expressErrorHandler({
   static: {
