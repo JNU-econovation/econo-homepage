@@ -11,7 +11,7 @@ const app = express();
 const router = express.Router();
 
 //설정
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 80);
 app.use(express.static(__dirname + "/front"));
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
