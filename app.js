@@ -28,10 +28,11 @@ app.get("/portfolio", (req, res) => {
 
   res.render("page/portfolio");
 });
-app.get("/fnq", (req, res) => {
-  console.log("get(fnq) 실행됨.");
 
-  res.render("page/fnq");
+app.get("/faq", (req, res) => {
+  console.log("get(faq) 실행됨.");
+
+  res.render("page/faq");
 });
 
 //에러 처리
