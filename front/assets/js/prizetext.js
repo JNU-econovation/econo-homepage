@@ -1,9 +1,8 @@
-
-          funcThisSize = ()=>{
-           if(window.innerWidth<800){
-            $(".chaning-text").html('');
-           }else{
- $(".chaning-text2").html( `<h2>~ 2018년</h2>
+funcThisSize = () => {
+    if (window.innerWidth < 800) {
+        $(".chaning-text").html('');
+    } else {
+        $(".chaning-text2").html(`<h2>~ 2018년</h2>
             <p></p>
             <p>2018 KOMIPO(중부발전) 정보 전략실 모바일 서비스 공모전 '우수상'</p>
             <p>2018 빛가람 에너지벨리 소프트웨어 작품경진대회 '장려상'</p>
@@ -19,11 +18,11 @@
             <p>2017 빛가람에너지밸리 소프트웨어 작품 경진대회 '장려상'</p>
             <p>2017 광주글로벌게임센터 인디스타즈 '우수상'</p>
             <p>2017 대구글로벌 게임컨퍼런스 '우수상'</p>
-            <p>한국스마트미디어학회 '우수상'</p>` );
-           }
+            <p>한국스마트미디어학회 '우수상'</p>`);
+    }
 }
 
-$(()=>{
-    $(window).resize( funcThisSize );
+$(() => {
+    $(window).resize(funcThisSize);
     funcThisSize();
 });
