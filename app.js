@@ -35,10 +35,10 @@ app.get("/faq", (req, res) => {
   res.render("page/faq");
 });
 
-app.get("/schedule", (req, res) => {
-  console.log("get(schedule) 실행됨.");
+app.get("/invitation", (req, res) => {
+  console.log("get(invitation) 실행됨.");
 
-  res.render("page/schedule");
+  res.render("page/invitation");
 })
 
 //에러 처리
