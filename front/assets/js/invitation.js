@@ -34,7 +34,7 @@ function showSlides(n) {
 
 function showImages() {
   var str = '';
-  for (var i = 1; i <= 11; i++) {
+  for (var i = 1; i <= 12; i++) {
     str += `<div class="mySlides fade" >
     <div class="numbertext">${i} / 11</div>
     <img src="/images/card${i}.jpg" style="width:100%">
