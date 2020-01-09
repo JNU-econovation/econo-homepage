@@ -5,6 +5,7 @@ const expressErrorHandler = require("express-error-handler");
 const static = require("serve-static");
 const fs = require("fs");
 const path = require("path");
+const logger = require('morgan');
 
 // //변수
 const app = express();
@@ -13,31 +14,32 @@ const router = express.Router();
 //설정
 app.set("port", process.env.PORT || 80);
 app.use(express.static(__dirname + "/front"));
+app.use(logger());
 app.set("view engine", "ejs");
 app.set("views", __dirname + "/views");
 app.use("/", static(path.join(__dirname, "views/page")));
 
 app.get("/", (req, res) => {
-  console.log("get(/) 실행됨.");
+  res.redirect('/winter')
+});
 
+app.get("/about", (req, res) => {
   res.render("page/main");
 });
 
 app.get("/portfolio", (req, res) => {
-  console.log("get(portfolio) 실행됨.");
-
   res.render("page/portfolio");
 });
 
-app.get("/faq", (req, res) => {
-  console.log("get(faq) 실행됨.");
+app.get("/winter", (req, res) => {
+  res.render("page/winter_dev");
+});
 
+app.get("/faq", (req, res) => {
   res.render("page/faq");
 });
 
 app.get("/invitation", (req, res) => {
-  console.log("get(invitation) 실행됨.");
-
   res.render("page/invitation");
 })
 
