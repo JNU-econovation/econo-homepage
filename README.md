@@ -31,3 +31,20 @@
 
 
 
+### 파일 구성
+
+- express 소스 코드 -> app.js
+
+- view 폴더
+
+  - page
+    - 화면 출력되는 페이지
+    - content, include(navigation, footer 등)을 포함하고 있다.
+  - content
+    - 내용이 들어가는 곳
+  - include
+    - 내용이 중복되는 것들
+    - navigation
+    - footer
+
+  
