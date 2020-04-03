@@ -20,8 +20,17 @@
 ```
 >> ssh <이름>@<IP> -p 222
 >> password
+
+(최초 github에서 소스코드 클론하기)
+>> cd /var/node
+>> git clone https://github.com/JNU-econovation/econo-homepage/ 
+
+(업데이트 시 수정된 소스코드 반영하기)
 >> cd /var/node/econo-website
+>> git pull origin master (업데이트 시)
+
 >> npm install -g forever (처음)
+
 >> forever stopall (백드라운드에 실행중인 프로세스 종료)
 >> npm install
 >> forever start app.js 
