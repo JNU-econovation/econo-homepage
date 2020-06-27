@@ -20,32 +20,24 @@ app.set("views", __dirname + "/views");
 app.use("/", static(path.join(__dirname, "views/page")));
 
 app.get("/", (req, res) => {
-  res.redirect('/recruitment')
+  res.redirect('/hackathon-2019')
 });
 
 app.get("/about", (req, res) => {
   res.render("page/main");
 });
 
+app.get("/hackathon-2019", (req, res) => {
+  res.render("page/hackathon_2019");
+});
+
 app.get("/portfolio", (req, res) => {
   res.render("page/portfolio");
-});
-
-app.get("/winter", (req, res) => {
-  res.render("page/winter_dev");
-});
-
-app.get("/recruitment", (req, res) => {
-  res.render("page/recruitment");
 });
 
 app.get("/faq", (req, res) => {
   res.render("page/faq");
 });
-
-app.get("/invitation", (req, res) => {
-  res.render("page/invitation");
-})
 
 //에러 처리
 var errorHandler = expressErrorHandler({
