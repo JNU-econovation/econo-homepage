@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jbj616/econo-website#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "ejs": "^2.6.2",
     "express": "^4.17.1",
     "express-error-handler": "^1.1.0",

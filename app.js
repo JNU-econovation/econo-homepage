@@ -10,6 +10,7 @@ const logger = require('morgan');
 // //변수
 const app = express();
 const router = express.Router();
+require('dotenv').config();
 
 //설정
 app.set("port", process.env.PORT || 80);
@@ -20,7 +21,7 @@ app.set("views", __dirname + "/views");
 app.use("/", static(path.join(__dirname, "views/page")));
 
 app.get("/", (req, res) => {
-  res.redirect('/hackathon-2019')
+  res.redirect('/hackathon-2020')
 });
 
 app.get("/about", (req, res) => {
@@ -29,6 +30,11 @@ app.get("/about", (req, res) => {
 
 app.get("/hackathon-2019", (req, res) => {
   res.render("page/hackathon_2019");
+});
+
+
+app.get("/hackathon-2020", (req, res) => {
+  res.render("page/hackathon_2020", { test: process.env.AKECONO });
 });
 
 app.get("/portfolio", (req, res) => {

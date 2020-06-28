@@ -1,0 +1,50 @@
+#linkbutton {
+  display: inline-block;
+  height: 2rem;
+  width: 5rem;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 2rem;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 1rem;
+}
+@media screen and (max-width: 360px) {
+  #linkbutton {
+    display: inline-block;
+    height: 2rem;
+    width: 5rem;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 2rem;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+}
+
+#linkbutton:link {
+  color: #e44c65;
+  text-decoration: none;
+}
+
+#linkbutton:visited {
+  color: #e44c65;
+  text-decoration: none;
+}
+
+#linkbutton:hover {
+  color: #e44c65;
+  text-decoration: none;
+}
+
+#kakao_chat {
+  background-color: #1c1d26;
+  border: none;
+}
