@@ -1,0 +1,110 @@
+<!-- Text -->
+<div id="mydiv" data-test="<%= test %>"></div>
+<script src="assets/js/kakao.js"></script>
+<script>
+  var test = document.getElementById("mydiv").dataset.test;
+  // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
+  Kakao.init(test);
+</script>
+
+<section id="FAQ">
+  <h2>제 2회 Inovation Hackathon FAQ</h2>
+  <header>
+    <h3>Q. 온라인 해커톤은 어떤식으로 진행되나요?</h3>
+    <blockquote>
+      A. 우선 코로나19의 여파로 해커톤을 온라인으로 개최하게 된 점 양해해주셔서
+      감사합니다. 이번 해커톤을 온라인으로 진행하는 만큼 앞으로 합격자에게
+      공지될 행사일정과 진행방법을 잘 숙지해주셔야 합니다. 해커톤 개회식과
+      폐회식을 비롯한 다양한 공통일정은 구글meet으로 진행되며 행사 내내 공지사항
+      전달을 위해 슬랙을 사용합니다. 다수의 인원이 모이는 상황을 피하기 위하여
+      온라인으로 개최되나, 구성된 해커톤 팀원들끼리 행사당일 자발적으로 모여서
+      참여하셔도 무방합니다.
+    </blockquote>
+  </header>
+  <hr />
+
+  <header>
+    <h3>Q. 프로젝트팀은 어떻게 구성하나요?</h3>
+    <blockquote>
+      A. 보통 첫 학기에는 지원하는 분야에 맞추어서 팀을 정하게 됩니다. 다음
+      학기부터는 '팀빌딩 데이'를 통해 각자 관심 있는 분야를 나누고 팀을 꾸리게
+      됩니다.
+    </blockquote>
+  </header>
+  <hr />
+
+  <header>
+    <h3>Q. 해커톤 기간 내에 개발을 끝마쳐야 하나요?</h3>
+    <blockquote>
+      A. 본 해커톤은 아이디어해커톤이므로(주제가 바뀌지 않는다는 가정) 일정 종료
+      시점까지 실제로 개발 구현을 마쳐야 할 필요는 없습니다. 아이디어의
+      구체성과, 어떤 데이터와 방법으로 실제 구현이 가능할지를 설득력 있게
+      구성하는 것이 매우 중요합니다. 그러나 어느정도의 프로토타입 개발까지
+      마치신다면 심사결과에 큰 가산점을 얻게 되며, 자세한 심사기준은
+      <a>심사기준</a>를 참고해주시기 바랍니다.
+    </blockquote>
+  </header>
+  <hr />
+
+  <header>
+    <h3>Q. 팀은 보통 어떻게 구성되나요?</h3>
+    <blockquote>
+      A. 개별 지원후 8월 12일 사전 모임을 가집니다. 그 때 진행하는 팀 빌딩
+      프로그램을 통해 팀을 짤 수 있습니다. 만약 지인과 팀을 짜고 싶다면 지인끼리
+      미리 이야기를 나누어 사전 모임 당일 혹은 그 전날까지 운영팀에게 연락
+      주시면 됩니다.
+    </blockquote>
+  </header>
+  <hr />
+
+  <header>
+    <h3>Q. 사전 모임에는 꼭 참가해야하나요?</h3>
+    <blockquote>
+      A. 사전 모임에서는 지원자들끼리 온라인으로 만나 자신을 소개하고 마음이
+      맞는 사람들끼리 모여 팀을 구성할 수 있는 프로그램을 제공합니다. 팀빌딩
+      방법은 합격자 발표 이후 자세한 안내가 나갈 예정입니다. 부득이한 사정으로
+      팀빌딩 사전모임에 참여하지 못하시는 지원자의 경우에는 운영팀이 임의로
+      팀매칭을 해 드리나, 스스로 멤버를 모아 맘에 드는 팀을 결성하는 것 부터가
+      주체적이고 즐거운 해커톤의 시작이라는 점! 알려드립니다.
+    </blockquote>
+  </header>
+  <hr />
+
+  <header>
+    <h3>Q. 개발자가 아니어도 지원할 수 있나요?</h3>
+    <blockquote>
+      A. 개발자 뿐만 아니라 디자이너 기획자들도 당연히 지원하실 수 있습니다.
+    </blockquote>
+  </header>
+  <hr />
+
+  <div style="text-align: center;">
+    <h2>이노베이션 해커톤 채널</h2>
+    <h4 style="margin-top: -20px;">
+      그 외 궁금한 사항은 이 카카오 채널을 이용해 주세요.
+    </h4>
+  </div>
+
+  <footer class="major">
+    <ul class="actions special">
+      <li>
+        <button id="kakao_chat"></button>
+        <!-- <a
+          href="https://open.kakao.com/o/g5PgWrZb"
+          class="button"
+          style="background: rgba(247, 230, 0, 0.979);"
+          ><strong style="color: rgba(60, 30, 30, 1); font-weight: 700;"
+            >카카오톡 오픈채팅방 가기</strong
+          ></a
+        > -->
+      </li>
+    </ul>
+  </footer>
+</section>
+
+<script>
+  Kakao.Channel.createChatButton({
+    container: "#kakao_chat",
+    channelPublicId: "_WXetxb", // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
+  });
+</script>
