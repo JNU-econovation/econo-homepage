@@ -12,7 +12,33 @@
   cursor: pointer;
   margin: 0 1rem;
 }
-@media screen and (max-width: 360px) {
+
+#mobile_btn {
+  display: none;
+}
+
+.mobile_btn_free {
+  display: block;
+  height: 3rem;
+  width: 15rem;
+  padding: 0 5px;
+  background-color: #e44c65;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.25rem;
+  line-height: 3rem;
+  border-radius: 5px;
+  border-bottom: none;
+}
+
+.mobile_btn_free:hover {
+  color: white !important;
+}
+
+@media screen and (max-width: 738px) {
   #linkbutton {
     display: inline-block;
     height: 2rem;
@@ -26,6 +52,10 @@
     text-decoration: none;
     cursor: pointer;
     margin: 0 5px;
+  }
+  #mobile_btn {
+    display: block;
+    margin-bottom: 1rem;
   }
 }
 
