@@ -21,8 +21,12 @@ app.set("views", __dirname + "/views");
 app.use("/", static(path.join(__dirname, "views/page")));
 
 app.get("/", (req, res) => {
-  res.redirect('/hackathon-2020')
+  res.redirect('/recruit-2020-2')
 });
+
+app.get("/recruit-2020-2",(req,res)=>{
+  res.render("page/recruit_2020")
+})
 
 app.get("/about", (req, res) => {
   res.render("page/main");

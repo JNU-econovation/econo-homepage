@@ -5,7 +5,7 @@
   background-color: white;
   border-radius: 10px;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 600;
   line-height: 2rem;
   text-decoration: none;
@@ -46,17 +46,26 @@
     background-color: white;
     border-radius: 10px;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.75rem;
     font-weight: 600;
     line-height: 2rem;
     text-decoration: none;
     cursor: pointer;
     margin: 0 5px;
   }
+
   #mobile_btn {
     display: block;
     margin-bottom: 1rem;
   }
+}
+
+header.major.pur:after {
+  background: #6871f5;
+}
+
+#titleBar .toggle.pur:before {
+  background: #6871f5;
 }
 
 #linkbutton:link {
@@ -77,4 +86,14 @@
 #kakao_chat {
   background-color: #1c1d26;
   border: none;
+}
+
+.hl-r202 {
+  color: #6871f5;
+  font-weight: bolder;
+  text-shadow: 0px 1px 1px #8999ff;
+}
+
+.button.primary.pur {
+  background-color: #6871f5;
 }
