@@ -60,8 +60,16 @@
   }
 }
 
+.mobile_btn_free.blue {
+  background: #2b499a;
+}
+
 header.major.pur:after {
   background: #6871f5;
+}
+
+header.major.blue:after {
+  background: #2b499a;
 }
 
 #titleBar .toggle.pur:before {

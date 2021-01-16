@@ -21,7 +21,7 @@ app.set("views", __dirname + "/views");
 app.use("/", static(path.join(__dirname, "views/page")));
 
 app.get("/", (req, res) => {
-  res.redirect('/recruit-2020-2')
+  res.redirect("winter-dev-2021")
 });
 
 app.get("/recruit-2020-2",(req,res)=>{
@@ -45,8 +45,12 @@ app.get("/summer-dev-2020", (req, res) => {
   res.render("page/summer_dev_2020");
 });
 
-app.get("/portfolio", (req, res) => {
-  res.render("page/portfolio");
+app.get("/winter-dev-2021", (req, res) => {
+  res.render("page/winter_dev_2021");
+});
+
+app.get("/portfolio-2020-winter", (req, res) => {
+  res.render("page/portfolio_2020_winter");
 });
 
 app.get("/faq", (req, res) => {
