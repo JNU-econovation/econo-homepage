@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/recruit-2020-2",(req,res)=>{
-  res.render("page/recruit_2020")
+  res.render("page/recruit/recruit_2020")
 })
 
 app.get("/about", (req, res) => {
@@ -33,24 +33,28 @@ app.get("/about", (req, res) => {
 });
 
 app.get("/hackathon-2019", (req, res) => {
-  res.render("page/hackathon_2019");
+  res.render("page/hackathon/hackathon_2019");
 });
 
 
 app.get("/hackathon-2020", (req, res) => {
-  res.render("page/hackathon_2020", { test: process.env.AKECONO });
+  res.render("page/hackathon/hackathon_2020", { test: process.env.AKECONO });
 });
 
 app.get("/summer-dev-2020", (req, res) => {
-  res.render("page/summer_dev_2020");
+  res.render("page/dev/summer_dev_2020");
 });
 
 app.get("/winter-dev-2021", (req, res) => {
-  res.render("page/winter_dev_2021");
+  res.render("page/dev/winter_dev_2021");
 });
 
 app.get("/portfolio-2020-winter", (req, res) => {
-  res.render("page/portfolio_2020_winter");
+  res.render("page/portfolio/portfolio_2020_winter");
+});
+
+app.get("/portfolio-2020-summer", (req, res) => {
+  res.render("page/portfolio/portfolio_2020_summer");
 });
 
 app.get("/faq", (req, res) => {
