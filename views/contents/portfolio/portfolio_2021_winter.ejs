@@ -1,0 +1,90 @@
+<div id="main" class="wrapper style1">
+    <div class="container">
+        <img src="assets/2021_winter_dev/[구글폼배너] 2021 WINTER DEV-01.png" width="100%" />
+        <header>
+            <h2 class="big-header">2020-2학기 에코노베이션이 개발한 프로젝트 미리보기</h2>
+        </header>
+        <section>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <img src="/assets/2021_winter_dev/sample.png" />
+                    <strong>[WEB] Collusic</strong>
+                    <div>해녀와 갈매기(김다애, 박재현)</div>
+                </div>
+
+                <div id="myModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <img src="/assets/2021_winter_dev/sample.png" />
+                        <div class="description">
+                        <div class="hash-container">
+                            <span class="hashtag">#nodeJS</span>
+                            <span class="hashtag">#JavaScript</span>
+                            <span class="hashtag">#HTML</span>
+                            <span class="hashtag">#CSS</span>
+                            <span class="hashtag">#mySQL</span>
+                            <span class="hashtag">#multer</span>
+                        </div>
+                        <div class="title">아이디어</div>
+                        <div> 아직도 혼자서 곡 전부를 프로듀싱한다? 저희는 글로벌 시대에 맞는 <span class="emphasize">온라인 프로듀싱 협업 서비스</span>를 제안합니다.</div>
+                        <div>
+                             곡의 빈 부분을 누군가 채워주길 원하는 작곡가, 괜찮은 노래에 부족한 부분을 채워주고 싶은 작곡가가 온라인 상으로 만날 수 있습니다. 먼저 완성되지 않은 곡에 대한 작곡가는 곡에서 채워주고 싶은 부족한 부분을 설명하고 표시합니다. 커뮤니티 상에서 여러 작곡가들이 추천하는 멜로디, 가사 등을 추천합니다. 완성되지 않은 곡에 대한 작곡가는 추천받은  멜로디, 가사 등을 검토하고 마음에 드는 추천내용을 채택할 수 있습니다. 또한 기여한 내용과 기여받은 내용은 자신의  포트폴리오 페이지에 기록이 되며 그 페이지가 곧 프로듀서로서의 경력이 됩니다. 수많은 작곡가들이 Collusic을    통해 자신의 이름을 알릴 수 있길 기대합니다.
+                        </div>
+                        <div class="title">기술</div>
+                        <div>
+                            nodeJS server와 mySQL server간의 연동을 통해 회원정보, 프로젝트 description, 프로젝트 파일의 path  data의 통신을 구축합니다.
+                        </div>
+                        <div>
+                            multer를 통해 작곡가들의 프로젝트 및 기여물을 업로드합니다.
+                        </div>
+                        <div>
+                            Google Login을 통해 로그인을 시도하고 회원정보를 DB server에 전달합니다.
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+                <div class="grid-item">
+                    <img src="/assets/2021_winter_dev/sample.png" />
+                    <strong>[WEB] Collusic</strong>
+                    <div>해녀와 갈매기(김다애, 박재현)</div>
+                </div>
+                <div class="grid-item">
+                    <img src="/assets/2021_winter_dev/sample.png" />
+                    <strong>[WEB] Collusic</strong>
+                    <div>해녀와 갈매기(김다애, 박재현)</div>
+                </div>
+                <div class="grid-item">
+                    <img src="/assets/2021_winter_dev/sample.png" />
+                    <strong>[WEB] Collusic</strong>
+                    <div>해녀와 갈매기(김다애, 박재현)</div>
+                </div>
+                <div class="grid-item">
+                    <img src="/assets/2021_winter_dev/sample.png" />
+                    <strong>[WEB] Collusic</strong>
+                    <div>해녀와 갈매기(김다애, 박재현)</div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+<script>
+    let modal = document.getElementById("myModal");
+    let item = document.querySelector(".grid-item");
+    let closeButton = document.querySelector(".close");
+
+    item.onclick = () => {
+        modal.style.display = "block";
+    }
+
+    closeButton.onclick = () => {
+        modal.style.display = "none";
+    }
+
+    window.onclick = (e) => {
+        if (e.target == modal)
+            modal.style.display = "none";
+    }
+
+</script>

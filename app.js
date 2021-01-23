@@ -49,12 +49,16 @@ app.get("/winter-dev-2021", (req, res) => {
   res.render("page/dev/winter_dev_2021");
 });
 
-app.get("/portfolio-2020-winter", (req, res) => {
-  res.render("page/portfolio/portfolio_2020_winter");
+app.get("/portfolio-2021-winter", (req, res) => {
+  res.render("page/portfolio/portfolio_2021_winter");
 });
 
 app.get("/portfolio-2020-summer", (req, res) => {
   res.render("page/portfolio/portfolio_2020_summer");
+});
+
+app.get("/portfolio-2020-winter", (req, res) => {
+  res.render("page/portfolio/portfolio_2020_winter");
 });
 
 app.get("/faq", (req, res) => {
