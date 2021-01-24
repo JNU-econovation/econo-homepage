@@ -76,19 +76,36 @@
 }
 
 .hash-container {
-    transform: translateX(-10px);
+    padding: 1rem 0;
 }
 
 .hashtag {
+    display: inline-block;
     color: rgba(43, 73, 154, 100);
     font-weight: bolder;
-    padding: 5px 10px;
+    padding: 0 10px;
+    margin: 5px 0;
+    border: 1px solid rgba(43, 73, 154, 100);
+    border-radius: 1rem;
+}
+
+.description-container {
+    padding: 0.5rem 0;
+}
+
+.project-link {
+    display: block;
+    padding: 0.5rem 0;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: rgba(43, 73, 154, 100);
+    border-bottom: none;
 }
 
 .hashtag:hover {
     color: #ffffff;
     background-color: rgba(43, 73, 154, 100);
-    border-radius: 0.5rem;
 }
 
 .emphasize {
