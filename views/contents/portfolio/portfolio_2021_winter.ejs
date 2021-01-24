@@ -8,7 +8,7 @@
             <div class="grid-container">
                 <% const keys = Object.keys(data) %>
                 <% keys.forEach(k => { %>
-                    <div class="grid-item" onclick="showModal(<%= k %>)">
+                    <div class="grid-item" onclick="showModal(<%= k %>)" style="animation-delay: <%= k * 0.1 %>s;">
                         <img src=<%= data[k].represent_img %> alt=<%= data[k].project_name %> />
                         <strong>[<%= data[k].field %>] <%= data[k].project_name %></strong>
                         <div><%= data[k].team %></div>
