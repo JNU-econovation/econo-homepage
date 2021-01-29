@@ -22,7 +22,7 @@ app.set("views", __dirname + "/views");
 app.use("/", static(path.join(__dirname, "views/page")));
 
 app.get("/", (req, res) => {
-  res.redirect("winter-dev-2021")
+  res.redirect("/portfolio-2021-winter")
 });
 
 app.get("/recruit-2020-2",(req,res)=>{
