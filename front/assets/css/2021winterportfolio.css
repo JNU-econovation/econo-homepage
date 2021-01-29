@@ -4,6 +4,12 @@
     animation-duration: 2s;
 }
 
+.portfolio-mobile-btn > a{
+    margin: 0 auto;
+    animation-name: showSlow;
+    animation-duration: 2s;
+}
+
 @keyframes showSlow {
     0% {
         transform: translateY(-30%);
