@@ -22,11 +22,11 @@ app.set("views", __dirname + "/views");
 app.use("/", static(path.join(__dirname, "views/page")));
 
 app.get("/", (req, res) => {
-  res.redirect("/portfolio-2021-winter")
+  res.redirect("/recruit-2021-1")
 });
 
-app.get("/recruit-2020-2",(req,res)=>{
-  res.render("page/recruit/recruit_2020")
+app.get("/recruit-2021-1",(req,res)=>{
+  res.render("page/recruit/recruit_2021")
 })
 
 app.get("/about", (req, res) => {

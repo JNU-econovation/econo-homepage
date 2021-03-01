@@ -4115,10 +4115,10 @@ input, select, textarea {
 	}
 
 	@media ( min-width: 800px ) {
-		#prize-left{
+		.prize-left{
 			float: left;
 		}
-		#prize-right{
+		.prize-right{
 			float: right;
 		}
 	  }
