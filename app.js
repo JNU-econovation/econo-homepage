@@ -37,9 +37,12 @@ app.get("/hackathon-2019", (req, res) => {
   res.render("page/hackathon/hackathon_2019");
 });
 
-
 app.get("/hackathon-2020", (req, res) => {
   res.render("page/hackathon/hackathon_2020", { test: process.env.AKECONO });
+});
+
+app.get("/hackathon-2021", (req, res) => {
+  res.render("page/hackathon/hackathon_2021", { test: process.env.AKECONO });
 });
 
 app.get("/summer-dev-2020", (req, res) => {
