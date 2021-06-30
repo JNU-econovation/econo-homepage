@@ -14,7 +14,7 @@ require('dotenv').config();
 const winter_2021_data = require("./views/contents/portfolio/2021_winter_data.json");
 
 //설정
-app.set("port", process.env.PORT || 80);
+app.set("port", process.env.PORT || 8080);
 app.use(express.static(__dirname + "/front"));
 app.use(logger());
 app.set("view engine", "ejs");
