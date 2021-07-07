@@ -29,7 +29,7 @@ app.get("/recruit-2021-1",(req,res)=>{
   res.render("page/recruit/recruit_2021")
 })
 
-app.get("/about", (req, res) => {
+app.get("/about_econo", (req, res) => {
   res.render("page/main");
 });
 
