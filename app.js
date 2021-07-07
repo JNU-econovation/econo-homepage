@@ -30,7 +30,7 @@ app.get("/recruit-2021-1",(req,res)=>{
 })
 
 app.get("/about_econo", (req, res) => {
-  res.render("page/main");
+  res.render("page/about");
 });
 
 app.get("/hackathon-2019", (req, res) => {
