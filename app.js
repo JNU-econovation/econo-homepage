@@ -53,6 +53,10 @@ app.get("/winter-dev-2021", (req, res) => {
   res.render("page/dev/winter_dev_2021");
 });
 
+app.get("/summer-dev-2021", (req, res) => {
+  res.render("page/dev/summer_dev_2021");
+});
+
 app.get("/portfolio-2021-winter", (req, res) => {
   res.render("page/portfolio/portfolio_2021_winter", {data: winter_2021_data});
 });
