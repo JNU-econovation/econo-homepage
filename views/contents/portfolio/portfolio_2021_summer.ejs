@@ -1,0 +1,77 @@
+<div id="main" class="wrapper style1">
+    <div class="container">
+        <img src="assets/2021_winter_dev/[구글폼배너] 2021 WINTER DEV-01.png" width="100%" />
+        <header>
+            <h2 class="big-header">2020-2학기 에코노베이션이 개발한 프로젝트 미리보기</h2>
+        </header>
+        <section>
+            <div id="mobile_btn" class="portfolio-mobile-btn">
+                <a
+                  href="https://meet.google.com/dng-mecm-dix"
+                  class="mobile_btn_free blue"
+                  style="font-size: 0.75rem;"
+                  target="_blank"
+                  >2021 WINTER DEV 참가하기</a
+                >
+            </div>
+            <br />
+            <div class="grid-container">
+                <% const keys = Object.keys(data) %>
+                <% keys.forEach(k => { %>
+                    <div class="grid-item" onclick="showModal(<%= k %>)" style="animation-delay: <%= k * 0.1 %>s;">
+                        <img src=<%= data[k].represent_img %> alt=<%= data[k].project_name %> />
+                        <strong>[<%= data[k].field %>] <%= data[k].project_name %></strong>
+                        <div><%= data[k].team %></div>
+                        <div><%= data[k].short_description %></div>
+                    </div>
+                    <div id="modal<%=k%>" class="modal" >
+                        <div class="modal-content">
+                            <span id="close<%=k%>" class="close">&times;</span>
+                            <img src=<%= data[k].represent_img %> alt=<%= data[k].project_name %> />
+                            <div class="description">
+                                <div class="hash-container">
+                                    <% data[k].hashtags.forEach(tag => { %>
+                                        <span class="hashtag"><%= tag %></span>
+                                    <% }) %>
+                                </div>
+                                <div class="description-container">
+                                    <div class="title">프로젝트 한 줄 소개</div>
+                                    <div><%= data[k].short_description %></div>
+                                </div>
+                                <% data[k].description.forEach(e => { %>
+                                    <div class="description-container">
+                                        <div class="title"><%= e.title %></div>
+                                        <% e.content.forEach(c => { %>
+                                            <div><%= c %></div>
+                                        <% }) %>
+                                    </div>
+                                <% }) %>
+                                <% if(data[k].link) {%>
+                                    <% data[k].link.forEach(e => { %>
+                                        <a href=<%= e.uri %> class="project-link" target="_blank"><%= e.title %></a>
+                                    <% }) %>
+                                <% } %>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<script>
+    const showModal = (id) => {
+        const modal = document.querySelector(`#modal${id}`);
+        modal.style.display = "block";
+        let closeButton = document.querySelector(`#close${id}`);
+        closeButton.onclick = () => {
+            modal.style.display = "none";
+        }
+        window.onclick = (e) => {
+            if (e.target == modal)
+                modal.style.display = "none";
+        }
+    }
+</script>

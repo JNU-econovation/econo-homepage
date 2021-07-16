@@ -5,12 +5,12 @@ const expressErrorHandler = require("express-error-handler");
 const static = require("serve-static");
 const fs = require("fs");
 const path = require("path");
-const logger = require('morgan');
+const logger = require("morgan");
 
 // //변수
 const app = express();
 const router = express.Router();
-require('dotenv').config();
+require("dotenv").config();
 const winter_2021_data = require("./views/contents/portfolio/2021_winter_data.json");
 
 //설정
@@ -22,12 +22,12 @@ app.set("views", __dirname + "/views");
 app.use("/", static(path.join(__dirname, "views/page")));
 
 app.get("/", (req, res) => {
-  res.redirect("/hackathon-2021")
+  res.redirect("/hackathon-2021");
 });
 
-app.get("/recruit-2021-1",(req,res)=>{
-  res.render("page/recruit/recruit_2021")
-})
+app.get("/recruit-2021-1", (req, res) => {
+  res.render("page/recruit/recruit_2021");
+});
 
 app.get("/about_econo", (req, res) => {
   res.render("page/about");
@@ -57,8 +57,16 @@ app.get("/summer-dev-2021", (req, res) => {
   res.render("page/dev/summer_dev_2021");
 });
 
+app.get("/portfolio-2021-summer", (req, res) => {
+  res.render("page/portfolio/portfolio_2021_summer", {
+    data: winter_2021_data,
+  });
+});
+
 app.get("/portfolio-2021-winter", (req, res) => {
-  res.render("page/portfolio/portfolio_2021_winter", {data: winter_2021_data});
+  res.render("page/portfolio/portfolio_2021_winter", {
+    data: winter_2021_data,
+  });
 });
 
 app.get("/portfolio-2020-summer", (req, res) => {
@@ -76,8 +84,8 @@ app.get("/faq", (req, res) => {
 //에러 처리
 var errorHandler = expressErrorHandler({
   static: {
-    "404": "./front/erroor.html"
-  }
+    404: "./front/erroor.html",
+  },
 });
 
 app.use(expressErrorHandler.httpError(404));
