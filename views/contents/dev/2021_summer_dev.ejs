@@ -13,7 +13,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-shrink" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="https://econovation.kr/about_econo"><img width="120" src="/assets/2021_summer_dev/images/ecnv-logo.png"></img></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="true" aria-label="Toggle navigation">
             Menu
             <i class="fas fa-bars ms-1"></i>
           </button>
@@ -22,9 +22,9 @@
               <li class="nav-item"><a class="nav-link" href="#intro">Intro</a></li>
               <li class="nav-item"><a class="nav-link" href="#timetable">Timetable</a></li>
               <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-              <li class="nav-item"><a class="nav-link" href="https://open.kakao.com/o/sKALqaod
-                ">Q&A</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://open.kakao.com/o/sKALqaod">Q&A</a></li>
               <!--li class="nav-item"><a class="nav-link" href="">지난 발표 보기</a></li-->
+              <div class="select-box"><a class="select-nav-link" href="https://econovation.kr/portfolio-2021-summer">프로젝트 미리보기</a></div>
             </ul>
           </div>
         </a>
@@ -34,6 +34,7 @@
     <header class="masthead">
       <div class="container">
         <div class="masthead-heading">2021 SUMMER DEV</div>
+        </div>
         <a class="btn btn-primary btn-xl text-uppercase" href="https://docs.google.com/forms/d/e/1FAIpQLSdsVMRup9Xuo1E89-NyDV9zTeen3Cdzs_JReLXmLYkCZ5FK_g/viewform">참가 신청하기</a>
         <!--a class="btn btn-primary btn-xl text-uppercase" href="../portfolio/portfolio_2021_summer">발표 소개</a-->
       </div>
@@ -67,6 +68,7 @@
               <p class="text-muted">18:15 ~ 18:30</p>
             </div>
           </div>
+          <button class="button-timetable">상세보기</button>
           <!--div class="row text-center">
             <div>
               <h4>GroupA</h4>
@@ -228,6 +230,7 @@
             <a class="link_qna" href="https://open.kakao.com/o/sKALqaod">Q&A 바로가기</a>
           </div>
         </div>
+      </div>
       <!--Footer-->
       <!--footer class="footer py-4">
         <div class="container">
@@ -245,51 +248,112 @@
             </div>
         </div>
     </footer-->
+    <div class="layer_wrap" style="display: none;">
+      <div class="layer_container" id="timetablePopup" style="display: none;">
+        <div class="popup_header">
+          <strong class="popup_title">발표 순서</strong>
+        </div>
+        <div class="popup_content scroll">
+          <div class="row text-center">
+            <ul>
+            <div class="groupContainer">
+              <h4>GroupA</h4>
+              <table>
+                <colgroup>
+                  <col width="5%">
+                  <col width="20%">
+                  <col width="50%">
+                </colgroup> 
+                <th>분야</th>
+                <th>프로젝트 명</th>
+                <th>프로젝트 소개</th>
+                <th>팀명 (팀원)</th>
+                <tr>
+                  <td>AI</td>
+                  <td>All-Rounder</td>
+                  <td>주가 데이터인 시계열 데이터를 이용한 주가 예층 인공지능</td>
+                  <td>Deeping Source<br><div  style="line-height: 100%;" class="name_text">(강다은, 이서현)</div></td>
+                </tr>
+                <tr>
+                  <td>App</td>
+                  <td>유서써유 <br>(You Will)</td>
+                  <td>나와 모두에게 쓰는 편지, 유서써유(You Will)</td>
+                  <td>캥거루즈<br><div  style="line-height: 100%;" class="name_text_small">(김민주,김송아,김유리,정주희)</div></td>
+                </tr>
+                <tr>
+                  <td>App</td>
+                  <td>Pinning</td>
+                  <td>나만의 추천을 기록하는 소셜 맵 안드로이드 애플리케이션</td>
+                  <td>이응<br><div  style="line-height: 100%;" class="name_text">(성윤아, 이혜은)</div></td>
+                </tr>
+                <tr>
+                  <td>App</td>
+                  <td>treena</td>
+                  <td>자연어 처리 기반 감성 분석 다이어리 애플리케이션</td>
+                  <td>파릇파릇<br><div  style="line-height: 100%;" class="name_text_small">(김송아, 김유리, 나영주, 류현지)</div></td>
+                </tr>
+                <tr>
+                  <td>AI</td>
+                  <td>HCP</td>
+                  <td>자연어 처리 기반 transformer알고리즘을 이용을 이용해 허밍(humming)을 멜로디로 변환하는 반주 생성 프로그램</td>
+                  <td>ARIA<br><div  style="line-height: 100%;" class="name_text">(김서영, 김양하, 신재욱)</div></td>
+                </tr>
+              </table>
+            </div>
+            <div class="groupContainer">
+              <h4>GroupB</h4>
+              <table> 
+                <colgroup>
+                  <col width="5%">
+                  <col width="20%">
+                  <col width="50%">
+                </colgroup> 
+                <th>분야</th>
+                <th>프로젝트 명</th>
+                <th>프로젝트 소개</th>
+                <th>팀명 (팀원)</th>
+                <tr>
+                  <td>Web</td>
+                  <td>에코노 냉장고</td>
+                  <td>냉장고 안 재료로 음식 레시피를 추천해주는 웹사이트</td>
+                  <td>위험한 형제들 <br><div  style="line-height: 100%;" class="name_text">(권순찬, 이윤성)</div></td>
+                </tr>
+                <tr>
+                  <td>App</td>
+                  <td>Friendo</td>
+                  <td>그룹 간의 To Do List를 작성하고 관리하는 애플리케이션</td>
+                  <td>FastBoys <br><div  style="line-height: 100%;" class="name_text">(채상엽, 홍동건)</div></td>
+                </tr>
+                <tr>
+                  <td>Game</td>
+                  <td>태그헌터</td>
+                  <td>찾아내고 맞바꾸는 스토리텔링 RPG</td>
+                  <td>레인디어게임즈 <br><div  style="line-height: 100%;" class="name_text">(김영우, 임원빈)</div></td>
+                </tr>
+                <tr>
+                  <td>Web</td>
+                  <td>collusic</td>
+                  <td>온라인 작사 작곡 협업 웹 사이트</td>
+                  <td>니곡내곡 <br><div style="line-height: 100%;" class="name_text_small">(박재현, 김다애, 주동혁, 한수아, 황지우)</div></td>
+                </tr>
+                <tr>
+                  <td>Web</td>
+                  <td>투너</td>
+                  <td>독자의, 독자를 위한, 독자에 의한 웹툰 리뷰 커뮤니티</td>
+                  <td>투너 <br><div style="line-height: 100%;" class="name_text_small">(김성혁, 김창영, 서서영, 이상윤, 정회형)</div></td>
+                </tr>
+              </table>
+            </div>
+          </ul>
+          </div>
+        </div>
+        <button type="button" class="btn_close">
+          <span class="blind">닫기</span>
+        </button>
+      </div>
+        </div>
+      </div>
+    </div>
     <script src="/assets/2021_summer_dev/js/scripts.js"></script>
   </body>
 </html>
-
-
-<!--div id="main" class="wrapper style1">
-  <div class="container">
-    <header class="major">
-      <h2>2021 SUMMER DEV</h2>
-      <p>에코노베이션 성과발표</p>
-    </header>
-
-    <section
-      style="display: flex; flex-direction: column; align-items: center;"
-    >
-      <div id="mobile_btn">
-        <a
-          href="https://meet.google.com/dgd-pwkm-nuv"
-          class="mobile_btn_free"
-          style="font-size: 0.75rem;"
-          >2020 SUMMER DEV 온라인 채널</a
-        >
-      </div>
-      <br />
-      <img src="assets/2020_summer_dev/2020_SUMMER_DEV.jpg" width="100%" />
-      <br />
-      <img src="assets/2020_summer_dev/2020_SUMMER_DEV_contents.jpg" width="100%" />
-      <br />
-      <br />
-      <section style="width: 100%;">
-        <h2>SUMMER DEV 보러오는 방법</h2>
-        <h3>
-          1. 먼저 2020 SUMMER DEV 참가 버튼을 눌러 지원 폼을 작성하여 제출한다.
-        </h3>
-        <h3>2. 발표 전날 및 당일 오는 문자 메세지나 메일을 확인한다.</h3>
-        <h3>3. SUMMER DEV를 보러온다.</h3>
-        <blockquote>
-          여러분의 많은 참여 부탁합니다!
-        </blockquote>
-      </section>
-      <section style="width: 100%;">
-        <h2>문의사항</h2>
-        <h3>SUMMER DEV 담당자 김기표: 010-5439-4111</h3>
-        <h3>에코노베이션 회장 배종진: 010-2247-9052</h3>
-      </section>
-    </section>
-  </div>
-</div-->
