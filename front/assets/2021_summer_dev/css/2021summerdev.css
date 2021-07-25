@@ -79,7 +79,7 @@ hr:not([size]) {
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-  /* font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+  font-family: 'NanumSquare', sans-serif;
   font-weight: 700;
   line-height: 1.2;
 }
@@ -94,6 +94,7 @@ h1, .h1 {
 }
 
 h2, .h2 {
+  /*font-size: calc(1.325rem + 0.9vw);*/
   font-size: calc(1.325rem + 0.9vw);
 }
 @media (min-width: 1200px) {
@@ -210,13 +211,15 @@ sup {
   top: -0.5em;
 }
 
+
 a {
-  color: #ffc800;
-  text-decoration: underline;
+  color: #fafafa;
+  text-decoration: none;
 }
 a:hover {
-  color: #cca000;
+  color: #fafafa;
 }
+
 
 a:not([href]):not([class]), a:not([href]):not([class]):hover {
   color: inherit;
@@ -1260,7 +1263,8 @@ progress {
 
   .col-md-4 {
     flex: 0 0 auto;
-    width: 33.33333333%;
+    /* width: 33.33333333%; */
+    width:20%;
   }
 
   .col-md-5 {
@@ -2953,13 +2957,17 @@ textarea.form-control-lg {
     transition: none;
   }
 }
+/*
 .btn:hover {
   color: #212529;
 }
+*/
+/*
 .btn-check:focus + .btn, .btn:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(255, 200, 0, 0.25);
 }
+*/
 .btn:disabled, .btn.disabled, fieldset:disabled .btn {
   pointer-events: none;
   opacity: 0.65;
@@ -2967,32 +2975,40 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #ffc800;
-  border-color: #ffc800;
+  background-color: #3a1cb3;
+  border-color: #3a1cb3;
+  border-radius: 50px;
 }
-.btn-primary:hover {
+
+/* .btn-primary:hover {
   color: #fff;
   background-color: #d9aa00;
   border-color: #cca000;
-}
+} */
+
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
-  background-color: #d9aa00;
+  /*background-color: #d9aa00;
   border-color: #cca000;
   box-shadow: 0 0 0 0.25rem rgba(255, 208, 38, 0.5);
+  */
 }
 .btn-check:checked + .btn-primary, .btn-check:active + .btn-primary, .btn-primary:active, .btn-primary.active, .show > .btn-primary.dropdown-toggle {
   color: #fff;
+  /*
   background-color: #cca000;
   border-color: #bf9600;
+  */
 }
 .btn-check:checked + .btn-primary:focus, .btn-check:active + .btn-primary:focus, .btn-primary:active:focus, .btn-primary.active:focus, .show > .btn-primary.dropdown-toggle:focus {
-  box-shadow: 0 0 0 0.25rem rgba(255, 208, 38, 0.5);
+  /*box-shadow: 0 0 0 0.25rem rgba(255, 208, 38, 0.5);*/
 }
 .btn-primary:disabled, .btn-primary.disabled {
   color: #fff;
+  /*
   background-color: #ffc800;
   border-color: #ffc800;
+  */
 }
 
 .btn-secondary {
@@ -3912,6 +3928,44 @@ textarea.form-control-lg {
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
 }
+.nav-tabs.select-box{
+  position: relative;
+  float: right;
+  width: 141px;
+  margin-top: 23px;
+}
+.nav-tabs .select-box .btn_pass_toggle{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 35px;
+  padding: 8px 26px 9px 18px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-family: 'NanumSquareB';
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.2px;
+  border: solid 1px #ffffff;
+  color: #fff;
+}
+.nav-tabs .select-box .btn_pass_toggle::after{
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 8px;
+  height: 5px;
+  margin-left: 4px;
+  background-position: 0 -348px;
+}
+.nav-tabs .select-box .btn_pass_toggle.active::after{
+  transform: rotateX(-180deg);
+}
+.nav-tabs .select-box .btn_pass_toggle.active ~ .select_list{
+  display: block;
+}
+
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
   border-top-left-radius: 0;
@@ -3930,13 +3984,13 @@ textarea.form-control-lg {
 }
 
 .nav-fill > .nav-link,
-.nav-fill .nav-item {
+.nav-fill .nav-item{
   flex: 1 1 auto;
   text-align: center;
 }
 
 .nav-justified > .nav-link,
-.nav-justified .nav-item {
+.nav-justified .nav-item{
   flex-basis: 0;
   flex-grow: 1;
   text-align: center;
@@ -3976,8 +4030,6 @@ textarea.form-control-lg {
   justify-content: space-between;
 }
 .navbar-brand {
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem;
   margin-right: 1rem;
   font-size: 1.25rem;
   text-decoration: none;
@@ -6919,9 +6971,14 @@ textarea.form-control-lg {
 }
 
 .my-3 {
+  color: #fff;
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
 }
+
+.my-3-1{
+  font-weight: 110;
+} 
 
 .my-4 {
   margin-top: 1.5rem !important;
@@ -7394,7 +7451,9 @@ textarea.form-control-lg {
 }
 
 .text-muted {
-  color: #6c757d !important;
+  font-size: large;
+  font-weight: bold;
+  color: #7e848a  !important;
 }
 
 .text-black-50 {
@@ -7438,7 +7497,7 @@ textarea.form-control-lg {
 }
 
 .bg-dark {
-  background-color: #212529 !important;
+  background-color: #252525 !important;
 }
 
 .bg-body {
@@ -10868,19 +10927,36 @@ p {
 }
 
 .page-section {
+  background-color: #0f0f0f;
   padding: 6rem 0;
 }
 .page-section h2.section-heading, .page-section .section-heading.h2 {
-  font-size: 2.5rem;
+  color: #fff;
+  font-weight:900;
+  font-size: 3rem;
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 .page-section h3.section-subheading, .page-section .section-subheading.h3 {
-  font-size: 1rem;
-  font-weight: 400;
-  font-style: italic;
-  /* font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+  color: rgb(185, 185, 185);
+  font-size: 1.1rem;
+  font-weight: 700;
   margin-bottom: 4rem;
+}
+
+.page-section .link_qna, 
+.page-section .button-timetable{
+  font-family: 'NanumSquare', sans-serif;
+  display: inline-block;
+  width: 380px;
+  height: 85px;
+  margin-top: 30px;
+  background-color: #e1e1e1;
+  font-size: 30px;
+  line-height: 85px;
+  letter-spacing: -0.94px;
+  color: #000;
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -10889,10 +10965,10 @@ p {
   }
 }
 .btn-xl {
-  padding: 1.25rem 2.5rem;
+  padding: 1.5rem 4rem;
   /* font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
-  font-size: 1.125rem;
-  font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 900;
 }
 
 .btn-social {
@@ -10928,13 +11004,29 @@ p {
   height: 1.5rem;
 }
 #mainNav .navbar-nav .nav-item .nav-link {
-  /* font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
-  font-size: 0.95rem;
+  font-family: 'NanumSquare', sans-serif;
+  /*font-size: 1.2rem;*/
+  font-size: 1rem;
+  font-weight: 700;
   color: #fff;
   letter-spacing: 0.0625em;
 }
 #mainNav .navbar-nav .nav-item .nav-link.active, #mainNav .navbar-nav .nav-item .nav-link:hover {
-  color: #ffc800;
+  color: #5e3bea;
+}
+#mainNav .navbar-nav .select-box{
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 35px;
+  padding: 8px 26px 9px 18px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-family: 'NanumSquare', sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.2px;
+  border: solid 1px #ffffff;
+  color: #fff;
 }
 
 @media (min-width: 992px) {
@@ -10984,9 +11076,10 @@ header.masthead {
   background-size: cover;
 }
 header.masthead .masthead-subheading {
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  margin-bottom: 25px;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3.25rem;
+  margin-bottom: 2rem;
   font-family: 'NanumSquare', sans-serif;
 }
 header.masthead .masthead-heading {
@@ -10998,19 +11091,89 @@ header.masthead .masthead-heading {
   /* font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
 }
 
+header.masthead .time-remaining-box{
+  margin: 50px auto 0;
+  background-position: -31px -109px; 
+}
+
+.header.masthead .time-remaining-box .time_box {
+  padding-top: 100px;
+}
+
+.header.masthead .time-remaining-box .time_box .colon,
+.header.masthead .time-remaining-box .time_box .day,
+.header.masthead .time-remaining-box .time_box .hour,
+.header.masthead .time-remaining-box .time_box .minute,
+.header.masthead .time-remaining-box .time_box .num,
+.header.masthead .time-remaining-box .time_box .second{
+  display: inline-block;
+  position: relative;
+  font-size: 100px;
+}
+
+.header.masthead .time-remaining-box .time_box .num {
+  width: 39px;
+  height: 46px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 39px 506px;
+  background-size: 39px 506px;
+}
+
+.header.masthead .time-remaining-box .time_box .num.num0{
+  background-position: 0 0;
+}
+.header.masthead .time-remaining-box .time_box .num.colon{
+  width: 17px;
+  height: 46px;
+  margin: 0 8px;
+  background-position: 0 -459px;
+}
+
+.header.masthead .time-remaining-box .time_box .time_text {
+  position: absolute;
+  left: 50%;
+  bottom: -43px;
+  transform: translateX(-50%);
+  height: 29px;
+  background-repeat: no-repeat;
+  -webkit-background-size: 91px 116px;
+  background-size: 91px 116px;
+}
+
+.header.masthead .time-remaining-box .time_box .time_text.days {
+  width: 51px;
+  background-position: 0 3px;
+}
+
+.header.masthead .time-remaining-box .time_box .time_text.hours {
+  width: 61px;
+  background-position: 0 -29px;
+}
+
+.header.masthead .time-remaining-box .time_box .time_text.minutes {
+  width: 82px;
+  background-position: 0 -58px;
+}
+
+.header.masthead .time-remaining-box .time_box .time_text.seconds {
+  width: 91px;
+  background-position: 0 -87px;
+}
+
+
 @media (min-width: 768px) {
   header.masthead {
     padding-top: 17rem;
     padding-bottom: 12.5rem;
   }
   header.masthead .masthead-subheading {
-    font-size: 2.25rem;
+    font-size: 3.25rem;
     font-style: italic;
     line-height: 2.25rem;
     margin-bottom: 2rem;
   }
   header.masthead .masthead-heading {
-    font-size: 4.5rem;
+    font-size: 4rem;
     font-weight: 700;
     line-height: 4.5rem;
     margin-bottom: 4rem;
@@ -11098,6 +11261,55 @@ header.masthead .masthead-heading {
 }
 .portfolio-modal .close-modal:hover {
   opacity: 0.3;
+}
+
+.section_faq .faq_list {
+  width: 1200px;
+  margin: 60px auto 0;
+  position: relative;
+}
+
+.page-section .faq_list:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  background-image: linear-gradient(to left, #5d33cd 0%, #a30fc9 56%, #fe8157 100%);
+}
+
+.section_faq .faq_list_item {
+  padding: 37px 0 34px 109px;
+  text-align: left;
+  border-bottom: 1px solid #747474;
+}
+
+.section_faq .faq_list_item .faq_question {
+  position: relative;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.75px;
+  color: #ccc;
+}
+
+.section_faq .faq_list_item .faq_question:before {
+  content: 'Q.';
+  position: absolute;
+  min-width: 22px;
+  left: -29px;
+  top: 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+.section_faq .faq_list_item .faq_answer {
+  padding-top: 10px;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.75px;
+  color: #747474;
 }
 
 .timeline {
@@ -11343,4 +11555,140 @@ section#contact form#contactForm :-ms-input-placeholder {
   text-align: center;
   font-size: 0.9rem;
   /* font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; */
+}
+
+.section_faq .faq_list {
+  width: 1200px;
+  margin: 60px auto 0;
+  position: relative;
+}
+
+.page-section .faq_list:before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 3px;
+  background-image: linear-gradient(to left, #5d33cd 0%, #a30fc9 56%, #fe8157 100%);
+}
+
+.section_faq .faq_list_item {
+  padding: 37px 0 34px 109px;
+  text-align: left;
+  border-bottom: 1px solid #747474;
+}
+
+.section_faq .faq_list_item .faq_question {
+  position: relative;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.75px;
+  color: #ccc;
+}
+
+.section_faq .faq_list_item .faq_question:before {
+  content: 'Q.';
+  position: absolute;
+  min-width: 22px;
+  left: -29px;
+  top: 0;
+  font-weight: bold;
+  color: #fff;
+}
+
+.section_faq .faq_list_item .faq_answer {
+  padding-top: 10px;
+  font-size: 24px;
+  line-height: 36px;
+  letter-spacing: -0.75px;
+  color: #747474;
+}
+
+.layer_wrap{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: 16px;
+  color: #333;
+  letter-spacing: -.32px;
+  line-height: 28px;
+}
+
+.layer_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 850px;
+}
+
+.popup_header {
+  height: 82px;
+  background-image: linear-gradient(to right, #AC64A0 0%, #240C9A 56%, #4AA45A 100%);
+}
+
+.popup_title{
+  font-family: 'NanumSquare', sans-serif;
+}
+
+.popup_title{
+  overflow: hidden;
+  display: block;
+  padding: 0 70px 0 50px;
+  font-size: 24px;
+  color: #fff;
+  line-height: 82px;
+  letter-spacing: -.96px;
+}
+
+.popup_content.scroll{
+  background-image: rgba(0, 0, 0, 0);
+  overflow: hidden;
+  overflow-y: auto;
+  height: 480px;
+}
+
+.groupContainer{
+  padding: 0 50px;
+  background-color: #fff;
+  padding-top: 39px;
+}
+
+.name_text_small{
+  color:rgba(66, 70, 73,1);
+  font-size: 11px;
+}
+
+.name_text{
+  color:rgba(66, 70, 73,1);
+  font-size: 13px;
+}
+
+.btn_close {
+  display: block;
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  width: 22px;
+  height: 22px;
+  background-position: -120px 0;
+  background: url("../images/letter-x.png") no-repeat 0 0;
+  background-size: 20px 20px;
+  border: none;
+}
+
+.blind {
+  overflow: hidden !important;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
 }

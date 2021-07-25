@@ -109,3 +109,7 @@ header.major.blue:after {
 .recruit_a:hover{
   color: #1F83C6 !important;
 }
+
+.summerdev_2021_button_background {
+  background: linear-gradient(to bottom right, #b35da3, #3a2d92, #03a051);
+}
