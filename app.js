@@ -12,6 +12,7 @@ const app = express();
 const router = express.Router();
 require("dotenv").config();
 const winter_2021_data = require("./views/contents/portfolio/2021_winter_data.json");
+const summer_2021_data = require("./views/contents/portfolio/2021_summer_data.json");
 
 //설정
 app.set("port", process.env.PORT || 8080);
@@ -59,7 +60,7 @@ app.get("/summer-dev-2021", (req, res) => {
 
 app.get("/portfolio-2021-summer", (req, res) => {
   res.render("page/portfolio/portfolio_2021_summer", {
-    data: winter_2021_data,
+    data: summer_2021_data,
   });
 });
 
