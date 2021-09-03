@@ -23,7 +23,7 @@ app.set("views", __dirname + "/views");
 app.use("/", static(path.join(__dirname, "views/page")));
 
 app.get("/", (req, res) => {
-  res.redirect("/about_econo");
+  res.redirect("/about");
 });
 
 app.get("/recruit-2021-1", (req, res) => {
@@ -31,6 +31,10 @@ app.get("/recruit-2021-1", (req, res) => {
 });
 
 app.get("/about_econo", (req, res) => {
+  res.render("page/about");
+});
+
+app.get("/about", (req, res) => {
   res.render("page/about");
 });
 
