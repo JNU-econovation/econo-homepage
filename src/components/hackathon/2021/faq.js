@@ -1,10 +1,17 @@
-<!-- Text -->
+function Hackathon2021Faq() {
+  const chatParam = [
+    '#kakao_chat', '_xbUxnGs' // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
+  ]
+  // Kakao.Channel.createChatButton({chatParam});
+  return (
+    <div>
 <div id="mydiv" data-test="<%= test %>"></div>
 <script src="assets/js/kakao.js"></script>
 <script>
   var test = document.getElementById("mydiv").dataset.test;
   // SDK를 초기화 합니다. 사용할 앱의 JavaScript 키를 설정해 주세요.
   Kakao.init(test);
+  Kakao.Channel.createChatButton({chatParam});
 </script>
 
 <section>
@@ -73,14 +80,14 @@
   </header>
   <hr />
 
-  <div style="text-align: center">
+  <div style={{'text-align': 'center'}}>
     <h2>이노베이션 해커톤 채널</h2>
-    <h4 style="margin-top: -20px">
+    <h4 style={{'margin-top': '-20px'}}>
       그 외 궁금한 사항은 이 카카오 채널을 이용해 주세요.
     </h4>
       <a class="button primary" 
       href="https://docs.google.com/forms/d/e/1FAIpQLSf5fFzvDgMooGcPcVKAqkFK_u0GX92Cj0gcmfkyrOrmwSClCQ/viewform?usp=sf_link"
-      style="background-color: #1F83C6;" 
+      style={{'background-color': '#1F83C6'}} 
       target="_blank"
       >
         해커톤 지원하기
@@ -95,10 +102,8 @@
     </ul>
   </footer>
 </section>
+</div>
+  );
+}
 
-<script>
-  Kakao.Channel.createChatButton({
-    container: "#kakao_chat",
-    channelPublicId: "_xbUxnGs", // 카카오톡 채널 홈 URL에 명시된 id로 설정합니다.
-  });
-</script>
+export default Hackathon2021Faq;

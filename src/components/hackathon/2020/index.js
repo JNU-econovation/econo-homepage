@@ -1,3 +1,8 @@
+import Faq from './faq'
+
+function Hackathon2020Component() {
+
+  return (
 <div id="main" class="wrapper style1">
   <div class="container">
     <header class="major">
@@ -6,7 +11,7 @@
     </header>
 
     <section
-      style="display: flex; flex-direction: column; align-items: center;"
+      style={{'display': 'flex', 'flex-direction': 'column', 'align-items': 'center'}}
     >
       <div id="mobile_btn">
         <a
@@ -16,7 +21,7 @@
         >
       </div>
 
-      <div style="margin-bottom: 2rem;">
+      <div style={{'margin-bottom': '2rem'}}>
         <a id="linkbutton" href="#일정">일정</a>
         <a id="linkbutton" href="#심사기준">심사기준</a>
         <a id="linkbutton" href="#FAQ">FAQ</a>
@@ -24,7 +29,7 @@
       <img src="assets/20_hackathon.png" width="100%" />
       <br />
       <br />
-      <section style="width: 100%;">
+      <section style={{'width': '100%'}}>
         <h2>코로나 19 그리고 해커톤</h2>
         <blockquote>
           현재 전 세계적으로 코로나 19로 인한 사회적 거리 두기가 일상처럼 자리를
@@ -51,7 +56,7 @@
         <br />
         <br />
       </section>
-      <section style="width: 100%;">
+      <section style={{'width': '100%'}}>
         <h2>해커톤 일정</h2>
         <ul>
           <li><h3>지원기간: 6월 29일(월) ~ 8월 09일(일) 23:59</h3></li>
@@ -61,7 +66,7 @@
           <li>
             <h3>
               대회당일:
-              <span style="color: #e44c65;">8월 26일(수) ~ 8월 28일(금)</span>
+              <span style={{'color': '#e44c65'}}>8월 26일(수) ~ 8월 28일(금)</span>
             </h3>
           </li>
         </ul>
@@ -71,7 +76,7 @@
         <br />
         <br />
       </section>
-      <section style="width: 100%;">
+      <section style={{'width': '100%'}}>
         <h2>심사기준</h2>
         <h3>주제 연관성</h3>
         <ul>
@@ -107,7 +112,11 @@
         <br />
         <br />
       </section>
-      <% include ./hackthon_faq_2020.ejs %>
+      <Faq />
     </section>
   </div>
 </div>
+);
+}
+
+export default Hackathon2020Component;

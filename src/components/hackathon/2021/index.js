@@ -1,3 +1,8 @@
+import Faq from './faq'
+
+function Hackathon2021Component() {
+
+  return (
 <div id="main" class="wrapper style1">
   <div class="container">
     <header class="major">
@@ -6,7 +11,7 @@
     </header>
 
     <section
-      style="display: flex; flex-direction: column; align-items: center;"
+      style={{'display': 'flex', 'flex-direction': 'column', 'align-items': 'center'}}
     >
       <div id="mobile_btn">
         <a
@@ -17,7 +22,7 @@
         >
       </div>
 
-      <div style="margin-bottom: 2rem;">
+      <div style={{'margin-bottom': '2rem'}}>
         <a id="linkbutton" href="#일정">일정</a>
         <a id="linkbutton" href="#심사기준">심사기준</a>
         <a id="linkbutton" href="#FAQ">FAQ</a>
@@ -25,7 +30,7 @@
       <img src="assets/21_hackathon.png" width="100%" />
       <br />
       <br />
-      <section style="width: 100%;">
+      <section style={{'width': '100%'}}>
         <h2>Trigger your inner HIP! (Happiness, Innovation, Passion)</h2>
         <blockquote>
           코로나 19 상황이 장기화됨에 따라 우리 사회에 언택트 시대가 새로이 열리고 있습니다. MZ 세대들은 SNS, AR, VR, 화상회의 등 언택트 플랫폼에 빠르게 적응하고 있고, 나아가 대학, 회사에서도 재택으로 업무를 진행하는 시스템을 구축하고 있습니다. 이노베이션 해커톤은 시대의 변화에 앞장서서 전남대학교 학생들이 언택트 플랫폼에 대한 아이디어와 소프트웨어 기술력을 나누며 발전할 기회를 제공하여 유의미한 결과물을 도출하고자 합니다.
@@ -43,7 +48,7 @@
         <br />
         <br />
       </section>
-      <section style="width: 100%;">
+      <section style={{'width': '100%'}}>
         <h2>해커톤 일정</h2>
         <ul>
           <li><h3>지원기간 : 7월 1일 (목) ~ 8월 8일 (일) 23:59</h3></li>
@@ -54,7 +59,7 @@
           <li>
             <h3>
               대회당일:
-              <span style="color: #e44c65;">8월 25일(수) ~ 8월 27일(금)</span>
+              <span style={{'color': '#e44c65'}}>8월 25일(수) ~ 8월 27일(금)</span>
             </h3>
           </li>
         </ul>
@@ -64,7 +69,7 @@
         <br />
         <br />
       </section>
-      <section style="width: 100%;">
+      <section style={{'width': '100%'}}>
         <h2 id="심사기준">심사기준</h2>
         <h3>주제 연관성</h3>
         <ul>
@@ -97,7 +102,13 @@
         <br />
         <br />
       </section>
-      <% include ./hackthon_faq_2021.ejs %>
+      <Faq />
     </section>
   </div>
 </div>
+  );
+}
+
+export default Hackathon2021Component;
+
+
