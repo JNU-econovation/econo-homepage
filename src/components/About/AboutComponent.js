@@ -1,8 +1,9 @@
-<!-- @format -->
-
-<!-- 첫 보이는 화면 -->
+function AboutComponent() {
+  return (
+    <div>
+{ /*첫 보이는 화면*/ }
 <section id="banner">
-  <div class="content">
+  <div className="content">
     <header>
       <h2>ECONOVATION</h2>
       <p>
@@ -10,21 +11,21 @@
         즐겁게 그리고 함께 개발하는 공간이 되는 것을 꿈꿉니다.
       </p>
     </header>
-    <span class="image"><img height="100%" src="images/logo.png" alt="" /></span>
+    <span className="image"><img height="100%" src="/images/logo.png" alt="" /></span>
   </div>
-  <a href="#video" class="goto-next scrolly">Next</a>
+  <a href="#video" className="goto-next scrolly">Next</a>
 </section>
 
 <section id="video">
-  <video width="100%" autoplay controls muted loop src="assets/video/econo2020-1.mp4"></video>
+  <video width="100%" autoplay controls muted loop src="/assets/video/econo2020-1.mp4"></video>
 </section>
-<!-- 첫번째 문구 -->
-<section id="one" class="spotlight style1 bottom">
-  <span class="image fit main"><img src="images/econo-main1.jpg" alt="" /></span>
-  <div class="content">
-    <div class="container">
-      <div class="row">
-        <div class="col-4 col-12-medium">
+{ /*첫번째 문구*/ }
+<section id="one" className="spotlight style1 bottom">
+  <span className="image fit main"><img src="./images/econo-main1.jpg" alt="" /></span>
+  <div className="content">
+    <div className="container">
+      <div className="row">
+        <div className="col-4 col-12-medium">
           <header>
             <h2>에코노베이션 <br />당신을 초대합니다</h2>
             <p>
@@ -32,14 +33,14 @@
             </p>
           </header>
         </div>
-        <div class="col-4 col-12-medium">
+        <div className="col-4 col-12-medium">
           <p>
             단순히 프로그래밍 지식에만 치중하지 않고 다양한 지식을 서로 공유하여 융합형인재로 거듭날
             수 있습니다. 어플 , 웹 , 게임 , IoT, 머신러닝 등 IT 와 관련된 다양한 프로젝트 동아리
             회원들은 학기가 시작 되면 팀을 모아 프로젝트를 진행합니다.
           </p>
         </div>
-        <div class="col-4 col-12-medium">
+        <div className="col-4 col-12-medium">
           <p>
             멘토 멘티가 함께 한 주에 한 번씩 만나 주간 미팅을 진행합니다. 멘토들의 깊은 피드백과
             팀원들 간의 의견을 공유할 수 있습니다. 관심 분야가 같은 동아리 부원들과 스터디를 진행 할
@@ -49,13 +50,13 @@
       </div>
     </div>
   </div>
-  <a href="#two" class="goto-next scrolly">Next</a>
+  <a href="#two" className="goto-next scrolly">Next</a>
 </section>
 
-<!-- 두번째 문구  -->
-<section id="two" class="spotlight style2 right">
-  <span class="image fit main"><img src="images/econo-main2.jpg" alt="" /></span>
-  <div class="content">
+{ /*두번째 문구*/ }
+<section id="two" className="spotlight style2 right">
+  <span className="image fit main"><img src="images/econo-main2.jpg" alt="" /></span>
+  <div className="content">
     <header>
       <h2>CNU IT FRONTIER INCUBATING PROJECT</h2>
       <p>
@@ -65,21 +66,21 @@
       </p>
     </header>
 
-    <ul class="actions">
+    <ul className="actions">
       <li>
-        <a href="https://www.youtube.com/channel/UCepdmgc4w5EQIc1J0lqXVtA" class="button"
+        <a href="https://www.youtube.com/channel/UCepdmgc4w5EQIc1J0lqXVtA" className="button"
           >YouTube 페이지 방문하기</a
         >
       </li>
     </ul>
   </div>
-  <a href="#three" class="goto-next scrolly">Next</a>
+  <a href="#three" className="goto-next scrolly">Next</a>
 </section>
 
-<!-- 세번째 문구  -->
-<section id="three" class="spotlight style3 left">
-  <span class="image fit main bottom"><img src="images/에코노intro2.png" alt="" /></span>
-  <div class="content">
+{ /*세번째 문구*/ }
+<section id="three" className="spotlight style3 left">
+  <span className="image fit main bottom"><img src="images/에코노intro2.png" alt="" /></span>
+  <div className="content">
     <header>
       <h2>ECONO CURRICULUM</h2>
       <p>
@@ -88,31 +89,31 @@
       </p>
     </header>
   </div>
-  <a href="#four" class="goto-next scrolly">Next</a>
+  <a href="#four" className="goto-next scrolly">Next</a>
 </section>
 
-<!-- 네번째 문구 -->
-<section id="four" class="wrapper style1 special fade-up">
-  <div class="container">
-    <header class="major">
+{ /*네번째 문구*/ }
+<section id="four" className="wrapper style1 special fade-up">
+  <div className="container">
+    <header className="major">
       <h2>신입회원 선발 기준</h2>
     </header>
-    <div class="box alt">
-      <div class="row gtr-uniform">
-        <section class="col-4 col-6-medium col-12-xsmall">
-          <span class="icon solid alt major fa-fire"></span>
+    <div className="box alt">
+      <div className="row gtr-uniform">
+        <section className="col-4 col-6-medium col-12-xsmall">
+          <span className="icon solid alt major fa-fire"></span>
           <h3>열정</h3>
           <p>배움과 성장을 끊임없이 추구하는 사람</p>
         </section>
-        <section class="col-4 col-6-medium col-12-xsmall">
-          <span class="icon solid alt major fa-handshake"></span>
+        <section className="col-4 col-6-medium col-12-xsmall">
+          <span className="icon solid alt major fa-handshake"></span>
           <h3>협업</h3>
           <p>
             혼자가 아닌 팀의 소중함과 시너지를 이해하는 사람
           </p>
         </section>
-        <section class="col-4 col-6-medium col-12-xsmall">
-          <span class="icon solid alt major fa-smile"></span>
+        <section className="col-4 col-6-medium col-12-xsmall">
+          <span className="icon solid alt major fa-smile"></span>
           <h3>성실</h3>
           <p>
             계획 뿐만 아니라 의미 있는 결실을 이끌어 낼 수 있는 사람
@@ -123,11 +124,11 @@
   </div>
 </section>
 
-<!-- 다섯번째 문구 -->
-<section id="five" class="wrapper style2 special fade">
-  <div class="container">
+{ /*다섯번째 문구*/ }
+<section id="five" className="wrapper style2 special fade">
+  <div className="container">
     <h2>수상 경력</h2>
-    <header class="prize-left" class="chaning-text">
+    <header className="prize-left" className="chaning-text">
       <h2>~ 2018년</h2>
             <p></p>
             <p>2018 KOMIPO(중부발전) 정보 전략실 모바일 서비스 공모전 '우수상'</p>
@@ -146,7 +147,7 @@
             <p>2017 대구글로벌 게임컨퍼런스 '우수상'</p>
             <p>한국스마트미디어학회 '우수상'</p>
     </header>
-    <header class="prize-right">
+    <header className="prize-right">
       <h2>2019년</h2>
       <p></p>
       <p>2019 광주글로벌게임센터 인디스타즈 '최우수상'</p>
@@ -166,8 +167,8 @@
       <p>2019 희망이음 경진대회 '동상'</p>
     </header>
   </div>
-  <div class="container">
-    <header class="prize-left">
+  <div className="container">
+    <header className="prize-left">
       <h2>2020년</h2>
       <p></p>
       <p>제 2회 전남대학교 이노베이션 해커톤 대회 '대상', '금상', '은상', 'KT특별상'</p>
@@ -185,11 +186,17 @@
       <p>전남대학교 LINK+ 페스티벌 CNU-창업옥션 '동상'</p>
       <p>한국장학재단 모의피칭 발표 '장려상'</p>
     </header>
-    <header class="prize-right"></header>
+    <header className="prize-right"></header>
   </div>
-  <footer class="major">
-    <ul class="actions special">
-      <li><a href="/portfolio-2021-winter" class="button">포트폴리오 보기</a></li>
+  <footer className="major">
+    <ul className="actions special">
+      <li><a href="/portfolio-2021-winter" className="button">포트폴리오 보기</a></li>
     </ul>
   </footer>
 </section>
+
+      </div>
+  );
+}
+
+export default AboutComponent;

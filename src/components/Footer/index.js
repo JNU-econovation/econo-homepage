@@ -1,5 +1,15 @@
-      <!-- Footer -->
-      <footer id="footer">
+import { useEffect } from "react";
+
+function Footer() {
+
+  useEffect(() => {
+    let doc = document.querySelector("#titleBar .toggle");
+    doc.classList.add("pur");
+    let but = document.querySelectorAll(".button.primary");
+    but.forEach((el) => el.classList.add("pur"));
+  }, [])
+  return (
+    <footer id="footer">
         <ul class="icons">
           <li>
             <a href="https://www.facebook.com/econo.jnu.ac.kr" class="icon brands alt fa-facebook-f"><span
@@ -27,18 +37,7 @@
           <li>Design: HTML5 UP</li>
         </ul>
       </footer>
-      </div>
-      <div id="fb-root"></div>
+  );
+}
 
-      <!-- Scripts -->
-      <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v4.0">
-      </script>
-
-      <script src="assets/js/jquery.min.js"></script>
-      <script src="assets/js/jquery.scrolly.min.js"></script>
-      <script src="assets/js/jquery.dropotron.min.js"></script>
-      <script src="assets/js/jquery.scrollex.min.js"></script>
-      <script src="assets/js/browser.min.js"></script>
-      <script src="assets/js/breakpoints.min.js"></script>
-      <script src="assets/js/util.js"></script>
-      <script src="assets/js/main.js"></script>
+export default Footer;

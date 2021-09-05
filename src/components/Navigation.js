@@ -1,11 +1,12 @@
-<!-- @format -->
+function Navigation() {
+  return (
 <header id="header">
   <h1 id="logo">
-    <a href="/about_econo"><img width="100px" src="images/logo-nav.png" alt="" /></a>
+    <a href="/about"><img width="100px" src="images/logo-nav.png" alt="" /></a>
   </h1>
   <nav id="nav">
     <ul>
-      <li><a href="/about_econo">About</a></li>
+      <li><a href="/about">About</a></li>
       <li>
         <a href="#">DEV</a>
         <ul>
@@ -75,8 +76,8 @@
       <li>
         <a
           href="https://www.youtube.com/watch?v=0eYdEDy8x-U"
-          class="button primary"
-          style="background-color: #1f83c6"
+          className="button primary"
+          style={{'background-color': '#1f83c6'}}
           target="_blank"
         >
           SUMMER DEV 다시보기
@@ -84,5 +85,9 @@
       </li>
     </ul>
   </nav>
+  {/*winterdev를 위해 임시로 버튼 색을 변경해 둔 것. 끝나면 style태그 빼기*/}
 </header>
-<!-- winterdev를 위해 임시로 버튼 색을 변경해 둔 것. 끝나면 style태그 빼기 -->
+  );
+}
+
+export default Navigation;
