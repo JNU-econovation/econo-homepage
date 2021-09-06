@@ -2,12 +2,12 @@ function Recruit21Component() {
 return (<div id="main" className="wrapper style1">
   <div className="container">
     <header className="major pur">
-      <h2>2021-1 ECONOVATION RECRUIT</h2>
+      <h2>2021-2 ECONOVATION RECRUIT</h2>
     </header>
 
     <section style={{'display': 'flex', 'flex-direction': 'column', 'align-items': 'center'}}>
       <div id="mobile_btn">
-        <a href="https://forms.gle/pKMdqXyxUBj2gdap6" className="mobile_btn_free"
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScTw_UunjguPh1MXna3pWocVchx91Z_zM0AY00IDDj2oY0_Ng/viewform?usp=sf_link" className="mobile_btn_free"
           style={{'background-color': '#1F83C6'}}>Econovation 지원하기</a>
       </div>
 
@@ -21,14 +21,14 @@ return (<div id="main" className="wrapper style1">
         frameborder="0"></iframe>
       <br />
 
-      <img src="assets/21_1_recruit.png" width="100%" />
+      <img src="assets/21_2_recruit.jpg" width="100%" />
       <br />
       <br />
       <section style={{'width': '100%'}}>
-        <h2>Econovation 21기 신입회원 모집</h2>
+        <h2>Econovation 22기 신입회원 모집</h2>
         <blockquote>
           전남대학교 정보전산원 소속 개발 동아리 Econovation에서 어느덧
-          <b className="hl-r202">21기</b>
+          <b className="hl-r202">22기</b>
           신입회원분들을 모집합니다. 다양한 전공의 학생들이 함께 모여 누구나
           즐겁게 코딩할 수있는 공간을 지향합니다. Econovation은 개발, 기획, 디자인
           등 IT 분야에 관심이 있는 모든 분들께 열려있습니다.
@@ -39,7 +39,7 @@ return (<div id="main" className="wrapper style1">
         <h2>모집 분야</h2>
         <h4>
           Econovation에서는 웹, 애플리케이션, 게임, IoT, 머신러닝 등 모든
-          개발분야와 IT관련 디자인/기획 분야에서 활동해 주실 21기 회원들을
+          개발분야와 IT관련 디자인/기획 분야에서 활동해 주실 22기 회원들을
           모집합니다.
         </h4>
         <ul>
@@ -66,23 +66,23 @@ return (<div id="main" className="wrapper style1">
         <h2>모집 일정</h2>
         <ul>
           <li>
-            <h3>서류지원: 3월 2일(화) ~ 3월 19일(금) 23:59</h3>
+            <h3>서류지원: 9월 6일(월) ~ 9월 22일(수) 23:59</h3>
           </li>
           <li>
             <h3 style={{'margin-bottom': '0'}}>
-              온라인면접: 3월 22일(월) ~ 3월 24일(수)
+              온라인면접: 9월 26일(일) ~ 9월 28일(화)
             </h3>
             <div style={{'margin-bottom': '10px'}}>
               (서류 합격자에 한함, Google Meet)
             </div>
           </li>
           <li>
-            <h3 style={{'margin-bottom': '0'}}>최종 합격자 발표: 3월 25일(목)</h3>
+            <h3 style={{'margin-bottom': '0'}}>최종 합격자 발표: 9월 29일(수)</h3>
             <div style={{'margin-bottom': '10px'}}>(개별 공지)</div>
           </li>
 
           <li>
-            <h3>21기 신입회원 OT: 3월 26일(금)</h3>
+            <h3>22기 신입회원 OT: 9월 30일(목)</h3>
           </li>
         </ul>
         <br />
@@ -101,7 +101,7 @@ return (<div id="main" className="wrapper style1">
           <li>
             <h3>
               상단의
-              <a href="https://forms.gle/pKMdqXyxUBj2gdap6" className="recruit_a">지원하기</a>
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScTw_UunjguPh1MXna3pWocVchx91Z_zM0AY00IDDj2oY0_Ng/viewform?usp=sf_link" className="recruit_a">지원하기</a>
               클릭
             </h3>
           </li>
@@ -138,7 +138,7 @@ return (<div id="main" className="wrapper style1">
         <ul className="actions special">
           <li>
             <button id="kakao_chat"></button>
-            <a href="https://open.kakao.com/o/g2fyBrYc" className="button" style={{'background': 'rgba(247, 230, 0, 0.979)'}} target='_blank'><strong
+            <a href="http://pf.kakao.com/_laTLs" className="button" style={{'background': 'rgba(247, 230, 0, 0.979)'}} target='_blank'><strong
                 style={{'color': 'rgba(60, 30, 30, 1)', 'font-weight': '700'}}>카카오톡 오픈채팅방 가기</strong></a>
           </li>
         </ul>

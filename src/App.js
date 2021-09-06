@@ -13,7 +13,7 @@ function App() {
         <Route exact path="/about">
           <About />
         </Route>
-        <Route exact path="/recruit-2021-1">
+        <Route exact path="/recruit-2021-2">
           <Recruit21 />
         </Route>
         <Route exact path="/hackathon-2021">
