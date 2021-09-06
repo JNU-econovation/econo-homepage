@@ -18,7 +18,7 @@ function Navigation() {
       <li>
         <a href="#">RECRUIT</a>
         <ul>
-          <li><a href="/recruit-2021-1">21기</a></li>
+          <li><a href="/recruit-2021-1">22기</a></li>
         </ul>
       </li>
       <li>
@@ -75,12 +75,12 @@ function Navigation() {
       <li><a href="/faq">FAQ</a></li>
       <li>
         <a
-          href="https://www.youtube.com/watch?v=0eYdEDy8x-U"
+          href="https://docs.google.com/forms/d/e/1FAIpQLScTw_UunjguPh1MXna3pWocVchx91Z_zM0AY00IDDj2oY0_Ng/viewform?usp=sf_link"
           className="button primary"
           style={{'background-color': '#1f83c6'}}
           target="_blank"
         >
-          SUMMER DEV 다시보기
+          ECONOVATION 지원하기
         </a>
       </li>
     </ul>
