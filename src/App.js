@@ -1,9 +1,15 @@
 import {BrowserRouter as Router, Switch, Route, Link, Redirect} from 'react-router-dom';
 import About from './page/About'
+import SummerDev2020 from './page/dev/SummerDev2020'
+import WinterDev2021 from './page/dev/WinterDev2021'
 import Recruit21 from './page/recruit/21'
 import Hackathon2021 from './page/hackathon/2021'
 import Hackathon2020 from './page/hackathon/2020'
 import Hackathon2019 from './page/hackathon/2019'
+import Portfolio2020Winter from './page/portfolio/Portfolio2020Winter'
+import Portfolio2020Summer from './page/portfolio/Portfolio2020Summer'
+import Portfolio2021Winter from './page/portfolio/Portfolio2021Winter'
+import Portfolio2021Summer from './page/portfolio/Portfolio2021Summer'
 import Faq from './page/Faq'
 
 function App() {
@@ -12,6 +18,12 @@ function App() {
       <Switch>
         <Route exact path="/about">
           <About />
+        </Route>
+        <Route exact path="/winter-dev-2021">
+          <WinterDev2021 />
+        </Route>
+        <Route exact path="/summer-dev-2020">
+          <SummerDev2020 />
         </Route>
         <Route exact path="/recruit-2021-2">
           <Recruit21 />
@@ -24,6 +36,18 @@ function App() {
         </Route>
         <Route exact path="/hackathon-2019">
           <Hackathon2019 />
+        </Route>
+        <Route exact path="/portfolio-2020-winter">
+          <Portfolio2020Winter />
+        </Route>
+        <Route exact path="/portfolio-2020-summer">
+          <Portfolio2020Summer />
+        </Route>
+        <Route exact path="/portfolio-2021-winter">
+          <Portfolio2021Winter />
+        </Route>
+        <Route exact path="/portfolio-2021-summer">
+          <Portfolio2021Summer />
         </Route>
         <Route exact path="/faq">
           <Faq />

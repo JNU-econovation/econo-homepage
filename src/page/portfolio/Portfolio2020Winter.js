@@ -1,16 +1,16 @@
 import Navigation from '../../components/Navigation.js';
-import SummerDev20 from '../../components/dev/SummerDev20';
+import Winter20 from '../../components/portfolio/Winter20';
 import Footer from '../../components/Footer';
 
-function SummerDev2020() {
+function Portfolio2020Winter() {
   
   return (
     <div id="page-wrapper">
       <Navigation />
-      <SummerDev20 /> 
+      <Winter20 /> 
       <Footer />
     </div>
   );
 }
 
-export default SummerDev2020;
+export default Portfolio2020Winter;
