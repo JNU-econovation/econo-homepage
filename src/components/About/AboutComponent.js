@@ -190,7 +190,7 @@ function AboutComponent() {
   </div>
   <footer className="major">
     <ul className="actions special">
-      <li><a href="/portfolio-2021-winter" className="button">포트폴리오 보기</a></li>
+      <li><a href="/portfolio-2021-summer" className="button">포트폴리오 보기</a></li>
     </ul>
   </footer>
 </section>
