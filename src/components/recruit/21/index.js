@@ -128,9 +128,9 @@ return (<div id="main" className="wrapper style1">
       </section>
 
       <div style={{'text-align': 'center'}}>
-        <h2>카카오톡 오픈 채팅방</h2>
+        <h2>카카오톡 채널</h2>
         <h4 style={{'margin-top': '-20px'}}>
-          그 외 궁금한 사항은 카카오톡 오픈 채팅방을 이용해 주세요
+          그 외 궁금한 사항은 카카오톡 채널을 이용해 주세요
         </h4>
       </div>
 
@@ -139,7 +139,7 @@ return (<div id="main" className="wrapper style1">
           <li>
             <button id="kakao_chat"></button>
             <a href="http://pf.kakao.com/_laTLs" className="button" style={{'background': 'rgba(247, 230, 0, 0.979)'}} target='_blank'><strong
-                style={{'color': 'rgba(60, 30, 30, 1)', 'font-weight': '700'}}>카카오톡 오픈채팅방 가기</strong></a>
+                style={{'color': 'rgba(60, 30, 30, 1)', 'font-weight': '700'}}>카카오톡 채널 가기</strong></a>
           </li>
         </ul>
       </footer>
