@@ -10,6 +10,7 @@ import Portfolio2020Winter from './page/portfolio/Portfolio2020Winter'
 import Portfolio2020Summer from './page/portfolio/Portfolio2020Summer'
 import Portfolio2021Winter from './page/portfolio/Portfolio2021Winter'
 import Portfolio2021Summer from './page/portfolio/Portfolio2021Summer'
+import NotFound from './page/NotFound'
 import Faq from './page/Faq'
 
 function App() {
@@ -18,6 +19,9 @@ function App() {
       <Switch>
         <Route exact path="/about">
           <About />
+        </Route>
+        <Route exact path="/about_econo">
+          <Redirect to="/about" />
         </Route>
         <Route exact path="/winter-dev-2021">
           <WinterDev2021 />
@@ -54,6 +58,9 @@ function App() {
         </Route>
         <Route exact path="/">
           <Redirect to="/about" />
+        </Route>
+        <Route path="*">
+          <NotFound />
         </Route>
       </Switch>
     </Router>
