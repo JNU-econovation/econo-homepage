@@ -38,7 +38,7 @@ return (<div id="main" className="wrapper style1">
 
         <h2>모집 분야</h2>
         <h4>
-          Econovation에서는 웹, 애플리케이션, 게임, IoT, 머신러닝 등 모든
+          Econovation에서는 웹, 애플리케이션, 게임, IoT, AI, AR/VR 등 모든
           개발분야와 IT관련 디자인/기획 분야에서 활동해 주실 22기 회원들을
           모집합니다.
         </h4>
@@ -49,7 +49,8 @@ return (<div id="main" className="wrapper style1">
           </li>
           <li>게임 - 일상의 소소한 즐거움이 되어주는 게임서비스</li>
           <li>IoT - 무선 통신을 통해 각종 사물을 연결하는 사물인터넷</li>
-          <li>머신러닝 - 머신러닝을 포함한 인공지능 분야 모델링</li>
+          <li>AI - 머신러닝을 포함한 인공지능 분야 모델링</li>
+          <li>AR/VR - AR/VR 기기를 통해 사용자에게 제공되는 가상환경 컴퓨터 모델링 서비스</li>
           <li>
             IT관련 디자인/기획 - IT서비스를 위한 기획과 UI 디자인 혹은 시스템
             디자인
@@ -99,10 +100,10 @@ return (<div id="main" className="wrapper style1">
             <h3>econovation.kr 접속</h3>
           </li>
           <li>
-            <h3>
-              상단의
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLScTw_UunjguPh1MXna3pWocVchx91Z_zM0AY00IDDj2oY0_Ng/viewform?usp=sf_link" className="recruit_a">지원하기</a>
-              클릭
+            <h3 style={{"display":"flex"}}>
+              상단의 
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLScTw_UunjguPh1MXna3pWocVchx91Z_zM0AY00IDDj2oY0_Ng/viewform?usp=sf_link" className="recruit_a" > 지원하기</a>
+               클릭
             </h3>
           </li>
           <li>
