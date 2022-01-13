@@ -1,5 +1,5 @@
 import Navigation from '../../components/Navigation.js';
-import Winter21 from '../../components/portfolio/Winter21';
+import Winter22 from '../../components/portfolio/Winter22';
 import Footer from '../../components/Footer';
 
 function Portfolio2021Winter() {
@@ -7,7 +7,7 @@ function Portfolio2021Winter() {
   return (
     <div id="page-wrapper">
       <Navigation />
-      <Winter21 /> 
+      <Winter22 /> 
       <Footer />
     </div>
   );
