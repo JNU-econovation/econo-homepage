@@ -16,7 +16,7 @@ function Winter21() {
     return (
         <div id="main" class="wrapper style1">
             <div class="container">
-                <img src="assets/2021_winter_dev/[구글폼배너] 2021 WINTER DEV-01.png" width="100%" />
+                <img src="assets/2022_winter_dev/2022 WINTER DEV-01.jpg" width="100%" />
                 <header>
                     <h2 class="big-header">2021-2학기 에코노베이션이 개발한 프로젝트 미리보기</h2>
                 </header>
