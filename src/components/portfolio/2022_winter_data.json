@@ -84,7 +84,7 @@
         "id": 3,
         "field": "APP",
         "project_name": "굿데이(GoodDay)",
-        "team": "네잎클로버(임채승, 최명선, 김시형)",
+        "team": "네잎클로버(임채승, 최명선, 김시형, 김서하)",
         "short_description": "이별로 인해 무너진 일상의 회복을 돕는 이별극복 서포팅(Supporting) 어플리케이션",
         "represent_img": "assets/2022_winter_dev/portfolio/네잎클로버.png",
         "hashtags": ["#굿데이", "#네잎클로버", "#MBTI", "#IOS", "#Swift", "#이별극복서포팅"],
