@@ -1,0 +1,392 @@
+@font-face {
+    font-family: 'KoPubDotumMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '116watermelon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.0/116watermelon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    }
+
+@import url('http://fonts.cdnfonts.com/css/nexa');
+
+body {
+    background-color:#1D1D29;
+    font-family: 'KoPubDotumMedium';
+}
+
+html {
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+.nav {
+    font-size: 18px;
+    margin-left: auto;
+}
+
+.nav > li {
+    margin-left: 18px;
+    padding: 1px 14px;
+}
+
+.purple-box {
+    background: #3A1CB3;
+    border: 1px solid #3A1CB3;
+    box-sizing: border-box;
+}
+
+.device-height {
+    height: 90vh;
+    min-height: 100%;
+}
+
+.watermelon-font {
+    font-family: '116watermelon';
+}
+
+.nexa-font {
+    font-family: 'Nexa', sans-serif;
+}
+
+.font-weight-700 {
+    font-weight: 700;
+}
+
+.width-1400 {
+    display: none;
+}
+
+.faq {
+    background-image: url('../images/faq_button_off.png');
+    /* box-shadow: -3px -3px 7px rgba(54, 13, 216, 0.246749), 3px 3px 7px rgba(12, 0, 63, 0.564931); */
+    box-shadow: -8px -8px 20px rgba(122, 134, 151, 0.101672), 8px 8px 20px rgba(0, 0, 0, 0.353065);
+    background-repeat: no-repeat;
+    background-color: transparent;
+    background-position: 0px 0px;
+    border: 0px solid;
+    background-size: cover;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    float: right;
+    margin-right: 5%;
+}
+
+.faq-container {
+    width: 100%;
+    display: flex;
+}
+
+
+.faq-label{
+    background-color: transparent;
+    width: 100%;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: white;
+    border: 0px solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.faq-line {
+    border-top: 0.5px #B5B5B5 solid ;
+    width: 95%;
+    background: transparent;
+}
+
+.faq-q {
+    width: 95%;
+    font-weight: 300;
+    font-size: 1.6rem;
+    border-radius: 0px 0px 3rem 3rem ;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#111216, #111216), linear-gradient(176deg, rgba(2,0,36,1) 0%, rgba(24,11,93,1) 38%, rgba(58,28,179,0.3) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;   
+}
+
+.faq-q-content {
+    padding: 2.2rem;
+}
+
+.notice-icon {
+    height: 52px;
+}
+
+.notice-icon-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 174px;
+    width: 174px;
+    border-radius: 50%;
+    margin-left: 56px;
+    border: 2px solid transparent;
+
+    background-image: linear-gradient(#1B1B26, #1B1B26), linear-gradient(130deg, rgba(58,28,179, 0.5) 0%, rgba(58,28,179,0) 48%, rgba(26,28,32,1) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;   
+
+    box-shadow: -8px -8px 20px rgba(122, 134, 151, 0.101672), 8px 8px 20px rgba(0, 0, 0, 0.353065);
+    mix-blend-mode: normal;
+}
+
+.winter-dev-button {
+    color: white;
+    background: #1B1B26;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid transparent;
+    background-image: linear-gradient(#1B1B26, #1B1B26), linear-gradient(130deg, rgba(65,70,75,1) 0%, rgba(14,16,19,1) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;   
+
+    box-shadow: -8px -8px 20px rgba(122, 134, 151, 0.101672), 8px 8px 20px rgba(0, 0, 0, 0.353065);
+    mix-blend-mode: normal;
+
+    cursor: pointer;
+}
+
+.winter-dev-button > a {
+    color: white;
+    text-decoration: none;
+}
+
+.winter-dev-button:hover {
+    color: white
+}
+
+.event-text {
+    font-family: 'KoPubDotumMedium';
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 190%;
+    margin-bottom: 7rem;    
+}
+
+.event-notice-text {
+    font-family: 'KoPubDotumMedium';
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 180%;
+}
+
+.nav-button {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-button:hover {
+    text-decoration: none;
+    color:white;
+}
+
+.notice-icons {
+    display: flex;
+}
+
+.cut-poster-img{
+    position: absolute; 
+    clip: rect(52.5rem, 42.5rem, 77.7rem, 0px);
+    margin-top: -52.5rem;
+    margin-left: -21.25rem;
+    width: 42.5rem
+}
+
+.intro-group-left {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.intro-team-name {
+    font-weight: 200;
+    font-size: 30px;
+    margin-bottom: 64px;
+}
+
+.intro-group-right {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.intro-time {
+    font-weight: 300;
+    font-size: 30px;
+    margin-bottom: 70px;
+}
+
+.intro-intro {
+    width: 100%;
+}
+
+.share-button {
+    box-shadow: -8px -8px 20px rgba(122, 134, 151, 0.101672), 8px 8px 20px rgba(0, 0, 0, 0.353065);
+    color: white;
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid transparent;
+    background-image: linear-gradient(#3A1CB3, #3A1CB3),  linear-gradient(130deg, rgba(92,68,188,1) 0%, rgba(36,18,109,1) 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;   
+}
+
+.share-button:hover{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.project-button {
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+    border: 0px solid;
+    margin-bottom: 1.75rem;
+    text-align: start;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.project-button-mobile {
+    background-color: transparent;
+    color: white;
+    text-decoration: underline;
+    border: 0px solid;
+    margin-bottom: 1.75rem;
+    text-align: start;
+    font-weight: 300;
+    font-size: 2rem;
+}
+
+.project-button:hover {
+    color: white;
+}
+
+.project-button-moble:hover {
+    color: white;
+}
+
+.project-button-selected {
+    color: #3A1CB3;
+    text-decoration: none;
+}
+
+.project-button-selected-mobile {
+    color: #3A1CB3;
+    text-decoration: none;
+}
+
+.project-button-selected:hover {
+    color: #3A1CB3;
+}
+
+.project-button-selected-mobile:hover {
+    color: #3A1CB3;
+}
+
+.project-title {
+    font-weight: 700;
+    font-size: 1.8rem;
+    border-bottom: 2.2rem;
+    padding-bottom: 4px;
+    border-bottom: 2px solid white ;
+    margin-bottom: 2.2rem;
+    width: fit-content;
+}
+
+.project-title-mobile{
+    font-weight: 700;
+    font-size: 2.8rem;
+    border-bottom: 2.2rem;
+    padding-bottom: 4px;
+    border-bottom: 2px solid white ;
+    margin-bottom: 2.2rem;
+    width: fit-content;
+}
+
+.project-content {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.project-content-mobile {
+    font-weight: 300;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+
+#paricipation-period {
+    margin-bottom: 19.2rem;
+}
+
+#event-sun {
+    margin-bottom: 7.7rem;
+}
+
+#event2-poster {
+    margin-right: 13.4rem;
+}
+
+#winter-dev-intro-mobile {
+    display: none;
+}
+
+#project-mobile {
+    display: none;
+}
+
+#intro-right-mobile-button {
+    display: none !important;
+}
+
+#intro-left-mobile-button {
+    display: none !important;
+}
+
+#intro-left-mobile {
+    margin-right: 13.4rem;
+}
+
+.intro-group-left-mobile {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 3.4rem;
+}
+
+.intro-team-name-mobile {
+    font-size: 2.2rem;
+    font-weight: 300;
+    margin-bottom: 7.4rem;
+}
+
+.intro-group-right-mobile {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+}
+
+.intro-time-mobile {
+    font-size: 2.6rem;
+    font-weight: 300;
+    margin-bottom: 5.4rem;
+}
