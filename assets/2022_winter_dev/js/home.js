@@ -2,10 +2,10 @@ $(document).ready(function () {
     $(`.faq`).click(function () {
         var faq_index = $(this).data("number");
         if ($(`#faq${faq_index}-q`).css("display") == "none") {
-            $(this).css("background-image", 'url("public/images/faq_button_on.png")');
+            $(this).css("background-image", 'url("assets/2022_winter_dev/images/faq_button_on.png")');
             $(this).css("box-shadow", "-3px -3px 7px rgba(54, 13, 216, 0.246749), 3px 3px 7px rgba(12, 0, 63, 0.564931)");
         } else {
-            $(this).css("background-image", 'url("public/images/faq_button_off.png")');
+            $(this).css("background-image", 'url("assets/2022_winter_dev/images/faq_button_off.png")');
             $(this).css("box-shadow", "-8px -8px 20px rgba(122, 134, 151, 0.101672), 8px 8px 20px rgba(0, 0, 0, 0.353065)");
         }
         $(`#faq${faq_index}-q`).slideToggle();

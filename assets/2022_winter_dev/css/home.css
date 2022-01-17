@@ -1,22 +1,22 @@
 @font-face {
-    font-family: 'KoPubDotumMedium';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff') format('woff');
+    font-family: "KoPubDotumMedium";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/KoPubDotumMedium.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: '116watermelon';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.0/116watermelon.woff') format('woff');
+    font-family: "116watermelon";
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.0/116watermelon.woff") format("woff");
     font-weight: normal;
     font-style: normal;
-    }
+}
 
-@import url('http://fonts.cdnfonts.com/css/nexa');
+@import url("https://fonts.cdnfonts.com/css/nexa");
 
 body {
-    background-color:#1D1D29;
-    font-family: 'KoPubDotumMedium';
+    background-color: #1d1d29;
+    font-family: "KoPubDotumMedium";
 }
 
 html {
@@ -35,8 +35,8 @@ html {
 }
 
 .purple-box {
-    background: #3A1CB3;
-    border: 1px solid #3A1CB3;
+    background: #3a1cb3;
+    border: 1px solid #3a1cb3;
     box-sizing: border-box;
 }
 
@@ -46,11 +46,11 @@ html {
 }
 
 .watermelon-font {
-    font-family: '116watermelon';
+    font-family: "116watermelon";
 }
 
 .nexa-font {
-    font-family: 'Nexa', sans-serif;
+    font-family: "Nexa", sans-serif;
 }
 
 .font-weight-700 {
@@ -62,7 +62,7 @@ html {
 }
 
 .faq {
-    background-image: url('../images/faq_button_off.png');
+    background-image: url("../images/faq_button_off.png");
     /* box-shadow: -3px -3px 7px rgba(54, 13, 216, 0.246749), 3px 3px 7px rgba(12, 0, 63, 0.564931); */
     box-shadow: -8px -8px 20px rgba(122, 134, 151, 0.101672), 8px 8px 20px rgba(0, 0, 0, 0.353065);
     background-repeat: no-repeat;
@@ -82,8 +82,7 @@ html {
     display: flex;
 }
 
-
-.faq-label{
+.faq-label {
     background-color: transparent;
     width: 100%;
     font-weight: 500;
@@ -96,7 +95,7 @@ html {
 }
 
 .faq-line {
-    border-top: 0.5px #B5B5B5 solid ;
+    border-top: 0.5px #b5b5b5 solid;
     width: 95%;
     background: transparent;
 }
@@ -105,11 +104,11 @@ html {
     width: 95%;
     font-weight: 300;
     font-size: 1.6rem;
-    border-radius: 0px 0px 3rem 3rem ;
+    border-radius: 0px 0px 3rem 3rem;
     border: 2px solid transparent;
-    background-image: linear-gradient(#111216, #111216), linear-gradient(176deg, rgba(2,0,36,1) 0%, rgba(24,11,93,1) 38%, rgba(58,28,179,0.3) 100%);
+    background-image: linear-gradient(#111216, #111216), linear-gradient(176deg, rgba(2, 0, 36, 1) 0%, rgba(24, 11, 93, 1) 38%, rgba(58, 28, 179, 0.3) 100%);
     background-origin: border-box;
-    background-clip: content-box, border-box;   
+    background-clip: content-box, border-box;
 }
 
 .faq-q-content {
@@ -131,9 +130,9 @@ html {
     margin-left: 56px;
     border: 2px solid transparent;
 
-    background-image: linear-gradient(#1B1B26, #1B1B26), linear-gradient(130deg, rgba(58,28,179, 0.5) 0%, rgba(58,28,179,0) 48%, rgba(26,28,32,1) 100%);
+    background-image: linear-gradient(#1b1b26, #1b1b26), linear-gradient(130deg, rgba(58, 28, 179, 0.5) 0%, rgba(58, 28, 179, 0) 48%, rgba(26, 28, 32, 1) 100%);
     background-origin: border-box;
-    background-clip: content-box, border-box;   
+    background-clip: content-box, border-box;
 
     box-shadow: -8px -8px 20px rgba(122, 134, 151, 0.101672), 8px 8px 20px rgba(0, 0, 0, 0.353065);
     mix-blend-mode: normal;
@@ -141,7 +140,7 @@ html {
 
 .winter-dev-button {
     color: white;
-    background: #1B1B26;
+    background: #1b1b26;
     text-decoration: none;
 
     display: flex;
@@ -149,9 +148,9 @@ html {
     align-items: center;
 
     border: 1px solid transparent;
-    background-image: linear-gradient(#1B1B26, #1B1B26), linear-gradient(130deg, rgba(65,70,75,1) 0%, rgba(14,16,19,1) 100%);
+    background-image: linear-gradient(#1b1b26, #1b1b26), linear-gradient(130deg, rgba(65, 70, 75, 1) 0%, rgba(14, 16, 19, 1) 100%);
     background-origin: border-box;
-    background-clip: content-box, border-box;   
+    background-clip: content-box, border-box;
 
     box-shadow: -8px -8px 20px rgba(122, 134, 151, 0.101672), 8px 8px 20px rgba(0, 0, 0, 0.353065);
     mix-blend-mode: normal;
@@ -165,19 +164,19 @@ html {
 }
 
 .winter-dev-button:hover {
-    color: white
+    color: white;
 }
 
 .event-text {
-    font-family: 'KoPubDotumMedium';
+    font-family: "KoPubDotumMedium";
     font-size: 2rem;
     font-weight: 700;
     line-height: 190%;
-    margin-bottom: 7rem;    
+    margin-bottom: 7rem;
 }
 
 .event-notice-text {
-    font-family: 'KoPubDotumMedium';
+    font-family: "KoPubDotumMedium";
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 180%;
@@ -190,19 +189,19 @@ html {
 
 .nav-button:hover {
     text-decoration: none;
-    color:white;
+    color: white;
 }
 
 .notice-icons {
     display: flex;
 }
 
-.cut-poster-img{
-    position: absolute; 
+.cut-poster-img {
+    position: absolute;
     clip: rect(52.5rem, 42.5rem, 77.7rem, 0px);
     margin-top: -52.5rem;
     margin-left: -21.25rem;
-    width: 42.5rem
+    width: 42.5rem;
 }
 
 .intro-group-left {
@@ -243,12 +242,12 @@ html {
     align-items: center;
 
     border: 1px solid transparent;
-    background-image: linear-gradient(#3A1CB3, #3A1CB3),  linear-gradient(130deg, rgba(92,68,188,1) 0%, rgba(36,18,109,1) 100%);
+    background-image: linear-gradient(#3a1cb3, #3a1cb3), linear-gradient(130deg, rgba(92, 68, 188, 1) 0%, rgba(36, 18, 109, 1) 100%);
     background-origin: border-box;
-    background-clip: content-box, border-box;   
+    background-clip: content-box, border-box;
 }
 
-.share-button:hover{
+.share-button:hover {
     text-decoration: none;
     color: white;
     cursor: pointer;
@@ -285,21 +284,21 @@ html {
 }
 
 .project-button-selected {
-    color: #3A1CB3;
+    color: #3a1cb3;
     text-decoration: none;
 }
 
 .project-button-selected-mobile {
-    color: #3A1CB3;
+    color: #3a1cb3;
     text-decoration: none;
 }
 
 .project-button-selected:hover {
-    color: #3A1CB3;
+    color: #3a1cb3;
 }
 
 .project-button-selected-mobile:hover {
-    color: #3A1CB3;
+    color: #3a1cb3;
 }
 
 .project-title {
@@ -307,17 +306,17 @@ html {
     font-size: 1.8rem;
     border-bottom: 2.2rem;
     padding-bottom: 4px;
-    border-bottom: 2px solid white ;
+    border-bottom: 2px solid white;
     margin-bottom: 2.2rem;
     width: fit-content;
 }
 
-.project-title-mobile{
+.project-title-mobile {
     font-weight: 700;
     font-size: 2.8rem;
     border-bottom: 2.2rem;
     padding-bottom: 4px;
-    border-bottom: 2px solid white ;
+    border-bottom: 2px solid white;
     margin-bottom: 2.2rem;
     width: fit-content;
 }
@@ -333,7 +332,6 @@ html {
     font-size: 2.5rem;
     margin-bottom: 20px;
 }
-
 
 #paricipation-period {
     margin-bottom: 19.2rem;
