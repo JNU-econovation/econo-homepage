@@ -15,6 +15,11 @@ function Navigation() {
                         <a href="#">DEV</a>
                         <ul>
                             <li>
+                                <a href="/winter-dev-2022" target="_blank">
+                                    Winter 2022
+                                </a>
+                            </li>
+                            <li>
                                 <a href="/summer-dev-2021" target="_blank">
                                     Summer 2021
                                 </a>
@@ -93,13 +98,8 @@ function Navigation() {
                         <a href="/faq">FAQ</a>
                     </li>
                     <li>
-                        <a
-                            href="https://docs.google.com/forms/d/e/1FAIpQLScTw_UunjguPh1MXna3pWocVchx91Z_zM0AY00IDDj2oY0_Ng/viewform?usp=sf_link"
-                            className="button primary"
-                            style={{ "background-color": "#1f83c6" }}
-                            target="_blank"
-                        >
-                            ECONOVATION 지원하기
+                        <a href="/winter-dev-2022" className="button primary" style={{ "background-color": "#1f83c6" }} target="_blank">
+                            WINTER DEV 구경하기
                         </a>
                     </li>
                 </ul>
