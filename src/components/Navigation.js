@@ -15,7 +15,7 @@ function Navigation() {
                         <a href="#">DEV</a>
                         <ul>
                             <li>
-                                <a href="/winter-dev-2022" target="_blank">
+                                <a href="/winter-dev-2022/" target="_blank">
                                     Winter 2022
                                 </a>
                             </li>
@@ -98,7 +98,7 @@ function Navigation() {
                         <a href="/faq">FAQ</a>
                     </li>
                     <li>
-                        <a href="/winter-dev-2022" className="button primary" style={{ "background-color": "#1f83c6" }} target="_blank">
+                        <a href="/winter-dev-2022/" className="button primary" style={{ "background-color": "#1f83c6" }} target="_blank">
                             WINTER DEV 구경하기
                         </a>
                     </li>
