@@ -200,6 +200,12 @@
                 "title": "기술 소개",
                 "content": ["PC를 지원하기 위해서 유니티 엔진을 통해 c#으로 개발되었습니다.", "그래픽 작업은 포토샵과 에이스프라이트를 이용했습니다.", "깃을 사용하여 버전관리를 진행했습니다."]
             }
+        ],
+        "link": [
+            {
+                "title": "팜터틀 데모 빌드 링크",
+                "uri": "https://drive.google.com/file/d/1PKBOIdShEFvHGc3OGzI4hoVWQ9yHkyZ2/view?usp=sharing"
+            }
         ]
     },
     "8": {
