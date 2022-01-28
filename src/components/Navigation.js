@@ -98,7 +98,7 @@ function Navigation() {
                         <a href="/faq">FAQ</a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/watch?v=FsTyUanbqG8" className="button primary" style={{ "background-color": "white", "font-weight": "bold" }} target="_blank">
+                        <a href="https://youtu.be/irk_4d08TWg" className="button primary" style={{ "background-color": "white", "font-weight": "bold" }} target="_blank">
                             <div style={{ display: "flex", "align-items": "center", gap: "3px", width: "100%", "background-color": "white", "font-weight": "bold", color: "#0000FE" }}>
                                 Winter Dev LIVE<div style={{ "background-color": "#0000FE", width: "7px", height: "7px", "border-radius": "3.5px", "margin-bottom": "8px" }}></div>
                             </div>
