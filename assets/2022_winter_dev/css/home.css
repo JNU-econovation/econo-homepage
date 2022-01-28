@@ -29,7 +29,7 @@ html {
     margin-left: auto;
 }
 
-.nav > li {
+.nav>li {
     margin-left: 18px;
     padding: 1px 14px;
 }
@@ -158,7 +158,7 @@ html {
     cursor: pointer;
 }
 
-.winter-dev-button > a {
+.winter-dev-button>a {
     color: white;
     text-decoration: none;
 }
