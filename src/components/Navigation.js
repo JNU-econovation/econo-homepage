@@ -103,25 +103,13 @@ function Navigation() {
           </li>
           <li>
             <a
-              href="https://youtu.be/irk_4d08TWg"
+              href="https://forms.gle/Lgsd3mVK6pgufax5A"
               className="button primary"
-              style={{ "background-color": "white", "font-weight": "bold" }}
+              style={{ "background-color": "#0000FE", "font-weight": "bold" }}
               target="_blank"
               rel="noreferrer"
             >
-              <div
-                style={{
-                  display: "flex",
-                  "align-items": "center",
-                  gap: "3px",
-                  width: "100%",
-                  "background-color": "white",
-                  "font-weight": "bold",
-                  color: "#0000FE",
-                }}
-              >
-                Winter Dev 다시보기
-              </div>
+              23기 지원하기
             </a>
           </li>
         </ul>

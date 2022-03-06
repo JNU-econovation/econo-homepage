@@ -15,7 +15,7 @@ function Recruit22Component() {
         >
           <div id="mobile_btn">
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLScTw_UunjguPh1MXna3pWocVchx91Z_zM0AY00IDDj2oY0_Ng/viewform?usp=sf_link"
+              href="https://forms.gle/Lgsd3mVK6pgufax5A"
               className="mobile_btn_free"
               style={{ "background-color": "#1F83C6" }}
             >
@@ -133,7 +133,7 @@ function Recruit22Component() {
                 <h3 style={{ display: "flex" }}>
                   상단의
                   <a
-                    href="https://docs.google.com/forms/d/e/1FAIpQLScTw_UunjguPh1MXna3pWocVchx91Z_zM0AY00IDDj2oY0_Ng/viewform?usp=sf_link"
+                    href="https://forms.gle/Lgsd3mVK6pgufax5A"
                     className="recruit_a"
                   >
                     {" "}
