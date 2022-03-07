@@ -1,13 +1,12 @@
-import Navigation from '../../components/Navigation.js';
-import Winter22 from '../../components/portfolio/Winter22';
-import Footer from '../../components/Footer';
+import Navigation from "../../components/Navigation.js";
+import Winter21 from "../../components/portfolio/Winter21";
+import Footer from "../../components/Footer";
 
 function Portfolio2021Winter() {
-  
   return (
     <div id="page-wrapper">
       <Navigation />
-      <Winter22 /> 
+      <Winter21 />
       <Footer />
     </div>
   );
