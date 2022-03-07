@@ -99,7 +99,7 @@ function Recruit22Component() {
               </li>
               <li>
                 <h3 style={{ "margin-bottom": "0" }}>
-                  온라인면접: 3월 25일(일) ~ 3월 27일(화)
+                  온라인면접: 3월 25일(금) ~ 3월 27일(일)
                 </h3>
                 <div style={{ "margin-bottom": "10px" }}>
                   (서류 합격자에 한함, Google Meet)
@@ -107,7 +107,7 @@ function Recruit22Component() {
               </li>
               <li>
                 <h3 style={{ "margin-bottom": "0" }}>
-                  최종 합격자 발표: 3월 29일(수)
+                  최종 합격자 발표: 3월 29일(화)
                 </h3>
                 <div style={{ "margin-bottom": "10px" }}>(개별 공지)</div>
               </li>
@@ -137,7 +137,7 @@ function Recruit22Component() {
                     className="recruit_a"
                   >
                     {" "}
-                    지원하기
+                    23기 지원하기
                   </a>
                   클릭
                 </h3>
