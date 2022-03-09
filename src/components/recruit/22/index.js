@@ -52,7 +52,12 @@ function Recruit22Component() {
             <h2>Econovation 23기 신입회원 모집</h2>
             <blockquote>
               전남대학교 정보전산원 소속 개발 동아리 Econovation에서 어느덧
-              <b className="hl-r202">23기</b>
+              <b
+                className="hl-r202"
+                style={{ display: "inline-block", padding: "0 0 3px 5px" }}
+              >
+                23기
+              </b>
               신입회원분들을 모집합니다. 다양한 전공의 학생들이 함께 모여 누구나
               즐겁게 코딩할 수있는 공간을 지향합니다. Econovation은 개발, 기획,
               디자인 등 IT 분야에 관심이 있는 모든 분들께 열려있습니다.
@@ -135,6 +140,7 @@ function Recruit22Component() {
                   <a
                     href="https://forms.gle/Lgsd3mVK6pgufax5A"
                     className="recruit_a"
+                    style={{ "margin-left": "10px" }}
                   >
                     {" "}
                     23기 지원하기
