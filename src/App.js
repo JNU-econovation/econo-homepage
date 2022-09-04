@@ -36,7 +36,7 @@ function App() {
         <Route exact path="/summer-dev-2020">
           <SummerDev2020 />
         </Route>
-        <Route exact path="/recruit-2022-1">
+        <Route exact path="/recruit-2022-2">
           <Recruit22 />
         </Route>
         <Route exact path="/hackathon-2021">

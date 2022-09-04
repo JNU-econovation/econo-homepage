@@ -1,5 +1,5 @@
 import Navigation from "../../../components/Navigation";
-import Recruit22Component from "../../../components/recruit/22";
+import Recruit22Component from "../../../components/recruit/22/index_2";
 import Footer from "../../../components/Footer";
 
 function Recruit22() {
