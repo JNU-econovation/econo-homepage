@@ -111,7 +111,7 @@ function Recruit22Component() {
               </li>
               <li>
                 <h3 style={{ "margin-bottom": "0" }}>
-                  최종 합격자 발표: 9월 28일(화)
+                  최종 합격자 발표: 9월 28일(수)
                 </h3>
                 <div style={{ "margin-bottom": "10px" }}>(개별 공지)</div>
               </li>
