@@ -1,12 +1,21 @@
-import { componentDidMount } from "react";
+import { useEffect } from "react";
 
 function Footer() {
-  componentDidMount = () => {
-    let doc = document.querySelector("#titleBar .toggle");
-    doc.classList.add("pur");
-    let but = document.querySelectorAll(".button.primary");
-    but.forEach((el) => el.classList.add("pur"));
-  };
+  useEffect(() => {
+    const onPageLoad = () => {
+      let doc = document.querySelector("#titleBar .toggle");
+      doc.classList.add("pur");
+      let but = document.querySelectorAll(".button.primary");
+      but.forEach((el) => el.classList.add("pur"));
+    };
+
+    if (document.readyState === "complete") {
+      onPageLoad();
+    } else {
+      window.addEventListener("load", onPageLoad);
+      return () => window.removeEventListener("load", onPageLoad);
+    }
+  }, []);
   return (
     <footer id="footer">
       <ul class="icons">
