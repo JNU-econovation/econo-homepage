@@ -67,7 +67,7 @@ function Recruit22Component() {
 
             <h2>모집 분야</h2>
             <h4>
-              Econovation에서는 웹, 애플리케이션, 게임, IoT, AI, AR/VR 등 모든
+              Econovation에서는 웹, 애플리케이션, 게임, AI, AR/VR 등 모든
               개발분야와 IT관련 디자인/기획 분야에서 활동해 주실 24기 회원들을
               모집합니다.
             </h4>
