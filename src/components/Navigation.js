@@ -108,7 +108,7 @@ function Navigation() {
           </li>
           <li>
             <a
-              href="/summer-dev-2022/"
+              href="https://forms.gle/qE8VqD6xkBtQ2ZKN9"
               target="_blank"
               className="button primary"
               style={{ "background-color": "#0000FE", "font-weight": "bold" }}
