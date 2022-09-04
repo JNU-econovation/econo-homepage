@@ -114,7 +114,7 @@ function Navigation() {
               style={{ "background-color": "#0000FE", "font-weight": "bold" }}
               rel="noreferrer"
             >
-              Econovation 지원하기
+              24기 지원하기
             </a>
           </li>
         </ul>
