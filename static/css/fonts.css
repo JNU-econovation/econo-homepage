@@ -1,0 +1,26 @@
+@font-face {
+  font-family: 'Argentum Sans';
+  font-weight: 400;
+  src: local('Argentum Sans'), url('../fonts/ArgentumSans-Regular.woff') format('woff');
+}
+@font-face {
+  font-family: 'Argentum Sans';
+  font-weight: 700;
+  src: local('Argentum Sans'), url('../fonts/ArgentumSans-Bold.woff') format('woff');
+}
+
+.argentum {
+  font-family: 'Argentum Sans', sans-serif;
+}
+
+.nanum {
+  font-family: 'NanumSquareAc', sans-serif;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.regular {
+  font-weight: 400;
+}

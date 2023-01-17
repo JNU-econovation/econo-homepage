@@ -1,0 +1,61 @@
+.people {
+    padding: 10rem 0 0 6rem;
+}
+
+.people-intro {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.people-intro-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+.people-intro-content {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.people-circle-cover {
+    margin-top: 14vh;
+}
+
+.people-circle {
+    height: 80vh;
+    width: 80vh;
+    border-radius: 50%;
+    margin-bottom: 20vh;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.people-circle >img {
+    height: 100%;
+}
+
+.people-title-cover {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 50vh;
+    margin-top: 25vh;
+    margin-left: 6rem;
+    height: fit-content;
+    margin-bottom: 50vh;
+    z-index: 1;
+    opacity: 1;
+    transition: opacity .6s ease-in-out;
+}
+
+.people-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.people-subtitle {
+    font-size: 1.2rem;
+}
+
+.changed-text {
+    opacity: 0;
+}

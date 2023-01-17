@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+
+
+  <link rel="stylesheet" href="./static/css/fonts.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/title.css">
+  <link rel="stylesheet" href="./static/css/chapter.css">
+  <link rel="stylesheet" href="./static/css/project.css">
+  <link rel="stylesheet" href="./static/css/people.css">
+  <link rel="stylesheet" href="./static/css/faq.css">
+  <link rel="stylesheet" href="./static/css/notice.css">
+  <link rel="stylesheet" href="./static/css/timeline.css">
+  <title>Winter Dev</title>
+  <script src="./static/js/svg-injector.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"
+    integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg=="
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+
+<body class="no-scroll">
+  <div id="loading">
+    <lottie-player src="./static/loading_lottie.json" background="transparent" speed="1"
+      style="width: 300px; height: 300px;" loop autoplay></lottie-player>
+  </div>
+  <div class="mouse"></div>
+  <div class="mouse-delay">
+    <svg width="256" height="256" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <clipPath id="svgmask">
+          <path d="M279.5 0.5V279.5H0.5V0.5H140H279.5Z" fill="#D9D9D9" stroke="black" />
+        </clipPath>
+      </defs>
+      <image class="clipped-img" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href=""></image>
+    </svg>
+  </div>
+  <div class="scroll-overflow absolute full-screen" id="canvas-cover">
+    <canvas id="canvas3d"></canvas>
+  </div>
+  <div class="full-screen title">
+    <div class="flex-col justify-between z-10 absolute h-100">
+      <div class="title-text argentum regular">
+        <div>
+          <div>ECONOVATION</div>
+        </div>
+        <div>
+          <div>WINTER</div>
+        </div>
+        <div>
+          <div>DEV</div>
+        </div>
+      </div>
+      <div style="margin-left: 5rem;">
+        <div class="title-date nanum bold">
+          <div>23.01.27</div>
+          <div>2PM</div>
+        </div>
+        <div class="subtitle-text nanum regular">
+          <div>전남대학교</div>
+          <div>공과대학 2호관 영명홀</div>
+        </div>
+        <div class="title-powerby-img">
+          <img src="./static/images/poweredbyd2.png" alt="naverD2">
+        </div>
+      </div>
+      <div class="title2 nanum bold" style="position: absolute;">
+        <div>팀을 이루어 협업하는 과정에서 얻은 경험들을 다른 사람들과 함께</div>
+        <div>공유하며 성장할 수 있는 네트워크를 만들기 위한 행사입니다.</div>
+      </div>
+    </div>
+  </div>
+  <div class="full-screen"></div>
+  <!-- <div style="height: 100vh; z-index: -1;"></div> -->
+  <div class="full-screen flex justify-center items-center">
+    <div class="chapter">
+      <div class="justify-center items-center h-100 argentum regular">
+        <div class="chapter-people">
+          <span class="chapter-small-num">01</span>
+          <span class="chapter-title">PEOPLE</span>
+        </div>
+        <div class="chapter-time">
+          <span class="chapter-small-num">02</span>
+          <span class="chapter-title">TIME</span>
+        </div>
+        <div class="chapter-project">
+          <span class="chapter-small-num">03</span>
+          <span class="chapter-title">PROJECT</span>
+        </div>
+        <div class="chapter-story">
+          <span class="chapter-small-num">04</span>
+          <span class="chapter-title">STORY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div style="height: 50vh; width: 100vw;">
+      <div class="people">
+        <div class="people-intro argentum bold">PEOPLE</div>
+        <div class="people-intro-title nanum bold">이런 사람들과 함께합니다.</div>
+        <div class="people-intro-content nanum regular">에코노베이션은 코딩을 하고 싶은 누구에게나 즐겁게</div>
+        <div class="people-intro-content nanum regular">그리고 함께 개발하는 공간이 되는 것을 꿈꿉니다.</div>
+      </div>
+    </div>
+    <div class="flex justify-between" style="width: 100vw;">
+      <div class="people-title-cover">
+        <div class="people-title argentum bold">Passion</div>
+        <div class="people-subtitle nanum regular">배움과 성장을 끊임없이 추구하는 사람</div>
+      </div>
+      <div class="people-circle-cover">
+        <div class="people-circle" style="transform: translateX(-10rem);">
+          <img src="./static/images/econovation_1.png" alt="" style="transform: translateX(-16%)">
+        </div>
+        <div class="people-circle" style="transform: translateX(-30rem);">
+          <img src="./static/images/econovation_2.png" alt="" style="transform: translateX(-23%)">
+        </div>
+        <div class="people-circle" style="transform: translateX(-6rem);">
+          <img src="./static/images/econovation_3.jpg" alt="" style="transform: translateX(-16%)">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="timeline full-screen flex-col">
+    <div class="argentum bold timeline-title">
+      Time
+    </div>
+    <div class="timeline-list">
+      <img src="./static/images/img_gradient_circle.png" alt="gradient_circle">
+    </div>
+    <div class="swiper nanum">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div>14:00 ~ 14:20</div>
+          <div>개회식</div>
+        </div>
+        <div class="swiper-slide">
+          <div>14:20 ~ 14:30</div>
+          <div>축사</div>
+        </div>
+        <div class="swiper-slide">
+          <div>14:30~15:10</div>
+          <div>Group A</div>
+        </div>
+        <div class="swiper-slide">
+          <div>15:30 ~ 15:50</div>
+          <div>개인 세션</div>
+        </div>
+        <div class="swiper-slide">
+          <div>15:50~17:10</div>
+          <div>Group B</div>
+        </div>
+        <div class="swiper-slide">
+          <div>17:30~17:50</div>
+          <div>폐회식</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="project">
+    <div>
+      <div class="project-title bold argentum">
+        <div>
+          ECONOVATION
+        </div>
+        <div>
+          PROJECT
+        </div>
+      </div>
+      <div class="project-subtitle nanum bold">
+        WINTER DEV 미리보기
+      </div>
+      <div class="project-description naum regular">
+        <div>
+          다양한 프로젝트 동아리 회원들은
+        </div>
+        <div>
+          학기가 시작 되면 팀을 모아 프로젝트를 진행합니다.
+        </div>
+        <div>
+          방학 때는 한 학기 프로젝트를 발표하는
+        </div>
+        <div>
+          에코노베이션만의 발표회 'DEV'를 진행합니다.
+        </div>
+      </div>
+    </div>
+    <div class="project-list naum regular">
+      <div>
+        <div class="project-item">
+          <div class="project-name">
+            <img src="./static/images/The econo.svg" alt="" onload="SVGInject(this)">
+          </div>
+          <div>
+            <div class="project-team bold">
+              스리남
+            </div>
+            <div class="project-people">
+              권순찬, 이서현, 이윤성, 임채승
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="project-item">
+          <div class="project-name">
+            <img src="./static/images/Sleeper.svg" alt="" onload="SVGInject(this)">
+          </div>
+          <div>
+            <div class="project-team bold">
+              복덩이들
+            </div>
+            <div class="project-people">
+              이시현, 임수미, 장현지, 황대선
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="project-item">
+          <div class="project-name">
+            <img src="./static/images/긱허브.svg" alt="" onload="SVGInject(this)">
+          </div>
+          <div>
+            <div class="project-team bold">
+              머지요정
+            </div>
+            <div class="project-people">
+              김지민, 조배경
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="project-item">
+          <div class="project-name">
+            <img src="./static/images/Date.now().svg" alt="" onload="SVGInject(this)">
+          </div>
+          <div>
+            <div class="project-team bold">
+              에코노 응애들
+            </div>
+            <div class="project-people">
+              김가연, 박영규, 이승건
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="project-item">
+          <div class="project-name">
+            <img src="./static/images/모여봐요 에코노 숲.svg" alt="" onload="SVGInject(this)">
+          </div>
+          <div>
+            <div class="project-team bold">
+              에코노 숲 주민들
+            </div>
+            <div class="project-people">
+              경주원, 김수민, 김정은, 김종준, 김현지
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="project-item">
+          <div class="project-name">
+            <img src="./static/images/AI COMPETITION.svg" alt="" onload="SVGInject(this)">
+          </div>
+          <div>
+            <div class="project-team bold">
+              개굴
+            </div>
+            <div class="project-people">
+              김건형, 이규민, 이도연
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="full-screen faq flex-col justify-center items-center">
+    <div id="faq-title" class="argentum">FAQ</div>
+    <div class="faq-body">
+      <div class="faq-separate">
+        <div class="faq-q-box" id="faq-q-0">
+          <div class="faq-q-title">Winter Dev는 어떤 행사인가요?</div>
+          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6274 1.01025L22.7278 10.1107L13.6274 19.2111" stroke="black" stroke-width="1.5" />
+            <path d="M23 10.011H0" stroke="black" stroke-width="1.5" />
+          </svg>
+        </div>
+        <div class="faq-a" id="faq-a-0">
+          에코노베이션 회원들이 한 학기 동안 개발한 팀 프로젝트의 결과를 공유하고 팀을 이루어 협업하는 과정에서 성장했던 내용과 경험을 다른 사람들과 함께 공유하는 행사입니다.
+        </div>
+        <div class="faq-q-box" id="faq-q-1">
+          <div class="faq-q-title">Winter Dev에 참가할 수 있는 자격이 따로 있을까요?</div>
+          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6274 1.01025L22.7278 10.1107L13.6274 19.2111" stroke="black" stroke-width="1.5" />
+            <path d="M23 10.011H0" stroke="black" stroke-width="1.5" />
+          </svg>
+        </div>
+        <div class="faq-a" id="faq-a-1">
+          아니요, Winter Dev에 관심있는 누구나 참가할 수 있습니다.
+        </div>
+        <div class="faq-q-box" id="faq-q-2">
+          <div class="faq-q-title">에코노베이션에 들어가면 주로 어떤 활동을 하나요?</div>
+          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6274 1.01025L22.7278 10.1107L13.6274 19.2111" stroke="black" stroke-width="1.5" />
+            <path d="M23 10.011H0" stroke="black" stroke-width="1.5" />
+          </svg>
+        </div>
+        <div class="faq-a" id="faq-a-2">
+          에코노베이션은 매 학기 한 가지 주제를 실제 동작하는 서비스를 구현하는 프로젝트를 진행합니다. 단순히 기한만 정해져 있는 프로젝트가 아닌 의무적으로 매주 금요일 모여 프로젝트의 진행 상황을 공유
+          및 발표하고 피드백을 주고 받습니다.
+        </div>
+      </div>
+      <div class="faq-separate">
+        <div class="faq-q-box" id="faq-q-3">
+          <div class="faq-q-title">Winter Dev는 어떤 방식으로 진행되나요?</div>
+          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6274 1.01025L22.7278 10.1107L13.6274 19.2111" stroke="black" stroke-width="1.5" />
+            <path d="M23 10.011H0" stroke="black" stroke-width="1.5" />
+          </svg>
+        </div>
+        <div class="faq-a" id="faq-a-3">
+          온/오프라인 발표와 오프라인 부스를 병행으로 진행합니다. 온라인 송출은 스트리밍 서비스를 통해 온라인 송출을 해드리고, 오프라인 부스에서 에코노베이션 회원들이 한 학기 동안 진행한 프로젝트를
+          실제로 체험해보실 수 있습니다
+        </div>
+        <div class="faq-q-box" id="faq-q-4">
+          <div class="faq-q-title">에코노베이션은 어떤 동아리인가요?</div>
+          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6274 1.01025L22.7278 10.1107L13.6274 19.2111" stroke="black" stroke-width="1.5" />
+            <path d="M23 10.011H0" stroke="black" stroke-width="1.5" />
+          </svg>
+        </div>
+        <div class="faq-a" id="faq-a-4">
+          에코노베이션은 정보전산원 소속 개발 동아리입니다. 개발에 열정 있는 사람이라면 전공에 관계업이 누구나 지원가능합니다.
+        </div>
+        <div class="faq-q-box" id="faq-q-5">
+          <div class="faq-q-title">에코노베이션 신입 동아리원 모집기간은 언제일까요?</div>
+          <svg width="24" height="20" viewBox="0 0 24 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.6274 1.01025L22.7278 10.1107L13.6274 19.2111" stroke="black" stroke-width="1.5" />
+            <path d="M23 10.011H0" stroke="black" stroke-width="1.5" />
+          </svg>
+        </div>
+        <div class="faq-a" id="faq-a-5">
+          에코노베이션은 매 학기 초 신입 동아리원을 모집하며 공지는 에브리타임, 교내 포스터, SNS(인스타그램,페이스북)등을 통해 확인하실 수 있습니다.
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="height: calc(100vh - 171px);">
+    <div class="notice-section">
+      <div id="notice-title" class="argentum">NOTICE</div>
+      <div class="notice-block">
+        <div class="notice-split-block">
+          <div id="kakaotalk-notice" class="notice-button">
+            <div class="notice-img"><img src="./static/images/kakao.svg" alt="kakao"></div>
+            <div class="notice-text">
+              <div class="notice-title blinker">Kakao Talk</div>
+              <div class="notice-subtitle">카카오톡 채널 - 에코노베이션(econovation)</div>
+            </div>
+          </div>
+          <div id="medium-notice" class="notice-button">
+            <div class="notice-img"><img src="./static/images/medium.svg" alt="medium"></div>
+            <div class="notice-text">
+              <div class="notice-title blinker">Medium</div>
+              <div class="notice-subtitle">ECONOVATION</div>
+            </div>
+          </div>
+        </div>
+        <div class="notice-split-block">
+          <div id="instagram-notice" class="notice-button">
+            <div class="notice-img"><img src="./static/images/instagram.svg" alt="instagram"></div>
+            <div class="notice-text">
+              <div class="notice-title blinker">Instagram</div>
+              <div class="notice-subtitle">@cnu_econovation</div>
+            </div>
+          </div>
+          <div id="homepage-notice" class="notice-button">
+            <div class="notice-img"><img src="./static/images/econovation.svg" alt="econo"></div>
+            <div class="notice-text">
+              <div class="notice-title blinker">Homepage</div>
+              <div class="notice-subtitle">econovation.kr</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer argentum">
+      <div id="footer-sum">
+        ECONOLVATION
+        <br>
+        WINTER
+        <br>
+        DEV
+      </div>
+      <div>
+        @econovation.All rights reserved.
+      </div>
+    </div>
+  </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <script src="./static/js/title.mjs" type="module"></script>
+  <script src="./static/js/project.mjs" type="module"></script>
+  <script src="./static/js/scroll.mjs" type="module"></script>
+  <script src="./static/js/faq.mjs" type="module"></script>
+  <script>
+    // document.querySelector('.loading').addEventListener('scoll', (e) => { e.preventDefault() })
+  </script>
+  <script>
+    let ww = window.innerWidth;
+    let swiper;
+
+    initSwiper();
+
+    function initSwiper() {
+      if (typeof (swiper) == 'object') swiper.destroy();
+
+      return swiper = new Swiper('.swiper', {
+        autoplay: {
+          delay: 3000,
+        },
+        loop: true,
+        speed: 400,
+        width: ww / 1.3,
+        slidesPerView: 1.5,
+        centeredSlides: true,
+        spaceBetween: 10,
+      });
+    }
+
+    window.addEventListener('resize', function () {
+      ww = window.innerWidth;
+      initSwiper();
+    });
+  </script>
+</body>
+
+</html>
