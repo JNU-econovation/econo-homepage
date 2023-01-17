@@ -10,14 +10,14 @@ const devElement = $(".title-text div:nth-child(3)");
 const timeElement = $(".title>div>div:nth-child(2)");
 const title2 = $(".title2");
 const body = $("body");
-const canavs = $('#canvas-cover');
+const canavs = $("#canvas-cover");
 
 let titleScrollValue = 0;
 
 const updateTitle = () => {
   let ratio = titleScrollValue / windowHeight;
   if (ratio > 1) ratio = 1;
-  
+
   econovationElement.style.opacity = 1 - ratio;
   timeElement.style.opacity = 1 - ratio;
   winterElement.style.transform = `translate(calc(${26 * ratio}rem + 10rem), ${
@@ -26,8 +26,10 @@ const updateTitle = () => {
   devElement.style.transform = `translate(calc(${4 * ratio}rem + 32rem), ${
     5 * ratio
   }vh) scale(${1 + ratio})`;
-  title2.style.transform = `translate(calc(9.5rem + ${100 * (1 - ratio)}vw), 80vh)`;
-  title2.style.display = 'block';
+  title2.style.transform = `translate(calc(9.5rem + ${
+    100 * (1 - ratio)
+  }vw), 47rem)`;
+  title2.style.display = "block";
   canavs.style.opacity = 1 - 0.44 * ratio;
 };
 
@@ -36,8 +38,8 @@ const initTitle = () => {
   devElement.style.transform = `translate(32rem, 0);`;
   econovationElement.style.opacity = 1;
   timeElement.style.opacity = 1;
-  title2.style.transform = `translate(calc(9.5rem + 100vw), 80vh)`;
-  title2.style.display = 'none';
+  title2.style.transform = `translate(calc(9.5rem + 100vw), 47rem)`;
+  title2.style.display = "none";
   canavs.style.opacity = 1;
 };
 
@@ -46,8 +48,8 @@ const afterTitle = () => {
   devElement.style.transform = `translate(36rem, 5vh) scale(2)`;
   econovationElement.style.opacity = 0;
   timeElement.style.opacity = 0;
-  title2.style.transform = `translate(9.5rem, 80vh)`;
-  title2.style.display = 'block';
+  title2.style.transform = `translate(9.5rem, 47rem)`;
+  title2.style.display = "block";
   canavs.style.opacity = 0.44;
 };
 
@@ -96,14 +98,26 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+  const body = document.body;
+  const html = document.documentElement;
+
+  const height = Math.max(
+    body.scrollHeight,
+    body.offsetHeight,
+    html.clientHeight,
+    html.scrollHeight,
+    html.offsetHeight
+  );
+
   document.addEventListener("scroll", (e) => {
     if (titleScrollValue < windowHeight * 1.5) {
       return;
     }
 
-    if (window.scrollY > windowHeight * 8.5 + 185) {
-      window.scrollTo({ top: windowHeight * 8.5 + 185 });
-    } else if (window.scrollY > windowHeight * 4) {
+    if (window.scrollY > height - windowHeight) {
+      scrollTo({ top: height - windowHeight});
+    }
+    if (window.scrollY > windowHeight * 4) {
       changePeopleValue(
         2,
         "Industrious",
