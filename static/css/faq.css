@@ -1,0 +1,38 @@
+.faq {
+    align-items: center;
+}
+
+#faq-title {
+    font-size: 64px;
+    font-weight: bolder;
+}
+
+.faq-body {
+    display: flex;
+    margin-top: 68px;
+}
+
+.faq-q-box {
+    width: 465px;
+    height: 47px;
+    border-bottom: 1px solid;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.faq-q-box svg {
+    margin-right: 10px;
+}
+
+.faq-separate {
+    margin-left: 37px;
+}
+
+.faq-a {
+    width: 400px;
+    margin: 20px 0px;
+    line-height: 30px;
+    display: none;
+}

@@ -1,0 +1,172 @@
+.chapter {
+    font-size: 8rem;
+}
+
+.chapter>div {
+    height: fit-content;
+    width: fit-content;
+}
+
+.chapter>div>div {
+    display: flex;
+}
+
+.chapter>div>div>span {
+    line-height: 71%;
+}
+
+.chapter>div:hover div {
+    opacity: 0.34;
+    transition: opacity .8s;
+}
+
+.chapter>div:not(:hover) div {
+    opacity: 1;
+    transition: opacity .8s;
+}
+
+.chapter-title::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: .5rem;
+    background: #000;
+    transition: width .8s;
+    margin-top: 1rem;
+}
+
+.chapter>div>div:hover>.chapter-title::after {
+    width: 100%;
+}
+
+.chapter-small-num {
+    font-size: 1rem;
+    padding-right: 1rem;
+}
+
+.chapter-people {
+    padding-bottom: 2rem;
+}
+
+.chapter-people:hover {
+    opacity: 1 !important;
+}
+
+
+.chapter-time {
+    padding-left: 11rem;
+    padding-bottom: 2rem;
+}
+
+.chapter-time:hover {
+    opacity: 1 !important;
+}
+
+.chapter-project {
+    padding-left: 5.5rem;
+    padding-bottom: 2rem;
+}
+
+.chapter-project:hover {
+    opacity: 1 !important;
+}
+
+.chapter-story {
+    padding-left: 19rem;
+}
+
+.chapter-story:hover {
+    opacity: 1 !important;
+}
+
+.chapter-people::before {
+    content: url("../images/mouse_folder.png");
+    transform: translate(-6rem, -4.5rem);
+    opacity: 0 !important;
+    z-index: -1;
+    height: 0;
+    width: 0;
+}
+
+.chapter-people:hover::before {
+    opacity: 1 !important;
+    transform: translate(-6rem, -9rem);
+    transition-property: opacity, transform;
+    transition-duration: .8s;
+}
+
+.chapter-people:not(:hover)::before {
+    opacity: 0 !important;
+    transform: translate(-6rem, -4.5rem);
+    transition-property: opacity, transform;
+    transition-duration: .8s;
+}
+
+.chapter-time::before {
+    content: url("../images/mouse_mouse.png");
+    transform: translate(18rem, 0.5rem);
+    opacity: 0 !important;
+    z-index: -1;
+    height: 0;
+    width: 0;
+}
+
+.chapter-time:hover::before {
+    opacity: 1 !important;
+    transform: translate(18rem, -5rem);
+    transition-property: opacity, transform;
+    transition-duration: .8s;
+}
+
+.chapter-time:not(:hover)::before {
+    opacity: 0 !important;
+    transform: translate(18rem, 0.5rem);
+    transition-property: opacity, transform;
+    transition-duration: .8s;
+}
+
+.chapter-project::before {
+    content: url("../images/mouse_cloud.png");
+    transform: translate(-10rem, -4.5rem);
+    opacity: 0 !important;
+    z-index: -1;
+    height: 0;
+    width: 0;
+}
+
+.chapter-project:hover::before {
+    opacity: 1 !important;
+    transform: translate(-10rem, -9rem);
+    transition-property: opacity, transform;
+    transition-duration: .8s;
+}
+
+.chapter-project:not(:hover)::before {
+    opacity: 0 !important;
+    transform: translate(-10rem, -4.5rem);
+    transition-property: opacity, transform;
+    transition-duration: .8s;
+}
+
+.chapter-story::before {
+    content: url("../images/mouse_logo.png");
+    transform: translate(23rem, -3rem);
+    opacity: 0 !important;
+    z-index: -1;
+    height: 0;
+    width: 0;
+}
+
+.chapter-story:hover::before {
+    opacity: 1 !important;
+    transform: translate(23rem, -8rem);
+    transition-property: opacity, transform;
+    transition-duration: .8s;
+}
+
+.chapter-story:not(:hover)::before {
+    opacity: 0 !important;
+    transform: translate(23rem, -3rem);
+    transition-property: opacity, transform;
+    transition-duration: .8s;
+}
