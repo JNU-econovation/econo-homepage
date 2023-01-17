@@ -17,7 +17,6 @@ let titleScrollValue = 0;
 const updateTitle = () => {
   let ratio = titleScrollValue / windowHeight;
   if (ratio > 1) ratio = 1;
-
   econovationElement.style.opacity = 1 - ratio;
   timeElement.style.opacity = 1 - ratio;
   winterElement.style.transform = `translate(calc(${26 * ratio}rem + 10rem), ${
@@ -108,7 +107,6 @@ document.addEventListener("DOMContentLoaded", () => {
     html.scrollHeight,
     html.offsetHeight
   );
-
   document.addEventListener("scroll", (e) => {
     if (titleScrollValue < windowHeight * 1.5) {
       return;
