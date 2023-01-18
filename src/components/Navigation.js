@@ -14,6 +14,11 @@ function Navigation() {
           <li>
             <a href="#">DEV</a>
             <ul>
+            <li>
+                <a href="/winter-dev-2023/" target="_blank">
+                  Winter 2023
+                </a>
+              </li>
               <li>
                 <a href="/summer-dev-2022/" target="_blank">
                   Summer 2022
@@ -86,6 +91,9 @@ function Navigation() {
           <li>
             <a>Portfolio</a>
             <ul>
+              <li>
+                <a href="/portfolio-2023-winter">Winter 2023</a>
+              </li>
               <li>
                 <a href="/portfolio-2022-winter">Winter 2022</a>
               </li>
