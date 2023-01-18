@@ -31,7 +31,7 @@
         "project_name": "Sleeper",
         "team": "복덩이(이시현, 임수미, 장현지, 황대선)",
         "short_description": "20대 대학생을 위한 규칙적인 수면관리 어플리케이션",
-        "represent_img": "assets/2023_winter_dev/portfolio/WeArt.png",
+        "represent_img": "assets/2023_winter_dev/portfolio/Sleeeper.png",
         "hashtags": ["#Android Studio", "#Kotlin", "#Spring Boot 2", "#JAVA 11", "#JPA", "#알람", "#수면관리", "#감사일기", "#모바일앱"],
         "description": [
             {
@@ -80,7 +80,7 @@
         "project_name": "Date.now()",
         "team": "에코노 응애들(김가연, 박영규, 이승건)",
         "short_description": "나만의 데이트 코스를 공유하는 데이트 코스 커뮤니티",
-        "represent_img": "assets/2023_winter_dev/portfolio/dateNow.png",
+        "represent_img": "assets/2023_winter_dev/portfolio/dateNow.jpg",
         "hashtags": ["#SpringDataJPA", "#SpringBoot", "#Spring", "#데이트", "#데이트코스", "#커뮤니티", "VanillaJS"],
         "description": [
             {
