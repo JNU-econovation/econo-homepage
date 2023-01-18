@@ -17,7 +17,7 @@ import Portfolio2020Summer from "./page/portfolio/Portfolio2020Summer";
 import Portfolio2021Winter from "./page/portfolio/Portfolio2021Winter";
 import Portfolio2021Summer from "./page/portfolio/Portfolio2021Summer";
 import Portfolio2022Winter from "./page/portfolio/Portfolio2022Winter";
-import Portfolio2023Winter from "./page/portfolio/Portfolio2022Winter";
+import Portfolio2023Winter from "./page/portfolio/Portfolio2023Winter";
 import NotFound from "./page/NotFound";
 import Faq from "./page/Faq";
 

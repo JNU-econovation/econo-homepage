@@ -116,13 +116,13 @@ function Navigation() {
           </li>
           <li>
             <a
-              href="https://forms.gle/qE8VqD6xkBtQ2ZKN9"
+              href="https://forms.gle/ZySuDMdwpb3PtscQ6"
               target="_blank"
               className="button primary"
               style={{ "background-color": "#0000FE", "font-weight": "bold" }}
               rel="noreferrer"
             >
-              24기 지원하기
+              2023 WinterDev 사전신청
             </a>
           </li>
         </ul>
