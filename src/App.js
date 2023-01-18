@@ -17,6 +17,7 @@ import Portfolio2020Summer from "./page/portfolio/Portfolio2020Summer";
 import Portfolio2021Winter from "./page/portfolio/Portfolio2021Winter";
 import Portfolio2021Summer from "./page/portfolio/Portfolio2021Summer";
 import Portfolio2022Winter from "./page/portfolio/Portfolio2022Winter";
+import Portfolio2023Winter from "./page/portfolio/Portfolio2022Winter";
 import NotFound from "./page/NotFound";
 import Faq from "./page/Faq";
 
@@ -62,6 +63,9 @@ function App() {
         </Route>
         <Route exact path="/portfolio-2022-winter">
           <Portfolio2022Winter />
+        </Route>
+        <Route exact path="/portfolio-2023-winter">
+          <Portfolio2023Winter />
         </Route>
         <Route exact path="/faq">
           <Faq />
