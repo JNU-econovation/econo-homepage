@@ -1,4 +1,4 @@
-import data from "./2022_winter_data.json";
+import data from "./2023_winter_data.json";
 
 function Winter23() {
     let showModal = (id) => {
