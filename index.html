@@ -1,10 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+      const isMobile = () => {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      }
+      if(isMobile) {
+        location.href = './index_mobile.html';
+      }
+  </script>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@2.0/nanumsquare.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
 
@@ -21,10 +29,6 @@
   <title>Winter Dev</title>
   <script src="./static/js/svg-injector.js"></script>
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r126/three.min.js"
-    integrity="sha512-n8IpKWzDnBOcBhRlHirMZOUvEq2bLRMuJGjuVqbzUJwtTsgwOgK5aS0c1JA647XWYfqvXve8k3PtZdzpipFjgg=="
-    crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/three@0.126.0/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 
 <body class="no-scroll nanum regular">
@@ -46,7 +50,7 @@
   <div class="scroll-overflow absolute full-screen" id="canvas-cover" style="min-height: 1024px;">
     <canvas id="canvas3d"></canvas>
   </div>
-  <div class="full-screen title"  style="min-height: 1024px;">
+  <div class="full-screen title" style="min-height: 1024px;">
     <div class="flex-col justify-between z-10 absolute h-100">
       <div class="title-text argentum regular">
         <div>
