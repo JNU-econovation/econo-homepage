@@ -18,7 +18,7 @@ app
   .load("https://prod.spline.design/EtRYZXWgimdP3Mn4/scene.splinecode")
   .then(() => {
     canvas.style.transform = "translate(15%, -1%) scale(1.3)";
-    scrollTo({top: 0, left: 0});
+    scrollTo({ top: 0, left: 0 });
     setTimeout(() => {
       loading.style.display = "none";
       moveBottomTop(title1, 0, 1.5);
@@ -28,6 +28,6 @@ app
       moveRightLeft(titleDate2, 0.15, 1.5);
       moveRightLeft(subtitle1, 0.23, 1.4);
       moveRightLeft(subtitle2, 0.24, 1.4);
-      moveRightLeft(titleImg, 0.3, 1.5);  
+      moveRightLeft(titleImg, 0.3, 1.5);
     }, 800);
   });
