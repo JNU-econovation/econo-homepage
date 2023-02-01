@@ -14,7 +14,7 @@ function Navigation() {
           <li>
             <a href="#">DEV</a>
             <ul>
-            <li>
+              <li>
                 <a href="/winter-dev-2023/" target="_blank">
                   Winter 2023
                 </a>
@@ -116,13 +116,13 @@ function Navigation() {
           </li>
           <li>
             <a
-              href="https://forms.gle/ZySuDMdwpb3PtscQ6"
+              href="https://www.youtube.com/watch?v=wOqimi4O8H4"
               target="_blank"
               className="button primary"
               style={{ "background-color": "#0000FE", "font-weight": "bold" }}
               rel="noreferrer"
             >
-              2023 WinterDev 사전신청
+              2023 WinterDev 다시보기
             </a>
           </li>
         </ul>
