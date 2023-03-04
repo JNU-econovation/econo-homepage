@@ -116,13 +116,13 @@ function Navigation() {
           </li>
           <li>
             <a
-              href="https://www.youtube.com/watch?v=wOqimi4O8H4"
+              href="https://forms.gle/Quo8n15CeK2mT9iF7"
               target="_blank"
               className="button primary"
               style={{ "background-color": "#0000FE", "font-weight": "bold" }}
               rel="noreferrer"
             >
-              2023 WinterDev 다시보기
+              25기 신입모집
             </a>
           </li>
         </ul>
