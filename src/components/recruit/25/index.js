@@ -1,4 +1,4 @@
-function Recruit22Component() {
+function Recruit25Component() {
   return (
     <div id="main" className="wrapper style1">
       <div className="container">
@@ -208,4 +208,4 @@ function Recruit22Component() {
   );
 }
 
-export default Recruit22Component;
+export default Recruit25Component;
