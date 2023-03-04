@@ -8,7 +8,6 @@ import {
 import About from "./page/About";
 import SummerDev2020 from "./page/dev/SummerDev2020";
 import WinterDev2021 from "./page/dev/WinterDev2021";
-import Recruit22 from "./page/recruit/22";
 import Hackathon2021 from "./page/hackathon/2021";
 import Hackathon2020 from "./page/hackathon/2020";
 import Hackathon2019 from "./page/hackathon/2019";
@@ -20,6 +19,7 @@ import Portfolio2022Winter from "./page/portfolio/Portfolio2022Winter";
 import Portfolio2023Winter from "./page/portfolio/Portfolio2023Winter";
 import NotFound from "./page/NotFound";
 import Faq from "./page/Faq";
+import Recruit25 from "./page/recruit/25";
 
 function App() {
   return (
@@ -37,8 +37,8 @@ function App() {
         <Route exact path="/summer-dev-2020">
           <SummerDev2020 />
         </Route>
-        <Route exact path="/recruit-2022-2">
-          <Recruit22 />
+        <Route exact path="/recruit-2023-1">
+          <Recruit25 />
         </Route>
         <Route exact path="/hackathon-2021">
           <Hackathon2021 />

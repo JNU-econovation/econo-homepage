@@ -46,7 +46,7 @@ function Navigation() {
             <a href="#">RECRUIT</a>
             <ul>
               <li>
-                <a href="/recruit-2022-2">24기</a>
+                <a href="/recruit-2023-1">25기</a>
               </li>
             </ul>
           </li>
