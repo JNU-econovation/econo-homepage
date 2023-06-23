@@ -1,11 +1,15 @@
-import App from "@/App";
+import Recruit from "@/pages/recruit";
 import { createBrowserRouter } from "react-router-dom";
 
-const route = createBrowserRouter([
+const router = createBrowserRouter([
   {
-    element: <App />,
+    element: <h1>hello world</h1>,
     path: "/",
+  },
+  {
+    element: <Recruit />,
+    path: "/recruit",
   },
 ]);
 
-export { route };
+export { router };
