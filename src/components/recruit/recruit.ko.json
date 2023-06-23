@@ -46,5 +46,27 @@
         "content": "C#, C++언어와 Unity, Unreal엔진을 활용하여 플레이어들의 재미를 느낄 수 있는 게임을 개발합니다."
       }
     ]
+  },
+  "subscription": {
+    "title": "subscription",
+    "contents": [
+      {
+        "title": "주간 발표 참석",
+        "link": { "link": "https://econovation.kr", "text": "주간 발표 자료" },
+        "content": "에코노베이션 활동회원은 매주 금요일\n주간 발표에 필수로 참여해야 합니다.",
+        "subcontent": "주간 발표는 각 팀이 진행 상황을 발표하고\n프로젝트 간 겪었던 문제들을 공유합니다."
+      },
+      {
+        "title": "최종 발표 DEV",
+        "link": { "link": "https://econovation.kr", "text": "최종 발표 영상" },
+        "content": "활동 회원은 1월, 7월에 진행하는\n최종발표인 DEV에 참여해야 합니다.",
+        "subcontent": "TODO: 내용 추가\nTODO: 내용 추가"
+      },
+      {
+        "title": "3학기 이상 활동",
+        "content": "에코노베이션은 3학기 이상 활동한\n회원들에게 수료 자격을 부여합니다.",
+        "subcontent": "단, 군 복무, 휴학 등 활동 할 수\n없는 경우 잠시 활동을 쉴 수 있습니다."
+      }
+    ]
   }
 }

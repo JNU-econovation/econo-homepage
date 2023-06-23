@@ -21,11 +21,11 @@ const Fileds = () => {
   };
 
   return (
-    <div className="flex justify-between">
-      <h1 className="uppercase font-medium flex-1">{data.title}</h1>
-      <div className="flex-1">
+    <div className="flex justify-between my-64">
+      <h1 className="uppercase font-medium flex-[2_1_0%]">{data.title}</h1>
+      <div className="flex-[3_1_0%]">
         {data.types.map((d, i) => (
-          <div className="border-t border-black cursor-pointer" key={i}>
+          <div className="border-t border-black last:border-b" key={i}>
             <input
               type="checkbox"
               name="recruit"
@@ -33,30 +33,28 @@ const Fileds = () => {
               className="hidden"
               onChange={contentToggle}
             />
-            <label
-              htmlFor={`recruit${i}`}
-              className="flex w-full py-6 cursor-pointer"
-            >
-              <span className="flex w-full justify-between mr-16 items-center">
-                <h2 className="font-medium text-3xl uppercase">{d.title}</h2>
-                <span>{d.translation}</span>
-              </span>
-              <span>
-                <img
-                  className={`recruit${i}-button`}
-                  src={rightArrowCirle}
-                  alt="right-arrow"
-                />
-              </span>
+            <label htmlFor={`recruit${i}`} className="cursor-pointer">
+              <div className="flex w-full py-6">
+                <span className="flex w-full justify-between mr-16 items-center">
+                  <h2 className="font-medium text-3xl uppercase">{d.title}</h2>
+                  <span>{d.translation}</span>
+                </span>
+                <span>
+                  <img
+                    className={`recruit${i}-button`}
+                    src={rightArrowCirle}
+                    alt="right-arrow"
+                  />
+                </span>
+              </div>
+              <div className={`h-0 recruit${i}-content opacity-0`}>
+                {d.content.split("\n").map((cd, ci) => (
+                  <div key={ci}>{cd}</div>
+                ))}
+              </div>
             </label>
-            <div className={`h-0 recruit${i}-content opacity-0`}>
-              {d.content.split("\n").map((cd, ci) => (
-                <div key={ci}>{cd}</div>
-              ))}
-            </div>
           </div>
         ))}
-        <div className="border-t border-black"></div>
       </div>
     </div>
   );

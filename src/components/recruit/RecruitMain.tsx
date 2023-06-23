@@ -1,5 +1,6 @@
 import strings from "@/components/recruit/recruit.ko.json";
 import Fileds from "@/components/recruit/Fields";
+import Subscription from "./SubScription";
 
 const data = strings;
 const RecruitMain = () => {
@@ -13,7 +14,7 @@ const RecruitMain = () => {
           <div key={i}>{d}</div>
         ))}
       </section>
-      <section className="w-full flex justify-start my-52 gap-16">
+      <section className="w-full flex justify-start my-64 gap-16">
         {data.schedule.map((d, i) => (
           <div className="w-full" key={i}>
             <div className="text-6xl mb-6">{d.date}</div>
@@ -25,6 +26,9 @@ const RecruitMain = () => {
       </section>
       <section>
         <Fileds />
+      </section>
+      <section>
+        <Subscription />
       </section>
     </div>
   );
