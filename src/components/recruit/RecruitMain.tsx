@@ -1,19 +1,20 @@
 import strings from "@/components/recruit/recruit.ko.json";
-import Fileds from "./Fields";
+import Fileds from "@/components/recruit/Fields";
 
+const data = strings;
 const RecruitMain = () => {
   return (
-    <div className="flex-col justify-center w-full">
+    <div className="flex-col justify-center w-full px-16">
       <section className="text-xl leading-relaxed text-center my-20">
-        <header className="text-[7rem] uppercase font-bold text-center my-20">
-          {strings.title}
-        </header>
-        {strings.content.split("\n").map((d, i) => (
+        <h1 className="text-[7rem] uppercase font-bold text-center my-20">
+          {data.title}
+        </h1>
+        {data.content.split("\n").map((d, i) => (
           <div key={i}>{d}</div>
         ))}
       </section>
-      <section className="w-full flex justify-between p-24 gap-16">
-        {strings.schedule.map((d, i) => (
+      <section className="w-full flex justify-start my-52 gap-16">
+        {data.schedule.map((d, i) => (
           <div className="w-full" key={i}>
             <div className="text-6xl mb-6">{d.date}</div>
             {/* TODO: min-with 설정 */}
