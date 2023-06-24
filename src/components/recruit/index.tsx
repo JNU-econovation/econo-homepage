@@ -1,3 +1,3 @@
-import RecruitMain from "./RecruitMain";
+import Recruit from "./Recruit";
 
-export default RecruitMain;
+export default Recruit;

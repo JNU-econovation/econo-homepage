@@ -1,4 +1,4 @@
-import strings from "@/components/recruit/recruit.ko.json";
+import strings from "@/assets/strings/recruit.ko.json";
 import rightArrowCirle from "@/assets/right-arrow-circle.svg";
 import { Link } from "react-router-dom";
 
@@ -10,6 +10,7 @@ const Subscription = () => {
       <div className="flex-[2_1_0%]">
         <div className="flex w-full justify-between">
           {data.contents.map((d, i) => (
+            // TODO: 오늘쪽으로 배치 + min-width 설정
             <div
               className="flex flex-col justify-between w-full h-80 px-8 border-r border-black last:border-r-0 relative"
               key={i}

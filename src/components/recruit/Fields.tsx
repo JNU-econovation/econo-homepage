@@ -1,4 +1,4 @@
-import strings from "@/components/recruit/recruit.ko.json";
+import strings from "@/assets/strings/recruit.ko.json";
 import rightArrowCirle from "@/assets/right-arrow-circle.svg";
 import { gsap } from "gsap";
 import { ChangeEvent } from "react";

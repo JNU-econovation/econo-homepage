@@ -1,9 +1,10 @@
-import strings from "@/components/recruit/recruit.ko.json";
+import strings from "@/assets/strings/recruit.ko.json";
 import Fileds from "@/components/recruit/Fields";
-import Subscription from "./SubScription";
+import Faq from "@/components/recruit/Faq";
+import Subscription from "@/components/recruit/Subscription";
 
 const data = strings;
-const RecruitMain = () => {
+const Recruit = () => {
   return (
     <div className="flex-col justify-center w-full px-16">
       <section className="text-xl leading-relaxed text-center my-20">
@@ -19,7 +20,7 @@ const RecruitMain = () => {
           <div className="w-full" key={i}>
             <div className="text-6xl mb-6">{d.date}</div>
             {/* TODO: min-with 설정 */}
-            <div className="border-t-[1px] border-t-transparent border-b-[1px] border-b-transparent shadow-[inset_0_0_0_2px] h-[4px] w-full border-black relative after:border-t after:border-r after:rotate-45 after:right-0 after:-bottom-[5px] after:h-3 after:w-3 after:absolute after:border-black"></div>
+            <div className="border-t-[2px] border-t-transparent border-b-[2px] border-b-transparent shadow-[inset_0_0_0_2px] h-[4px] w-full border-black relative after:border-t-2 after:border-r-2 after:rotate-45 after:right-[1px] after:-bottom-[5px] after:h-3 after:w-3 after:absolute after:border-black"></div>
             <div className="text-lg mt-4">{d.text}</div>
           </div>
         ))}
@@ -30,8 +31,11 @@ const RecruitMain = () => {
       <section>
         <Subscription />
       </section>
+      <section>
+        <Faq />
+      </section>
     </div>
   );
 };
 
-export default RecruitMain;
+export default Recruit;
