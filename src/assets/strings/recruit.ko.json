@@ -52,13 +52,13 @@
     "contents": [
       {
         "title": "주간 발표 참석",
-        "link": { "link": "https://econovation.kr", "text": "주간 발표 자료" },
+        "link": "WEEK_ANOUNCE_REFERENCE",
         "content": "에코노베이션 활동회원은 매주 금요일\n주간 발표에 필수로 참여해야 합니다.",
         "subcontent": "주간 발표는 각 팀이 진행 상황을 발표하고\n프로젝트 간 겪었던 문제들을 공유합니다."
       },
       {
         "title": "최종 발표 DEV",
-        "link": { "link": "https://econovation.kr", "text": "최종 발표 영상" },
+        "link": "LAST_ANOUNCE_VIDEO",
         "content": "활동 회원은 1월, 7월에 진행하는\n최종발표인 DEV에 참여해야 합니다.",
         "subcontent": "TODO: 내용 추가\nTODO: 내용 추가"
       },

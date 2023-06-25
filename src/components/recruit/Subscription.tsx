@@ -1,6 +1,7 @@
 import strings from "@/assets/strings/recruit.ko.json";
+import URLS from "@/assets/strings/url.ko.json";
 import rightArrowCirle from "@/assets/right-arrow-circle.svg";
-import { Link } from "react-router-dom";
+import { LinkTo } from "@/components/common";
 
 const Subscription = () => {
   const data = strings.subscription;
@@ -12,22 +13,24 @@ const Subscription = () => {
           {data.contents.map((d, i) => (
             // TODO: 오늘쪽으로 배치 + min-width 설정
             <div
-              className="flex flex-col justify-between w-full h-80 px-8 border-r border-black last:border-r-0 relative"
+              className="flex flex-col justify-between w-full h-80 px-8 min-w-[20.5rem] border-r border-black last:border-r-0 relative first:pl-0 last:pr-0 last:w-[80%]"
               key={i}
             >
               <div className="text-3xl font-normal">{d.title}</div>
               {d.link ? (
-                <Link
-                  to={d.link.link}
+                <LinkTo
+                  link={d.link}
                   className="flex items-center gap-4 absolute top-14"
                 >
                   <img
-                    className={`h-6 w-`}
+                    className={`h-6 w-6`}
                     src={rightArrowCirle}
                     alt="right-arrow"
                   />
-                  <span className="text-lg">{d.link.text}</span>
-                </Link>
+                  <span className="text-lg">
+                    {URLS[d.link as keyof typeof URLS].text}
+                  </span>
+                </LinkTo>
               ) : (
                 ""
               )}

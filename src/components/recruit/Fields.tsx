@@ -22,8 +22,8 @@ const Fileds = () => {
 
   return (
     <div className="flex justify-between my-64">
-      <h1 className="uppercase font-medium flex-[2_1_0%]">{data.title}</h1>
-      <div className="flex-[3_1_0%]">
+      <h1 className="uppercase font-medium flex-1">{data.title}</h1>
+      <div className="flex-[2_1_0%] min-w-[61.5rem]">
         {data.types.map((d, i) => (
           <div className="border-t border-black last:border-b" key={i}>
             <input
