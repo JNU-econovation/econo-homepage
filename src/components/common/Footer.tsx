@@ -4,6 +4,7 @@ import { LinkTo } from ".";
 
 const Footer = () => {
   const data = strings.footer;
+  const backToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <footer className="w-full mt-52 uppercase">
       <div className="flex w-full mx-16 ">
@@ -38,9 +39,12 @@ const Footer = () => {
           ))}
         </div>
       </div>
-      <div className="flex justify-center items-center h-[10rem] bg-black text-white text-xl">
+      <button
+        onClick={backToTop}
+        className="flex justify-center items-center h-[10rem] bg-black text-white text-xl w-full cursor-pointer"
+      >
         {data.toTop}
-      </div>
+      </button>
     </footer>
   );
 };
