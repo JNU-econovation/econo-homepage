@@ -30,5 +30,9 @@
   "YOUTUBE_LINK": {
     "link": "https://econovation.kr",
     "text": "youtube"
+  },
+  "APPLY_LINK": {
+    "link": "https://econovation.kr",
+    "text": "지원하기"
   }
 }

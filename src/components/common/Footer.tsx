@@ -7,7 +7,7 @@ const Footer = () => {
   const backToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <footer className="w-full mt-52 uppercase">
-      <div className="flex w-full mx-16 ">
+      <div className="flex w-full px-16 ">
         <div className="flex flex-col justify-between flex-[3_1_0%] border-r border-black h-[40rem]">
           <h1 className="text-6xl">{data.title}</h1>
           <div className="text-2xl">
@@ -41,7 +41,7 @@ const Footer = () => {
       </div>
       <button
         onClick={backToTop}
-        className="flex justify-center items-center h-[10rem] bg-black text-white text-xl w-full cursor-pointer"
+        className="flex justify-center items-center h-[10rem] bg-black text-white text-xl w-full cursor-pointer uppercase"
       >
         {data.toTop}
       </button>
