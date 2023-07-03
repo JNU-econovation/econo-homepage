@@ -1,5 +1,5 @@
 import strings from "@/assets/strings/recruit.ko.json";
-import { LinkTo } from "../common";
+import { LinkTo } from "../common/index.component";
 import rightArrowCirleWhite from "@/assets/right-arrow-circle-white.svg";
 
 const data = strings;

@@ -1,11 +1,11 @@
 import strings from "@/assets/strings/recruit.ko.json";
-import Fileds from "@/components/recruit/Fields";
-import Faq from "@/components/recruit/Faq";
-import Subscription from "@/components/recruit/Subscription";
+import Fileds from "@/components/recruit/Fields.component";
+import Faq from "@/components/recruit/Faq.component";
+import Subscription from "@/components/recruit/Subscription.component";
 import { useInsertionEffect, useRef } from "react";
 
-import Wating from "./Waiting";
-import RecruitMain from "./RecruitMain";
+import Wating from "./Waiting.component";
+import RecruitMain from "./RecruitMain.component";
 
 const data = strings;
 const Recruit = () => {

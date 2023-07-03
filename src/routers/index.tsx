@@ -1,4 +1,4 @@
-import Recruit from "@/pages/recruit";
+import Recruit from "@/pages/recruit/index.page";
 import { createBrowserRouter } from "react-router-dom";
 
 const router = createBrowserRouter([
