@@ -21,7 +21,7 @@ const Fileds = () => {
   };
 
   return (
-    <div className="flex justify-between my-64">
+    <div className="flex translate-y-[25%]">
       <h1 className="uppercase font-medium flex-1">{data.title}</h1>
       <div className="flex-[2_1_0%] min-w-[61.5rem]">
         {data.types.map((d, i) => (

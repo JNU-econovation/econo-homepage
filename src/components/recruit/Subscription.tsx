@@ -6,12 +6,11 @@ import { LinkTo } from "@/components/common";
 const Subscription = () => {
   const data = strings.subscription;
   return (
-    <div className="flex justify-between my-52">
+    <div className="flex justify-between my-96">
       <h1 className="uppercase font-medium flex-1">{data.title}</h1>
       <div className="flex-[2_1_0%]">
         <div className="flex w-full justify-between">
           {data.contents.map((d, i) => (
-            // TODO: 오늘쪽으로 배치 + min-width 설정
             <div
               className="flex flex-col justify-between w-full h-80 px-8 min-w-[20.5rem] border-r border-black last:border-r-0 relative first:pl-0 last:pr-0 last:w-[80%]"
               key={i}
