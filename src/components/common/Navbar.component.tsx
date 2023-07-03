@@ -1,6 +1,6 @@
 import strings from "@/assets/strings/nav.ko.json";
 import recruitString from "@/assets/strings/recruit.ko.json";
-import LinkTo from "./Link.component";
+import LinkTo from "@/components/common/Link.component";
 
 const Navbar = () => {
   const navData = strings.nav;

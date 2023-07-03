@@ -1,6 +1,6 @@
 import strings from "@/assets/strings/recruit.ko.json";
 import rightArrowCirleWhite from "@/assets/right-arrow-circle-white.svg";
-import InputTextHover from "../common/InputTextHover.component";
+import InputTextHover from "@/components/common/InputTextHover.component";
 
 const data = strings.waiting;
 const Wating = ({
