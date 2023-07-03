@@ -2,13 +2,17 @@ import strings from "@/assets/strings/recruit.ko.json";
 import Fileds from "@/components/recruit/Fields.component";
 import Faq from "@/components/recruit/Faq.component";
 import Subscription from "@/components/recruit/Subscription.component";
-import { useInsertionEffect, useRef } from "react";
+import { FC, useInsertionEffect, useRef } from "react";
 
 import Wating from "./Waiting.component";
 import RecruitMain from "./RecruitMain.component";
 
 const data = strings;
-const Recruit = () => {
+interface RecruitProps {
+  emailInputValue: string;
+  emailInputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}
+const Recruit: FC<RecruitProps> = ({ emailInputValue, emailInputOnChange }) => {
   const recruitRef = useRef<HTMLDivElement>(null);
 
   const scrollToRecruit = () =>
@@ -33,7 +37,11 @@ const Recruit = () => {
       <div className="px-24">
         {!data.isOn && (
           <section>
-            <Wating scrollToRecruit={scrollToRecruit} />
+            <Wating
+              inputValue={emailInputValue}
+              inputOnChange={emailInputOnChange}
+              scrollToRecruit={scrollToRecruit}
+            />
           </section>
         )}
         <div ref={recruitRef}>

@@ -1,8 +1,17 @@
 import strings from "@/assets/strings/recruit.ko.json";
 import rightArrowCirleWhite from "@/assets/right-arrow-circle-white.svg";
+import InputTextHover from "../common/InputTextHover.component";
 
 const data = strings.waiting;
-const Wating = ({ scrollToRecruit }: { scrollToRecruit: () => void }) => {
+const Wating = ({
+  scrollToRecruit,
+  inputValue,
+  inputOnChange,
+}: {
+  scrollToRecruit: () => void;
+  inputValue: string;
+  inputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+}) => {
   return (
     <div className="flex flex-col align-center justify-center text-2xl leading-relaxed text-center mb-60 h-screen">
       <div>
@@ -16,7 +25,14 @@ const Wating = ({ scrollToRecruit }: { scrollToRecruit: () => void }) => {
           </div>
         ))}
       </div>
-      <input className="my-52 text-2xl" type="text" name="" id="" />
+      <InputTextHover
+        onChange={inputOnChange}
+        value={inputValue}
+        className="my-52 text-2x"
+        placeholder="econovation@gmail.com"
+        label="이메일 입력하기"
+      />
+      {/* <input className="my-52 text-2xl" type="text" name="" id="" /> */}
       <div>
         <div className="text-[#565656] mb-20 text-base">
           *{data.email_alert}
