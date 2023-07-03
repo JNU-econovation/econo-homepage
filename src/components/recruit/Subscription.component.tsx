@@ -1,7 +1,7 @@
 import strings from "@/assets/strings/recruit.ko.json";
 import URLS from "@/assets/strings/url.ko.json";
 import rightArrowCirle from "@/assets/right-arrow-circle.svg";
-import { LinkTo } from "@/components/common/index.component";
+import { LinkTo } from "@/components/common";
 
 const Subscription = () => {
   const data = strings.subscription;

@@ -8,7 +8,7 @@ const LinkTo = ({
 }: {
   link: string;
   className?: string;
-  children: React.ReactElement[] | React.ReactElement | string;
+  children: React.ReactElement[] | React.ReactElement | string[] | string;
 }) => (
   <Link to={URLS[link as keyof typeof URLS].link} className={className}>
     {children}

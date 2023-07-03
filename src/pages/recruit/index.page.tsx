@@ -1,5 +1,5 @@
-import { Footer } from "@/components/common/index.component";
-import RecruitMain from "@/components/recruit/index.component";
+import { Footer } from "@/components/common";
+import RecruitMain from "@/components/recruit";
 import { useState } from "react";
 
 const Recruit = () => {

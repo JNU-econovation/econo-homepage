@@ -1,0 +1,24 @@
+{
+  "nav": [
+    {
+      "name": "home",
+      "link": "HOME",
+      "position": "left"
+    },
+    {
+      "name": "portfolio",
+      "link": "PORTFOLIO",
+      "position": "left"
+    },
+    {
+      "name": "contact",
+      "link": "CONTACT",
+      "position": "left"
+    },
+    {
+      "name": "recruit",
+      "link": "RECRUIT",
+      "position": "right"
+    }
+  ]
+}

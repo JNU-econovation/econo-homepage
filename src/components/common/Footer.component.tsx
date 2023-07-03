@@ -1,6 +1,6 @@
 import strings from "@/assets/strings/common.ko.json";
 import rightArrowCirle from "@/assets/right-arrow-circle.svg";
-import { LinkTo } from "./index.component";
+import { LinkTo } from ".";
 
 const Footer = () => {
   const data = strings.footer;
