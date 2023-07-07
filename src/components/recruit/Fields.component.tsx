@@ -1,8 +1,7 @@
-import strings from "@/assets/strings/recruit.ko.json";
+import { FIELDS } from "@/assets/constants/recruit.ko.json";
 import rightArrowCirle from "@/assets/right-arrow-circle.svg";
 import { gsap } from "gsap";
 import { ChangeEvent } from "react";
-const data = strings.fileds;
 
 const Fileds = () => {
   const contentToggle = (e: ChangeEvent<HTMLInputElement>) => {
@@ -22,9 +21,9 @@ const Fileds = () => {
 
   return (
     <div className="flex translate-y-[25%]">
-      <h1 className="uppercase font-medium flex-1">{data.title}</h1>
+      <h1 className="uppercase font-medium flex-1">{FIELDS.TITLE}</h1>
       <div className="flex-[2_1_0%] min-w-[61.5rem]">
-        {data.types.map((d, i) => (
+        {FIELDS.TYPE.map((d, i) => (
           <div className="border-t border-black last:border-b" key={i}>
             <input
               type="checkbox"
@@ -36,8 +35,8 @@ const Fileds = () => {
             <label htmlFor={`recruit${i}`} className="cursor-pointer">
               <div className="flex w-full py-6">
                 <span className="flex w-full justify-between mr-16 items-center">
-                  <h2 className="font-medium text-3xl uppercase">{d.title}</h2>
-                  <span>{d.translation}</span>
+                  <h2 className="font-medium text-3xl uppercase">{d.TITLE}</h2>
+                  <span>{d.TRANSLATION}</span>
                 </span>
                 <span>
                   <img
@@ -48,7 +47,7 @@ const Fileds = () => {
                 </span>
               </div>
               <div className={`h-0 recruit${i}-content opacity-0`}>
-                {d.content.split("\n").map((cd, ci) => (
+                {d.CONTENT.split("\n").map((cd, ci) => (
                   <div key={ci}>{cd}</div>
                 ))}
               </div>

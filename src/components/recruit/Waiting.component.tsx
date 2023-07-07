@@ -1,8 +1,7 @@
-import strings from "@/assets/strings/recruit.ko.json";
+import * as RECRUIT from "@/assets/constants/recruit.ko.json";
 import rightArrowCirleWhite from "@/assets/right-arrow-circle-white.svg";
 import InputTextHover from "@/components/common/InputTextHover.component";
 
-const data = strings.waiting;
 const Wating = ({
   scrollToRecruit,
   inputValue,
@@ -16,11 +15,11 @@ const Wating = ({
     <div className="flex flex-col align-center justify-center text-2xl leading-relaxed text-center mb-60 h-screen">
       <div>
         <h1 className="text-[9.5rem] uppercase font-bold text-center my-8 leading-[9.5rem]">
-          {data.title}
+          {RECRUIT.WAITING.TITLE}
         </h1>
-        {data.content.split("\n").map((d, i) => (
+        {RECRUIT.WAITING.CONTENT.split("\n").map((d, i) => (
           <div key={i}>
-            {strings.peroid + i}
+            {RECRUIT.PERIOD + i}
             {d}
           </div>
         ))}
@@ -32,17 +31,16 @@ const Wating = ({
         placeholder="econovation@gmail.com"
         label="이메일 입력하기"
       />
-      {/* <input className="my-52 text-2xl" type="text" name="" id="" /> */}
       <div>
         <div className="text-[#565656] mb-20 text-base">
-          *{data.email_alert}
+          *{RECRUIT.WAITING.EMAIL_ALERT}
         </div>
         <div className="flex items-center justify-center">
           <button
             className="flex bg-[#0038FF] text-white px-6 py-3 gap-4 rounded-full text-xl items-center"
             onClick={scrollToRecruit}
           >
-            <span>{data.view_button}</span>
+            <span>{RECRUIT.WAITING.VIEW_BUTTON}</span>
             <img
               className="h-6 rotate-90"
               src={rightArrowCirleWhite}

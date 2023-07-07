@@ -1,4 +1,4 @@
-import strings from "@/assets/strings/award.ko.json";
+import AWARDS from "@/assets/constants/award.ko.json";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
@@ -6,28 +6,22 @@ import { useLayoutEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 
 const Awards = () => {
-  let awardItemsNum = 0;
   const awardItemsRef = useRef<HTMLDivElement[]>([]);
   const awardRef = useRef<HTMLDivElement>(null);
   const awardYearsRef = useRef<HTMLDivElement>(null);
   const awardYearsCoverRef = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
-    const ctx = gsap.context((self) => {
-      if (typeof self.selector !== "function") return;
-
+    const ctx = gsap.context(() => {
       awardItemsRef.current.forEach((item: HTMLDivElement) => {
-        const tl = gsap.timeline({
+        gsap.to(item, {
+          x: "0",
           scrollTrigger: {
             trigger: item,
             start: "top bottom",
-            end: "top 0%",
+            end: "top +=30%",
             scrub: 0.5,
-            markers: true,
           },
-        });
-        tl.to(item, {
-          x: 0,
         });
       });
 
@@ -35,9 +29,10 @@ const Awards = () => {
         scrollTrigger: {
           trigger: awardYearsCoverRef.current,
           start: "top top",
-          end: "bottom +=50%",
+          end: "bottom +=40%",
           scrub: 0.5,
           pin: awardYearsRef.current,
+          markers: true,
         },
       });
     }, awardYearsCoverRef);
@@ -46,10 +41,7 @@ const Awards = () => {
 
   return (
     <div className="flex justify-between pt-4">
-      <div
-        className="flex-1 border-r-[1px] border-black"
-        ref={awardYearsCoverRef}
-      >
+      <div className="flex-1" ref={awardYearsCoverRef}>
         <div className="font-medium" ref={awardYearsRef}>
           <h1 className="uppercase">awards</h1>
           <div className="text-7xl my-4">2023</div>
@@ -60,23 +52,31 @@ const Awards = () => {
           </div>
         </div>
       </div>
-      <div className="flex-1 pl-4" ref={awardRef}>
-        {strings.map((data, index) => (
-          <div key={index} className="flex flex-col gap-8">
-            {data.data.map((data, dindex) => (
+      <div className="flex-1 " ref={awardRef}>
+        {AWARDS.map((data, index) => (
+          <div
+            key={index}
+            className="flex flex-col gap-8 border-l-[1px] border-black pl-8 my-12"
+          >
+            {data.DATA.map((data, dindex) => (
               <div
                 key={dindex}
-                className="translate-x-[15vw] flex justify-between font-medium text-2xl"
-                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                ref={(el) => (awardItemsRef.current[awardItemsNum++] = el!)}
+                className="translate-x-[30vw] flex justify-between font-medium text-2xl"
+                ref={(el) =>
+                  // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                  (awardItemsRef.current[awardItemsRef.current.length] = el!)
+                }
               >
-                <div className="">{data.title}</div>
-                <div>{data.award}</div>
+                <div className="">{data.TITLE}</div>
+                <div>{data.AWARD}</div>
               </div>
             ))}
             <div
-              className="translate-x-[15vw] border-b-[1px] mb-8 border-black"
-              ref={(el) => awardItemsRef.current[awardItemsNum++] == el}
+              className="translate-x-[30vw] border-b-[1px] border-black translate-y-4"
+              ref={(el) =>
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                (awardItemsRef.current[awardItemsRef.current.length] = el!)
+              }
             ></div>
           </div>
         ))}

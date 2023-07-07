@@ -1,9 +1,8 @@
-import string from "@/assets/strings/faq.ko.json";
+import * as FAQ from "@/assets/constants/faq.ko.json";
 import { gsap } from "gsap";
 import { useState } from "react";
 
 const Faq = () => {
-  const data = string;
   const [faqBoard, setFaqBoard] = useState(0);
   const [faqOpenPosition, setFaqOpenPosition] = useState(-1);
 
@@ -43,7 +42,7 @@ const Faq = () => {
   };
 
   const faqToggle = (position: number) => {
-    data[faqBoard].data.map((_, i) => {
+    FAQ[faqBoard].DATA.map((_, i) => {
       if (i !== position) faqClose(i);
       else faqOpen(i);
     });
@@ -60,7 +59,7 @@ const Faq = () => {
       <div className="flex justify-between my-8">
         <h1>FAQ</h1>
         <div className="flex gap-10 text-2xl">
-          {data.map((d, i) => (
+          {FAQ.map((d, i) => (
             <button
               className={faqBoard === i ? "" : "text-[#AFAFAF]"}
               key={i}
@@ -69,13 +68,13 @@ const Faq = () => {
                 faqToggle(-1);
               }}
             >
-              {d.title}
+              {d.TITLE}
             </button>
           ))}
         </div>
       </div>
       <div className="grid grid-cols-2">
-        {data[faqBoard].data.map((d, i) => (
+        {FAQ[faqBoard].DATA.map((d, i) => (
           <div
             className="py-14 text-2xl border-b border-black odd:border-r first:border-t [&:nth-child(2)]:border-t relative"
             key={i}
@@ -97,7 +96,7 @@ const Faq = () => {
               <div
                 className={`faq-content-${i} absolute top-[50%] -translate-y-4 left-0 text-center w-[100%] h-[100%]`}
               >
-                {d.q}
+                {d.Q}
               </div>
               <div
                 className={
@@ -111,7 +110,7 @@ const Faq = () => {
                   (i % 2 === 0 ? "left-[90%]" : "right-[90%]")
                 }
               >
-                {d.a.split("\n").map((ad, ai) => (
+                {d.A.split("\n").map((ad, ai) => (
                   <div key={ai}>{ad}</div>
                 ))}
               </div>

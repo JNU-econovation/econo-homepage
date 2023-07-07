@@ -1,14 +1,12 @@
 import Footer from "@/components/common/Footer.component";
 import { useState } from "react";
-import strings from "@/assets/strings/recruit.ko.json";
+import * as RECRUIT from "@/assets/constants/recruit.ko.json";
 import Fileds from "@/components/recruit/Fields.component";
 import Faq from "@/components/recruit/Faq.component";
 import Subscription from "@/components/recruit/Subscription.component";
 import { useInsertionEffect, useRef } from "react";
 import Wating from "@/components/recruit/Waiting.component";
 import RecruitMain from "@/components/recruit/RecruitMain.component";
-
-const data = strings;
 
 const Recruit = () => {
   const [emailInputValue, setEmailInputValue] = useState("");
@@ -34,7 +32,7 @@ const Recruit = () => {
   return (
     <>
       <div className="px-24">
-        {!data.isOn && (
+        {!RECRUIT.IS_ON && (
           <section>
             <Wating
               inputValue={emailInputValue}
