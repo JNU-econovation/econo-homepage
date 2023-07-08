@@ -23,7 +23,7 @@ const Subscription = () => {
                 >
                   <img
                     className={`h-6 w-6`}
-                    src="/right-arrow-circle.svg"
+                    src="/icons/right-arrow-circle.svg"
                     alt="right-arrow"
                   />
                   <span className="text-lg">

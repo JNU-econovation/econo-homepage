@@ -16,7 +16,7 @@ const Footer = () => {
                 className="flex align-baseline my-4"
               >
                 <img
-                  src="/right-arrow-circle.svg"
+                  src="/icons/right-arrow-circle.svg"
                   alt="rightArrow"
                   className="inline mr-4 h-8 w-8"
                 />

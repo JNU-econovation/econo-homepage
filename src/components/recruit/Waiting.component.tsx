@@ -42,7 +42,7 @@ const Wating = ({
             <span>{RECRUIT.WAITING.VIEW_BUTTON}</span>
             <img
               className="h-6 rotate-90"
-              src="right-arrow-circle-white.svg"
+              src="/icons/right-arrow-circle-white.svg"
               alt="right arrow"
             />
           </button>

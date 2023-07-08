@@ -23,7 +23,7 @@ const RecruitMain = () => {
             <span>{RECRUIT.PERIOD}기 지원하기</span>
             <img
               className="h-6"
-              src="/right-arrow-circle-white.svg"
+              src="/icons/right-arrow-circle-white.svg"
               alt="right arrow"
             />
           </LinkTo>
