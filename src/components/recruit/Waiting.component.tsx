@@ -1,5 +1,4 @@
 import * as RECRUIT from "@/assets/constants/recruit.ko.json";
-import rightArrowCirleWhite from "@/assets/right-arrow-circle-white.svg";
 import InputTextHover from "@/components/common/InputTextHover.component";
 
 const Wating = ({
@@ -43,7 +42,7 @@ const Wating = ({
             <span>{RECRUIT.WAITING.VIEW_BUTTON}</span>
             <img
               className="h-6 rotate-90"
-              src={rightArrowCirleWhite}
+              src="right-arrow-circle-white.svg"
               alt="right arrow"
             />
           </button>

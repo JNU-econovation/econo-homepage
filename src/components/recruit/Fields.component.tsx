@@ -1,5 +1,4 @@
 import { FIELDS } from "@/assets/constants/recruit.ko.json";
-import rightArrowCirle from "@/assets/right-arrow-circle.svg";
 import { gsap } from "gsap";
 import { ChangeEvent } from "react";
 
@@ -41,7 +40,7 @@ const Fileds = () => {
                 <span>
                   <img
                     className={`recruit${i}-button`}
-                    src={rightArrowCirle}
+                    src="/-circle.svg"
                     alt="right-arrow"
                   />
                 </span>

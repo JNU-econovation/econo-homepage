@@ -1,17 +1,18 @@
 import { SUBSCRIPTION } from "@/assets/constants/recruit.ko.json";
 import * as URLS from "@/assets/constants/url.ko.json";
-import rightArrowCirle from "@/assets/right-arrow-circle.svg";
 import LinkTo from "@/components/common/Link.component";
 
 const Subscription = () => {
   return (
     <div className="flex justify-between my-96">
-      <h1 className="uppercase font-medium flex-1">{SUBSCRIPTION.TITLE}</h1>
+      <h1 className="uppercase font-medium flex-1 mr-4">
+        {SUBSCRIPTION.TITLE}
+      </h1>
       <div className="flex-[2_1_0%]">
         <div className="flex w-full justify-between">
           {SUBSCRIPTION.CONTENTS.map((d, i) => (
             <div
-              className="flex flex-col justify-between w-full h-80 px-8 min-w-[20.5rem] border-r border-black last:border-r-0 relative first:pl-0 last:pr-0 last:w-[80%]"
+              className="flex flex-col justify-between w-full h-80 px-8 min-w-[23rem] border-r border-black last:border-r-0 relative first:pl-0 last:pr-0 last:min-w-[20rem]"
               key={i}
             >
               <div className="text-3xl font-normal">{d.TITLE}</div>
@@ -22,7 +23,7 @@ const Subscription = () => {
                 >
                   <img
                     className={`h-6 w-6`}
-                    src={rightArrowCirle}
+                    src="/right-arrow-circle.svg"
                     alt="right-arrow"
                   />
                   <span className="text-lg">
@@ -32,7 +33,7 @@ const Subscription = () => {
               ) : (
                 ""
               )}
-              <div className="text-xl">
+              <div className="text-lg">
                 <div className="font-semibold mb-4">
                   {d.CONTENT.split("\n").map((cd, ci) => (
                     <div key={ci}>{cd}</div>

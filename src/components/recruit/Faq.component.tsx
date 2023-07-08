@@ -1,4 +1,4 @@
-import * as FAQ from "@/assets/constants/faq.ko.json";
+import FAQ from "@/assets/constants/faq.ko.json";
 import { gsap } from "gsap";
 import { useState } from "react";
 

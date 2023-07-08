@@ -32,7 +32,6 @@ const Awards = () => {
           end: "bottom +=40%",
           scrub: 0.5,
           pin: awardYearsRef.current,
-          markers: true,
         },
       });
     }, awardYearsCoverRef);

@@ -1,5 +1,4 @@
 import { FOOTER } from "@/assets/constants/common.ko.json";
-import rightArrowCirle from "@/assets/right-arrow-circle.svg";
 import LinkTo from "@/components/common/Link.component";
 
 const Footer = () => {
@@ -17,7 +16,7 @@ const Footer = () => {
                 className="flex align-baseline my-4"
               >
                 <img
-                  src={rightArrowCirle}
+                  src="/right-arrow-circle.svg"
                   alt="rightArrow"
                   className="inline mr-4 h-8 w-8"
                 />

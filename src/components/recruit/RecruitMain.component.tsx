@@ -1,6 +1,5 @@
 import * as RECRUIT from "@/assets/constants/recruit.ko.json";
 import LinkTo from "@/components/common/Link.component";
-import rightArrowCirleWhite from "@/assets/right-arrow-circle-white.svg";
 
 const RecruitMain = () => {
   return (
@@ -22,7 +21,11 @@ const RecruitMain = () => {
             className="flex bg-[#0038FF] text-white px-6 py-3 gap-4 rounded-full text-xl items-center"
           >
             <span>{RECRUIT.PERIOD}기 지원하기</span>
-            <img className="h-6" src={rightArrowCirleWhite} alt="right arrow" />
+            <img
+              className="h-6"
+              src="/right-arrow-circle-white.svg"
+              alt="right arrow"
+            />
           </LinkTo>
         </div>
       )}
