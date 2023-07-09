@@ -40,7 +40,7 @@ const Fileds = () => {
                 <span>
                   <img
                     className={`recruit${i}-button`}
-                    src="/-circle.svg"
+                    src="/icons/right-arrow-circle.svg"
                     alt="right-arrow"
                   />
                 </span>

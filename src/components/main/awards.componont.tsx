@@ -16,11 +16,12 @@ const Awards = () => {
       awardItemsRef.current.forEach((item: HTMLDivElement) => {
         gsap.to(item, {
           x: "0",
+          ease: "power1.out",
           scrollTrigger: {
             trigger: item,
             start: "top bottom",
-            end: "top +=30%",
-            scrub: 0.5,
+            end: "top +=20%",
+            scrub: 1,
           },
         });
       });
@@ -60,18 +61,18 @@ const Awards = () => {
             {data.DATA.map((data, dindex) => (
               <div
                 key={dindex}
-                className="translate-x-[30vw] flex justify-between font-medium text-2xl"
+                className="translate-x-[15vw] flex justify-between font-medium text-2xl"
                 ref={(el) =>
                   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                   (awardItemsRef.current[awardItemsRef.current.length] = el!)
                 }
               >
                 <div className="">{data.TITLE}</div>
-                <div>{data.AWARD}</div>
+                <div>{data.AWARDS.join(", ")}</div>
               </div>
             ))}
             <div
-              className="translate-x-[30vw] border-b-[1px] border-black translate-y-4"
+              className="translate-x-[15vw] border-b-[1px] border-black translate-y-4"
               ref={(el) =>
                 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                 (awardItemsRef.current[awardItemsRef.current.length] = el!)
