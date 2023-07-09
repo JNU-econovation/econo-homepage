@@ -11,7 +11,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2023_winter_dev/portfolio/kaggle.png"
+        }
+      ]
     },
     {
       "TITLE": "모여봐요 에코노 숲",
@@ -23,7 +28,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2023_winter_dev/portfolio/moesup.png"
+        }
+      ]
     },
     {
       "TITLE": "Date.now()",
@@ -35,7 +45,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2023_winter_dev/portfolio/dateNow.png"
+        }
+      ]
     },
     {
       "TITLE": "긱허브",
@@ -47,7 +62,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2023_winter_dev/portfolio/gikhub.png"
+        }
+      ]
     },
     {
       "TITLE": "Sleeper",
@@ -59,7 +79,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2023_winter_dev/portfolio/Sleeper.png"
+        }
+      ]
     },
     {
       "TITLE": "The Econo",
@@ -71,7 +96,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2023_winter_dev/portfolio/theEcono.png"
+        }
+      ]
     },
     {
       "TITLE": "별을 찾아서",
@@ -83,7 +113,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_summer_dev/portfolio/findStar.png"
+        }
+      ]
     },
     {
       "TITLE": "헬퍼",
@@ -95,7 +130,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_summer_dev/portfolio/healper.png"
+        }
+      ]
     },
     {
       "TITLE": "친해지길 바라",
@@ -107,7 +147,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_summer_dev/portfolio/makefriendly.png"
+        }
+      ]
     },
     {
       "TITLE": "econoBeep",
@@ -119,7 +164,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_summer_dev/portfolio/econoBeep.png"
+        }
+      ]
     },
     {
       "TITLE": "Hack Your day!",
@@ -131,7 +181,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_summer_dev/portfolio/hackyourday.png"
+        }
+      ]
     },
     {
       "TITLE": "손말잇기",
@@ -143,7 +198,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_summer_dev/portfolio/E1I3.png"
+        }
+      ]
     },
     {
       "TITLE": "T-ECONO",
@@ -155,7 +215,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_summer_dev/portfolio/t-econo.png"
+        }
+      ]
     },
     {
       "TITLE": "나나김",
@@ -167,7 +232,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_summer_dev/portfolio/HairLog.png"
+        }
+      ]
     },
     {
       "TITLE": "Junggle",
@@ -179,7 +249,12 @@
       "BG_IMAGE": "",
       "YEAR": "2022-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_summer_dev/portfolio/juggle.png"
+        }
+      ]
     },
     {
       "TITLE": "Callusic-new",
@@ -191,7 +266,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_winter_dev/portfolio/Collusic.png"
+        }
+      ]
     },
     {
       "TITLE": "물에 드리운 그림자",
@@ -202,11 +282,16 @@
       "SKILLS": "기존에 여러 사람들과 오프라인으로 모여야하고 룰이 어렵다는 제한적인 특성 때문에 TPRG에 관심이 있어도 해보지 못하는 안타까운 상황이 자주 있었습니다. 최대한 그 느낌과 감성을 살리면서도 초보자들도 즐길 수 있도록 하여 PC게임으로 즐길 수 있도록 게임 개발을 진행했습니다.\n키워드를 이용한 추리와 한정된 능력치를 투자해 원하는 방향으로 스토리를 진행해 나가며 여러 가지 결말을 얻을 수 있습니다.",
       "BG_IMAGE": "",
       "YEAR": "2021-2",
-      "LINKS": [],
-      "INTRODUCTION": [
+      "LINKS": [
         {
           "TITLE": "팜터틀 데모 빌드 링크",
           "LINK": "https://drive.google.com/file/d/1PKBOIdShEFvHGc3OGzI4hoVWQ9yHkyZ2/view"
+        }
+      ],
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_winter_dev/portfolio/PamTurtle.png"
         }
       ]
     },
@@ -220,7 +305,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_winter_dev/portfolio/TodayCocktail.png"
+        }
+      ]
     },
     {
       "TITLE": "카페가네",
@@ -232,7 +322,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_winter_dev/portfolio/CafeGane.png"
+        }
+      ]
     },
     {
       "TITLE": "에그밋(EggMeet)",
@@ -244,7 +339,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_winter_dev/portfolio/EggMeet.png"
+        }
+      ]
     },
     {
       "TITLE": "굿데이(GoodDay)",
@@ -256,7 +356,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_winter_dev/portfolio/GoodDay.png"
+        }
+      ]
     },
     {
       "TITLE": "Peace Maker",
@@ -268,7 +373,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_winter_dev/portfolio/PeaceMaker.png"
+        }
+      ]
     },
     {
       "TITLE": "WE: ART",
@@ -280,7 +390,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_winter_dev/portfolio/WeArt.png"
+        }
+      ]
     },
     {
       "TITLE": "HoneyBe",
@@ -292,7 +407,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2022_winter_dev/portfolio/HoneyBe.png"
+        }
+      ]
     },
     {
       "TITLE": "투너",
@@ -304,7 +424,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_summer_dev/portfolio/Tooner.png"
+        }
+      ]
     },
     {
       "TITLE": "유서써유(You Will)",
@@ -316,7 +441,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_summer_dev/portfolio/YouWill.png"
+        }
+      ]
     },
     {
       "TITLE": "HCP(Humming based Chord Progress)",
@@ -328,7 +458,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_summer_dev/portfolio/HCP.png"
+        }
+      ]
     },
     {
       "TITLE": "Collusic",
@@ -340,7 +475,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_summer_dev/portfolio/Callusic.png"
+        }
+      ]
     },
     {
       "TITLE": "All Rounder",
@@ -352,7 +492,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_summer_dev/portfolio/AllRoundeer.png"
+        }
+      ]
     },
     {
       "TITLE": "에코노 냉장고",
@@ -364,7 +509,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_summer_dev/portfolio/EconoRefrigerator.png"
+        }
+      ]
     },
     {
       "TITLE": "Pinning",
@@ -376,7 +526,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_summer_dev/portfolio/Pinning.png"
+        }
+      ]
     },
     {
       "TITLE": "태그헌터",
@@ -388,7 +543,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_summer_dev/portfolio/TagHunter.png"
+        }
+      ]
     },
     {
       "TITLE": "FRIENDO",
@@ -400,7 +560,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_summer_dev/portfolio/Friendo.png"
+        }
+      ]
     },
     {
       "TITLE": "Treena",
@@ -412,7 +577,12 @@
       "BG_IMAGE": "",
       "YEAR": "2021-1",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_summer_dev/portfolio/Treena.png"
+        }
+      ]
     },
     {
       "TITLE": "We Meet",
@@ -424,7 +594,12 @@
       "BG_IMAGE": "",
       "YEAR": "2020-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_winter_dev/portfolio/WeMeet.png"
+        }
+      ]
     },
     {
       "TITLE": "Which Book",
@@ -436,7 +611,12 @@
       "BG_IMAGE": "",
       "YEAR": "2020-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_winter_dev/portfolio/WhichBook.jpg"
+        }
+      ]
     },
     {
       "TITLE": "그린케어(grandcare)",
@@ -448,7 +628,12 @@
       "BG_IMAGE": "",
       "YEAR": "2020-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_winter_dev/portfolio/grandcare.jpg"
+        }
+      ]
     },
     {
       "TITLE": "트로트 끝판왕",
@@ -465,7 +650,12 @@
           "LINK": "https://github.com/JNU-econovation/the-last-king-of-TROT"
         }
       ],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_winter_dev/portfolio/TrotEnding.png"
+        }
+      ]
     },
     {
       "TITLE": "가는길에",
@@ -477,7 +667,12 @@
       "BG_IMAGE": "",
       "YEAR": "2020-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_winter_dev/portfolio/GanungilE.gif"
+        }
+      ]
     },
     {
       "TITLE": "이도",
@@ -489,7 +684,12 @@
       "BG_IMAGE": "",
       "YEAR": "2020-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_winter_dev/portfolio/Edo.png"
+        }
+      ]
     },
     {
       "TITLE": "Collusic(Collaboration + Music)",
@@ -501,7 +701,12 @@
       "BG_IMAGE": "",
       "YEAR": "2020-2",
       "LINKS": [],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_winter_dev/portfolio/collusic.png"
+        }
+      ]
     },
     {
       "TITLE": "Pick-T",
@@ -518,7 +723,12 @@
           "LINK": "https://github.com/mywnajsldkf/pick_t"
         }
       ],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_winter_dev/portfolio/pick-t.png"
+        }
+      ]
     },
     {
       "TITLE": "CheckMate",
@@ -535,7 +745,12 @@
           "LINK": "https://drive.google.com/drive/folders/1cUg4xEqoCbWG4sOTssG21yYaK03vEqja"
         }
       ],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_winter_dev/portfolio/CheckMate.png"
+        }
+      ]
     },
 
     {
@@ -557,7 +772,12 @@
           "LINK": "https://github.com/JNU-econovation/canvas"
         }
       ],
-      "INTRODUCTION": []
+      "INTRODUCTION": [
+        {
+          "TYPE": "image",
+          "SRC": "/dev/2021_winter_dev/portfolio/DongDong.jpg"
+        }
+      ]
     },
     {
       "TITLE": "가는 길에",
