@@ -1,5 +1,5 @@
-import * as RECRUIT from "@/assets/constants/recruit.ko.json";
-import LinkTo from "@/components/common/Link.component";
+import { RECRUIT } from "@/src/assets/constants/recruit.ko";
+import LinkTo from "../common/Link.component";
 
 const RecruitMain = () => {
   return (

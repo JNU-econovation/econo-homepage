@@ -1,7 +1,8 @@
-import { FIELDS } from "@/assets/constants/recruit.ko.json";
+import { RECRUIT } from "@/src/assets/constants/recruit.ko";
 import { gsap } from "gsap";
 import { ChangeEvent } from "react";
 
+const { FIELDS } = RECRUIT;
 const Fileds = () => {
   const contentToggle = (e: ChangeEvent<HTMLInputElement>) => {
     const key = e.currentTarget;

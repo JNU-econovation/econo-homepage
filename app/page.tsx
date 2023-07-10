@@ -1,5 +1,5 @@
-import Navbar from "@/components/common/Navbar.component";
-import Awards from "@/components/main/awards.componont";
+import Navbar from "@/src/components/common/Navbar.component";
+import Awards from "@/src/components/main/awards.componont";
 
 const MainPage = () => {
   return (

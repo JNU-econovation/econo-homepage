@@ -1,4 +1,6 @@
-import { TITLE } from "@/assets/constants/portfolio/portfolio.ko.json";
+import { PORTFOLIO } from "@/src/assets/constants/portfolio/portfolio.ko";
+
+const { TITLE, DATA } = PORTFOLIO;
 
 const Portfolio = () => {
   return (
@@ -10,9 +12,19 @@ const Portfolio = () => {
         </button>
       </div>
       <div className="h-[14rem]"></div>
-      <div className="px-12 flex justify-center w-full">
-        <div className="flex-1">T-ECONO</div>
-        <div className="flex-1">asfd</div>
+      <div className="px-12 flex-col">
+        {DATA.map((item, index) => (
+          <div key={index} className="flex justify-center w-full">
+            <h2 className="flex-1">{item.TITLE}</h2>
+            <div className="flex-1">
+              <img
+                className="w-full"
+                src={item.BG_IMAGE}
+                alt={item.INTRODUCTION[0].LINK}
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </>
   );

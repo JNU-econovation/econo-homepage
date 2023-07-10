@@ -1,6 +1,8 @@
-import { NAV } from "@/assets/constants/nav.ko.json";
-import recruitString from "@/assets/constants/recruit.ko.json";
-import LinkTo from "@/components/common/Link.component";
+"use client";
+
+import { NAV } from "@/src/assets/constants/nav.ko";
+import { RECRUIT } from "@/src/assets/constants/recruit.ko";
+import LinkTo from "@/src/components/common/Link.component";
 
 const Navbar = () => {
   return (
@@ -23,7 +25,7 @@ const Navbar = () => {
             key={data.LINK}
             link={data.LINK}
           >
-            {`${recruitString.PERIOD}TH`} {data.NAME}
+            {`${RECRUIT.PERIOD}TH`} {data.NAME}
           </LinkTo>
         ))}
       </div>

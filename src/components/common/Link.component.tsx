@@ -1,5 +1,7 @@
-import URLS from "@/assets/constants/url.ko.json";
-import { Link } from "react-router-dom";
+"use client";
+
+import { URLS } from "@/src/assets/constants/url.ko";
+import Link from "next/link";
 
 const LinkTo = ({
   link,
@@ -10,7 +12,7 @@ const LinkTo = ({
   className?: string;
   children: React.ReactElement[] | React.ReactElement | string[] | string;
 }) => (
-  <Link to={URLS[link as keyof typeof URLS].LINK} className={className}>
+  <Link href={URLS[link as keyof typeof URLS].LINK} className={className}>
     {children}
   </Link>
 );

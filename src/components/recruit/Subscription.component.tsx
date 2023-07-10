@@ -1,6 +1,8 @@
-import { SUBSCRIPTION } from "@/assets/constants/recruit.ko.json";
-import * as URLS from "@/assets/constants/url.ko.json";
-import LinkTo from "@/components/common/Link.component";
+import { RECRUIT } from "@/src/assets/constants/recruit.ko";
+import { URLS } from "@/src/assets/constants/url.ko";
+import LinkTo from "@/src/components/common/Link.component";
+
+const { SUBSCRIPTION } = RECRUIT;
 
 const Subscription = () => {
   return (

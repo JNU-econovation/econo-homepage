@@ -1,12 +1,12 @@
-import Footer from "@/components/common/Footer.component";
-import { useState } from "react";
-import * as RECRUIT from "@/assets/constants/recruit.ko.json";
-import Fileds from "@/components/recruit/Fields.component";
-import Faq from "@/components/recruit/Faq.component";
-import Subscription from "@/components/recruit/Subscription.component";
-import { useInsertionEffect, useRef } from "react";
-import Wating from "@/components/recruit/Waiting.component";
-import RecruitMain from "@/components/recruit/RecruitMain.component";
+"use client";
+
+import { RECRUIT } from "@/src/assets/constants/recruit.ko";
+import Faq from "@/src/components/recruit/Faq.component";
+import Fileds from "@/src/components/recruit/Fields.component";
+import RecruitMain from "@/src/components/recruit/RecruitMain.component";
+import Subscription from "@/src/components/recruit/Subscription.component";
+import Wating from "@/src/components/recruit/Waiting.component";
+import { useInsertionEffect, useRef, useState } from "react";
 
 const Recruit = () => {
   const [emailInputValue, setEmailInputValue] = useState("");
@@ -56,7 +56,6 @@ const Recruit = () => {
           <Faq />
         </section>
       </div>
-      <Footer />
     </>
   );
 };

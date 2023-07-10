@@ -1,5 +1,5 @@
-import * as RECRUIT from "@/assets/constants/recruit.ko.json";
-import InputTextHover from "@/components/common/InputTextHover.component";
+import { RECRUIT } from "@/src/assets/constants/recruit.ko";
+import InputTextHover from "../common/InputTextHover.component";
 
 const Wating = ({
   scrollToRecruit,
