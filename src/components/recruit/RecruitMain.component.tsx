@@ -1,5 +1,6 @@
 import { RECRUIT } from "@/src/assets/constants/recruit.ko";
 import LinkTo from "../common/Link.component";
+import classNames from "classnames";
 
 const RecruitMain = () => {
   return (
@@ -13,22 +14,22 @@ const RecruitMain = () => {
             <div key={i}>{d}</div>
           ))}
         </div>
+        {RECRUIT.IS_ON && (
+          <div className="flex items-center justify-center mt-24 mb-32">
+            <LinkTo
+              link="APPLY_LINK"
+              className="flex bg-[#0038FF] text-white px-6 py-3 gap-4 rounded-full text-xl items-center"
+            >
+              <span>{RECRUIT.PERIOD}기 지원하기</span>
+              <img
+                className="h-6"
+                src="/icons/right-arrow-circle-white.svg"
+                alt="right arrow"
+              />
+            </LinkTo>
+          </div>
+        )}
       </div>
-      {RECRUIT.IS_ON && (
-        <div className="flex items-center justify-center mt-24 mb-32">
-          <LinkTo
-            link="APPLY_LINK"
-            className="flex bg-[#0038FF] text-white px-6 py-3 gap-4 rounded-full text-xl items-center"
-          >
-            <span>{RECRUIT.PERIOD}기 지원하기</span>
-            <img
-              className="h-6"
-              src="/icons/right-arrow-circle-white.svg"
-              alt="right arrow"
-            />
-          </LinkTo>
-        </div>
-      )}
       <div className="w-full grid grid-cols-[repeat(2,minmax(16rem,_1fr))] gap-16 xl:grid-cols-[repeat(4,minmax(16rem,_1fr))]">
         {RECRUIT.SCHEDULE.map((d, i) => (
           <div className="w-full" key={i}>
