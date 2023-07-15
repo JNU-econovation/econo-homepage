@@ -33,13 +33,13 @@ const PortfolioItem: FC<PortfolioItemProps> = ({ item, onShowDetailText }) => {
         width: "100vw",
         height: "100vh",
         ease: "sine",
-        duration: 1,
+        duration: 0.7,
         onComplete: onShowDetailText,
       });
 
       tl.to(clickedElement, {
-        delay: 3,
-        filter: "blur(10px)",
+        delay: 2,
+        filter: "blur(10px) brightness(0.5)",
         duration: 1,
       });
     });
@@ -51,7 +51,7 @@ const PortfolioItem: FC<PortfolioItemProps> = ({ item, onShowDetailText }) => {
       <div className="flex-1">
         <button className="w-full overflow-hidden h-[40vh]">
           <Image
-            className="object-cover object-center w-full h-[40vh]"
+            className="object-cover object-center w-full h-[40vh] blur-0 brightness-100"
             src={item.BG_IMAGE}
             alt={item.TITLE}
             placeholder="blur"
