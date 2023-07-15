@@ -1,19 +1,48 @@
 import Image from "next/image";
-import { FC, MouseEvent } from "react";
+import { FC, MouseEvent, useRef } from "react";
 import { PORTFOLIO } from "@/src/assets/constants/portfolio/portfolio.ko";
 import gsap from "gsap";
 
 interface PortfolioItemProps {
   item: (typeof PORTFOLIO.DATA)[number];
   onShowDetailText: () => void;
+  isShowDetail: boolean;
 }
 
-const PortfolioItem: FC<PortfolioItemProps> = ({ item, onShowDetailText }) => {
+const PortfolioItem: FC<PortfolioItemProps> = ({
+  item,
+  onShowDetailText,
+  isShowDetail,
+}) => {
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
   const onShowDetail = (e: MouseEvent<HTMLImageElement>) => {
     const clickedElement = e.currentTarget;
     const viewportOffset = clickedElement.getBoundingClientRect();
+    const coverViewportOffset = buttonRef.current?.getBoundingClientRect();
 
     gsap.context(() => {
+      if (isShowDetail) {
+        gsap.to(clickedElement, {
+          filter: "blur(0) brightness(1)",
+          duration: 0.5,
+          left: coverViewportOffset?.left,
+          top: coverViewportOffset?.top,
+          width: coverViewportOffset?.width,
+          height: coverViewportOffset?.height,
+          onStart: onShowDetailText,
+        });
+        gsap.to(clickedElement, {
+          delay: 0.5,
+          position: "initial",
+          height: "40vh",
+          onComplete: () => {
+            clickedElement.style.width = "100%";
+          },
+        });
+        return;
+      }
+
       const tl = gsap.timeline(clickedElement);
       tl.to(clickedElement, {
         left: viewportOffset.left,
@@ -38,7 +67,7 @@ const PortfolioItem: FC<PortfolioItemProps> = ({ item, onShowDetailText }) => {
       });
 
       tl.to(clickedElement, {
-        delay: 2,
+        delay: 1,
         filter: "blur(10px) brightness(0.5)",
         duration: 1,
       });
@@ -49,7 +78,7 @@ const PortfolioItem: FC<PortfolioItemProps> = ({ item, onShowDetailText }) => {
     <div className="flex justify-center w-full">
       <h2 className="flex-1">{item.TITLE}</h2>
       <div className="flex-1">
-        <button className="w-full overflow-hidden h-[40vh]">
+        <button className="w-full overflow-hidden h-[40vh]" ref={buttonRef}>
           <Image
             className="object-cover object-center w-full h-[40vh] blur-0 brightness-100"
             src={item.BG_IMAGE}
