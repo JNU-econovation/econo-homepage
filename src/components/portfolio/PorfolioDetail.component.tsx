@@ -35,7 +35,7 @@ const PorfolioDetail: FC<PortfolioItemProps> = ({ item, isShowDetail }) => {
 
     gsap.to(titleCoverRef.current, {
       delay: 1,
-      top: "20rem", // 마지막 애니매이션에서 최대 높이를 지정하는 곳
+      top: "12rem", // 마지막 애니매이션에서 최대 높이를 지정하는 곳
       duration: 0.7,
     });
 
@@ -123,11 +123,11 @@ const PorfolioDetail: FC<PortfolioItemProps> = ({ item, isShowDetail }) => {
         </div>
       </div>
       <div
-        className="fixed bottom-10 left-14 font-semibold z-30 w-[40rem] min-w-96 translate-y-[140%] text-white"
+        className="fixed flex flex-col bottom-10 left-14 font-semibold z-30 w-[40%] min-w-[40rem] translate-y-[140%] text-white max-lg:w-[90%] top-[24rem] overflow-x-auto"
         ref={contentRef}
       >
         {item.IDEA ? (
-          <div className="mb-14">
+          <div className="mt-auto mb-14">
             <div className="text-4xl mb-5">IDEA</div>
             <div className="text-lg">
               {item.IDEA.split("\n").map((line, index) => (
@@ -152,7 +152,7 @@ const PorfolioDetail: FC<PortfolioItemProps> = ({ item, isShowDetail }) => {
           ""
         )}
       </div>
-      <div className="fixed bottom-10 right-14 z-30 text-white text-right font-bold">
+      <div className="fixed bottom-10 right-14 z-30 text-white text-right font-bold max-lg:hidden">
         <div className="text-2xl mb-5 translate-y-96" ref={teamNameRef}>
           {item.TEAM_NAME}
         </div>
@@ -161,7 +161,7 @@ const PorfolioDetail: FC<PortfolioItemProps> = ({ item, isShowDetail }) => {
         </div>
       </div>
       <div
-        className="fixed top-10 right-14 z-30 w-[40%] translate-y-[100vh]"
+        className="fixed top-10 right-14 z-30 w-[40%] h-[calc(100%-2.5rem)] translate-y-[100vh] max-xl:hidden"
         ref={imagesCoverRef}
       >
         <PortfolioImages images={item.INTRODUCTION} />

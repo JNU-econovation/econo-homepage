@@ -1,9 +1,10 @@
 "use client";
 
 import { PORTFOLIO } from "@/src/assets/constants/portfolio/portfolio.ko";
-import PortfolioItem from "@/src/components/portfolio/PortfolioTitleImage.component";
+import PortfolioTitleImage from "@/src/components/portfolio/PortfolioTitleImage.component";
 import { useEffect, useState } from "react";
 import PorfolioDetail from "./PorfolioDetail.component";
+import classNames from "classnames";
 
 const { TITLE, DATA } = PORTFOLIO;
 
@@ -12,8 +13,12 @@ const Portfolio = () => {
   const [isShowDetail, setIsShowDetail] = useState(false);
 
   const showDetail = (selectedProjectIndex = 0) => {
-    setIsShowDetail((prev) => !prev);
+    setIsShowDetail(true);
     setSelectedProject(selectedProjectIndex);
+  };
+
+  const closeDetail = () => {
+    setIsShowDetail(false);
   };
 
   useEffect(() => {
@@ -22,7 +27,7 @@ const Portfolio = () => {
     };
 
     if (isShowDetail) {
-      window.addEventListener("wheel", blockScroll, { passive: false });
+      window.addEventListener("wheel", blockScroll);
     } else {
       window.removeEventListener("wheel", blockScroll);
     }
@@ -34,6 +39,21 @@ const Portfolio = () => {
 
   return (
     <>
+      <button
+        className={classNames("fixed w-fit h-fit z-50 left-14 top-14", {
+          "brightness-0": !isShowDetail,
+        })}
+      >
+        <img src="/icons/hamburger.svg" alt="hamburger" />
+      </button>
+      {isShowDetail && (
+        <button
+          onClick={closeDetail}
+          className="fixed w-fit h-fit z-50 left-14 top-32"
+        >
+          <img src="/icons/left-arrow.svg" alt="arrow-left" />
+        </button>
+      )}
       <div className="w-full flex justify-center bg-gradient-to-b from-white z-10 pt-20 fixed top-0 pointer-events-none">
         <h1 className="text-9xl uppercase">{TITLE}</h1>
         <button>
@@ -43,7 +63,7 @@ const Portfolio = () => {
       <div className="h-[14rem]"></div>
       <div className="px-12 m-auto max-w-[1920px]">
         {DATA.map((item, index) => (
-          <PortfolioItem
+          <PortfolioTitleImage
             item={item}
             key={index}
             onShowDetailText={() => showDetail(index)}

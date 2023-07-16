@@ -12,7 +12,7 @@ const PortfolioImages: FC<PortfolioImagesProps> = ({ images }) => {
   return (
     <>
       {images.map((image) => (
-        <Image src={image.LINK} alt={image.LINK} />
+        <Image className="my-4" src={image.LINK} alt={image.LINK} />
       ))}
     </>
   );

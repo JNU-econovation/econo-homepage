@@ -300,7 +300,17 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "image",
-          LINK: require("/public/dev/2022_summer_dev/portfolio/juggle.png")
+          LINK: require("/public/dev/2022_summer_dev/portfolio/junggle/junggle1.png")
+            .default,
+        },
+        {
+          TYPE: "image",
+          LINK: require("/public/dev/2022_summer_dev/portfolio/junggle/junggle2.png")
+            .default,
+        },
+        {
+          TYPE: "image",
+          LINK: require("/public/dev/2022_summer_dev/portfolio/junggle/junggle3.png")
             .default,
         },
       ],
