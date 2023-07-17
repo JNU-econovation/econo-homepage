@@ -3,15 +3,20 @@
 import { AWARDS } from "@/src/assets/constants/award.ko";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
+const currentYear = new Date().getFullYear();
 
 const Awards = () => {
   const awardItemsRef = useRef<HTMLDivElement[]>([]);
+  const awardSplitRef = useRef<HTMLDivElement[]>([]);
   const awardRef = useRef<HTMLDivElement>(null);
   const awardYearsRef = useRef<HTMLDivElement>(null);
   const awardYearsCoverRef = useRef<HTMLDivElement>(null);
+  const awardYearProgressRef = useRef<HTMLDivElement>(null);
+  const [aawardYear, setAwardYear] = useState<number>(currentYear);
+  let awardYear = currentYear;
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -28,11 +33,47 @@ const Awards = () => {
         });
       });
 
+      awardSplitRef.current.forEach((item: HTMLDivElement) => {
+        gsap.to(item, {
+          x: "0",
+          ease: "power1.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top bottom",
+            end: "top +=20%",
+            scrub: 1,
+            onEnterBack: () => {
+              gsap.to(".awardYear", {
+                translateY: `${
+                  ((++awardYear - currentYear) * 100) / (currentYear - 2018)
+                }%`,
+                ease: "power1.out",
+              });
+            },
+            onLeave: () => {
+              gsap.to(".awardYear", {
+                translateY: `${
+                  ((--awardYear - currentYear) * 100) / (currentYear - 2018)
+                }%`,
+                ease: "power1.out",
+              });
+            },
+            onUpdate: (e) => {
+              if (awardYearProgressRef.current) {
+                awardYearProgressRef.current.style.width = `${
+                  e.progress * 100
+                }%`;
+              }
+            },
+          },
+        });
+      });
+
       gsap.to(awardYearsRef.current, {
         scrollTrigger: {
           trigger: awardYearsCoverRef.current,
           start: "top top",
-          end: "bottom +=40%",
+          end: "bottom +=20%",
           scrub: 0.5,
           pin: awardYearsRef.current,
         },
@@ -46,11 +87,30 @@ const Awards = () => {
       <div className="flex-1" ref={awardYearsCoverRef}>
         <div className="font-medium" ref={awardYearsRef}>
           <h1 className="uppercase">awards</h1>
-          <div className="text-7xl my-4">2023</div>
+          <div className="text-7xl my-4 h-20 overflow-hidden">
+            <div className="awardYear">
+              {Array.from({ length: currentYear - 2018 }).map((_, index) => (
+                <div key={index} className="text-7xl">
+                  {currentYear - index}
+                </div>
+              ))}
+            </div>
+          </div>
           <div className="flex">
+            <div className="overflow-hidden h-6">
+              <div className="awardYear">
+                {Array.from({ length: currentYear - 2018 }).map((_, index) => (
+                  <div key={index}>{currentYear - index}</div>
+                ))}
+              </div>
+            </div>
+            <div className="w-[30%] flex justify-start items-center">
+              <div
+                className="border-b-[1px] border-black translate-y-[calc(-50%-1px)] mx-4"
+                ref={awardYearProgressRef}
+              ></div>
+            </div>
             <div>2020</div>
-            <div className="w-[30%] border-b-[1px] border-black translate-y-[calc(-50%-1px)] mx-4"></div>
-            <div>2023</div>
           </div>
         </div>
       </div>
@@ -77,7 +137,7 @@ const Awards = () => {
               className="translate-x-[15vw] border-b-[1px] border-black translate-y-4"
               ref={(el) =>
                 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                (awardItemsRef.current[awardItemsRef.current.length] = el!)
+                (awardSplitRef.current[awardSplitRef.current.length] = el!)
               }
             ></div>
           </div>

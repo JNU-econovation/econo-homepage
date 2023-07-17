@@ -4,8 +4,20 @@ const URLS = {
     TEXT: "home",
   },
   PORTFOLIO: {
-    LINK: "/portfolio",
+    LINK: "/portfolio/dev",
     TEXT: "portfolio",
+  },
+  PORTFOLIO_DEV: {
+    LINK: "/portfolio/dev",
+    TEXT: "dev",
+  },
+  PORTFOLIO_HACKATHON: {
+    LINK: "/portfolio/hackathon",
+    TEXT: "hackathon",
+  },
+  PORTFOLIO_SERVICE: {
+    LINK: "/#services",
+    TEXT: "service",
   },
   PROJECT: {
     LINK: "/project",
@@ -54,6 +66,18 @@ const URLS = {
   APPLY_LINK: {
     LINK: "https://econovation.kr",
     TEXT: "지원하기",
+  },
+  ECONO_RECRUIT: {
+    LINK: "https://econovation.kr",
+    TEXT: "econo recruit",
+  },
+  ECONO_BEEP: {
+    LINK: "https://econovation.kr",
+    TEXT: "econo beep",
+  },
+  T_ECONO: {
+    LINK: "https://econovation.kr",
+    TEXT: "t-econo",
   },
 };
 

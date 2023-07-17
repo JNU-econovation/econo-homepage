@@ -1,6 +1,7 @@
 "use client";
 
 import { RECRUIT } from "@/src/assets/constants/recruit.ko";
+import Footer from "@/src/components/common/Footer.component";
 import Faq from "@/src/components/recruit/Faq.component";
 import Fileds from "@/src/components/recruit/Fields.component";
 import RecruitMain from "@/src/components/recruit/RecruitMain.component";
@@ -56,6 +57,7 @@ const Recruit = () => {
           <Faq />
         </section>
       </div>
+      <Footer />
     </>
   );
 };

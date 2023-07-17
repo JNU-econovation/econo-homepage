@@ -54,7 +54,7 @@ const PortfolioTitleImage: FC<PortfolioTitleImageProps> = ({
 
       tl.to(imageRef.current, {
         delay: 1,
-        filter: "blur(10px) brightness(0.5)",
+        filter: "blur(20px) brightness(0.5)",
         duration: 1,
       });
     });
@@ -79,6 +79,7 @@ const PortfolioTitleImage: FC<PortfolioTitleImageProps> = ({
         onComplete: () => {
           if (imageRef.current === null) return;
           imageRef.current.style.width = "100%";
+          imageRef.current.style.filter = "blur(0) brightness(1)";
         },
       });
     }

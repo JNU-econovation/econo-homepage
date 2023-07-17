@@ -1,6 +1,7 @@
 import Navbar from "@/src/components/common/Navbar.component";
 import Awards from "@/src/components/main/awards.componont";
 import Footer from "@/src/components/common/Footer.component";
+import Service from "@/src/components/main/Service.component";
 
 const MainPage = () => {
   return (
@@ -11,7 +12,7 @@ const MainPage = () => {
         <div className="px-12">
           <Awards />
         </div>
-        <div className="h-screen"></div>
+        <Service />
       </div>
       <Footer />
     </>

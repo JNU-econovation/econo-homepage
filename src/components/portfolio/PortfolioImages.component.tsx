@@ -11,9 +11,15 @@ interface PortfolioImagesProps {
 const PortfolioImages: FC<PortfolioImagesProps> = ({ images }) => {
   return (
     <>
-      {images.map((image) => (
-        <Image className="my-4" src={image.LINK} alt={image.LINK} />
-      ))}
+      {images.map((image) =>
+        image.TYPE === "image" ? (
+          <Image src={image.LINK} alt={image.LINK} />
+        ) : image.TYPE === "video" ? (
+          <iframe id="ytplayer" width="100%" height="500" src={image.LINK} />
+        ) : (
+          ""
+        )
+      )}
     </>
   );
 };

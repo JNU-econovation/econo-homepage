@@ -316,7 +316,7 @@ const PORTFOLIO = {
       ],
     },
     {
-      TITLE: "Callusic-new",
+      TITLE: "Collusic-new",
       SUBTITLE: "온라인 작사 작곡 협업 웹 사이트",
       TEAM_NAME: "잘가라회장단.",
       PEOPLE: "김성혁, 박재현, 김규란, 홍동건, 한수아",
@@ -527,7 +527,7 @@ const PORTFOLIO = {
       ],
     },
     {
-      TITLE: "유서써유(You Will)",
+      TITLE: "유서써유",
       SUBTITLE: "나와 모두에게 쓰는 편지, 유서써유(You Will)",
       TEAM_NAME: "캥거루즈",
       PEOPLE: "김송아, 김유리, 김민주, 류현지, 정주희",
@@ -547,7 +547,7 @@ const PORTFOLIO = {
       ],
     },
     {
-      TITLE: "HCP(Humming based Chord Progress)",
+      TITLE: "HCP",
       SUBTITLE: "흥얼거림을 기반으로 노래를 만들어주는 인공지능 작곡 프로그램",
       TEAM_NAME: "ARIA",
       PEOPLE: "김서영, 감양하, 신재욱",
@@ -751,7 +751,7 @@ const PORTFOLIO = {
       ],
     },
     {
-      TITLE: "그린케어(grandcare)",
+      TITLE: "그랜케어",
       SUBTITLE: "딥러닝 영상처리 기반 독거노인의 응급상황 감지 시스템",
       TEAM_NAME: "아이됴아",
       PEOPLE: "나영주, 송창훈, 황지우",
@@ -835,7 +835,7 @@ const PORTFOLIO = {
       ],
     },
     {
-      TITLE: "Collusic(Collaboration + Music)",
+      TITLE: "Collusic",
       SUBTITLE: "온라인 작곡, 작사 협업 웹사이트",
       TEAM_NAME: "Seagull & Seagirl",
       PEOPLE: "박재현, 김다애",
@@ -946,7 +946,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/zbqbgAVfBr4",
+          LINK: "https://youtube.com/embed/zbqbgAVfBr4",
         },
       ],
     },
@@ -966,7 +966,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/JLsy4DCfsiw",
+          LINK: "https://youtube.com/embed/JLsy4DCfsiw",
         },
       ],
     },
@@ -984,7 +984,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/vwlexBdCrnw",
+          LINK: "https://youtube.com/embed/vwlexBdCrnw",
         },
       ],
     },
@@ -1002,7 +1002,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/Es9ASjBCSaU",
+          LINK: "https://youtube.com/embed/Es9ASjBCSaU",
         },
       ],
     },
@@ -1021,7 +1021,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/-Yzm8ASAclU",
+          LINK: "https://youtube.com/embed/-Yzm8ASAclU",
         },
       ],
     },
@@ -1040,12 +1040,12 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/NXMqlOccROU",
+          LINK: "https://youtube.com/embed/NXMqlOccROU",
         },
       ],
     },
     {
-      TITLE: "ROBOTICS=LOVERTICS(로봇팔을 제어하다)",
+      TITLE: "ROBOTICS=LOVERTICS",
       SUBTITLE: "",
       TEAM_NAME: "로보덕",
       PEOPLE: "김정인",
@@ -1058,7 +1058,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/Q5QkPeNbKHc",
+          LINK: "https://youtube.com/embed/Q5QkPeNbKHc",
         },
       ],
     },
@@ -1076,7 +1076,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/Fx-9SdgAXaw",
+          LINK: "https://youtube.com/embed/Fx-9SdgAXaw",
         },
       ],
     },
@@ -1094,7 +1094,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/vz9XIV847DQ",
+          LINK: "https://youtube.com/embed/vz9XIV847DQ",
         },
       ],
     },
@@ -1113,7 +1113,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/Q8S37O_GzGQ",
+          LINK: "https://youtube.com/embed/Q8S37O_GzGQ",
         },
       ],
     },
@@ -1131,7 +1131,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/Z_WnhbXPEg0",
+          LINK: "https://youtube.com/embed/Z_WnhbXPEg0",
         },
       ],
     },
@@ -1149,7 +1149,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/bYDR9_b01Bo",
+          LINK: "https://youtube.com/embed/bYDR9_b01Bo",
         },
       ],
     },
@@ -1167,7 +1167,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/mv3yg4uWHG4",
+          LINK: "https://youtube.com/embed/mv3yg4uWHG4",
         },
       ],
     },
@@ -1185,7 +1185,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/5jpdnnSS784",
+          LINK: "https://youtube.com/embed/5jpdnnSS784",
         },
       ],
     },
@@ -1203,7 +1203,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/9z8f1yeggZk",
+          LINK: "https://youtube.com/embed/9z8f1yeggZk",
         },
       ],
     },
@@ -1221,7 +1221,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/_nCGZ4bFnHA",
+          LINK: "https://youtube.com/embed/_nCGZ4bFnHA",
         },
       ],
     },
@@ -1239,7 +1239,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/N5zcX1fvJmE",
+          LINK: "https://youtube.com/embed/N5zcX1fvJmE",
         },
       ],
     },
@@ -1258,7 +1258,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/_O6X71OowSU",
+          LINK: "https://youtube.com/embed/_O6X71OowSU",
         },
       ],
     },
@@ -1276,7 +1276,7 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/4xn0JziN_-g",
+          LINK: "https://youtube.com/embed/4xn0JziN_-g",
         },
       ],
     },
@@ -1294,11 +1294,17 @@ const PORTFOLIO = {
       INTRODUCTION: [
         {
           TYPE: "video",
-          LINK: "https://youtu.be/7zFZIevBKXk",
+          LINK: "https://youtube.com/embed/7zFZIevBKXk",
         },
       ],
     },
   ],
 };
 
-export { PORTFOLIO };
+const PORTFOLIO_MENU = [
+  { TITLE: "DEV", LINK: "PORTFOLIO_DEV" },
+  { TITLE: "HACKATHON", LINK: "PORTFOLIO_HACKATHON" },
+  { TITLE: "SERVICE", LINK: "PORTFOLIO_SERVICE" },
+];
+
+export { PORTFOLIO, PORTFOLIO_MENU };
