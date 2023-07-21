@@ -60,15 +60,24 @@ const Portfolio = () => {
         </button>
       )}
       <PortfolioNavbar />
-      <div className="px-12 m-auto max-w-[1920px]">
-        {DATA.map((item, index) => (
-          <PortfolioTitleImage
-            item={item}
-            key={index}
-            onShowDetailText={() => showDetail(index)}
-            isShowDetail={isShowDetail}
-          />
-        ))}
+      <div className="flex px-12 m-auto max-w-[1920px]">
+        <div>
+          {DATA.map((item, index) => (
+            <h2 key={index} className="text-7xl uppercase">
+              {item.TITLE}
+            </h2>
+          ))}
+        </div>
+        <div>
+          {DATA.map((item, index) => (
+            <PortfolioTitleImage
+              item={item}
+              key={index}
+              onShowDetailText={() => showDetail(index)}
+              isShowDetail={isShowDetail}
+            />
+          ))}
+        </div>
       </div>
       <div className="fixed bottom-0 w-full bg-gradient-to-t from-white z-10 py-32 pointer-events-none"></div>
       <PorfolioDetail

@@ -1,3 +1,7 @@
+const MAIN = {
+  SUBTITLE: "coding connected",
+};
+
 const FOOTER = {
   TITLE: "contact us",
   CONTACT: [
@@ -17,4 +21,4 @@ const FOOTER = {
   TO_TOP: "back to top",
 };
 
-export { FOOTER };
+export { MAIN, FOOTER };

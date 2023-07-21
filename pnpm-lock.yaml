@@ -10,9 +10,6 @@ dependencies:
   jotai:
     specifier: ^2.2.1
     version: 2.2.1(react@18.2.0)
-  lodash-es:
-    specifier: ^4.17.21
-    version: 4.17.21
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -21,9 +18,6 @@ dependencies:
     version: 18.2.0(react@18.2.0)
 
 devDependencies:
-  '@types/google.maps':
-    specifier: ^3.53.4
-    version: 3.53.4
   '@types/node':
     specifier: 20.4.1
     version: 20.4.1
@@ -312,10 +306,6 @@ packages:
     resolution: {integrity: sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg==}
     dependencies:
       tslib: 2.6.0
-    dev: true
-
-  /@types/google.maps@3.53.4:
-    resolution: {integrity: sha512-IiDAYTONQEKCBssPtoM0XqWF8YIIk2leba4NOf9qVQ/d8l5gLuS3QT87TrX6/u8rMonQAXC9KEDmM4q7sT6MWg==}
     dev: true
 
   /@types/json-schema@7.0.12:
@@ -1894,10 +1884,6 @@ packages:
     dependencies:
       p-locate: 5.0.0
     dev: true
-
-  /lodash-es@4.17.21:
-    resolution: {integrity: sha512-mKnC+QJ9pWVzv+C4/U3rRsHapFfHvQFoFB92e52xeyGMcX6/OlIl78je1u8vePzYZSkkogMPJ2yjxxsb89cxyw==}
-    dev: false
 
   /lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}

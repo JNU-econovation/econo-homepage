@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   PORTFOLIO,
   PORTFOLIO_MENU,
 } from "@/src/assets/constants/portfolio/portfolio.ko";
 import { URLS } from "@/src/assets/constants/url.ko";
 import gsap from "gsap";
-import LinkTo from "../common/Link.component";
+import LinkTo from "@components/common/LinkTo.component";
 import classNames from "classnames";
 
 const { TITLE } = PORTFOLIO;
@@ -25,6 +25,7 @@ const PortfolioNavbar = () => {
 
     gsap.to(".portfolio-menu-button", {
       scale: isShowPortfolioMenu ? 1 : 1.2,
+      translateY: "0",
       duration: 0.5,
     });
 
@@ -46,11 +47,46 @@ const PortfolioNavbar = () => {
     });
   };
 
+  useEffect(() => {
+    const addSmallNavbar = () => {
+      gsap.to(".portfolio-menu-button", {
+        translateY: "-3.5rem",
+        scale: 0.5,
+        duration: 0.5,
+      });
+    };
+
+    const removeSmallNavbar = () => {
+      gsap.to(".portfolio-menu-button", {
+        translateY: "0",
+        scale: 1,
+        duration: 0.5,
+      });
+    };
+
+    const onScroll = (e: WheelEvent) => {
+      if (isShowPortfolioMenu) {
+        return;
+      }
+
+      if (e.deltaY > 0) {
+        addSmallNavbar();
+      } else {
+        removeSmallNavbar();
+      }
+    };
+
+    window.addEventListener("wheel", onScroll);
+    return () => {
+      window.removeEventListener("wheel", onScroll);
+    };
+  }, [isShowPortfolioMenu]);
+
   return (
     <>
       <h1 className="w-full flex justify-center bg-gradient-to-b font-bold from-white z-20 pt-20 fixed top-0 portfolio-menu-cover">
         <button
-          className="flex items-center portfolio-menu-button outline-none"
+          className="flex items-center portfolio-menu-button outline-none "
           onClick={togglePortfolioMenu}
         >
           <h1 className="text-9xl uppercase mr-4">{TITLE}</h1>
@@ -61,7 +97,7 @@ const PortfolioNavbar = () => {
           />
         </button>
       </h1>
-      <div className="fixed h-full w-full bg-white opacity-0 screen-bg-cover"></div>
+      <div className="fixed h-full w-full bg-white opacity-0 screen-bg-cover -z-10"></div>
       <div className="h-[14rem]"></div>
       <div className="fixed flex flex-col items-center w-full text-7xl font-bold gap-4 opacity-0  portfolio-menu-subtitles">
         {PORTFOLIO_MENU.map((menu, index) => (

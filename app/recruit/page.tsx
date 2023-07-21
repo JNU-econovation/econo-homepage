@@ -32,7 +32,7 @@ const Recruit = () => {
 
   return (
     <>
-      <div className="px-24">
+      <div className="px-24 max-w-[1920px] m-auto">
         {!RECRUIT.IS_ON && (
           <section>
             <Wating
@@ -42,11 +42,9 @@ const Recruit = () => {
             />
           </section>
         )}
-        <div ref={recruitRef}>
-          <section>
-            <RecruitMain />
-          </section>
-        </div>
+        <section ref={recruitRef}>
+          <RecruitMain />
+        </section>
         <section>
           <Fileds />
         </section>

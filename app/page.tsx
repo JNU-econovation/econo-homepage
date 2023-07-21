@@ -1,15 +1,16 @@
 import Navbar from "@/src/components/common/Navbar.component";
-import Awards from "@/src/components/main/awards.componont";
 import Footer from "@/src/components/common/Footer.component";
 import Service from "@/src/components/main/Service.component";
+import Intro from "@/src/components/main/Intro.component";
+import Awards from "@/src/components/main/awards.componont";
 
 const MainPage = () => {
   return (
     <>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden max-w-[1920px] m-auto">
         <Navbar />
-        <div className="h-screen"></div>
         <div className="px-12">
+          <Intro />
           <Awards />
         </div>
         <Service />

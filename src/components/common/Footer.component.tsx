@@ -1,7 +1,7 @@
 "use client";
 
 import { FOOTER } from "@/src/assets/constants/common.ko";
-import LinkTo from "./Link.component";
+import LinkTo from "./LinkTo.component";
 
 const Footer = () => {
   const backToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });

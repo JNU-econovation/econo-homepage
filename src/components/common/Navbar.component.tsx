@@ -2,11 +2,11 @@
 
 import { NAV } from "@/src/assets/constants/nav.ko";
 import { RECRUIT } from "@/src/assets/constants/recruit.ko";
-import LinkTo from "@/src/components/common/Link.component";
+import LinkTo from "@/src/components/common/LinkTo.component";
 
 const Navbar = () => {
   return (
-    <div className="flex w-full justify-between min-h-fit px-12 mt-12">
+    <div className="flex w-full justify-between min-h-fit px-12 my-12">
       <div>
         {NAV.filter((data) => data.POSITION === "left").map((data) => (
           <LinkTo

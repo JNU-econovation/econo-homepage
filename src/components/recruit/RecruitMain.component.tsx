@@ -1,8 +1,21 @@
 import { RECRUIT } from "@/src/assets/constants/recruit.ko";
-import LinkTo from "../common/Link.component";
-import classNames from "classnames";
+import LinkTo from "../common/LinkTo.component";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+import gsap from "gsap";
 
+gsap.registerPlugin(ScrollTrigger);
 const RecruitMain = () => {
+  useEffect(() => {
+    gsap.to(".recruit-skedule-arrow", {
+      width: "100%",
+      scrollTrigger: {
+        trigger: ".recruit-skedule-arrow",
+        start: "top +=70%",
+      },
+    });
+  }, []);
+
   return (
     <div className="flex flex-col justify-center items-center text-xl leading-relaxed h-screen">
       <div>
@@ -34,7 +47,7 @@ const RecruitMain = () => {
         {RECRUIT.SCHEDULE.map((d, i) => (
           <div className="w-full" key={i}>
             <div className="text-6xl mb-6 tracking-tighter">{d.DATE}</div>
-            <div className="border-t-[0.5px] w-full border-black relative after:border-t-[1px] after:border-r-[1px] after:rotate-45 after:right-[1px] after:-bottom-[6px] after:h-[12px] after:w-[12px] after:absolute after:border-black"></div>
+            <div className="recruit-skedule-arrow  border-t-[0.5px] w-0 border-black relative after:border-t-[1px] after:border-r-[1px] after:rotate-45 after:right-[1px] after:-bottom-[6px] after:h-[12px] after:w-[12px] after:absolute after:border-black"></div>
             <div className="text-lg mt-4">{d.TEXT}</div>
           </div>
         ))}

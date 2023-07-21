@@ -86,25 +86,22 @@ const PortfolioTitleImage: FC<PortfolioTitleImageProps> = ({
   }, [isShowDetail]);
 
   return (
-    <div className="flex justify-center w-full">
-      <h2 className="text-7xl flex-1 uppercase">{item.TITLE}</h2>
-      <div className="flex-1">
-        <button
-          className={classNames("w-full overflow-hidden h-[40vh]", {
-            "cursor-default": isShowDetail,
-          })}
-          ref={buttonRef}
-        >
-          <Image
-            className="object-cover object-center w-full h-[40vh] blur-0 brightness-100"
-            src={item.BG_IMAGE}
-            alt={item.TITLE}
-            placeholder="blur"
-            onClick={onShowDetail}
-            ref={imageRef}
-          />
-        </button>
-      </div>
+    <div className="flex-1">
+      <button
+        className={classNames("w-full overflow-hidden h-[40vh]", {
+          "cursor-default": isShowDetail,
+        })}
+        ref={buttonRef}
+      >
+        <Image
+          className="object-cover object-center w-full h-[40vh] blur-0 brightness-100"
+          src={item.BG_IMAGE}
+          alt={item.TITLE}
+          placeholder="blur"
+          onClick={onShowDetail}
+          ref={imageRef}
+        />
+      </button>
     </div>
   );
 };

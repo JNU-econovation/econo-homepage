@@ -3,7 +3,7 @@
 import { AWARDS } from "@/src/assets/constants/award.ko";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 const currentYear = new Date().getFullYear();
@@ -15,7 +15,6 @@ const Awards = () => {
   const awardYearsRef = useRef<HTMLDivElement>(null);
   const awardYearsCoverRef = useRef<HTMLDivElement>(null);
   const awardYearProgressRef = useRef<HTMLDivElement>(null);
-  const [aawardYear, setAwardYear] = useState<number>(currentYear);
   let awardYear = currentYear;
 
   useLayoutEffect(() => {
@@ -84,7 +83,7 @@ const Awards = () => {
 
   return (
     <div className="flex justify-between pt-4">
-      <div className="flex-1" ref={awardYearsCoverRef}>
+      <div className="flex-1 w-1/2" ref={awardYearsCoverRef}>
         <div className="font-medium" ref={awardYearsRef}>
           <h1 className="uppercase">awards</h1>
           <div className="text-7xl my-4 h-20 overflow-hidden">
