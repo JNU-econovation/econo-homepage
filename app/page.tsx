@@ -2,7 +2,7 @@ import Navbar from "@/src/components/common/Navbar.component";
 import Footer from "@/src/components/common/Footer.component";
 import Service from "@/src/components/main/Service.component";
 import Intro from "@/src/components/main/Intro.component";
-import Awards from "@/src/components/main/awards.componont";
+import Awards from "@/src/components/main/Awards.componont";
 
 const MainPage = () => {
   return (

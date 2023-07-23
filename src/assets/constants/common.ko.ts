@@ -21,4 +21,8 @@ const FOOTER = {
   TO_TOP: "back to top",
 };
 
-export { MAIN, FOOTER };
+const HAMBGER_MENU = {
+  CLOSE: "close",
+};
+
+export { MAIN, FOOTER, HAMBGER_MENU };

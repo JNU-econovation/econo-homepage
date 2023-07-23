@@ -5,6 +5,8 @@ import gsap from "gsap";
 import { FC, useEffect } from "react";
 import PortfolioImages from "./PortfolioImages.component";
 import PortfolioDetailDescription from "./PortfolioDetailDescription.component";
+import { isMobile } from "react-device-detect";
+import classNames from "classnames";
 
 const { DATA } = PORTFOLIO;
 
@@ -73,7 +75,7 @@ const PorfolioDetail: FC<PortfolioItemProps> = ({ item, isShowDetail }) => {
     });
 
     gsap.to(".portfolio-item-content", {
-      translateY: "140%",
+      translateY: isMobile ? "200vh" : "100vh",
       duration: 0.7,
     });
 
@@ -103,10 +105,20 @@ const PorfolioDetail: FC<PortfolioItemProps> = ({ item, isShowDetail }) => {
   return (
     <>
       <div className="fixed bottom-10 left-14 z-30 text-white font-bold w-[50%] break-words portfolio-item-title-cover max-lg:w-[90%]">
-        <div className="text-7xl mb-5 translate-y-96 uppercase portfolio-item-title">
+        <div
+          className={classNames(
+            "mb-5 translate-y-96 uppercase portfolio-item-title ",
+            isMobile ? "text-7xl" : "text-7xl"
+          )}
+        >
           {item.TITLE}
         </div>
-        <div className="text-xl translate-y-96 portfolio-item-subtitle">
+        <div
+          className={classNames(
+            "translate-y-96 portfolio-item-subtitle leading-relaxed",
+            isMobile ? "text-3xl" : "text-xl"
+          )}
+        >
           {item.SUBTITLE.split("\n").map((line, index) => (
             <div key={index}>{line}</div>
           ))}

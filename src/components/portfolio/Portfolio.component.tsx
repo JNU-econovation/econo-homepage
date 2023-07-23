@@ -2,20 +2,33 @@
 
 import { PORTFOLIO } from "@/src/assets/constants/portfolio/portfolio.ko";
 import PortfolioTitleImage from "@/src/components/portfolio/PortfolioTitleImage.component";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import PorfolioDetail from "./PortfolioDetail.component";
 import classNames from "classnames";
 import PortfolioNavbar from "@/src/components/portfolio/PortfolioNavbar.component";
+import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import { Mousewheel, FreeMode, Controller } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/mousewheel";
+import "swiper/css/free-mode";
+import PortfolioBackImage from "./PortfolioBackImage.component";
+import HambergerMenu from "../common/Hamberger.component";
 
 const { DATA } = PORTFOLIO;
 
 const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(0);
   const [isShowDetail, setIsShowDetail] = useState(false);
+  const topRef = useRef<HTMLDivElement>(null);
 
-  const showDetail = (selectedProjectIndex = 0) => {
+  const titleSwiperRef = useRef<SwiperRef>(null);
+  const imageSwiperRef = useRef<SwiperRef>(null);
+
+  const showDetail = (index = 0) => {
+    if (titleSwiperRef.current === null) return;
     setIsShowDetail(true);
-    setSelectedProject(selectedProjectIndex);
+    titleSwiperRef.current.swiper.slideTo(index);
+    setSelectedProject(index);
   };
 
   const closeDetail = () => {
@@ -23,34 +36,20 @@ const Portfolio = () => {
   };
 
   useEffect(() => {
-    const blockScroll = (e: WheelEvent) => {
-      e.preventDefault();
-    };
+    scrollTo(0, topRef.current?.offsetTop || 0);
 
-    if (isShowDetail) {
-      window.addEventListener("wheel", blockScroll);
-    } else {
-      window.removeEventListener("wheel", blockScroll);
-    }
-
-    return () => {
-      window.removeEventListener("wheel", blockScroll);
-    };
-  }, [isShowDetail]);
-
-  useEffect(() => {
-    scrollTo(0, 0);
+    if (imageSwiperRef.current === null || titleSwiperRef.current === null)
+      return;
+    imageSwiperRef.current.swiper.controller.control =
+      titleSwiperRef.current.swiper;
+    titleSwiperRef.current.swiper.controller.control =
+      imageSwiperRef.current.swiper;
   }, []);
 
   return (
     <>
-      <button
-        className={classNames("fixed w-fit h-fit z-50 left-14 top-14", {
-          "brightness-0": !isShowDetail,
-        })}
-      >
-        <img src="/icons/hamburger.svg" alt="hamburger" />
-      </button>
+      <div ref={topRef} />
+      <HambergerMenu isWhite={!isShowDetail} />
       {isShowDetail && (
         <button
           onClick={closeDetail}
@@ -60,26 +59,65 @@ const Portfolio = () => {
         </button>
       )}
       <PortfolioNavbar />
-      <div className="flex px-12 m-auto max-w-[1920px]">
-        <div>
+      <div className="absolute h-screen flex px-12 max-w-[1920px] justify-between translate-x-[-50%] translate-y-[-50%] left-1/2 top-1/2 ">
+        <Swiper
+          className="flex-1 h-screen"
+          modules={[Mousewheel, FreeMode, Controller]}
+          direction="vertical"
+          slidesPerView="auto"
+          centeredSlides={true}
+          freeMode={{ enabled: true, sticky: true }}
+          mousewheel={{
+            releaseOnEdges: true,
+            thresholdTime: 100,
+            thresholdDelta: 10,
+          }}
+          ref={titleSwiperRef}
+        >
           {DATA.map((item, index) => (
-            <h2 key={index} className="text-7xl uppercase">
-              {item.TITLE}
-            </h2>
+            <SwiperSlide key={index} style={{ height: "fit-content" }}>
+              {({ isActive }) => (
+                <button
+                  onClick={() => showDetail(index)}
+                  className={classNames("text-7xl uppercase", {
+                    "text-gray-400": !isActive,
+                  })}
+                >
+                  <h2>{item.TITLE}</h2>
+                </button>
+              )}
+            </SwiperSlide>
           ))}
-        </div>
-        <div>
+        </Swiper>
+        <Swiper
+          className="h-full max-lg:!hidden"
+          modules={[Mousewheel, FreeMode, Controller]}
+          direction="vertical"
+          centeredSlides={true}
+          freeMode={{ enabled: true, sticky: true }}
+          mousewheel={{
+            releaseOnEdges: true,
+          }}
+          slidesPerView={3}
+          spaceBetween={20}
+          ref={imageSwiperRef}
+        >
           {DATA.map((item, index) => (
-            <PortfolioTitleImage
-              item={item}
-              key={index}
-              onShowDetailText={() => showDetail(index)}
-              isShowDetail={isShowDetail}
-            />
+            <SwiperSlide key={index} className="overflow-hidden w-[40rem]">
+              <PortfolioTitleImage
+                item={item}
+                key={index}
+                onShowDetail={() => showDetail(index)}
+              />
+            </SwiperSlide>
           ))}
-        </div>
+        </Swiper>
       </div>
       <div className="fixed bottom-0 w-full bg-gradient-to-t from-white z-10 py-32 pointer-events-none"></div>
+      <PortfolioBackImage
+        isShowDetail={isShowDetail}
+        item={DATA[selectedProject]}
+      />
       <PorfolioDetail
         item={DATA[selectedProject]}
         isShowDetail={isShowDetail}

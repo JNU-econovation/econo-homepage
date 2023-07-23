@@ -1,5 +1,6 @@
 import { MAIN } from "@/src/assets/constants/common.ko";
 import Image from "next/image";
+import econovationBlackLogo from "/public/images/econovation-black.svg";
 
 const Intro = () => {
   return (
@@ -7,7 +8,7 @@ const Intro = () => {
       <h1>
         <Image
           className="w-full"
-          src={require("@/public/images/econovation_black.svg").default}
+          src={econovationBlackLogo}
           alt="ECONOVATION"
         />
       </h1>

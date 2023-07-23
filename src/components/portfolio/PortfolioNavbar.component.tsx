@@ -21,12 +21,8 @@ const PortfolioNavbar = () => {
     gsap.to(".portfolio-menu-cover", {
       zIndex: isShowPortfolioMenu ? 10 : 100,
       duration: 0.5,
-    });
-
-    gsap.to(".portfolio-menu-button", {
       scale: isShowPortfolioMenu ? 1 : 1.2,
       translateY: "0",
-      duration: 0.5,
     });
 
     gsap.to(".portfolio-menu-buttom-image", {
@@ -49,15 +45,15 @@ const PortfolioNavbar = () => {
 
   useEffect(() => {
     const addSmallNavbar = () => {
-      gsap.to(".portfolio-menu-button", {
-        translateY: "-3.5rem",
+      gsap.to(".portfolio-menu-cover", {
+        translateY: "-4.5rem",
         scale: 0.5,
         duration: 0.5,
       });
     };
 
     const removeSmallNavbar = () => {
-      gsap.to(".portfolio-menu-button", {
+      gsap.to(".portfolio-menu-cover", {
         translateY: "0",
         scale: 1,
         duration: 0.5,
@@ -84,9 +80,10 @@ const PortfolioNavbar = () => {
 
   return (
     <>
-      <h1 className="w-full flex justify-center bg-gradient-to-b font-bold from-white z-20 pt-20 fixed top-0 portfolio-menu-cover">
+      <div className="w-full flex justify-center bg-gradient-to-b from-white z-20 fixed top-0 pointer-events-none"></div>
+      <h1 className="w-full flex justify-center font-bold z-20 mt-20 fixed top-0 portfolio-menu-cover">
         <button
-          className="flex items-center portfolio-menu-button outline-none "
+          className="flex items-center portfolio-menu-button outline-none"
           onClick={togglePortfolioMenu}
         >
           <h1 className="text-9xl uppercase mr-4">{TITLE}</h1>
@@ -99,7 +96,7 @@ const PortfolioNavbar = () => {
       </h1>
       <div className="fixed h-full w-full bg-white opacity-0 screen-bg-cover -z-10"></div>
       <div className="h-[14rem]"></div>
-      <div className="fixed flex flex-col items-center w-full text-7xl font-bold gap-4 opacity-0  portfolio-menu-subtitles">
+      <div className="fixed flex flex-col items-center w-full text-7xl font-bold gap-4 opacity-0  portfolio-menu-subtitles -z-10">
         {PORTFOLIO_MENU.map((menu, index) => (
           <LinkTo key={index} link={menu.LINK}>
             {

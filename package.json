@@ -13,7 +13,10 @@
     "gsap": "^3.12.1",
     "jotai": "^2.2.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-device-detect": "^2.2.3",
+    "react-dom": "^18.2.0",
+    "react-scroll-parallax": "^3.4.2",
+    "swiper": "^10.0.4"
   },
   "devDependencies": {
     "@types/node": "20.4.1",

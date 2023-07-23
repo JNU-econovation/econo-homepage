@@ -1,5 +1,7 @@
 import { PORTFOLIO } from "@/src/assets/constants/portfolio/portfolio.ko";
 import { FC } from "react";
+import classNames from "classnames";
+import { isMobile } from "react-device-detect";
 
 interface PortfolioDetailDescriptionProps {
   item: (typeof PORTFOLIO.DATA)[number];
@@ -9,11 +11,25 @@ const PortfolioDetailDescription: FC<PortfolioDetailDescriptionProps> = ({
   item,
 }) => {
   return (
-    <div className="fixed flex flex-col bottom-10 left-14 font-semibold z-30 w-[40%] min-w-[40rem] translate-y-[140%] text-white max-lg:w-[90%] top-[24rem] overflow-x-auto portfolio-item-content">
+    <div
+      className={classNames(
+        "fixed flex flex-col bottom-10 left-14 font-semibold z-30 w-[40%] min-w-[40rem] translate-y-[140%] text-white max-lg:w-[90%] overflow-x-auto portfolio-item-content",
+        isMobile ? "top-[30rem]" : "top-[24rem]"
+      )}
+    >
       {item.IDEA ? (
-        <div className="mt-auto mb-14">
-          <div className="text-4xl mb-5">IDEA</div>
-          <div className="text-lg">
+        <div className={classNames("mb-14", { "mt-auto": !isMobile })}>
+          <div
+            className={classNames("mb-5", isMobile ? "text-6xl" : "text-4xl")}
+          >
+            IDEA
+          </div>
+          <div
+            className={classNames(
+              "mb-5 leading-relaxed",
+              isMobile ? "text-3xl" : "text-lg"
+            )}
+          >
             {item.IDEA.split("\n").map((line, index) => (
               <div key={index}>{line}</div>
             ))}
@@ -25,8 +41,17 @@ const PortfolioDetailDescription: FC<PortfolioDetailDescriptionProps> = ({
 
       {item.SKILLS ? (
         <div>
-          <div className="text-4xl mb-5">SKILLS</div>
-          <div className="text-lg">
+          <div
+            className={classNames("mb-5", isMobile ? "text-6xl" : "text-4xl")}
+          >
+            SKILLS
+          </div>
+          <div
+            className={classNames(
+              "mb-5 leading-relaxed",
+              isMobile ? "text-3xl" : "text-lg"
+            )}
+          >
             {item.SKILLS.split("\n").map((line, index) => (
               <div key={index}>{line}</div>
             ))}
