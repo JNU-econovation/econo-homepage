@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   PORTFOLIO,
   PORTFOLIO_MENU,
@@ -14,6 +14,12 @@ const { TITLE } = PORTFOLIO;
 
 const PortfolioNavbar = () => {
   const [isShowPortfolioMenu, setIsShowPortfolioMenu] = useState(false);
+
+  const isUrlMatch = (url: string) => {
+    if (typeof window === "undefined") return false;
+
+    return URLS[url as keyof typeof URLS].LINK === window.location.pathname;
+  };
 
   const togglePortfolioMenu = () => {
     setIsShowPortfolioMenu((prev) => !prev);
@@ -102,12 +108,10 @@ const PortfolioNavbar = () => {
             {
               <div
                 className={classNames({
-                  "text-[#878787]":
-                    URLS[menu.LINK as keyof typeof URLS].LINK !==
-                    window.location.pathname,
+                  "text-gray-400": !isUrlMatch(menu.LINK),
                 })}
               >
-                {menu.TITLE}
+                {menu.NAME}
               </div>
             }
           </LinkTo>

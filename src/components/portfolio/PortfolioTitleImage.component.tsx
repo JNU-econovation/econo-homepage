@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { FC, useEffect, useRef } from "react";
+import { FC } from "react";
 import { PORTFOLIO } from "@/src/assets/constants/portfolio/portfolio.ko";
 
 interface PortfolioTitleImageProps {

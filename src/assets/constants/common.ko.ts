@@ -1,3 +1,5 @@
+import { PORTFOLIO_MENU } from "./portfolio/portfolio.ko";
+
 const MAIN = {
   SUBTITLE: "coding connected",
 };
@@ -23,6 +25,16 @@ const FOOTER = {
 
 const HAMBGER_MENU = {
   CLOSE: "close",
+  MENUS: [
+    { NAME: "about", LINK: "HOME" },
+    {
+      NAME: "portfolio",
+      LINK: "PORTFOLIO",
+      CHILDREN: PORTFOLIO_MENU,
+    },
+    { NAME: "recruit", LINK: "RECRUIT" },
+    { NAME: "contact", LINK: "CONTACT" },
+  ],
 };
 
 export { MAIN, FOOTER, HAMBGER_MENU };
