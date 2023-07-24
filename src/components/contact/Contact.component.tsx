@@ -3,6 +3,7 @@
 import { CONTACT } from "@/src/assets/constants/contact.ko";
 import { FOOTER } from "@/src/assets/constants/common.ko";
 import { useRef } from "react";
+import HambergerMenu from "../common/Hamberger.component";
 
 const { ADDRESS } = FOOTER;
 const Contact = () => {
@@ -10,9 +11,7 @@ const Contact = () => {
 
   return (
     <>
-      <button className={"fixed w-fit h-fit z-50 left-14 top-14 brightness-0"}>
-        <img src="/icons/hamburger.svg" alt="hamburger" />
-      </button>
+      <HambergerMenu />
       <h1 className="w-full flex justify-center mt-52 font-semibold text-9xl uppercase">
         {CONTACT.TITLE}
       </h1>

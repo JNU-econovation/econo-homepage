@@ -83,9 +83,9 @@ const Awards = () => {
 
   return (
     <div className="flex justify-between pt-4">
-      <div className="flex-1 w-1/2" ref={awardYearsCoverRef}>
+      <div className="flex-1 w-1/2 " ref={awardYearsCoverRef}>
         <div className="font-medium" ref={awardYearsRef}>
-          <h1 className="uppercase">awards</h1>
+          <h1 className="uppercase mt-4">awards</h1>
           <div className="text-7xl my-4 h-20 overflow-hidden">
             <div className="awardYear">
               {Array.from({ length: currentYear - 2018 }).map((_, index) => (

@@ -3,9 +3,10 @@ import LinkTo from "../common/LinkTo.component";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import gsap from "gsap";
+import HambergerMenu from "../common/Hamberger.component";
 
 gsap.registerPlugin(ScrollTrigger);
-const RecruitMain = () => {
+const Recruit = () => {
   useEffect(() => {
     gsap.to(".recruit-skedule-arrow", {
       width: "100%",
@@ -18,6 +19,7 @@ const RecruitMain = () => {
 
   return (
     <div className="flex flex-col justify-center items-center text-xl leading-relaxed h-screen">
+      <HambergerMenu />
       <div>
         <h1 className="text-[9.5rem] uppercase font-bold text-center my-8 leading-[9.5rem]">
           {RECRUIT.TITLE}
@@ -56,4 +58,4 @@ const RecruitMain = () => {
   );
 };
 
-export default RecruitMain;
+export default Recruit;

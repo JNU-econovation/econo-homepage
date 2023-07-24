@@ -2,17 +2,21 @@
 
 import { URLS } from "@/src/assets/constants/url.ko";
 import Link from "next/link";
+import { FC, ReactElement } from "react";
 
-const LinkTo = ({
-  link,
-  className,
-  children,
-}: {
+interface LinkToProps {
   link: string;
   className?: string;
-  children: React.ReactElement[] | React.ReactElement | string[] | string;
-}) => (
-  <Link href={URLS[link as keyof typeof URLS].LINK} className={className}>
+  children: ReactElement[] | ReactElement | string[] | string;
+  onClick?: () => void;
+}
+
+const LinkTo: FC<LinkToProps> = ({ link, className, children, onClick }) => (
+  <Link
+    onClick={onClick}
+    href={URLS[link as keyof typeof URLS].LINK}
+    className={className}
+  >
     {children}
   </Link>
 );

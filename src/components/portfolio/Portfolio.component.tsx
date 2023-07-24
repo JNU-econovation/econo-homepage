@@ -49,7 +49,7 @@ const Portfolio = () => {
   return (
     <>
       <div ref={topRef} />
-      <HambergerMenu isWhite={!isShowDetail} />
+      <HambergerMenu isWhite={isShowDetail} />
       {isShowDetail && (
         <button
           onClick={closeDetail}

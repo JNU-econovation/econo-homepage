@@ -4,12 +4,12 @@ import { RECRUIT } from "@/src/assets/constants/recruit.ko";
 import Footer from "@/src/components/common/Footer.component";
 import Faq from "@/src/components/recruit/Faq.component";
 import Fileds from "@/src/components/recruit/Fields.component";
-import RecruitMain from "@/src/components/recruit/RecruitMain.component";
+import Recruit from "@/src/components/recruit/Recruit.component";
 import Subscription from "@/src/components/recruit/Subscription.component";
 import Wating from "@/src/components/recruit/Waiting.component";
 import { useInsertionEffect, useRef, useState } from "react";
 
-const Recruit = () => {
+const RecruitPage = () => {
   const [emailInputValue, setEmailInputValue] = useState("");
   const recruitRef = useRef<HTMLDivElement>(null);
 
@@ -43,7 +43,7 @@ const Recruit = () => {
           </section>
         )}
         <section ref={recruitRef}>
-          <RecruitMain />
+          <Recruit />
         </section>
         <section>
           <Fileds />
@@ -60,4 +60,4 @@ const Recruit = () => {
   );
 };
 
-export default Recruit;
+export default RecruitPage;
