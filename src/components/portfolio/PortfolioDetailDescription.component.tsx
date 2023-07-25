@@ -13,14 +13,21 @@ const PortfolioDetailDescription: FC<PortfolioDetailDescriptionProps> = ({
   return (
     <div
       className={classNames(
-        "fixed flex flex-col bottom-10 left-14 font-semibold z-30 w-[40%] min-w-[40rem] translate-y-[140%] text-white max-lg:w-[90%] overflow-x-auto portfolio-item-content",
+        "fixed flex flex-col bottom-10 left-14 z-30 w-[40%] min-w-[40rem] translate-y-[140%] text-white max-lg:w-[90%] overflow-x-auto portfolio-item-content",
         isMobile ? "top-[30rem]" : "top-[24rem]"
       )}
     >
       {item.IDEA ? (
-        <div className={classNames("mb-14", { "mt-auto": !isMobile })}>
+        <div
+          className={classNames("mb-14", {
+            "mt-auto": !isMobile,
+          })}
+        >
           <div
-            className={classNames("mb-5", isMobile ? "text-6xl" : "text-4xl")}
+            className={classNames(
+              "mb-5 font-semibold",
+              isMobile ? "text-6xl" : "text-4xl"
+            )}
           >
             IDEA
           </div>
@@ -42,7 +49,10 @@ const PortfolioDetailDescription: FC<PortfolioDetailDescriptionProps> = ({
       {item.SKILLS ? (
         <div>
           <div
-            className={classNames("mb-5", isMobile ? "text-6xl" : "text-4xl")}
+            className={classNames(
+              "mb-5 font-semibold",
+              isMobile ? "text-6xl" : "text-4xl"
+            )}
           >
             SKILLS
           </div>

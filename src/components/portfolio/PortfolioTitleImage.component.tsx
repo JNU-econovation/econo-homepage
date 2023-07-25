@@ -12,7 +12,7 @@ const PortfolioTitleImage: FC<PortfolioTitleImageProps> = ({
   onShowDetail,
 }) => {
   return (
-    <button className="w-[40rem]" onClick={onShowDetail}>
+    <button className="w-[40rem] bg-white" onClick={onShowDetail}>
       <Image
         className="w-full object-cover absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
         src={item.BG_IMAGE}

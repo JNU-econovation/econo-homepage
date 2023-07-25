@@ -14,6 +14,7 @@ const PortfolioBackImage: FC<PortfolioBackImageProps> = ({
 }) => {
   const wapperRef = useRef<HTMLDivElement>(null);
   const imageRef = useRef<HTMLImageElement>(null);
+  const blurRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -41,7 +42,11 @@ const PortfolioBackImage: FC<PortfolioBackImageProps> = ({
           onComplete: () => {
             if (imageRef.current === null) return;
             imageRef.current.style.width = "100%";
-            imageRef.current.style.filter = "blur(0) brightness(1)";
+            imageRef.current.style.filter = "brightness(1)";
+            gsap.to(blurRef.current, {
+              backdropFilter: "blur(0)",
+              duration: 0.7,
+            });
           },
         });
       } else {
@@ -82,11 +87,15 @@ const PortfolioBackImage: FC<PortfolioBackImageProps> = ({
               if (imageRef.current === null) return;
               imageRef.current.style.width = "100%";
               imageRef.current.style.height = "100%";
+              gsap.to(blurRef.current, {
+                backdropFilter: "blur(50px)",
+                duration: 0.7,
+              });
             },
           });
 
           tl.to(imageRef.current, {
-            filter: "blur(20px) brightness(0.5)",
+            filter: "brightness(0.7)",
             duration: 1,
           });
         });
@@ -102,12 +111,16 @@ const PortfolioBackImage: FC<PortfolioBackImageProps> = ({
       className="absolute right-12 left-[calc(50%)] top-[calc(33%)] bottom-[calc(33%)] overflow-hidden opacity-0 z-20 cursor-pointer pointer-events-none"
     >
       <Image
-        className="object-cover object-center w-full blur-0 brightness-100"
+        className="object-cover object-center w-[150%] brightness-100"
         src={item.BG_IMAGE}
         alt={item.TITLE}
         placeholder="blur"
         ref={imageRef}
       />
+      <div
+        className="fixed top-0 left-0 w-full h-full z-30 backdrop-blur-0"
+        ref={blurRef}
+      ></div>
     </div>
   );
 };

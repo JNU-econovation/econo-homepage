@@ -12,6 +12,7 @@
     "classnames": "^2.3.2",
     "gsap": "^3.12.1",
     "jotai": "^2.2.1",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.3",
     "react-dom": "^18.2.0",
@@ -19,6 +20,7 @@
     "swiper": "^10.0.4"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.195",
     "@types/node": "20.4.1",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",

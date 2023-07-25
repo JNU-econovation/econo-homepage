@@ -25,7 +25,7 @@ const PortfolioNavbar = () => {
     setIsShowPortfolioMenu((prev) => !prev);
 
     gsap.to(".portfolio-menu-cover", {
-      zIndex: isShowPortfolioMenu ? 10 : 100,
+      zIndex: isShowPortfolioMenu ? 10 : 70,
       duration: 0.5,
       scale: isShowPortfolioMenu ? 1 : 1.2,
       translateY: "0",
@@ -38,13 +38,13 @@ const PortfolioNavbar = () => {
 
     gsap.to(".screen-bg-cover", {
       opacity: isShowPortfolioMenu ? 0 : 0.7,
-      zIndex: isShowPortfolioMenu ? -1 : 99,
+      zIndex: isShowPortfolioMenu ? -1 : 69,
       duration: 0.5,
     });
 
     gsap.to(".portfolio-menu-subtitles", {
       opacity: isShowPortfolioMenu ? 0 : 1,
-      zIndex: isShowPortfolioMenu ? -1 : 100,
+      zIndex: isShowPortfolioMenu ? -1 : 70,
       duration: 0.5,
     });
   };

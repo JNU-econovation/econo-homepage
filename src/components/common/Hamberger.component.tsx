@@ -11,13 +11,11 @@ import LinkTo from "./LinkTo.component";
 interface HambergerChildMenuProps {
   children: { NAME: string; LINK: string }[];
   isOpen: boolean;
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
 }
 
 const HambergerChildMenu: FC<HambergerChildMenuProps> = ({
   children,
   isOpen,
-  setIsOpen,
 }) => {
   return (
     <div
@@ -30,7 +28,6 @@ const HambergerChildMenu: FC<HambergerChildMenuProps> = ({
     >
       {children.map((child, index) => (
         <LinkTo
-          onClick={() => setIsOpen(false)}
           key={index}
           link={child.LINK}
           className="font-light text-5xl uppercase w-fit max-2xl:text-3xl max-md:text-2xl"
@@ -58,22 +55,18 @@ const HambergerNavMain: FC<HambergerNavMainProps> = ({
   return (
     <div
       className={classNames(
-        "w-full text-white my-0 mx-auto",
+        "w-full text-white my-0 mx-auto [transition:transform_.6s_cubic-bezier(0.38,0.005,0.215,1),opacity_.6s_cubic-bezier(0.38,0.005,0.215,1)] ",
         isOpen
           ? "opacity-100 delay-200 translate-y-0"
           : "opacity-0 delay-0 translate-y-[-2.5rem]"
       )}
-      style={{
-        transition:
-          "opacity .6s cubic-bezier(0.38, 0.005, 0.215, 1),transform .6s cubic-bezier(0.38, 0.005, 0.215, 1);",
-      }}
     >
       <div className="flex flex-col items-center gap-2 mb-8 font-semibold">
         {HAMBGER_MENU.MENUS.map((menu, index) => (
           <Fragment key={index}>
             {menu.CHILDREN ? (
               <button
-                className="text-7xl uppercase w-fit max-2xl:text-6xl max-md:text-4xl hamberger-menu-item"
+                className="text-7xl uppercase w-fit max-2xl:text-6xl max-md:text-4xl hamberger-menu-item z-[2]"
                 onClick={() => {
                   setIsShowSubMenu((prev) => {
                     prev[index] = !prev[index];
@@ -87,7 +80,7 @@ const HambergerNavMain: FC<HambergerNavMainProps> = ({
               <LinkTo
                 link={menu.LINK}
                 className={classNames(
-                  "text-7xl uppercase w-fit max-2xl:text-6xl max-md:text-4xl hamberger-menu-item",
+                  "text-7xl uppercase w-fit max-2xl:text-6xl max-md:text-4xl hamberger-menu-item z-[2]",
                   { blur: isShowSubMenu.some((isOpen) => isOpen) }
                 )}
               >
@@ -98,7 +91,6 @@ const HambergerNavMain: FC<HambergerNavMainProps> = ({
               <HambergerChildMenu
                 children={menu.CHILDREN}
                 isOpen={isShowSubMenu[index]}
-                setIsOpen={setIsOpen}
               />
             )}
           </Fragment>
@@ -170,7 +162,7 @@ const HambergerMenu: FC<HambergerMenuProps> = ({ isWhite = false }) => {
               isShowSubMenu={isShowSubMenu}
               setIsShowSubMenu={setIsShowSubMenu}
             />
-            <button className="w-full overflow-hidden shrink-0">
+            <LinkTo link="HOME" className="w-full overflow-hidden shrink-0">
               <Image
                 className={classNames(
                   "flex justify-center transition-transform duration-[0.6s] ease-[cubic-bezier(0.38, 0.005, 0.215, 1)]",
@@ -179,7 +171,7 @@ const HambergerMenu: FC<HambergerMenuProps> = ({ isWhite = false }) => {
                 src={econovationWhiteLogo}
                 alt="econovation"
               />
-            </button>
+            </LinkTo>
           </div>
         </div>
       </div>

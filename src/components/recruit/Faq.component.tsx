@@ -53,7 +53,7 @@ const Faq = () => {
             </button>
           ))}
         </div>
-        <div className="grid grid-cols-2 gap-12 flex-[2_0_0%] -translate-y-8">
+        <div className="grid grid-cols-2 gap-12 flex-[2_0_0%] -translate-y-8 max-md:grid-cols-1">
           {FAQ[faqBoard].DATA.map((data, index) => (
             <div className="w-full border-b" key={index}>
               <button

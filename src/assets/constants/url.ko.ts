@@ -32,51 +32,51 @@ const URLS = {
     TEXT: "recruit",
   },
   WEEK_ANOUNCE_REFERENCE: {
-    LINK: "https://econovation.kr",
+    LINK: "https://github.com/JNU-econovation/weekly_presentation",
     TEXT: "주간 발표 자료",
   },
   LAST_ANOUNCE_VIDEO: {
-    LINK: "https://econovation.kr",
+    LINK: "#",
     TEXT: "최종 발표 영상",
   },
   KAKAO_LINK: {
-    LINK: "https://econovation.kr",
+    LINK: "https://pf.kakao.com/_laTLs",
     TEXT: "kakao",
   },
   EMAIL_LINK: {
-    LINK: "https://econovation.kr",
+    LINK: "/contact",
     TEXT: "e-mail",
   },
   INSTAGRAM_LINK: {
-    LINK: "https://econovation.kr",
+    LINK: "https://www.instagram.com/cnu_econovation/",
     TEXT: "instagram",
   },
   FACEBOOK_LINK: {
-    LINK: "https://econovation.kr",
+    LINK: "https://www.facebook.com/econo.jnu.ac.kr/",
     TEXT: "facebook",
   },
   MEDIUM_LINK: {
-    LINK: "https://econovation.kr",
+    LINK: "https://medium.com/econovation",
     TEXT: "medium",
   },
   YOUTUBE_LINK: {
-    LINK: "https://econovation.kr",
+    LINK: "https://www.youtube.com/@econovation3827",
     TEXT: "youtube",
   },
   APPLY_LINK: {
-    LINK: "https://econovation.kr",
+    LINK: "/recruit",
     TEXT: "지원하기",
   },
   ECONO_RECRUIT: {
-    LINK: "https://econovation.kr",
+    LINK: "/recruit",
     TEXT: "econo recruit",
   },
   ECONO_BEEP: {
-    LINK: "https://econovation.kr",
+    LINK: "#",
     TEXT: "econo beep",
   },
   T_ECONO: {
-    LINK: "https://econovation.kr",
+    LINK: "#",
     TEXT: "t-econo",
   },
 };

@@ -45,8 +45,20 @@ const PorfolioDetail: FC<PortfolioItemProps> = ({ item, isShowDetail }) => {
       duration: 0.5,
     });
 
+    gsap.to(".portfolio-item-teamname", {
+      delay: 2,
+      translateY: "24rem",
+      duration: 0.5,
+    });
+
     gsap.to(".portfolio-item-people", {
       translateY: "0",
+      duration: 0.7,
+    });
+
+    gsap.to(".portfolio-item-people", {
+      delay: 2,
+      translateY: "24rem",
       duration: 0.7,
     });
 
@@ -133,7 +145,14 @@ const PorfolioDetail: FC<PortfolioItemProps> = ({ item, isShowDetail }) => {
           {item.PEOPLE}
         </div>
       </div>
-      <div className="flex flex-col gap-4 overflow-x-auto fixed top-32 right-14 z-30 w-[40%] bottom-10 translate-y-[100vh] max-xl:hidden portfolio-item-images-cover">
+      <div
+        className={classNames(
+          "flex flex-col gap-4 overflow-x-auto fixed right-14 z-30 w-[40%] bottom-10 translate-y-[100vh] max-xl:hidden portfolio-item-images-cover",
+          item.INTRODUCTION.length === 1
+            ? "justify-center top-0 opacity-0"
+            : "top-32"
+        )}
+      >
         <PortfolioImages images={item.INTRODUCTION} />
       </div>
     </>

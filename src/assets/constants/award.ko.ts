@@ -181,7 +181,7 @@ const AWARDS = [
       },
       {
         TITLE: "한국정보보호학회 호남지부 추계학술대회 포스터발표",
-        AWARDS: ["특별상(정보보호학회 호남지부장상)"],
+        AWARDS: ["특별상"],
         PEOPLE: ["김다애"],
       },
       {
@@ -201,7 +201,7 @@ const AWARDS = [
       },
       {
         TITLE: "제6회 Creative Space G A.I & IoT 해커톤",
-        AWARDS: ["대상(광주과학기술원 과학기술응용연구단장상)"],
+        AWARDS: ["대상"],
         PEOPLE: ["김성혁"],
       },
       {

@@ -113,27 +113,27 @@ const Awards = () => {
           </div>
         </div>
       </div>
-      <div className="flex-1 " ref={awardRef}>
+      <div className="flex-1 flex-shrink min-w-[52rem]" ref={awardRef}>
         {AWARDS.map((data, index) => (
           <div
             key={index}
-            className="flex flex-col gap-8 border-l-[1px] border-black pl-8 my-12"
+            className="flex flex-col gap-12 border-l border-black pl-8 my-12"
           >
             {data.DATA.map((data, dindex) => (
               <div
                 key={dindex}
-                className="translate-x-[15vw] flex justify-between font-medium text-2xl"
+                className="translate-x-[15vw] flex justify-between text-2xl"
                 ref={(el) =>
                   // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                   (awardItemsRef.current[awardItemsRef.current.length] = el!)
                 }
               >
-                <div className="">{data.TITLE}</div>
-                <div>{data.AWARDS.join(", ")}</div>
+                <div className="font-light">{data.TITLE}</div>
+                <div className="font-normal">{data.AWARDS.join(", ")}</div>
               </div>
             ))}
             <div
-              className="translate-x-[15vw] border-b-[1px] border-black translate-y-4"
+              className="translate-x-[15vw] border-b-[1px] border-black translate-y-6"
               ref={(el) =>
                 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
                 (awardSplitRef.current[awardSplitRef.current.length] = el!)
