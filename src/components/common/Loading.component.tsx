@@ -7,7 +7,7 @@ const Loading = ({ isLoading = false }) => {
   return (
     <div
       className={classNames(
-        "w-full h-full flex flex-col justify-between items-center text-white fixed top-0 left-0 m-0 z-[100] min-h-screen overflow-hidden pointer-events-auto transition-transform duration-[0.6s] ease-[cubic-bezier(0.38, 0.005, 0.215, 1)]",
+        "w-full h-full flex flex-col justify-between items-center text-white fixed top-0 left-0 m-0 z-[1000] min-h-screen overflow-hidden pointer-events-auto transition-transform duration-[0.6s] ease-[cubic-bezier(0.38, 0.005, 0.215, 1)]",
         isLoading
           ? "visible translate-y-[0%] [transition:transform_.6s_cubic-bezier(0.38,0.005,0.215,1),visibility_0s_0s_linear]"
           : "invisible translate-y-[-105%] [transition:transform_.6s_cubic-bezier(0.38,0.005,0.215,1),visibility_0s_0.6s_linear]"

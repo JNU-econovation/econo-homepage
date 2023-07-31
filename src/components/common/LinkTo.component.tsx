@@ -19,7 +19,6 @@ const LinkTo: FC<LinkToProps> = ({ link, className, children, onClick }) => {
   const setIsLoading = useSetAtom(loadingState);
   const router = useRouter();
   const viewLoading = debounce(() => {
-    console.log("debounce");
     router.push(URLS[link as keyof typeof URLS].LINK);
   }, 600);
 
