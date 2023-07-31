@@ -1,7 +1,7 @@
 "use client";
 
 import Loading from "@/src/components/common/Loading.component";
-import Hackathon from "@/src/components/portfolio/Hackathon/Hackathon.component";
+import Hackathon from "@/src/components/portfolio/hackathon/Hackathon.component";
 import { useEffect } from "react";
 import { loadingState } from "@/src/stores/common";
 import { useAtom } from "jotai";

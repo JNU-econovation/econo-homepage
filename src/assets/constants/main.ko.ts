@@ -7,6 +7,8 @@ const FIELDS = [
   "ai",
 ];
 
+const ECONOVATION = "econovation";
+
 const JOBS = ["product manager", "product designer", "developer"];
 
-export { FIELDS, JOBS };
+export { FIELDS, JOBS, ECONOVATION };

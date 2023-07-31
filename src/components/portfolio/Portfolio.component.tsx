@@ -90,7 +90,7 @@ const Portfolio = () => {
           ))}
         </Swiper>
         <Swiper
-          className="h-full max-lg:!hidden"
+          className="h-full max-2xl:!hidden"
           modules={[Mousewheel, FreeMode, Controller]}
           direction="vertical"
           centeredSlides={true}

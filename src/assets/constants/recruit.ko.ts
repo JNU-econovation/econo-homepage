@@ -2,7 +2,7 @@ const RECRUIT = {
   TITLE: "recruit",
   CONTENT:
     "에코노베이션에서 함께할 여러분을 모집합니다.\n에코노베이션은 지식의 선순환이 자연스럽게 이루어지는 환경을 만드는 것을 목표하고 있습니다.\n개발에 열정이 있다면 에코노베이션에 들어와 지식의 선순환을 일으켜주세요.",
-  IS_ON: false,
+  IS_ON: true,
   PERIOD: 26,
   SCHEDULE: [
     { TEXT: "서류 접수 시작", DATE: "3/6" },
@@ -94,4 +94,15 @@ const RECRUIT = {
   },
 };
 
-export { RECRUIT };
+const RECRUIT_FLOAT = {
+  ECONO_IS_RECRUITING: "econovation은 지금 신입 모집 중!",
+  ECONO_PERIOD_RECRUIT_EN: `econovation ${RECRUIT.PERIOD} period recruit`,
+  ECONO_PERIOD_RECRUIT_KR: `에코노베이션 ${RECRUIT.PERIOD}기 신입 모집`,
+  DAY: "day",
+  HOUR: "hour",
+  MINUTE: "minute",
+  SECOND: "second",
+  RECRUIT_START_DATE: "2023-08-04",
+};
+
+export { RECRUIT, RECRUIT_FLOAT };
