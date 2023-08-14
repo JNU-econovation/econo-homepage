@@ -13,8 +13,11 @@ const InfinityAutoScroll: FC<PropsWithChildren<InfinityAutoScrollProps>> = ({
 }) => {
   return (
     <div className={classNames("flex w-full truncate text-clip", className)}>
-      {Array.from({ length: multiple }).map(() => (
-        <div className="flex items-center w-fit animate-infinity-scroll">
+      {Array.from({ length: multiple }).map((_, i) => (
+        <div
+          className="flex items-center w-fit animate-infinity-scroll"
+          key={i}
+        >
           {children}
         </div>
       ))}

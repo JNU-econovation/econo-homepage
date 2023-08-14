@@ -1,4 +1,13 @@
-const AWARDS = [
+export interface Award {
+  YEAR: string;
+  DATA: {
+    TITLE: string;
+    AWARDS: string[];
+    PEOPLE: string[];
+  }[];
+}
+
+const AWARDS: Award[] = [
   {
     YEAR: "2023",
     DATA: [

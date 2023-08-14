@@ -16,7 +16,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="ko">
       <Header />
-      <body>{children}</body>
+      <body className="">{children}</body>
     </html>
   );
 };
