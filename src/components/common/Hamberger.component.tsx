@@ -1,6 +1,6 @@
 "use client";
 
-import { HAMBGER_MENU } from "@/src/assets/constants/common.ko";
+import { HAMBGER_MENU } from "@/src/constants/common.ko";
 import classNames from "classnames";
 import Image from "next/image";
 import { Dispatch, FC, Fragment, SetStateAction, useState } from "react";

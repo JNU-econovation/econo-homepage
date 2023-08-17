@@ -1,4 +1,4 @@
-import { RECRUIT } from "@/src/assets/constants/recruit.ko";
+import { RECRUIT } from "@/src/constants/recruit.ko";
 import InputTextHover from "../common/InputTextHover.component";
 
 const Wating = ({

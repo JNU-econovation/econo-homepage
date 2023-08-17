@@ -1,4 +1,4 @@
-import { FAQ } from "@/src/assets/constants/faq.ko";
+import { FAQ } from "@/src/constants/faq.ko";
 import gsap from "gsap";
 import Image from "next/image";
 import { useState } from "react";

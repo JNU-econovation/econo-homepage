@@ -1,4 +1,4 @@
-import { RECRUIT, RECRUIT_FLOAT } from "@/src/assets/constants/recruit.ko";
+import { RECRUIT, RECRUIT_FLOAT } from "@/src/constants/recruit.ko";
 import gsap from "gsap";
 import Image from "next/image";
 import { useRef } from "react";

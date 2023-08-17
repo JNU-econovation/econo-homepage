@@ -1,6 +1,6 @@
 "use client";
 
-import { PORTFOLIO } from "@/src/assets/constants/portfolio/portfolio.ko";
+import { PORTFOLIO } from "@/src/constants/portfolio/portfolio.ko";
 import PortfolioTitleImage from "@/src/components/portfolio/PortfolioTitleImage.component";
 import { useEffect, useRef, useState } from "react";
 import PorfolioDetail from "./PortfolioDetail.component";

@@ -1,7 +1,7 @@
 "use client";
 
-import { NAV } from "@/src/assets/constants/nav.ko";
-import { RECRUIT } from "@/src/assets/constants/recruit.ko";
+import { NAV } from "@/src/constants/nav.ko";
+import { RECRUIT } from "@/src/constants/recruit.ko";
 import LinkTo from "@/src/components/common/LinkTo.component";
 
 const Navbar = () => {

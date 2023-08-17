@@ -1,4 +1,4 @@
-import { PORTFOLIO } from "@/src/assets/constants/portfolio/portfolio.ko";
+import { PORTFOLIO } from "@/src/constants/portfolio/portfolio.ko";
 import gsap from "gsap";
 import Image from "next/image";
 import { FC, useEffect, useRef } from "react";

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FC } from "react";
-import { PORTFOLIO } from "@/src/assets/constants/portfolio/portfolio.ko";
+import { PORTFOLIO } from "@/src/constants/portfolio/portfolio.ko";
 
 interface PortfolioTitleImageProps {
   item: (typeof PORTFOLIO.DATA)[number];

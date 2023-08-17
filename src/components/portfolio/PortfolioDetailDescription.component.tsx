@@ -1,4 +1,4 @@
-import { PORTFOLIO } from "@/src/assets/constants/portfolio/portfolio.ko";
+import { PORTFOLIO } from "@/src/constants/portfolio/portfolio.ko";
 import { FC } from "react";
 import classNames from "classnames";
 import { isMobile } from "react-device-detect";

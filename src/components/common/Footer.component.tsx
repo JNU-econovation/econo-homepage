@@ -1,6 +1,6 @@
 "use client";
 
-import { FOOTER } from "@/src/assets/constants/common.ko";
+import { FOOTER } from "@/src/constants/common.ko";
 import LinkTo from "./LinkTo.component";
 
 const Footer = () => {

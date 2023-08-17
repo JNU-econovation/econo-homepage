@@ -1,6 +1,6 @@
 "use client";
 
-import { Award } from "@/src/assets/constants/award.ko";
+import { Award } from "@/src/constants/award.ko";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FC, RefObject, useLayoutEffect, useRef } from "react";
@@ -61,7 +61,7 @@ const AwardGroup: FC<AwardGroupProps> = ({ data, awardYearProgressRef }) => {
     };
   }, []);
   return (
-    <div className="flex flex-col gap-12 border-l border-black pl-8 my-12">
+    <div className="flex flex-col border-l border-black pl-4 my-12">
       {data.DATA.map((data, index) => (
         <AwardGroupItem data={data} key={index} />
       ))}

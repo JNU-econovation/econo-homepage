@@ -1,6 +1,6 @@
 "use client";
 
-import { AWARDS } from "@/src/assets/constants/award.ko";
+import { AWARDS } from "@/src/constants/award.ko";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";

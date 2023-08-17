@@ -1,4 +1,4 @@
-import { HACKATHON_POSTER } from "@/src/assets/constants/portfolio/hackathon.ko";
+import { HACKATHON_POSTER } from "@/src/constants/portfolio/hackathon.ko";
 import HambergerMenu from "../../common/Hamberger.component";
 import PortfolioNavbar from "../PortfolioNavbar.component";
 import Image from "next/image";

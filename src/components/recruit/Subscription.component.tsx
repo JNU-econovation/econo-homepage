@@ -1,5 +1,5 @@
-import { RECRUIT } from "@/src/assets/constants/recruit.ko";
-import { URLS } from "@/src/assets/constants/url.ko";
+import { RECRUIT } from "@/src/constants/recruit.ko";
+import { URLS } from "@/src/constants/url.ko";
 import LinkTo from "@/src/components/common/LinkTo.component";
 
 const { SUBSCRIPTION } = RECRUIT;

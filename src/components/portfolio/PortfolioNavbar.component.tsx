@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import {
   PORTFOLIO,
   PORTFOLIO_MENU,
-} from "@/src/assets/constants/portfolio/portfolio.ko";
-import { URLS } from "@/src/assets/constants/url.ko";
+} from "@/src/constants/portfolio/portfolio.ko";
+import { URLS } from "@/src/constants/url.ko";
 import gsap from "gsap";
 import LinkTo from "@components/common/LinkTo.component";
 import classNames from "classnames";

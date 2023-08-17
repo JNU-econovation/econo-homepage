@@ -1,7 +1,7 @@
 "use client";
 
-import { CONTACT } from "@/src/assets/constants/contact.ko";
-import { FOOTER } from "@/src/assets/constants/common.ko";
+import { CONTACT } from "@/src/constants/contact.ko";
+import { FOOTER } from "@/src/constants/common.ko";
 import { useRef } from "react";
 import HambergerMenu from "../common/Hamberger.component";
 

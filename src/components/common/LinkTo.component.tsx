@@ -1,6 +1,6 @@
 "use client";
 
-import { URLS } from "@/src/assets/constants/url.ko";
+import { URLS } from "@/src/constants/url.ko";
 import { loadingState } from "@/src/stores/common";
 import classNames from "classnames";
 import { useSetAtom } from "jotai";

@@ -1,6 +1,6 @@
 "use client";
 
-import { PORTFOLIO } from "@/src/assets/constants/portfolio/portfolio.ko";
+import { PORTFOLIO } from "@/src/constants/portfolio/portfolio.ko";
 import gsap from "gsap";
 import { FC, useEffect } from "react";
 import PortfolioImages from "./PortfolioImages.component";
