@@ -21,6 +21,23 @@ const FOOTER = {
     KO: "전남대학교 정보화본부 101호",
   },
   TO_TOP: "back to top",
+  SPONSOR: [
+    {
+      IMAGE: require("/public/images/naverD2.png").default,
+      ALT: "naverD2",
+      HREF: "https://d2.naver.com/",
+    },
+    {
+      IMAGE: require("/public/images/impact.campus.png").default,
+      ALT: "impact campus",
+      HREF: "https://impactcampus.campaignus.me/",
+    },
+    {
+      IMAGE: require("/public/images/codeit.png").default,
+      ALT: "codeit",
+      HREF: "https://www.codeit.kr/",
+    },
+  ],
 };
 
 const HAMBGER_MENU = {

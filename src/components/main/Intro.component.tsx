@@ -31,7 +31,7 @@ const Intro = () => {
         {ABOUT.map((field, index) => (
           <div key={index} className="text-2xl my-4 uppercase">
             <Image
-              className="w-full h-[77%]"
+              className="w-full"
               placeholder="blur"
               src={field.IMAGE}
               alt={field.TITLE}

@@ -2,12 +2,14 @@
 
 import { FOOTER } from "@/src/constants/common.ko";
 import LinkTo from "./LinkTo.component";
+import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const backToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <footer className="w-full mt-52 uppercase">
-      <div className="flex w-full px-16 ">
+      <div className="flex w-full px-16 border-b border-black">
         <div className="flex flex-col justify-between flex-[3_1_0%] border-r border-black h-[40rem]">
           <h1 className="text-6xl">{FOOTER.TITLE}</h1>
           <div className="text-2xl">
@@ -38,6 +40,13 @@ const Footer = () => {
             </LinkTo>
           ))}
         </div>
+      </div>
+      <div className="w-full flex justify-around">
+        {FOOTER.SPONSOR.map((sponser) => (
+          <Link className="p-12 " href={sponser.HREF} target="_blank">
+            <Image alt={sponser.ALT} src={sponser.IMAGE} />
+          </Link>
+        ))}
       </div>
       <button
         onClick={backToTop}
