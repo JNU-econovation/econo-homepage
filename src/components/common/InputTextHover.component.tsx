@@ -25,7 +25,7 @@ const InputTextHover: FC<InputHoverProps> = ({
   return (
     <div className="relative">
       <input
-        className={`hover:visible hover:w-[16.5rem] transition-all border-b-2 border-[#7E7E7E] outline-none ${
+        className={`font-sans hover:visible hover:w-[16.5rem] transition-all border-b-2 border-[#7E7E7E] outline-none ${
           isShow ? "visible w-[16.5rem]" : "invisible w-[9rem]"
         } ${className}`}
         type="text"

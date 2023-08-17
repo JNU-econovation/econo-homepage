@@ -6,7 +6,7 @@ import Faq from "@/src/components/recruit/Faq.component";
 import Fileds from "@/src/components/recruit/Fields.component";
 import Recruit from "@/src/components/recruit/Recruit.component";
 import Subscription from "@/src/components/recruit/Subscription.component";
-import Wating from "@/src/components/recruit/Waiting.component";
+import Waiting from "@/src/components/recruit/Waiting.component";
 import { useInsertionEffect, useRef, useState } from "react";
 
 const RecruitPage = () => {
@@ -35,7 +35,7 @@ const RecruitPage = () => {
       <div className="px-24 max-w-[1920px] m-auto">
         {!RECRUIT.IS_ON && (
           <section>
-            <Wating
+            <Waiting
               inputValue={emailInputValue}
               inputOnChange={(e) => setEmailInputValue(e.target.value)}
               scrollToRecruit={scrollToRecruit}

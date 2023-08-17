@@ -1,15 +1,35 @@
 import { RECRUIT } from "@/src/constants/recruit.ko";
 import InputTextHover from "../common/InputTextHover.component";
+import { ChangeEvent, FormEvent } from "react";
 
-const Wating = ({
+const Waiting = ({
   scrollToRecruit,
   inputValue,
   inputOnChange,
 }: {
   scrollToRecruit: () => void;
   inputValue: string;
-  inputOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  inputOnChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }) => {
+  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    fetch("/api/recruit/subscribe", {
+      method: "POST",
+      body: JSON.stringify({ email: inputValue }),
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          alert(RECRUIT.WAITING.ALERT_SUCCESS);
+          inputOnChange({
+            target: { value: "" },
+          } as ChangeEvent<HTMLInputElement>);
+        }
+      })
+      .catch((err) => {
+        alert(RECRUIT.WAITING.ALERT_FAIL);
+      });
+  };
+
   return (
     <div className="flex flex-col align-center justify-center text-2xl leading-relaxed text-center mb-60 h-screen">
       <div>
@@ -23,13 +43,20 @@ const Wating = ({
           </div>
         ))}
       </div>
-      <InputTextHover
-        onChange={inputOnChange}
-        value={inputValue}
-        className="my-52 text-2x"
-        placeholder="econovation@gmail.com"
-        label="이메일 입력하기"
-      />
+      <form className="my-40 text-2xl" onSubmit={onSubmit}>
+        <InputTextHover
+          onChange={inputOnChange}
+          value={inputValue}
+          placeholder="econovation@gmail.com"
+          label={RECRUIT.WAITING.EMAIL_INPUT}
+        />
+        <button
+          type="submit"
+          className="text-lg mt-4 border text-[#0038FF] border-[#0038FF] rounded-full px-4 py-2"
+        >
+          {RECRUIT.WAITING.ALERT}
+        </button>
+      </form>
       <div>
         <div className="text-[#565656] mb-20 text-base">
           *{RECRUIT.WAITING.EMAIL_ALERT}
@@ -52,4 +79,4 @@ const Wating = ({
   );
 };
 
-export default Wating;
+export default Waiting;

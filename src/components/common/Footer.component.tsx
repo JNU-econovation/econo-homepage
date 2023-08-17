@@ -43,7 +43,12 @@ const Footer = () => {
       </div>
       <div className="w-full flex justify-around">
         {FOOTER.SPONSOR.map((sponser) => (
-          <Link className="p-12 " href={sponser.HREF} target="_blank">
+          <Link
+            key={sponser.ALT}
+            className="p-12"
+            href={sponser.HREF}
+            target="_blank"
+          >
             <Image alt={sponser.ALT} src={sponser.IMAGE} />
           </Link>
         ))}
