@@ -33,7 +33,6 @@ const ABOUT = [
     CONTENT:
       "서로 다른 분야의 팀들이 만나 네트워킹을 진행합니다. 프로젝트 진행 과정에서 겪는 문제와 고민을 함께 나누고 해결하는 시간을 통해 회원들 간에 결속력을 도모합니다.",
   },
-
   {
     IMAGE: require("/public/home/head_4.png").default,
     TITLE: "weekly presentation",

@@ -1,6 +1,6 @@
 const URLS = {
   HOME: {
-    LINK: "/",
+    LINK: "/home",
     TEXT: "home",
   },
   PORTFOLIO: {
@@ -36,7 +36,7 @@ const URLS = {
     TEXT: "주간 발표 자료",
   },
   LAST_ANOUNCE_VIDEO: {
-    LINK: "#",
+    LINK: "/home",
     TEXT: "최종 발표 영상",
   },
   KAKAO_LINK: {
@@ -72,11 +72,11 @@ const URLS = {
     TEXT: "econo recruit",
   },
   ECONO_BEEP: {
-    LINK: "#",
+    LINK: "/home",
     TEXT: "econo beep",
   },
   T_ECONO: {
-    LINK: "#",
+    LINK: "/home",
     TEXT: "t-econo",
   },
 };

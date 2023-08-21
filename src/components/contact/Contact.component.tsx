@@ -4,6 +4,7 @@ import { CONTACT } from "@/src/constants/contact.ko";
 import { FOOTER } from "@/src/constants/common.ko";
 import { useRef } from "react";
 import HambergerMenu from "../common/Hamberger.component";
+import ContactAsk from "./Ask.component";
 
 const { ADDRESS } = FOOTER;
 const Contact = () => {
@@ -27,8 +28,9 @@ const Contact = () => {
         ></iframe>
       </div>
       <div className="w-full flex justify-center my-8 text-xl uppercase">
-        {ADDRESS.EN} {ADDRESS.KO}
+        {`${ADDRESS.EN} ${ADDRESS.KO}}`}
       </div>
+      <ContactAsk />
     </>
   );
 };

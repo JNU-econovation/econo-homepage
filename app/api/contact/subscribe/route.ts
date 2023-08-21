@@ -11,9 +11,13 @@ export const POST = async (req: NextRequest) => {
 
   const body = await req.json();
 
+  console.log(body);
+
   await db.run(
-    "INSERT INTO recruit (email, create_at) VALUES(?, ?)",
+    "INSERT INTO contact (email, content, name, create_at) VALUES(?, ?, ?, ?)",
     body.email,
+    body.message,
+    body.name,
     new Date().getTime()
   );
 

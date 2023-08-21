@@ -36,7 +36,7 @@ const Awards = () => {
         <div className="font-medium" ref={awardYearsRef}>
           <h1 className="uppercase mt-4">awards</h1>
           <div className="text-7xl my-4 h-20 overflow-hidden">
-            <div className="awardYear">
+            <div className="award-year">
               {Array.from({ length: currentYear - 2018 }).map((_, index) => (
                 <div key={index} className="text-7xl">
                   {currentYear - index}
@@ -46,7 +46,7 @@ const Awards = () => {
           </div>
           <div className="flex">
             <div className="overflow-hidden h-6">
-              <div className="awardYear">
+              <div className="award-year">
                 {Array.from({ length: currentYear - 2018 }).map((_, index) => (
                   <div key={index}>{currentYear - index}</div>
                 ))}

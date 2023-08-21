@@ -16,17 +16,19 @@ const AwardGroupItem: FC<AwardGroupItemProps> = ({ data }) => {
   const [isStringChange, setIsStringChange] = useState<boolean>(false);
   const intervalId = useRef<any>(null);
 
-  const ctx = gsap.context(() => {
-    awardItemsRef.current.forEach((item: HTMLDivElement) => {
-      gsap.to(item, {
-        x: "0",
-        ease: "power1.out",
-        scrollTrigger: {
-          trigger: item,
-          start: "top bottom",
-          end: "top +=20%",
-          scrub: 1,
-        },
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      awardItemsRef.current.forEach((item: HTMLDivElement) => {
+        gsap.to(item, {
+          x: "0",
+          ease: "power1.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top bottom",
+            end: "top +=20%",
+            scrub: 1,
+          },
+        });
       });
     });
     return () => {

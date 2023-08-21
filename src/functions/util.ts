@@ -13,3 +13,10 @@ export const timeDiff = (date1: Date, date2: Date) => {
   const seconds = abs(floor(diff - hours * 3600 - minutes * 60) % 60);
   return { days, hours, minutes, seconds };
 };
+
+export const isEmail = (email: string): boolean => {
+  const re =
+    // eslint-disable-next-line no-useless-escape
+    /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(email);
+};

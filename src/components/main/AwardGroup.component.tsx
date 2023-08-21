@@ -3,7 +3,7 @@
 import { Award } from "@/src/constants/award.ko";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { FC, RefObject, useLayoutEffect, useRef } from "react";
+import { FC, RefObject, useEffect, useRef } from "react";
 import AwardGroupItem from "./AwardGroupItem.component";
 
 interface AwardGroupProps {
@@ -18,7 +18,7 @@ let awardYear = currentYear;
 const AwardGroup: FC<AwardGroupProps> = ({ data, awardYearProgressRef }) => {
   const awardSplitRef = useRef<HTMLDivElement[]>([]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const ctx = gsap.context(() => {
       awardSplitRef.current.forEach((item: HTMLDivElement) => {
         gsap.to(item, {
@@ -30,7 +30,7 @@ const AwardGroup: FC<AwardGroupProps> = ({ data, awardYearProgressRef }) => {
             end: "top +=20%",
             scrub: 1,
             onEnterBack: () => {
-              gsap.to(".awardYear", {
+              gsap.to(".award-year", {
                 translateY: `${
                   ((++awardYear - currentYear) * 100) / (currentYear - 2018)
                 }%`,
@@ -38,7 +38,7 @@ const AwardGroup: FC<AwardGroupProps> = ({ data, awardYearProgressRef }) => {
               });
             },
             onLeave: () => {
-              gsap.to(".awardYear", {
+              gsap.to(".award-year", {
                 translateY: `${
                   ((--awardYear - currentYear) * 100) / (currentYear - 2018)
                 }%`,

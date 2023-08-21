@@ -18,6 +18,7 @@ const Footer = () => {
                 link={d.LINK}
                 key={i}
                 className="flex align-baseline my-4"
+                target="_blank"
               >
                 <img
                   src="/icons/right-arrow-circle.svg"
@@ -35,7 +36,7 @@ const Footer = () => {
         </div>
         <div className="flex flex-col justify-end flex-1 text-base gap-4 m-10">
           {FOOTER.SOCIAL.map((d, i) => (
-            <LinkTo link={d.LINK} key={i}>
+            <LinkTo target="_blank" link={d.LINK} key={i}>
               <span>{d.NAME}</span>
             </LinkTo>
           ))}

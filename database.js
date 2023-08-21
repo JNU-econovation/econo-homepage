@@ -1,5 +1,4 @@
 const sqlite3 = require("sqlite3").verbose();
-import { open } from "sqlite";
 
 const db = new sqlite3.Database("./database/database.db", (err) => {
   if (err) {
@@ -12,11 +11,7 @@ db.serialize(() => {
   db.run(
     "CREATE TABLE IF NOT EXISTS recruit (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, create_at NUMERIC)"
   );
+  db.run(
+    "CREATE TABLE IF NOT EXISTS contact (id INTEGER PRIMARY KEY AUTOINCREMENT, email TEXT, name TEXT, message TEXT, create_at NUMERIC)"
+  );
 });
-
-export const getDB = async () => {
-  return await open({
-    filename: "./database/database.db",
-    driver: sqlite3.Database,
-  });
-};
