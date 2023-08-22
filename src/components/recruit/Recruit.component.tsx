@@ -1,4 +1,4 @@
-import { RECRUIT } from "@/src/constants/recruit.ko";
+import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import LinkTo from "../common/LinkTo.component";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
@@ -35,7 +35,7 @@ const Recruit = () => {
               link="APPLY_LINK"
               className="flex bg-[#0038FF] text-white px-6 py-3 gap-4 rounded-full text-xl items-center"
             >
-              <span>{RECRUIT.PERIOD}기 지원하기</span>
+              <span>{RECRUIT.GENERTAION}기 지원하기</span>
               <img
                 className="h-6"
                 src="/icons/right-arrow-circle-white.svg"

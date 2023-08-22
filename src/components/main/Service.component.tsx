@@ -1,4 +1,4 @@
-import { SERVICES } from "@/src/constants/service.ko";
+import { SERVICES } from "@/src/constants/common.ko";
 import LinkTo from "@components/common/LinkTo.component";
 
 const { ECONOVATION_DEV, ECONO_RECRUIT, OTHER } = SERVICES;

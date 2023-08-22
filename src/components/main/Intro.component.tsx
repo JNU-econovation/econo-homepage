@@ -4,7 +4,7 @@ import econovationBlackLogo from "/public/images/econovation-black.svg";
 import InfinityAutoScroll from "../common/InfinityAutoScroll.component";
 import { ABOUT, ECONOVATION, JOBS } from "@/src/constants/main.ko";
 import { Fragment } from "react";
-import { RECRUIT } from "@/src/constants/recruit.ko";
+import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import RecruitFloat from "./RecruitFloat.component";
 
 const Intro = () => {

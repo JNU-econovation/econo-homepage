@@ -1,4 +1,4 @@
-import { RECRUIT, RECRUIT_FLOAT } from "@/src/constants/recruit.ko";
+import { RECRUIT, RECRUIT_FLOAT } from "@/src/constants/recruit/recruit.ko";
 import gsap from "gsap";
 import Image from "next/image";
 import { useRef } from "react";
@@ -56,9 +56,9 @@ const RecruitFloat = () => {
         <div className="pb-2 border-b-white border-b-2 flex justify-between px-4">
           <div className="flex gap-4 items-baseline">
             <div className="uppercase text-3xl">
-              {RECRUIT_FLOAT.ECONO_PERIOD_RECRUIT_EN}
+              {RECRUIT_FLOAT.ECONO_GENERTAION_RECRUIT_EN}
             </div>
-            <div>{RECRUIT_FLOAT.ECONO_PERIOD_RECRUIT_KR}</div>
+            <div>{RECRUIT_FLOAT.ECONO_GENERTAION_RECRUIT_KR}</div>
           </div>
           <div className="flex gap-8">
             <div className="flex gap-4">

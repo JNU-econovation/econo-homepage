@@ -1,6 +1,6 @@
 "use client";
 
-import { RECRUIT } from "@/src/constants/recruit.ko";
+import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import Footer from "@/src/components/common/Footer.component";
 import Faq from "@/src/components/recruit/Faq.component";
 import Fileds from "@/src/components/recruit/Fields.component";

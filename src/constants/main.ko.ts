@@ -1,12 +1,3 @@
-const FIELDS = [
-  "product manager",
-  "product designer",
-  "front-end",
-  "back-end",
-  "game",
-  "ai",
-];
-
 const ECONOVATION = "econovation";
 
 const JOBS = ["product manager", "product designer", "developer"];
@@ -63,4 +54,27 @@ const MISSION = [
   },
 ];
 
-export { FIELDS, JOBS, ECONOVATION, ABOUT };
+const MAIN_NAV = [
+  {
+    NAME: "home",
+    LINK: "HOME",
+    POSITION: "left",
+  },
+  {
+    NAME: "portfolio",
+    LINK: "PORTFOLIO",
+    POSITION: "left",
+  },
+  {
+    NAME: "contact",
+    LINK: "CONTACT",
+    POSITION: "left",
+  },
+  {
+    NAME: "recruit",
+    LINK: "RECRUIT",
+    POSITION: "right",
+  },
+];
+
+export { MISSION, JOBS, ECONOVATION, ABOUT, MAIN_NAV };

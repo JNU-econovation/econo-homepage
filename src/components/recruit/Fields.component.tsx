@@ -1,4 +1,4 @@
-import { RECRUIT } from "@/src/constants/recruit.ko";
+import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import { gsap } from "gsap";
 import { ChangeEvent } from "react";
 
@@ -36,7 +36,7 @@ const Fileds = () => {
               <div className="flex w-full py-6">
                 <span className="flex w-full justify-between mr-16 items-center">
                   <h2 className="font-medium text-3xl uppercase">{d.TITLE}</h2>
-                  <span>{d.TRANSLATION}</span>
+                  <span>{d.TITLE_KO}</span>
                 </span>
                 <span>
                   <img

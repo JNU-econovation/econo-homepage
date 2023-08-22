@@ -1,4 +1,4 @@
-import { RECRUIT } from "@/src/constants/recruit.ko";
+import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import { URLS } from "@/src/constants/url.ko";
 import LinkTo from "@/src/components/common/LinkTo.component";
 
@@ -22,6 +22,7 @@ const Subscription = () => {
                 <LinkTo
                   link={d.LINK}
                   className="flex items-center gap-4 absolute top-14"
+                  target="_blank"
                 >
                   <img
                     className={`h-6 w-6`}

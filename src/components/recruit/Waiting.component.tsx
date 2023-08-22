@@ -1,4 +1,4 @@
-import { RECRUIT } from "@/src/constants/recruit.ko";
+import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import InputTextHover from "../common/InputTextHover.component";
 import { ChangeEvent, FormEvent } from "react";
 
@@ -38,7 +38,7 @@ const Waiting = ({
         </h1>
         {RECRUIT.WAITING.CONTENT.split("\n").map((d, i) => (
           <div key={i}>
-            {RECRUIT.PERIOD + i}
+            {RECRUIT.GENERTAION + i}
             {d}
           </div>
         ))}
@@ -54,7 +54,7 @@ const Waiting = ({
           type="submit"
           className="text-lg mt-4 border text-[#0038FF] border-[#0038FF] rounded-full px-4 py-2"
         >
-          {RECRUIT.WAITING.ALERT}
+          {RECRUIT.WAITING.ALERT_BUTTON}
         </button>
       </form>
       <div>
