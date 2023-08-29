@@ -39,18 +39,21 @@ const MISSION = [
     SUBTITLE: "개발, 발전을 향한 열정",
     CONTENT:
       "무언가를 열망하지 않으면 우리는 쉽게 지치기 마련입니다.\n열정은 그런 우리에게 중요한 동기가 될 수 있습니다.\n에코노베이션은 배움과 성장을 끊임없이 \n추구하는 사람들이 모인 커뮤니티입니다.",
+    IMAGE: require("/public/home/passion.jpg").default,
   },
   {
-    TITLE: "COMMUNICATION",
+    TITLE: "communication",
     SUBTITLE: "협업, 끊임 없는 소통",
     CONTENT:
       "에코노베이션은 혼자가 아닌 팀의 소중함과 시너지를 \n이해하며 끊임없이 소통하기 위해 노력합니다.회원들은 \n프로젝트를 통해 소통 능력을 기르고, 더 나아가 동아리 \n행사, 최종 발표 등에서 큰 무대에서 소통하는 능력을 기릅니다. ",
+    IMAGE: require("/public/home/communication.jpg").default,
   },
   {
-    TITLE: "FAITHFUL",
+    TITLE: "faithful",
     SUBTITLE: "성실, 끈기있는 노력",
     CONTENT:
       "스스로 발전하기 위한 노력은 성장을 위한 시발점입니다.\n에코노베이션은 계획 뿐만 아니라 끈기 있는 노력을 통해 \n스스로 동기 부여합니다. 이를 통해 의미 있는 결실을 \n이끌어 낼 수 있도록 합니다.",
+    IMAGE: require("/public/home/faithful.jpg").default,
   },
 ];
 

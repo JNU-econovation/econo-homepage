@@ -1,0 +1,36 @@
+.timeline {
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.swiper {
+    width: 100%;
+    transform: translateY(-20rem);
+}
+
+.swiper-slide {
+    text-align: center;
+}
+
+.swiper-slide > div:nth-child(1) {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.swiper-slide > div:nth-child(2) {
+    font-size: 5.5rem;
+    font-weight: 700;
+}
+
+.swiper-slide-active {
+    color: white;
+}
+
+.swiper-wrapper {
+    left: 11vw;
+}

@@ -39,7 +39,7 @@ const RecruitFloat = () => {
 
   return (
     <div
-      className="fixed bottom-0 h-16 w-full z-[200]"
+      className="fixed bottom-0 h-16 w-full z-[200] max-w-[calc(1980px-3.5rem)]"
       onMouseEnter={showDetail}
       onMouseLeave={closeDetail}
     >
