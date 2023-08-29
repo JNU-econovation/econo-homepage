@@ -1,0 +1,140 @@
+.project {
+    display: flex;
+    padding: 20vh 7vw 0;
+    width: 86vw;
+    height: fit-content;
+}
+
+.project>div:first-child {
+    flex: 1;
+}
+
+.project>div:last-child {
+    flex: 2;
+}
+
+.project-title {
+    font-size: 3rem;
+}
+
+.project-subtitle {
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.project-description {
+    font-size: 1.1rem;
+}
+
+.project-description>div {
+    margin-bottom: 8px;
+}
+
+.project-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-item>div {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4.5rem;
+}
+
+.project-people {
+    width: 15rem;
+    text-align: end;
+}
+
+.project-team {
+    width: 14rem;
+    text-align: center;
+}
+
+.project-list>div:hover::after {
+    width: 100%;
+}
+
+.project-list>div::after {
+    content: ' ';
+    display: block;
+    width: 0;
+    height: .17rem;
+    background: #000;
+    transition-property: width fill;
+    transition-duration: .8s;
+    transform: translateY(-3.8rem);
+}
+
+.project-list>div:hover svg>path {
+    fill: black;
+}
+
+@media (max-width: 1600px) {
+    .project-item {
+        flex-direction: column;
+        align-items: inherit;
+        margin-left: 2rem;
+    }
+
+    .project-item>div {
+        display: flex;
+        justify-content: start;
+        margin-bottom: 1rem;
+    }
+
+    .project-item>div:last-child {
+        margin-bottom: 3rem;
+    }
+
+    .project-people {
+        width: fit-content;
+        text-align: start;
+    }
+
+    .project-team {
+        width: fit-content;
+        text-align: start;
+    }
+
+    .project-people::before {
+        content: '-';
+        padding-left: .3rem;
+    }
+
+    .project-list>div::after {
+        content: ' ';
+        display: block;
+        width: 0;
+        height: .2rem;
+        background: #000;
+        transition: width .8s;
+        transform: translate(2rem, -2.5rem);
+    }
+}
+
+.mouse-delay.project-img {
+    width: 256px;
+    height: 256px;
+    left: -128px;
+    top: -128px;
+    border: 0px solid;
+    border-radius: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.mouse-inner {
+    width: 256px;
+    height: 256px;
+}
+
+.clipped-img {
+    clip-path: url('#svgmask');
+}
+
+#svgmask path {
+    transition: 0.4s;
+}
