@@ -3,12 +3,12 @@ const RECRUIT = {
   CONTENT:
     "에코노베이션에서 함께할 여러분을 모집합니다.\n에코노베이션은 지식의 선순환이 자연스럽게 이루어지는 환경을 만드는 것을 목표하고 있습니다.\n개발에 열정이 있다면 에코노베이션에 들어와 지식의 선순환을 일으켜주세요.",
   IS_ON: true,
-  GENERTAION: 25,
+  GENERTAION: 26,
   SCHEDULE: [
-    { TEXT: "서류 접수 시작", DATE: "3/6" },
-    { TEXT: "서류 접수 마감", DATE: "3/12" },
-    { TEXT: "인터뷰 진행", DATE: "3/25 - 26" },
-    { TEXT: "최종 합격 안내", DATE: "4/3" },
+    { TEXT: "서류 접수 시작", DATE: "9/4" },
+    { TEXT: "서류 접수 마감", DATE: "9/15" },
+    { TEXT: "인터뷰 진행", DATE: "9/20 - 22" },
+    { TEXT: "최종 합격 안내", DATE: "9/26" },
   ],
   WAITING: {
     TITLE: "comming soon",
