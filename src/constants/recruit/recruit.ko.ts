@@ -8,7 +8,7 @@ const RECRUIT = {
     { TEXT: "서류 접수 시작", DATE: "9/4" },
     { TEXT: "서류 접수 마감", DATE: "9/15" },
     { TEXT: "인터뷰 진행", DATE: "9/20 - 22" },
-    { TEXT: "최종 합격 안내", DATE: "9/26" },
+    { TEXT: "최종 합격 안내", DATE: "9/25" },
   ],
   WAITING: {
     TITLE: "comming soon",
