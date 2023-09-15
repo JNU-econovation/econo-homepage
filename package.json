@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "node database/database.js && next start",
+    "start": "node database.js && next start",
     "lint": "next lint"
   },
   "dependencies": {
