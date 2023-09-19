@@ -37,6 +37,11 @@ const FOOTER = {
       ALT: "codeit",
       HREF: "https://www.codeit.kr/",
     },
+    {
+      IMAGE: require("/public/images/sparta.png").default,
+      ALT: "team sparta",
+      HREF: "https://spartacodingclub.kr/",
+    },
   ],
 };
 
