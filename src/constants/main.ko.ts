@@ -80,4 +80,6 @@ const MAIN_NAV = [
   },
 ];
 
-export { MISSION, JOBS, ECONOVATION, ABOUT, MAIN_NAV };
+const MENU_STRING = "menu";
+
+export { MISSION, JOBS, ECONOVATION, ABOUT, MAIN_NAV, MENU_STRING };

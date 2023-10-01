@@ -68,7 +68,7 @@ const URLS = {
     TEXT: "지원하기",
   },
   ECONO_RECRUIT: {
-    LINK: "/recruit",
+    LINK: "https://recruit.econovation.kr/application",
     TEXT: "econo recruit",
   },
   ECONO_BEEP: {
