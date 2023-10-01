@@ -40,7 +40,7 @@ const RECRUIT = {
         TITLE: "app",
         TITLE_KO: "앱",
         CONTENT:
-          "안드로이드, IOS 등의 APP을 개발합니다.\nKotlin, Java, Swfit등을 사용하여 스마트폰에서 프로젝트가 동작할 수 있도록 구현합니다.",
+          "안드로이드, IOS 등의 APP을 개발합니다.\nKotlin, Java, Swift등을 사용하여 스마트폰에서 프로젝트가 동작할 수 있도록 구현합니다.",
       },
       {
         TITLE: "web",
@@ -58,7 +58,7 @@ const RECRUIT = {
         TITLE: "ai",
         TITLE_KO: "인공지능",
         CONTENT:
-          "프로젝트에서 인공지능을 활용하는 부분을 맡아 개발합니다.\n주로 이미지처리, 자연어 처리, 추천 시스템 드의 기능을 구현합니다.",
+          "프로젝트에서 인공지능을 활용하는 부분을 맡아 개발합니다.\n주로 이미지처리, 자연어 처리, 추천 시스템 등의 기능을 구현합니다.",
       },
       {
         TITLE: "game",
