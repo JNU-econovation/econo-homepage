@@ -28,7 +28,7 @@ const Contact = () => {
         ></iframe>
       </div>
       <div className="w-full flex justify-center my-8 text-xl uppercase">
-        {`${ADDRESS.EN} ${ADDRESS.KO}}`}
+        {`${ADDRESS.EN} ${ADDRESS.KO}`}
       </div>
       <ContactAsk />
     </>

@@ -10,6 +10,8 @@ import { loadingState } from "@/src/stores/common";
 import { useAtom } from "jotai";
 import Awards from "@/src/components/main/Award/Awards.componont";
 import Missions from "@/src/components/main/Missions.component";
+import classNames from "classnames";
+import { isMobile } from "react-device-detect";
 
 const MainPage = () => {
   const [isLoading, setIsLoading] = useAtom(loadingState);
@@ -20,9 +22,9 @@ const MainPage = () => {
   return (
     <>
       <Loading isLoading={isLoading} />
-      <div className="overflow-hidden max-w-[1920px] m-auto">
+      <div className={isMobile ? "w-[1920px]" : "overflow-hidden m-auto"}>
         <Navbar />
-        <div className="px-12">
+        <div className={classNames(isMobile ? "px-4" : "px-12")}>
           <Intro />
           <Missions />
           <Awards />

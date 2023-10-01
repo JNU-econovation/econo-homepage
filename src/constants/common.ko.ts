@@ -17,7 +17,7 @@ const FOOTER = {
     { NAME: "youtube", LINK: "YOUTUBE_LINK" },
   ],
   ADDRESS: {
-    EN: "77. youngbong-ro, buk-gu, gangju, republic of korea",
+    EN: "77. youngbong-ro, buk-gu, gwangju, republic of korea",
     KO: "전남대학교 정보화본부 101호",
   },
   TO_TOP: "back to top",

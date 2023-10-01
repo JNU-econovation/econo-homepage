@@ -2,11 +2,12 @@
 
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import LinkTo from "@/src/components/common/LinkTo.component";
-import { MAIN_NAV } from "@/src/constants/main.ko";
+import { MAIN_NAV, MENU_STRING } from "@/src/constants/main.ko";
+import { isMobile } from "react-device-detect";
 
 const Navbar = () => {
-  return (
-    <div className="flex w-full justify-between min-h-fit px-12 my-12">
+  return !isMobile ? (
+    <nav className="flex w-full justify-between min-h-fit px-12 my-12">
       <div>
         {MAIN_NAV.filter((data) => data.POSITION === "left").map((data) => (
           <LinkTo
@@ -29,7 +30,11 @@ const Navbar = () => {
           </LinkTo>
         ))}
       </div>
-    </div>
+    </nav>
+  ) : (
+    <nav className="flex w-full justify-between min-h-fit px-4 mt-12 mb-6 text-xl">
+      {MENU_STRING}
+    </nav>
   );
 };
 

@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
 import AwardGroup from "./AwardGroup.component";
+import { isMobile } from "react-device-detect";
 
 gsap.registerPlugin(ScrollTrigger);
 const currentYear = new Date().getFullYear();
