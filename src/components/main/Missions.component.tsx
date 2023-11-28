@@ -4,13 +4,13 @@ import { ECONOVATION, MISSION } from "@/src/constants/main.ko";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import { FC, useState } from "react";
-import classNames from "classnames";
 import Image from "next/image";
 
 import "swiper/css";
 import "swiper/css/effect-fade";
 import { isMobile } from "react-device-detect";
 import InfinityAutoScroll from "../common/InfinityAutoScroll.component";
+import { cn } from "@/src/functions/util";
 
 interface MissionContentProps {
   mission: (typeof MISSION)[0];
@@ -30,14 +30,14 @@ const MissionContent: FC<MissionContentProps> = ({
       onClick={() => {
         swiper.slideTo(index);
       }}
-      className={classNames(
+      className={cn(
         "w-full pt-4 text-left",
         selectedMission === index || isMobile ? "text-black" : "text-[#9C9C9C]"
       )}
     >
       <span className="text-xl">{`0${index + 1}`}</span>
       <div
-        className={classNames(
+        className={cn(
           !isMobile && "border-t-2",
           selectedMission === index ? "border-black" : "border-[#9C9C9C]"
         )}
@@ -45,7 +45,7 @@ const MissionContent: FC<MissionContentProps> = ({
       <div className="text-4xl font-semibold">{mission.TITLE}</div>
       <div className="text-lg font-medium my-3">{mission.SUBTITLE}</div>
       <div
-        className={classNames(
+        className={cn(
           "my-8 flex flex-col gap-1",
           selectedMission === index || isMobile
             ? "text-[#292929]"

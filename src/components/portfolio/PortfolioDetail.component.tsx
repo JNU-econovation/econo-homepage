@@ -6,7 +6,7 @@ import { FC, useEffect } from "react";
 import PortfolioImages from "./PortfolioImages.component";
 import PortfolioDetailDescription from "./PortfolioDetailDescription.component";
 import { isMobile } from "react-device-detect";
-import classNames from "classnames";
+import { cn } from "@/src/functions/util";
 
 const { DATA } = PORTFOLIO;
 
@@ -118,7 +118,7 @@ const PorfolioDetail: FC<PortfolioItemProps> = ({ item, isShowDetail }) => {
     <>
       <div className="fixed bottom-10 left-14 z-30 text-white font-bold w-[50%] break-words portfolio-item-title-cover max-lg:w-[90%]">
         <div
-          className={classNames(
+          className={cn(
             "mb-5 translate-y-96 uppercase portfolio-item-title ",
             isMobile ? "text-7xl" : "text-7xl"
           )}
@@ -126,7 +126,7 @@ const PorfolioDetail: FC<PortfolioItemProps> = ({ item, isShowDetail }) => {
           {item.TITLE}
         </div>
         <div
-          className={classNames(
+          className={cn(
             "translate-y-96 portfolio-item-subtitle leading-relaxed",
             isMobile ? "text-3xl" : "text-xl"
           )}
@@ -146,7 +146,7 @@ const PorfolioDetail: FC<PortfolioItemProps> = ({ item, isShowDetail }) => {
         </div>
       </div>
       <div
-        className={classNames(
+        className={cn(
           "flex flex-col gap-4 overflow-x-auto fixed right-14 z-30 w-[40%] bottom-10 translate-y-[100vh] max-xl:hidden portfolio-item-images-cover",
           item.INTRODUCTION.length === 1
             ? "justify-center top-0 opacity-0"

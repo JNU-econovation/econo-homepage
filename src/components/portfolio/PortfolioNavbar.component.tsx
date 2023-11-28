@@ -8,7 +8,7 @@ import {
 import { URLS } from "@/src/constants/url.ko";
 import gsap from "gsap";
 import LinkTo from "@components/common/LinkTo.component";
-import classNames from "classnames";
+import { cn } from "@/src/functions/util";
 
 const { TITLE } = PORTFOLIO;
 
@@ -107,7 +107,7 @@ const PortfolioNavbar = () => {
           <LinkTo key={index} link={menu.LINK}>
             {
               <div
-                className={classNames({
+                className={cn({
                   "text-gray-400": !isUrlMatch(menu.LINK),
                 })}
               >

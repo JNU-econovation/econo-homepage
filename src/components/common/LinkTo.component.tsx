@@ -2,12 +2,12 @@
 
 import { URLS } from "@/src/constants/url.ko";
 import { loadingState } from "@/src/stores/common";
-import classNames from "classnames";
 import { useSetAtom } from "jotai";
 import { useRouter } from "next/navigation";
 import { FC, ReactElement } from "react";
 import debounce from "lodash/debounce";
 import Link from "next/link";
+import { cn } from "@/src/functions/util";
 
 interface LinkToProps {
   link: string;
@@ -42,7 +42,7 @@ const LinkTo: FC<LinkToProps> = ({
         viewLoading();
       }}
       target={target}
-      className={classNames(className, "cursor-pointer")}
+      className={cn(className, "cursor-pointer")}
     >
       {children}
     </Link>

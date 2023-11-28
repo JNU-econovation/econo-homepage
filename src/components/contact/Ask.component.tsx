@@ -1,5 +1,4 @@
-import { isEmail } from "@/src/functions/util";
-import classNames from "classnames";
+import { cn, isEmail } from "@/src/functions/util";
 import { ChangeEvent, FC, FormEvent, useId, useState } from "react";
 
 interface AskInputTextProps {
@@ -24,7 +23,7 @@ const AskInputText: FC<AskInputTextProps> = ({
         {label}
       </label>
       <input
-        className={classNames(
+        className={cn(
           "font-sans w-full py-6 border-b outline-none",
           isError ? "border-[#CE0000]" : "border-[#545454]"
         )}
@@ -34,12 +33,7 @@ const AskInputText: FC<AskInputTextProps> = ({
         onChange={onChange}
         placeholder={placeholder}
       />
-      <div
-        className={classNames(
-          "text-[#CE0000]",
-          isError ? "visible" : "invisible"
-        )}
-      >
+      <div className={cn("text-[#CE0000]", isError ? "visible" : "invisible")}>
         PLEASE ENTER TEXT
       </div>
     </div>

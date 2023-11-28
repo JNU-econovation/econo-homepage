@@ -1,6 +1,6 @@
 import { PORTFOLIO } from "@/src/constants/portfolio/portfolio.ko";
+import { cn } from "@/src/functions/util";
 import { FC } from "react";
-import classNames from "classnames";
 import { isMobile } from "react-device-detect";
 
 interface PortfolioDetailDescriptionProps {
@@ -12,19 +12,19 @@ const PortfolioDetailDescription: FC<PortfolioDetailDescriptionProps> = ({
 }) => {
   return (
     <div
-      className={classNames(
+      className={cn(
         "fixed flex flex-col bottom-10 left-14 z-30 w-[40%] min-w-[40rem] translate-y-[140%] text-white max-lg:w-[90%] overflow-x-auto portfolio-item-content",
         isMobile ? "top-[30rem]" : "top-[24rem]"
       )}
     >
       {item.IDEA ? (
         <div
-          className={classNames("mb-14", {
+          className={cn("mb-14", {
             "mt-auto": !isMobile,
           })}
         >
           <div
-            className={classNames(
+            className={cn(
               "mb-5 font-semibold",
               isMobile ? "text-6xl" : "text-4xl"
             )}
@@ -32,7 +32,7 @@ const PortfolioDetailDescription: FC<PortfolioDetailDescriptionProps> = ({
             IDEA
           </div>
           <div
-            className={classNames(
+            className={cn(
               "mb-5 leading-relaxed",
               isMobile ? "text-3xl" : "text-lg"
             )}
@@ -49,7 +49,7 @@ const PortfolioDetailDescription: FC<PortfolioDetailDescriptionProps> = ({
       {item.SKILLS ? (
         <div>
           <div
-            className={classNames(
+            className={cn(
               "mb-5 font-semibold",
               isMobile ? "text-6xl" : "text-4xl"
             )}
@@ -57,7 +57,7 @@ const PortfolioDetailDescription: FC<PortfolioDetailDescriptionProps> = ({
             SKILLS
           </div>
           <div
-            className={classNames(
+            className={cn(
               "mb-5 leading-relaxed",
               isMobile ? "text-3xl" : "text-lg"
             )}

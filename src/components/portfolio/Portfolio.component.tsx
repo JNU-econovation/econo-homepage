@@ -4,7 +4,6 @@ import { PORTFOLIO } from "@/src/constants/portfolio/portfolio.ko";
 import PortfolioTitleImage from "@/src/components/portfolio/PortfolioTitleImage.component";
 import { useEffect, useRef, useState } from "react";
 import PorfolioDetail from "./PortfolioDetail.component";
-import classNames from "classnames";
 import PortfolioNavbar from "@/src/components/portfolio/PortfolioNavbar.component";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { Mousewheel, FreeMode, Controller } from "swiper/modules";
@@ -13,6 +12,7 @@ import "swiper/css/mousewheel";
 import "swiper/css/free-mode";
 import PortfolioBackImage from "./PortfolioBackImage.component";
 import HambergerMenu from "../common/Hamberger.component";
+import { cn } from "@/src/functions/util";
 
 const { DATA } = PORTFOLIO;
 
@@ -79,7 +79,7 @@ const Portfolio = () => {
               {({ isActive }) => (
                 <button
                   onClick={() => showDetail(index)}
-                  className={classNames("text-7xl uppercase", {
+                  className={cn("text-7xl uppercase", {
                     "text-gray-400": !isActive,
                   })}
                 >

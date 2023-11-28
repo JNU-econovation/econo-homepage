@@ -6,8 +6,8 @@ import { ABOUT, ECONOVATION, JOBS } from "@/src/constants/main.ko";
 import { Fragment } from "react";
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import RecruitFloat from "./RecruitFloat.component";
-import classNames from "classnames";
 import { isMobile } from "react-device-detect";
+import { cn } from "@/src/functions/util";
 
 const Intro = () => {
   return (
@@ -21,7 +21,7 @@ const Intro = () => {
         />
       </h1>
       <h2
-        className={classNames(
+        className={cn(
           "uppercase font-semibold",
           isMobile ? "text-2xl my-4" : "text-7xl my-8"
         )}
@@ -32,7 +32,7 @@ const Intro = () => {
         {JOBS.map((field, index) => (
           <Fragment key={index}>
             <div
-              className={classNames(
+              className={cn(
                 "uppercase p-2 text-white",
                 isMobile ? "text-base font-light" : "text-3xl"
               )}
@@ -44,7 +44,7 @@ const Intro = () => {
         ))}
       </InfinityAutoScroll>
       <div
-        className={classNames(
+        className={cn(
           "grid",
           isMobile ? "grid-cols-2 gap-2" : "grid-cols-4 gap-4"
         )}
@@ -60,7 +60,7 @@ const Intro = () => {
             <div className="border-t border-black mt-4 py-2 text-xs">
               {field.SUBTITLE}
             </div>
-            <div className={classNames(isMobile ? "text-base" : "text-2xl")}>
+            <div className={cn(isMobile ? "text-base" : "text-2xl")}>
               {field.TITLE}
             </div>
           </div>
