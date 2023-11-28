@@ -1,17 +1,17 @@
 "use client";
 
 import { PORTFOLIO } from "@/src/constants/portfolio/portfolio.ko";
-import PortfolioTitleImage from "@/src/components/portfolio/PortfolioTitleImage.component";
+import PortfolioTitleImage from "@/src/components/portfolio/TitleImage";
 import { useEffect, useRef, useState } from "react";
-import PorfolioDetail from "./PortfolioDetail.component";
-import PortfolioNavbar from "@/src/components/portfolio/PortfolioNavbar.component";
+import PorfolioDetail from "./Detail";
+import PortfolioNavbar from "@/src/components/portfolio/Navbar";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { Mousewheel, FreeMode, Controller } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/mousewheel";
 import "swiper/css/free-mode";
-import PortfolioBackImage from "./PortfolioBackImage.component";
-import HambergerMenu from "../common/Hamberger.component";
+import PortfolioBackImage from "./BackImage";
+import HambergerMenu from "../common/Hamberger";
 import { cn } from "@/src/functions/util";
 
 const { DATA } = PORTFOLIO;

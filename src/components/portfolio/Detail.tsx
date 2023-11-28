@@ -3,8 +3,8 @@
 import { PORTFOLIO } from "@/src/constants/portfolio/portfolio.ko";
 import gsap from "gsap";
 import { FC, useEffect } from "react";
-import PortfolioImages from "./PortfolioImages.component";
-import PortfolioDetailDescription from "./PortfolioDetailDescription.component";
+import PortfolioImages from "./Images";
+import PortfolioDetailDescription from "./PortfolioDetailDescription";
 import { isMobile } from "react-device-detect";
 import { cn } from "@/src/functions/util";
 

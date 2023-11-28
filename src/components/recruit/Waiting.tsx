@@ -1,5 +1,5 @@
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
-import InputTextHover from "../common/InputTextHover.component";
+import InputTextHover from "../common/InputTextHover";
 import { ChangeEvent, FormEvent } from "react";
 
 const Waiting = ({

@@ -4,7 +4,7 @@ import { AWARDS } from "@/src/constants/award.ko";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
-import AwardGroup from "./AwardGroup.component";
+import AwardGroup from "./Group";
 import { isMobile } from "react-device-detect";
 
 gsap.registerPlugin(ScrollTrigger);

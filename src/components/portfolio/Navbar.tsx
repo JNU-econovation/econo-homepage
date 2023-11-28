@@ -7,7 +7,7 @@ import {
 } from "@/src/constants/portfolio/portfolio.ko";
 import { URLS } from "@/src/constants/url.ko";
 import gsap from "gsap";
-import LinkTo from "@components/common/LinkTo.component";
+import LinkTo from "@/src/components/common/LinkTo";
 import { cn } from "@/src/functions/util";
 
 const { TITLE } = PORTFOLIO;

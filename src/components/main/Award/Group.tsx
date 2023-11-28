@@ -4,7 +4,7 @@ import { Award } from "@/src/constants/award.ko";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FC, RefObject, useEffect, useRef } from "react";
-import AwardGroupItem from "./AwardGroupItem.component";
+import AwardGroupItem from "./GroupItem";
 
 interface AwardGroupProps {
   data: Award;

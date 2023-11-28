@@ -3,8 +3,8 @@
 import { CONTACT } from "@/src/constants/contact.ko";
 import { FOOTER } from "@/src/constants/common.ko";
 import { useRef } from "react";
-import HambergerMenu from "../common/Hamberger.component";
-import ContactAsk from "./Ask.component";
+import HambergerMenu from "../common/Hamberger";
+import ContactAsk from "./Ask";
 
 const { ADDRESS } = FOOTER;
 const Contact = () => {

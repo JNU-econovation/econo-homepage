@@ -1,13 +1,13 @@
 "use client";
 
-import Navbar from "@/src/components/common/Navbar.component";
-import Footer from "@/src/components/common/Footer.component";
-import Service from "@/src/components/main/Service.component";
-import Intro from "@/src/components/main/Intro.component";
+import Navbar from "@/src/components/common/Navbar";
+import Footer from "@/src/components/common/Footer";
+import Service from "@/src/components/main/Service";
+import Intro from "@/src/components/main/Intro";
 import { useEffect, useState } from "react";
-import Loading from "@/src/components/common/Loading.component";
-import Awards from "@/src/components/main/Award/Awards.componont";
-import Missions from "@/src/components/main/Missions.component";
+import Loading from "@/src/components/common/Loading";
+import Awards from "@/src/components/main/Award/Awards";
+import Missions from "@/src/components/main/Missions";
 import { isMobile } from "react-device-detect";
 import { cn } from "@/src/functions/util";
 

@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Dispatch, FC, Fragment, SetStateAction, useState } from "react";
 import backgorundImage from "/public/images/hamburger-background.png";
 import econovationWhiteLogo from "/public/images/econovation-white.svg";
-import LinkTo from "./LinkTo.component";
+import LinkTo from "./LinkTo";
 import { cn } from "@/src/functions/util";
 
 interface HambergerChildMenuProps {

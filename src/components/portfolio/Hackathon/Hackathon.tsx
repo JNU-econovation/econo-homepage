@@ -1,6 +1,6 @@
 import { HACKATHON_POSTER } from "@/src/constants/portfolio/hackathon.ko";
-import HambergerMenu from "../../common/Hamberger.component";
-import PortfolioNavbar from "../PortfolioNavbar.component";
+import HambergerMenu from "../../common/Hamberger";
+import PortfolioNavbar from "../Navbar";
 import Image from "next/image";
 
 const Hackathon = () => {

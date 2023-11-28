@@ -9,7 +9,7 @@ import Image from "next/image";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import { isMobile } from "react-device-detect";
-import InfinityAutoScroll from "../common/InfinityAutoScroll.component";
+import InfinityAutoScroll from "../common/InfinityAutoScroll";
 import { cn } from "@/src/functions/util";
 
 interface MissionContentProps {

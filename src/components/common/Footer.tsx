@@ -1,7 +1,7 @@
 "use client";
 
 import { FOOTER } from "@/src/constants/common.ko";
-import LinkTo from "./LinkTo.component";
+import LinkTo from "./LinkTo";
 import Link from "next/link";
 import Image from "next/image";
 

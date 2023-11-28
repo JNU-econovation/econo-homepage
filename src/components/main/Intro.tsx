@@ -1,11 +1,11 @@
 import { MAIN } from "@/src/constants/common.ko";
 import Image from "next/image";
 import econovationBlackLogo from "/public/images/econovation-black.svg";
-import InfinityAutoScroll from "../common/InfinityAutoScroll.component";
+import InfinityAutoScroll from "../common/InfinityAutoScroll";
 import { ABOUT, ECONOVATION, JOBS } from "@/src/constants/main.ko";
 import { Fragment } from "react";
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
-import RecruitFloat from "./RecruitFloat.component";
+import RecruitFloat from "./RecruitFloat";
 import { isMobile } from "react-device-detect";
 import { cn } from "@/src/functions/util";
 

@@ -2,7 +2,7 @@
 
 import { PORTFOLIO } from "@/src/constants/portfolio/portfolio.ko";
 import Image from "next/image";
-import { FC, useEffect } from "react";
+import { FC } from "react";
 
 interface PortfolioImagesProps {
   images: (typeof PORTFOLIO.DATA)[number]["INTRODUCTION"];
