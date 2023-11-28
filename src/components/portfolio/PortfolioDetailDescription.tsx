@@ -7,9 +7,9 @@ interface PortfolioDetailDescriptionProps {
   item: (typeof PORTFOLIO.DATA)[number];
 }
 
-const PortfolioDetailDescription: FC<PortfolioDetailDescriptionProps> = ({
-  item,
-}) => {
+export const PortfolioDetailDescription: FC<
+  PortfolioDetailDescriptionProps
+> = ({ item }) => {
   return (
     <div
       className={cn(
@@ -73,5 +73,3 @@ const PortfolioDetailDescription: FC<PortfolioDetailDescriptionProps> = ({
     </div>
   );
 };
-
-export default PortfolioDetailDescription;

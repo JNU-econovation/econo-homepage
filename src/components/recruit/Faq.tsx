@@ -3,7 +3,7 @@ import gsap from "gsap";
 import Image from "next/image";
 import { useState } from "react";
 
-const Faq = () => {
+export const Faq = () => {
   const [faqBoard, setFaqBoard] = useState(0);
   const [faqOpenPosition, setFaqOpenPosition] = useState(-1);
 
@@ -82,5 +82,3 @@ const Faq = () => {
     </>
   );
 };
-
-export default Faq;

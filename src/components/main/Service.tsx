@@ -1,9 +1,9 @@
 import { SERVICES } from "@/src/constants/common.ko";
-import LinkTo from "@/src/components/common/LinkTo";
+import { LinkTo } from "@/src/components/common/LinkTo";
 
 const { ECONOVATION_DEV, ECONO_RECRUIT, OTHER } = SERVICES;
 
-const Service = () => {
+export const Service = () => {
   return (
     <div className="flex w-full gap-2 px-14 py-24 uppercase" id="services">
       <LinkTo
@@ -60,5 +60,3 @@ const Service = () => {
     </div>
   );
 };
-
-export default Service;

@@ -7,12 +7,12 @@ import {
 } from "@/src/constants/portfolio/portfolio.ko";
 import { URLS } from "@/src/constants/url.ko";
 import gsap from "gsap";
-import LinkTo from "@/src/components/common/LinkTo";
+import { LinkTo } from "@/src/components/common/LinkTo";
 import { cn } from "@/src/functions/util";
 
 const { TITLE } = PORTFOLIO;
 
-const PortfolioNavbar = () => {
+export const PortfolioNavbar = () => {
   const [isShowPortfolioMenu, setIsShowPortfolioMenu] = useState(false);
 
   const isUrlMatch = (url: string) => {
@@ -120,5 +120,3 @@ const PortfolioNavbar = () => {
     </>
   );
 };
-
-export default PortfolioNavbar;

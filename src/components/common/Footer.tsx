@@ -5,7 +5,7 @@ import LinkTo from "./LinkTo";
 import Link from "next/link";
 import Image from "next/image";
 
-const Footer = () => {
+export const Footer = () => {
   const backToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <footer className="w-full mt-52 uppercase">
@@ -63,5 +63,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

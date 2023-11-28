@@ -40,7 +40,7 @@ const AskInputText: FC<AskInputTextProps> = ({
   );
 };
 
-const ContactAsk = () => {
+export const ContactAsk = () => {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
@@ -116,5 +116,3 @@ const ContactAsk = () => {
     </form>
   );
 };
-
-export default ContactAsk;

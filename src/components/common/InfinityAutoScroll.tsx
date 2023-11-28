@@ -6,13 +6,11 @@ interface InfinityAutoScrollProps {
   multiple?: number;
 }
 
-const InfinityAutoScroll: FC<PropsWithChildren<InfinityAutoScrollProps>> = ({
-  children,
-  className,
-  multiple = 2,
-}) => {
+export const InfinityAutoScroll: FC<
+  PropsWithChildren<InfinityAutoScrollProps>
+> = ({ children, className, multiple = 2 }) => {
   return (
-    <div className={cn("flex w-full truncate text-clip", className)}>
+    <div className={cn("flex w-full truncate", className)}>
       {Array.from({ length: multiple }).map((_, i) => (
         <div
           className="flex items-center w-fit animate-infinity-scroll"
@@ -24,5 +22,3 @@ const InfinityAutoScroll: FC<PropsWithChildren<InfinityAutoScrollProps>> = ({
     </div>
   );
 };
-
-export default InfinityAutoScroll;

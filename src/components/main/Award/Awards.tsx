@@ -4,13 +4,12 @@ import { AWARDS } from "@/src/constants/award.ko";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useLayoutEffect, useRef } from "react";
-import AwardGroup from "./Group";
-import { isMobile } from "react-device-detect";
+import { AwardGroup } from "./Group";
 
 gsap.registerPlugin(ScrollTrigger);
 const currentYear = new Date().getFullYear();
 
-const Awards = () => {
+export const Awards = () => {
   const awardRef = useRef<HTMLDivElement>(null);
   const awardYearsRef = useRef<HTMLDivElement>(null);
   const awardYearsCoverRef = useRef<HTMLDivElement>(null);
@@ -75,5 +74,3 @@ const Awards = () => {
     </div>
   );
 };
-
-export default Awards;

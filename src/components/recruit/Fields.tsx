@@ -3,7 +3,8 @@ import { gsap } from "gsap";
 import { ChangeEvent } from "react";
 
 const { FIELDS } = RECRUIT;
-const Fileds = () => {
+
+export const Fileds = () => {
   const contentToggle = (e: ChangeEvent<HTMLInputElement>) => {
     const key = e.currentTarget;
 
@@ -58,5 +59,3 @@ const Fileds = () => {
     </div>
   );
 };
-
-export default Fileds;

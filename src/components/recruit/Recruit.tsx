@@ -1,12 +1,13 @@
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
-import LinkTo from "../common/LinkTo";
+import { LinkTo } from "../common/LinkTo";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import gsap from "gsap";
-import HambergerMenu from "../common/Hamberger";
+import { HambergerMenu } from "../common/Hamberger";
 
 gsap.registerPlugin(ScrollTrigger);
-const Recruit = () => {
+
+export const Recruit = () => {
   useEffect(() => {
     gsap.to(".recruit-skedule-arrow", {
       width: "100%",
@@ -57,5 +58,3 @@ const Recruit = () => {
     </div>
   );
 };
-
-export default Recruit;

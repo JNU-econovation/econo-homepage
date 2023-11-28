@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Dispatch, FC, Fragment, SetStateAction, useState } from "react";
 import backgorundImage from "/public/images/hamburger-background.png";
 import econovationWhiteLogo from "/public/images/econovation-white.svg";
-import LinkTo from "./LinkTo";
+import { LinkTo } from "./LinkTo";
 import { cn } from "@/src/functions/util";
 
 interface HambergerChildMenuProps {
@@ -103,7 +103,7 @@ interface HambergerMenuProps {
   isWhite?: boolean;
 }
 
-const HambergerMenu: FC<HambergerMenuProps> = ({ isWhite = false }) => {
+export const HambergerMenu: FC<HambergerMenuProps> = ({ isWhite = false }) => {
   const [isShowSubMenu, setIsShowSubMenu] = useState<boolean[]>(
     Array.from(
       {
@@ -178,5 +178,3 @@ const HambergerMenu: FC<HambergerMenuProps> = ({ isWhite = false }) => {
     </nav>
   );
 };
-
-export default HambergerMenu;

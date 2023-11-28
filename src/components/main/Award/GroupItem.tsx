@@ -3,13 +3,13 @@
 import { Award } from "@/src/constants/award.ko";
 import { FC, useEffect, useRef, useState } from "react";
 import gsap from "gsap";
-import TextTransition from "../../common/TextTransition";
+import { TextTransition } from "../../common/TextTransition";
 
 interface AwardGroupItemProps {
   data: Award["DATA"][0];
 }
 
-const AwardGroupItem: FC<AwardGroupItemProps> = ({ data }) => {
+export const AwardGroupItem: FC<AwardGroupItemProps> = ({ data }) => {
   const awardItemsRef = useRef<HTMLDivElement[]>([]);
   const awardTeamAndPeopleString = [data.AWARDS.join(", "), ...data.PEOPLE];
   const [stringIndex, setStringIndex] = useState<number>(0);
@@ -87,5 +87,3 @@ const AwardGroupItem: FC<AwardGroupItemProps> = ({ data }) => {
     </div>
   );
 };
-
-export default AwardGroupItem;

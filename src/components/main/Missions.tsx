@@ -5,11 +5,10 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 import { Autoplay, EffectFade } from "swiper/modules";
 import { FC, useState } from "react";
 import Image from "next/image";
-
 import "swiper/css";
 import "swiper/css/effect-fade";
 import { isMobile } from "react-device-detect";
-import InfinityAutoScroll from "../common/InfinityAutoScroll";
+import { InfinityAutoScroll } from "../common/InfinityAutoScroll";
 import { cn } from "@/src/functions/util";
 
 interface MissionContentProps {
@@ -60,7 +59,7 @@ const MissionContent: FC<MissionContentProps> = ({
   );
 };
 
-const Missions = () => {
+export const Missions = () => {
   const [selectedMission, setSelectedMission] = useState(0);
 
   return !isMobile ? (
@@ -133,5 +132,3 @@ const Missions = () => {
     </>
   );
 };
-
-export default Missions;

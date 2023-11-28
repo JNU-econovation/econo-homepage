@@ -1,7 +1,7 @@
 "use client";
 
-import Loading from "@/src/components/common/Loading";
-import Portfolio from "@/src/components/portfolio";
+import { Loading } from "@/src/components/common/Loading";
+import { Portfolio } from "@/src/components/portfolio";
 import { useEffect } from "react";
 import { loadingState } from "@/src/stores/common";
 import { useAtom } from "jotai";

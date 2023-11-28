@@ -1,22 +1,22 @@
 "use client";
 
 import { PORTFOLIO } from "@/src/constants/portfolio/portfolio.ko";
-import PortfolioTitleImage from "@/src/components/portfolio/TitleImage";
+import { PortfolioTitleImage } from "@/src/components/portfolio/TitleImage";
 import { useEffect, useRef, useState } from "react";
-import PorfolioDetail from "./Detail";
-import PortfolioNavbar from "@/src/components/portfolio/Navbar";
+import { PorfolioDetail } from "./Detail";
+import { PortfolioNavbar } from "@/src/components/portfolio/Navbar";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
 import { Mousewheel, FreeMode, Controller } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/mousewheel";
 import "swiper/css/free-mode";
-import PortfolioBackImage from "./BackImage";
-import HambergerMenu from "../common/Hamberger";
+import { PortfolioBackImage } from "./BackImage";
+import { HambergerMenu } from "../common/Hamberger";
 import { cn } from "@/src/functions/util";
 
 const { DATA } = PORTFOLIO;
 
-const Portfolio = () => {
+export const Portfolio = () => {
   const [selectedProject, setSelectedProject] = useState(0);
   const [isShowDetail, setIsShowDetail] = useState(false);
   const topRef = useRef<HTMLDivElement>(null);
@@ -125,5 +125,3 @@ const Portfolio = () => {
     </>
   );
 };
-
-export default Portfolio;

@@ -7,7 +7,7 @@ interface PortfolioTitleImageProps {
   onShowDetail: () => void;
 }
 
-const PortfolioTitleImage: FC<PortfolioTitleImageProps> = ({
+export const PortfolioTitleImage: FC<PortfolioTitleImageProps> = ({
   item,
   onShowDetail,
 }) => {
@@ -22,5 +22,3 @@ const PortfolioTitleImage: FC<PortfolioTitleImageProps> = ({
     </button>
   );
 };
-
-export default PortfolioTitleImage;

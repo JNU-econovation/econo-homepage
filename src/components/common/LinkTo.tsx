@@ -17,7 +17,7 @@ interface LinkToProps {
   target?: "_blank" | "_self" | "_parent" | "_top";
 }
 
-const LinkTo: FC<LinkToProps> = ({
+export const LinkTo: FC<LinkToProps> = ({
   link,
   className,
   children,
@@ -48,4 +48,3 @@ const LinkTo: FC<LinkToProps> = ({
     </Link>
   );
 };
-export default LinkTo;

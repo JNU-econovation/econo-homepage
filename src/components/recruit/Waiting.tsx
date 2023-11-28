@@ -1,8 +1,8 @@
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
-import InputTextHover from "../common/InputTextHover";
+import { InputTextHover } from "../common/InputTextHover";
 import { ChangeEvent, FormEvent } from "react";
 
-const Waiting = ({
+export const Waiting = ({
   scrollToRecruit,
   inputValue,
   inputOnChange,
@@ -78,5 +78,3 @@ const Waiting = ({
     </div>
   );
 };
-
-export default Waiting;

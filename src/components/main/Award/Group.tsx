@@ -4,7 +4,7 @@ import { Award } from "@/src/constants/award.ko";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { FC, RefObject, useEffect, useRef } from "react";
-import AwardGroupItem from "./GroupItem";
+import { AwardGroupItem } from "./GroupItem";
 
 interface AwardGroupProps {
   data: Award;
@@ -15,7 +15,10 @@ gsap.registerPlugin(ScrollTrigger);
 const currentYear = new Date().getFullYear();
 let awardYear = currentYear;
 
-const AwardGroup: FC<AwardGroupProps> = ({ data, awardYearProgressRef }) => {
+export const AwardGroup: FC<AwardGroupProps> = ({
+  data,
+  awardYearProgressRef,
+}) => {
   const awardSplitRef = useRef<HTMLDivElement[]>([]);
 
   useEffect(() => {
@@ -75,5 +78,3 @@ const AwardGroup: FC<AwardGroupProps> = ({ data, awardYearProgressRef }) => {
     </div>
   );
 };
-
-export default AwardGroup;

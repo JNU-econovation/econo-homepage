@@ -1,7 +1,7 @@
 import "@/app/globals.css";
-import Header from "@/app/head";
 import { FC, ReactNode } from "react";
 import { Metadata } from "next";
+import { Header } from "./head";
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -16,7 +16,7 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="ko">
       <Header />
-      <body className="">{children}</body>
+      <body>{children}</body>
     </html>
   );
 };

@@ -1,10 +1,10 @@
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import { URLS } from "@/src/constants/url.ko";
-import LinkTo from "@/src/components/common/LinkTo";
+import { LinkTo } from "@/src/components/common/LinkTo";
 
 const { SUBSCRIPTION } = RECRUIT;
 
-const Subscription = () => {
+export const Subscription = () => {
   return (
     <div className="flex justify-between my-96">
       <h1 className="uppercase font-medium flex-1 mr-4">
@@ -55,5 +55,3 @@ const Subscription = () => {
     </div>
   );
 };
-
-export default Subscription;

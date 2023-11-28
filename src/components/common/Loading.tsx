@@ -3,7 +3,7 @@ import backgorundImage from "/public/images/hamburger-background.png";
 import econovationWhiteLogo from "/public/images/econovation-white.svg";
 import { cn } from "@/src/functions/util";
 
-const Loading = ({ isLoading = false }) => {
+export const Loading = ({ isLoading = false }) => {
   return (
     <div
       className={cn(
@@ -26,5 +26,3 @@ const Loading = ({ isLoading = false }) => {
     </div>
   );
 };
-
-export default Loading;

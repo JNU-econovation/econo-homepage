@@ -8,7 +8,7 @@ interface PortfolioImagesProps {
   images: (typeof PORTFOLIO.DATA)[number]["INTRODUCTION"];
 }
 
-const PortfolioImages: FC<PortfolioImagesProps> = ({ images }) => {
+export const PortfolioImages: FC<PortfolioImagesProps> = ({ images }) => {
   return (
     <>
       {images.map((image, index) =>
@@ -29,5 +29,3 @@ const PortfolioImages: FC<PortfolioImagesProps> = ({ images }) => {
     </>
   );
 };
-
-export default PortfolioImages;

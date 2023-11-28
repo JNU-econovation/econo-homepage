@@ -5,7 +5,7 @@ import LinkTo from "@/src/components/common/LinkTo";
 import { MAIN_NAV, MENU_STRING } from "@/src/constants/main.ko";
 import { isMobile } from "react-device-detect";
 
-const Navbar = () => {
+export const Navbar = () => {
   return !isMobile ? (
     <nav className="flex w-full justify-between min-h-fit px-12 my-12">
       <div>
@@ -37,5 +37,3 @@ const Navbar = () => {
     </nav>
   );
 };
-
-export default Navbar;

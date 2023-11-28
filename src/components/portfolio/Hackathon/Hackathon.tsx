@@ -1,9 +1,9 @@
 import { HACKATHON_POSTER } from "@/src/constants/portfolio/hackathon.ko";
-import HambergerMenu from "../../common/Hamberger";
-import PortfolioNavbar from "../Navbar";
+import { HambergerMenu } from "../../common/Hamberger";
+import { PortfolioNavbar } from "../Navbar";
 import Image from "next/image";
 
-const Hackathon = () => {
+export const Hackathon = () => {
   return (
     <>
       <HambergerMenu />
@@ -24,5 +24,3 @@ const Hackathon = () => {
     </>
   );
 };
-
-export default Hackathon;

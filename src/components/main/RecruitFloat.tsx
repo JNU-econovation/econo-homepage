@@ -1,11 +1,11 @@
-import { RECRUIT, RECRUIT_FLOAT } from "@/src/constants/recruit/recruit.ko";
+import { RECRUIT_FLOAT } from "@/src/constants/recruit/recruit.ko";
 import gsap from "gsap";
 import Image from "next/image";
 import { useRef } from "react";
-import LinkTo from "../common/LinkTo";
-import useTimeDiffer from "@/src/hooks/useTimeDiffer";
+import { LinkTo } from "../common/LinkTo";
+import { useTimeDiffer } from "@/src/hooks/useTimeDiffer";
 
-const RecruitFloat = () => {
+export const RecruitFloat = () => {
   const recruitDate = new Date(RECRUIT_FLOAT.RECRUIT_START_DATE);
   const floatRef = useRef<HTMLDivElement>(null);
   const floatDetailRef = useRef<HTMLDivElement>(null);
@@ -112,5 +112,3 @@ const RecruitFloat = () => {
     </div>
   );
 };
-
-export default RecruitFloat;

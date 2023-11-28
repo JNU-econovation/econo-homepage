@@ -8,7 +8,7 @@ interface InputHoverProps {
   className?: string;
 }
 
-const InputTextHover: FC<InputHoverProps> = ({
+export const InputTextHover: FC<InputHoverProps> = ({
   value,
   onChange,
   placeholder = "",
@@ -45,5 +45,3 @@ const InputTextHover: FC<InputHoverProps> = ({
     </div>
   );
 };
-
-export default InputTextHover;

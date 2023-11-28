@@ -2,14 +2,12 @@
 
 import { CONTACT } from "@/src/constants/contact.ko";
 import { FOOTER } from "@/src/constants/common.ko";
-import { useRef } from "react";
-import HambergerMenu from "../common/Hamberger";
-import ContactAsk from "./Ask";
+import { HambergerMenu } from "../common/Hamberger";
+import { ContactAsk } from "./Ask";
 
 const { ADDRESS } = FOOTER;
-const Contact = () => {
-  const mapRef = useRef<HTMLDivElement>(null);
 
+export const Contact = () => {
   return (
     <>
       <HambergerMenu />
@@ -34,5 +32,3 @@ const Contact = () => {
     </>
   );
 };
-
-export default Contact;

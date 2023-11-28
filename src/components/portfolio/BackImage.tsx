@@ -8,7 +8,7 @@ interface PortfolioBackImageProps {
   isShowDetail: boolean;
 }
 
-const PortfolioBackImage: FC<PortfolioBackImageProps> = ({
+export const PortfolioBackImage: FC<PortfolioBackImageProps> = ({
   item,
   isShowDetail,
 }) => {
@@ -124,5 +124,3 @@ const PortfolioBackImage: FC<PortfolioBackImageProps> = ({
     </div>
   );
 };
-
-export default PortfolioBackImage;
