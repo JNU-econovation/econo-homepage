@@ -10,6 +10,7 @@ import "swiper/css/effect-fade";
 import { isMobile } from "react-device-detect";
 import { InfinityAutoScroll } from "../common/InfinityAutoScroll";
 import { cn } from "@/src/functions/util";
+import { Icon } from "../common/Icon";
 
 interface MissionContentProps {
   mission: (typeof MISSION)[0];
@@ -42,7 +43,7 @@ const MissionContent: FC<MissionContentProps> = ({
         )}
       ></div>
       <div className="text-4xl font-semibold">{mission.TITLE}</div>
-      <div className="text-lg font-medium my-3">{mission.SUBTITLE}</div>
+      <div className="my-3 text-lg font-medium">{mission.SUBTITLE}</div>
       <div
         className={cn(
           "my-8 flex flex-col gap-1",
@@ -87,7 +88,7 @@ export const Missions = () => {
           />
         </SwiperSlide>
       ))}
-      <div className="flex justify-between text-left w-full">
+      <div className="flex w-full justify-between text-left">
         {MISSION.map((mission, index) => (
           <MissionContent
             key={mission.TITLE}
@@ -101,7 +102,7 @@ export const Missions = () => {
   ) : (
     <>
       <div>
-        <div className="flex flex-col text-left w-full">
+        <div className="flex w-full flex-col text-left">
           {MISSION.map((mission, index) => (
             <MissionContent
               key={mission.TITLE}
@@ -112,23 +113,16 @@ export const Missions = () => {
           ))}
         </div>
       </div>
-      {
-        <div className="pt-52 pb-24">
-          <div className="absolute left-0 w-full -translate-y-28">
-            <InfinityAutoScroll multiple={10}>
-              <div className="text-5xl uppercase">{ECONOVATION}</div>
-              <div className="flex justify-center items-center w-10 h-10 bg-[#0038FF] mx-8 rounded-full">
-                <Image
-                  src={require("/public/icons/right-up-direction.svg").default}
-                  alt="right-up-direction"
-                  width={16}
-                  height={16}
-                />
-              </div>
-            </InfinityAutoScroll>
-          </div>
+      <div className="pb-24 pt-52">
+        <div className="absolute left-0 w-full -translate-y-28">
+          <InfinityAutoScroll multiple={10}>
+            <div className="text-5xl uppercase">{ECONOVATION}</div>
+            <div className="mx-8 flex h-10 w-10 items-center justify-center rounded-full bg-[#0038FF]">
+              <Icon icon="right-up-direction" />
+            </div>
+          </InfinityAutoScroll>
         </div>
-      }
+      </div>
     </>
   );
 };

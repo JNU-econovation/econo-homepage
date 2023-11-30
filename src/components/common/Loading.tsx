@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import backgorundImage from "/public/images/hamburger-background.png";
 import econovationWhiteLogo from "/public/images/econovation-white.svg";

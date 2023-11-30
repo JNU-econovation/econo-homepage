@@ -8,6 +8,7 @@ import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import { RecruitFloat } from "./RecruitFloat";
 import { isMobile } from "react-device-detect";
 import { cn } from "@/src/functions/util";
+import { Icon } from "../common/Icon";
 
 export const Intro = () => {
   return (
@@ -72,10 +73,7 @@ export const Intro = () => {
             <InfinityAutoScroll multiple={10}>
               <div className="text-7xl uppercase">{ECONOVATION}</div>
               <div className="flex justify-center items-center w-16 h-16 bg-[#0038FF] mx-8 rounded-full p-4">
-                <Image
-                  src={require("/public/icons/right-up-direction.svg").default}
-                  alt="right-up-direction"
-                />
+                <Icon icon="right-up-direction" />
               </div>
             </InfinityAutoScroll>
           </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
-import LinkTo from "@/src/components/common/LinkTo";
+import { LinkTo } from "@/src/components/common/LinkTo";
 import { MAIN_NAV, MENU_STRING } from "@/src/constants/main.ko";
 import { isMobile } from "react-device-detect";
 

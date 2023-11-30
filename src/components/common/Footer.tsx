@@ -1,9 +1,10 @@
 "use client";
 
 import { FOOTER } from "@/src/constants/common.ko";
-import LinkTo from "./LinkTo";
+import { LinkTo } from "./LinkTo";
 import Link from "next/link";
 import Image from "next/image";
+import { Icon } from "./Icon";
 
 export const Footer = () => {
   const backToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
@@ -20,11 +21,7 @@ export const Footer = () => {
                 className="flex align-baseline my-4"
                 target="_blank"
               >
-                <img
-                  src="/icons/right-arrow-circle.svg"
-                  alt="rightArrow"
-                  className="inline mr-4 h-8 w-8"
-                />
+                <Icon icon="right-arrow-circle"  className="inline mr-4 h-8 w-8"/>
                 <span>{d.NAME}</span>
               </LinkTo>
             ))}

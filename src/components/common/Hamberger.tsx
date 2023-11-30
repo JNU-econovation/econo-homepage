@@ -7,14 +7,15 @@ import backgorundImage from "/public/images/hamburger-background.png";
 import econovationWhiteLogo from "/public/images/econovation-white.svg";
 import { LinkTo } from "./LinkTo";
 import { cn } from "@/src/functions/util";
+import { Icon } from "./Icon";
 
 interface HambergerChildMenuProps {
-  children: { NAME: string; LINK: string }[];
+  hamburgerChildData: { NAME: string; LINK: string }[];
   isOpen: boolean;
 }
 
 const HambergerChildMenu: FC<HambergerChildMenuProps> = ({
-  children,
+  hamburgerChildData,
   isOpen,
 }) => {
   return (
@@ -22,11 +23,11 @@ const HambergerChildMenu: FC<HambergerChildMenuProps> = ({
       className={cn(
         "flex flex-col items-center gap-2 duration-500 transition-all",
         isOpen
-          ? `h-[${3.5 * children.length - 0.5}rem] opacity-100`
+          ? `h-[${3.5 * hamburgerChildData.length - 0.5}rem] opacity-100`
           : "h-0 opacity-0"
       )}
     >
-      {children.map((child, index) => (
+      {hamburgerChildData.map((child, index) => (
         <LinkTo
           key={index}
           link={child.LINK}
@@ -48,7 +49,6 @@ interface HambergerNavMainProps {
 
 const HambergerNavMain: FC<HambergerNavMainProps> = ({
   isOpen,
-  setIsOpen,
   isShowSubMenu,
   setIsShowSubMenu,
 }) => {
@@ -89,7 +89,7 @@ const HambergerNavMain: FC<HambergerNavMainProps> = ({
             )}
             {menu.CHILDREN && (
               <HambergerChildMenu
-                children={menu.CHILDREN}
+                hamburgerChildData={menu.CHILDREN}
                 isOpen={isShowSubMenu[index]}
               />
             )}
@@ -125,7 +125,7 @@ export const HambergerMenu: FC<HambergerMenuProps> = ({ isWhite = false }) => {
         })}
         onClick={() => setIsOpen(true)}
       >
-        <img src="/icons/hamburger.svg" alt="hamburger" />
+        <Icon icon="hamberger" />
       </button>
       <div
         className={cn(

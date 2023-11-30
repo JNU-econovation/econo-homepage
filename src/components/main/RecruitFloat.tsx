@@ -1,3 +1,5 @@
+"use client";
+
 import { RECRUIT_FLOAT } from "@/src/constants/recruit/recruit.ko";
 import gsap from "gsap";
 import Image from "next/image";
@@ -39,7 +41,7 @@ export const RecruitFloat = () => {
 
   return (
     <div
-      className="fixed bottom-0 h-16 w-full z-[200] max-w-[calc(1980px-3.5rem)]"
+      className="fixed bottom-0 h-16 w-full max-w-[1600px] z-[200]"
       onMouseEnter={showDetail}
       onMouseLeave={closeDetail}
     >
