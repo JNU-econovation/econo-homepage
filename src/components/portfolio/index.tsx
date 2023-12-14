@@ -13,6 +13,8 @@ import "swiper/css/free-mode";
 import { PortfolioBackImage } from "./BackImage";
 import { HambergerMenu } from "../common/Hamberger";
 import { cn } from "@/src/functions/util";
+import Image from "next/image";
+import LeftArrow from "@/public/icons/left-arrow.svg";
 
 const { DATA } = PORTFOLIO;
 
@@ -53,15 +55,15 @@ export const Portfolio = () => {
       {isShowDetail && (
         <button
           onClick={closeDetail}
-          className="fixed w-fit h-fit z-50 left-14 top-32"
+          className="fixed left-14 top-32 z-50 h-fit w-fit"
         >
-          <img src="/icons/left-arrow.svg" alt="arrow-left" />
+          <Image src={LeftArrow} alt="arrow-left" />
         </button>
       )}
       <PortfolioNavbar />
-      <div className="absolute h-screen flex px-12 max-w-[1920px] justify-between translate-x-[-50%] translate-y-[-50%] left-1/2 top-1/2 ">
+      <div className="absolute left-1/2 top-1/2 flex h-screen max-w-[1920px] translate-x-[-50%] translate-y-[-50%] justify-between px-12 ">
         <Swiper
-          className="flex-1 h-screen"
+          className="h-screen flex-1"
           modules={[Mousewheel, FreeMode, Controller]}
           direction="vertical"
           slidesPerView="auto"
@@ -103,7 +105,7 @@ export const Portfolio = () => {
           ref={imageSwiperRef}
         >
           {DATA.map((item, index) => (
-            <SwiperSlide key={index} className="overflow-hidden w-[40rem]">
+            <SwiperSlide key={index} className="w-[40rem] overflow-hidden">
               <PortfolioTitleImage
                 item={item}
                 key={index}
@@ -113,7 +115,7 @@ export const Portfolio = () => {
           ))}
         </Swiper>
       </div>
-      <div className="fixed bottom-0 w-full bg-gradient-to-t from-white z-10 py-32 pointer-events-none"></div>
+      <div className="pointer-events-none fixed bottom-0 z-10 w-full bg-gradient-to-t from-white py-32"></div>
       <PortfolioBackImage
         isShowDetail={isShowDetail}
         item={DATA[selectedProject]}

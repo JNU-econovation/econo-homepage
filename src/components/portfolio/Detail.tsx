@@ -119,10 +119,10 @@ export const PorfolioDetail: FC<PortfolioItemProps> = ({
 
   return (
     <>
-      <div className="fixed bottom-10 left-14 z-30 text-white font-bold w-[50%] break-words portfolio-item-title-cover max-lg:w-[90%]">
+      <div className="portfolio-item-title-cover fixed bottom-10 left-14 z-30 w-[50%] break-words font-bold text-white max-lg:w-[90%]">
         <div
           className={cn(
-            "mb-5 translate-y-96 uppercase portfolio-item-title ",
+            "portfolio-item-title mb-5 translate-y-96 uppercase ",
             isMobile ? "text-7xl" : "text-7xl"
           )}
         >
@@ -130,7 +130,7 @@ export const PorfolioDetail: FC<PortfolioItemProps> = ({
         </div>
         <div
           className={cn(
-            "translate-y-96 portfolio-item-subtitle leading-relaxed",
+            "portfolio-item-subtitle translate-y-96 leading-relaxed",
             isMobile ? "text-3xl" : "text-xl"
           )}
         >
@@ -140,20 +140,17 @@ export const PorfolioDetail: FC<PortfolioItemProps> = ({
         </div>
       </div>
       <PortfolioDetailDescription item={item} />
-      <div className="fixed bottom-10 right-14 z-30 text-white text-right font-bold max-lg:hidden">
-        <div className="text-2xl mb-5 translate-y-96 portfolio-item-teamname">
+      <div className="fixed bottom-10 right-14 z-30 text-right font-bold text-white max-lg:hidden">
+        <div className="portfolio-item-teamname mb-5 translate-y-96 text-2xl">
           {item.TEAM_NAME}
         </div>
-        <div className="text-xl translate-y-96 portfolio-item-people">
+        <div className="portfolio-item-people translate-y-96 text-xl">
           {item.PEOPLE}
         </div>
       </div>
       <div
         className={cn(
-          "flex flex-col gap-4 overflow-x-auto fixed right-14 z-30 w-[40%] bottom-10 translate-y-[100vh] max-xl:hidden portfolio-item-images-cover",
-          item.INTRODUCTION.length === 1
-            ? "justify-center top-0 opacity-0"
-            : "top-32"
+          "portfolio-item-images-cover fixed bottom-10 right-14 top-32 z-30 flex w-[40%] translate-y-[100vh] flex-col gap-4 overflow-x-auto max-xl:hidden"
         )}
       >
         <PortfolioImages images={item.INTRODUCTION} />

@@ -53,8 +53,6 @@ export const PortfolioBackImage: FC<PortfolioBackImageProps> = ({
         if (imageRef.current === null) return;
 
         const viewportOffset = imageRef.current.getBoundingClientRect();
-        const windowWidth = window.innerWidth;
-        const windowHeight = window.innerHeight;
 
         gsap.to(wapperRef.current, {
           opacity: 1,
@@ -79,8 +77,8 @@ export const PortfolioBackImage: FC<PortfolioBackImageProps> = ({
             zIndex: 20,
             x: "0",
             y: "0",
-            width: windowWidth,
-            height: windowHeight,
+            width: window.innerWidth,
+            height: window.innerHeight,
             ease: "sine",
             duration: 0.7,
             onComplete: () => {
@@ -108,17 +106,17 @@ export const PortfolioBackImage: FC<PortfolioBackImageProps> = ({
   return (
     <div
       ref={wapperRef}
-      className="absolute right-12 left-[calc(50%)] top-[calc(33%)] bottom-[calc(33%)] overflow-hidden opacity-0 z-20 cursor-pointer pointer-events-none"
+      className="pointer-events-none absolute bottom-[calc(33%)] left-[calc(50%)] right-12 top-[calc(33%)] z-20 cursor-pointer overflow-hidden opacity-0"
     >
       <Image
-        className="object-cover object-center w-[150%] brightness-100"
+        className="w-[150%] object-cover object-center brightness-100"
         src={item.BG_IMAGE}
         alt={item.TITLE}
         placeholder="blur"
         ref={imageRef}
       />
       <div
-        className="fixed top-0 left-0 w-full h-full z-30 backdrop-blur-0"
+        className="fixed left-0 top-0 z-30 h-full w-full backdrop-blur-0"
         ref={blurRef}
       ></div>
     </div>
