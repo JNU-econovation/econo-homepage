@@ -45,11 +45,11 @@ const FooterDesktop = () => {
         {FOOTER.SPONSOR.map((sponser) => (
           <Link
             key={sponser.ALT}
-            className="p-12"
+            className="flex items-center justify-center object-cover p-6"
             href={sponser.HREF}
             target="_blank"
           >
-            <Image alt={sponser.ALT} src={sponser.IMAGE} />
+            <Image className="w-[6rem]" alt={sponser.ALT} src={sponser.IMAGE} />
           </Link>
         ))}
       </div>
@@ -85,10 +85,10 @@ const FooterMobile = () => {
           <Link
             key={sponser.ALT}
             href={sponser.HREF}
-            className="p-4"
+            className="flex aspect-video items-center justify-center object-cover p-4"
             target="_blank"
           >
-            <Image alt={sponser.ALT} src={sponser.IMAGE} />
+            <Image className="w-[6rem]" alt={sponser.ALT} src={sponser.IMAGE} />
           </Link>
         ))}
       </div>
