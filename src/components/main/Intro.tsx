@@ -6,9 +6,9 @@ import { ABOUT, ECONOVATION, JOBS } from "@/src/constants/main.ko";
 import { Fragment } from "react";
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import { RecruitFloat } from "./RecruitFloat";
-import { isMobile } from "react-device-detect";
 import { cn } from "@/src/functions/util";
 import { Icon } from "../common/Icon";
+import { isMobile } from "react-device-detect";
 
 export const Intro = () => {
   return (
@@ -23,8 +23,7 @@ export const Intro = () => {
       </h1>
       <h2
         className={cn(
-          "uppercase font-semibold",
-          isMobile ? "text-2xl my-4" : "text-7xl my-8"
+          "my-8 text-7xl font-semibold uppercase max-xl:my-4 max-lg:text-4xl max-md:text-2xl"
         )}
       >
         {MAIN.SUBTITLE}
@@ -34,21 +33,17 @@ export const Intro = () => {
           <Fragment key={index}>
             <div
               className={cn(
-                "uppercase p-2 text-white",
-                isMobile ? "text-base font-light" : "text-3xl"
+                "p-2 text-3xl uppercase text-white max-lg:text-base"
               )}
             >
               {field}
             </div>
-            <div className="mx-4 w-1 h-1 bg-white rounded-full"></div>
+            <div className="mx-4 h-1 w-1 rounded-full bg-white"></div>
           </Fragment>
         ))}
       </InfinityAutoScroll>
       <div
-        className={cn(
-          "grid",
-          isMobile ? "grid-cols-2 gap-2" : "grid-cols-4 gap-4"
-        )}
+        className={cn("grid grid-cols-4 gap-4 max-lg:grid-cols-2 max-lg:gap-2")}
       >
         {ABOUT.map((field, index) => (
           <div key={index} className="mt-4 uppercase">
@@ -58,27 +53,15 @@ export const Intro = () => {
               src={field.IMAGE}
               alt={field.TITLE}
             />
-            <div className="border-t border-black mt-4 py-2 text-xs">
+            <div className="mt-4 border-t border-black py-2 text-xs">
               {field.SUBTITLE}
             </div>
-            <div className={cn(isMobile ? "text-base" : "text-2xl")}>
+            <div className="text-base md:text-xl xl:text-2xl">
               {field.TITLE}
             </div>
           </div>
         ))}
       </div>
-      {!isMobile && (
-        <div className="py-96">
-          <div className="absolute left-0 w-full -translate-y-28">
-            <InfinityAutoScroll multiple={10}>
-              <div className="text-7xl uppercase">{ECONOVATION}</div>
-              <div className="flex justify-center items-center w-16 h-16 bg-[#0038FF] mx-8 rounded-full p-4">
-                <Icon icon="right-up-direction" />
-              </div>
-            </InfinityAutoScroll>
-          </div>
-        </div>
-      )}
     </>
   );
 };

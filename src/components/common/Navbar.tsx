@@ -1,17 +1,14 @@
-"use client";
-
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import { LinkTo } from "@/src/components/common/LinkTo";
 import { MAIN_NAV, MENU_STRING } from "@/src/constants/main.ko";
-import { isMobile } from "react-device-detect";
 
-export const Navbar = () => {
-  return !isMobile ? (
-    <nav className="flex w-full justify-between min-h-fit px-12 my-12">
+const NavbarDesktop = () => {
+  return (
+    <nav className="my-12 flex min-h-fit w-full justify-between px-12 text-xl max-lg:text-lg ">
       <div>
         {MAIN_NAV.filter((data) => data.POSITION === "left").map((data) => (
           <LinkTo
-            className="py-4 px-8 uppercase text-xl"
+            className="px-8 py-4 uppercase first:pl-0"
             key={data.LINK}
             link={data.LINK}
           >
@@ -22,7 +19,7 @@ export const Navbar = () => {
       <div>
         {MAIN_NAV.filter((data) => data.POSITION === "right").map((data) => (
           <LinkTo
-            className="p-2 bg-[#0038FF] text-white uppercase text-xl"
+            className="bg-[#0038FF] p-2 uppercase text-white"
             key={data.LINK}
             link={data.LINK}
           >
@@ -31,9 +28,26 @@ export const Navbar = () => {
         ))}
       </div>
     </nav>
-  ) : (
-    <nav className="flex w-full justify-between min-h-fit px-4 mt-12 mb-6 text-xl">
+  );
+};
+
+const NavbarMobile = () => {
+  return (
+    <nav className="mb-6 mt-12 flex min-h-fit w-full justify-between px-4">
       {MENU_STRING}
     </nav>
+  );
+};
+
+export const Navbar = () => {
+  return (
+    <>
+      <div className="max-md:hidden">
+        <NavbarDesktop />
+      </div>
+      <div className="md:hidden">
+        <NavbarMobile />
+      </div>
+    </>
   );
 };
