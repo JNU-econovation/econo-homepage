@@ -16,3 +16,5 @@ const AWARDS = {
   }[]
 }[]
 ```
+
+수상이 여러개일 경우에는 각 index에 맞추어 Awrad, People을 적어주시기 바랍니다.
