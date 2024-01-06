@@ -1,7 +1,9 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { timeDiff } from "../functions/util";
 
-const useTimeDiffer = (date: Date) => {
+export const useTimeDiffer = (date: Date) => {
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [minutes, setMinuts] = useState(0);
@@ -23,5 +25,3 @@ const useTimeDiffer = (date: Date) => {
 
   return { days, hours, minutes, seconds };
 };
-
-export default useTimeDiffer;

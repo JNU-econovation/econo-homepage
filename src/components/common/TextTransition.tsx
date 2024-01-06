@@ -20,7 +20,7 @@ export interface TextTransitionProps {
 }
 
 // https://github.com/WinterCore/react-text-transition/blob/master/src/components/TextTransition.tsx
-const TextTransition: FC<PropsWithChildren<TextTransitionProps>> = ({
+export const TextTransition: FC<PropsWithChildren<TextTransitionProps>> = ({
   direction = "up",
   inline = false,
   springConfig = config.default,
@@ -92,5 +92,3 @@ const TextTransition: FC<PropsWithChildren<TextTransitionProps>> = ({
     </animated.div>
   );
 };
-
-export default TextTransition;

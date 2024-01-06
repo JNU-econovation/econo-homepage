@@ -1,4 +1,4 @@
-const Header = () => {
+export const Header = () => {
   return (
     <head>
       <meta charSet="UTF-8" />
@@ -7,5 +7,3 @@ const Header = () => {
     </head>
   );
 };
-
-export default Header;

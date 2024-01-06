@@ -23,11 +23,6 @@ const FOOTER = {
   TO_TOP: "back to top",
   SPONSOR: [
     {
-      IMAGE: require("/public/images/naverD2.png").default,
-      ALT: "naverD2",
-      HREF: "https://d2.naver.com/",
-    },
-    {
       IMAGE: require("/public/images/impact.campus.png").default,
       ALT: "impact campus",
       HREF: "https://impactcampus.campaignus.me/",
@@ -41,6 +36,11 @@ const FOOTER = {
       IMAGE: require("/public/images/sparta.png").default,
       ALT: "team sparta",
       HREF: "https://spartacodingclub.kr/",
+    },
+    {
+      IMAGE: require("/public/images/NDS.jpg").default,
+      ALT: "nongshim nds",
+      HREF: "https://nds.nongshim.co.kr/main.do",
     },
   ],
 };

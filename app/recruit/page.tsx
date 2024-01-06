@@ -1,12 +1,12 @@
 "use client";
 
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
-import Footer from "@/src/components/common/Footer.component";
-import Faq from "@/src/components/recruit/Faq.component";
-import Fileds from "@/src/components/recruit/Fields.component";
-import Recruit from "@/src/components/recruit/Recruit.component";
-import Subscription from "@/src/components/recruit/Subscription.component";
-import Waiting from "@/src/components/recruit/Waiting.component";
+import { Footer } from "@/src/components/common/Footer";
+import { Faq } from "@/src/components/recruit/Faq";
+import { Fileds } from "@/src/components/recruit/Fields";
+import { Recruit } from "@/src/components/recruit/Recruit";
+import { Subscription } from "@/src/components/recruit/Subscription";
+import { Waiting } from "@/src/components/recruit/Waiting";
 import { useInsertionEffect, useRef, useState } from "react";
 
 const RecruitPage = () => {
