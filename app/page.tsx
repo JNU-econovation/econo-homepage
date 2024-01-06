@@ -2,7 +2,6 @@ import { Navbar } from "@/src/components/common/Navbar";
 import { Footer } from "@/src/components/common/Footer";
 import { Service } from "@/src/components/main/Service";
 import { Intro } from "@/src/components/main/Intro";
-import { Loading } from "@/src/components/common/Loading";
 import { Awards } from "@/src/components/main/Award/Awards";
 import { Missions } from "@/src/components/main/Missions";
 

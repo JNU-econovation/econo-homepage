@@ -26,7 +26,7 @@ export const Intro = () => {
       >
         {MAIN.SUBTITLE}
       </h2>
-      <InfinityAutoScroll className="bg-[#0038FF]" multiple={8}>
+      <InfinityAutoScroll className="bg-[#0038FF]" multiple={8} reverse>
         {JOBS.map((field, index) => (
           <Fragment key={index}>
             <div
