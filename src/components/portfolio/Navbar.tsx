@@ -24,15 +24,9 @@ export const PortfolioNavbar = () => {
   const togglePortfolioMenu = () => {
     setIsShowPortfolioMenu((prev) => !prev);
 
-    gsap.to(".portfolio-menu-cover", {
-      zIndex: isShowPortfolioMenu ? 10 : 70,
-      duration: 0.5,
-      scale: isShowPortfolioMenu ? 1 : 1.2,
-      translateY: "0",
-    });
-
-    gsap.to(".portfolio-menu-buttom-image", {
-      rotate: isShowPortfolioMenu ? 0 : 45,
+    gsap.to(".portfolio-menu-subtitles", {
+      opacity: isShowPortfolioMenu ? 0 : 1,
+      zIndex: isShowPortfolioMenu ? -1 : 70,
       duration: 0.5,
     });
 
@@ -42,11 +36,31 @@ export const PortfolioNavbar = () => {
       duration: 0.5,
     });
 
-    gsap.to(".portfolio-menu-subtitles", {
-      opacity: isShowPortfolioMenu ? 0 : 1,
-      zIndex: isShowPortfolioMenu ? -1 : 70,
-      duration: 0.5,
-    });
+    if (typeof window === "undefined") return false;
+    if (window.innerWidth > 1200) {
+      gsap.to(".portfolio-menu-cover", {
+        zIndex: isShowPortfolioMenu ? 10 : 70,
+        duration: 0.5,
+        scale: isShowPortfolioMenu ? 1 : 1.2,
+        translateY: "0",
+      });
+
+      gsap.to(".portfolio-menu-buttom-image", {
+        rotate: isShowPortfolioMenu ? 0 : 45,
+        duration: 0.5,
+      });
+    } else {
+      gsap.to(".portfolio-menu-cover", {
+        zIndex: isShowPortfolioMenu ? 10 : 70,
+        duration: 0.5,
+        translateY: "0",
+      });
+
+      gsap.to(".portfolio-menu-buttom-image", {
+        rotate: isShowPortfolioMenu ? 0 : 45,
+        duration: 0.5,
+      });
+    }
   };
 
   useEffect(() => {
@@ -67,9 +81,9 @@ export const PortfolioNavbar = () => {
     };
 
     const onScroll = (e: WheelEvent) => {
-      if (isShowPortfolioMenu) {
-        return;
-      }
+      if (isShowPortfolioMenu) return;
+      if (typeof window === "undefined") return;
+      if (window.innerWidth < 1200) return;
 
       if (e.deltaY > 0) {
         addSmallNavbar();
@@ -84,15 +98,31 @@ export const PortfolioNavbar = () => {
     };
   }, [isShowPortfolioMenu]);
 
+  useEffect(() => {
+    const resetNavbar = () => {
+      if (window.innerWidth > 1024) {
+        gsap.to(".portfolio-menu-cover", {
+          translateY: 0,
+          scale: 0.5,
+          duration: 0.5,
+        });
+      }
+    };
+    window.addEventListener("resize", resetNavbar);
+    return () => {
+      window.removeEventListener("resize", resetNavbar);
+    };
+  }, []);
+
   return (
     <>
-      <div className="w-full flex justify-center bg-gradient-to-b from-white z-20 fixed top-0 pointer-events-none"></div>
-      <h1 className="w-full flex justify-center font-bold z-20 mt-12 fixed top-0 portfolio-menu-cover">
+      <div className="pointer-events-none fixed top-0 z-20 flex w-full justify-center bg-gradient-to-b from-white"></div>
+      <h1 className="portfolio-menu-cover fixed top-0 z-50 mt-12 flex w-full justify-center font-bold max-lg:mt-2 max-lg:scale-[.4]">
         <button
-          className="flex items-center portfolio-menu-button outline-none"
+          className="portfolio-menu-button flex items-center outline-none"
           onClick={togglePortfolioMenu}
         >
-          <h1 className="text-9xl uppercase mr-4">{TITLE}</h1>
+          <h1 className="mr-4 text-9xl uppercase">{TITLE}</h1>
           <img
             className="portfolio-menu-buttom-image"
             src="/icons/multiply.svg"
@@ -100,9 +130,9 @@ export const PortfolioNavbar = () => {
           />
         </button>
       </h1>
-      <div className="fixed h-full w-full bg-white opacity-0 screen-bg-cover -z-10"></div>
-      <div className="h-[14rem]"></div>
-      <div className="fixed top-48 flex flex-col items-center w-full text-7xl font-bold gap-4 opacity-0  portfolio-menu-subtitles -z-10">
+      <div className="screen-bg-cover fixed -z-10 h-full w-full bg-white opacity-0"></div>
+      <div className="h-[14rem] max-lg:h-[2.5rem]"></div>
+      <div className="portfolio-menu-subtitles fixed top-48 -z-10 flex w-full flex-col items-center gap-4 text-7xl font-bold opacity-0 max-lg:top-14 max-lg:scale-[.5]">
         {PORTFOLIO_MENU.map((menu, index) => (
           <LinkTo key={index} link={menu.LINK}>
             {

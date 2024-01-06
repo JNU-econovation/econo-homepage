@@ -8,9 +8,12 @@ export const Hackathon = () => {
     <>
       <HambergerMenu />
       <PortfolioNavbar />
-      <div className="grid grid-cols-3 px-24 mt-24 max-w-[1920px] m-auto gap-8 max-2xl:grid-cols-1">
+      <div className="m-auto mt-24 grid max-w-[1920px] grid-cols-3 gap-8 px-24 max-2xl:grid-cols-1 max-md:px-6">
         {HACKATHON_POSTER.map((poster, index) => (
-          <div className="w-full h-full object-cover flex justify-center">
+          <div
+            className="flex h-full w-full justify-center object-cover"
+            key={index}
+          >
             <Image
               className="w-full max-2xl:w-[40rem]"
               key={index}
