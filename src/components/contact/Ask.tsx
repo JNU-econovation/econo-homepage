@@ -6,6 +6,7 @@ interface AskInputTextProps {
   placeholder?: string;
   isError?: boolean;
   value: string;
+  // eslint-disable-next-line no-unused-vars
   onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -18,13 +19,16 @@ const AskInputText: FC<AskInputTextProps> = ({
 }) => {
   const id = useId();
   return (
-    <div className="text-xl w-full">
-      <label className="my-2 block" htmlFor={id}>
+    <div className="w-full text-xl">
+      <label
+        className="my-2 block max-sm:text-base max-sm:text-[#7E7E7E]"
+        htmlFor={id}
+      >
         {label}
       </label>
       <input
         className={cn(
-          "font-sans w-full py-6 border-b outline-none",
+          "w-full border-b py-6 font-sans outline-none max-sm:py-2",
           isError ? "border-[#CE0000]" : "border-[#545454]"
         )}
         id={id}
@@ -78,17 +82,17 @@ export const ContactAsk = () => {
           setMessage("");
         }
       })
-      .catch((err) => {
+      .catch(() => {
         console.log("알 수 없는 오류입니다. 관리자에게 문의해주세요.");
       });
   };
 
   return (
     <form
-      className="flex flex-col gap-12 px-12 max-w-[1280px] m-auto"
+      className="m-auto flex max-w-[1280px] flex-col gap-12 px-12 max-sm:gap-0 max-sm:px-4"
       onSubmit={onSend}
     >
-      <div className="flex gap-12 w-full">
+      <div className="flex gap-12 max-sm:hidden">
         <AskInputText
           placeholder="NAME*"
           value={name}
@@ -102,14 +106,28 @@ export const ContactAsk = () => {
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
+      <div className="flex flex-col gap-0 sm:hidden">
+        <AskInputText
+          label="NAME*"
+          value={name}
+          isError={isNameError}
+          onChange={(e) => setName(e.target.value)}
+        />
+        <AskInputText
+          label="EMAIL*"
+          value={email}
+          isError={isEmailError}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+      </div>
       <AskInputText
         label="MESSAGE*"
         value={message}
         isError={isMessageError}
         onChange={(e) => setMessage(e.target.value)}
       />
-      <div className="flex justify-end">
-        <button className="p-2 bg-[#A3A3A3] text-white mb-24" type="submit">
+      <div className="flex justify-end max-sm:justify-center">
+        <button className="mb-24 bg-[#A3A3A3] p-2 text-white" type="submit">
           SEND MESSAGE
         </button>
       </div>

@@ -11,13 +11,13 @@ export const Contact = () => {
   return (
     <>
       <HambergerMenu />
-      <h1 className="w-full flex justify-center mt-52 font-semibold text-9xl uppercase">
+      <h1 className="mt-52 flex w-full justify-center text-9xl font-semibold uppercase max-sm:mt-12 max-sm:text-5xl">
         {CONTACT.TITLE}
       </h1>
-      <h2 className="w-full flex justify-center my-8 text-2xl">
+      <h2 className="my-8 flex w-full justify-center text-2xl max-sm:hidden">
         {CONTACT.SUBTITLE}
       </h2>
-      <div className="w-[calc(100%-7rem)] m-auto">
+      <div className="m-auto w-[calc(100%-7rem)] max-sm:mt-12 max-sm:w-[calc(100%-3rem)]">
         <iframe
           width="100%"
           height="400"
@@ -25,8 +25,9 @@ export const Contact = () => {
           loading="lazy"
         ></iframe>
       </div>
-      <div className="w-full flex justify-center my-8 text-xl uppercase">
-        {`${ADDRESS.EN} ${ADDRESS.KO}`}
+      <div className="mx-12 my-8 flex justify-center text-xl uppercase max-lg:flex-col">
+        <span>{ADDRESS.EN}</span>
+        <span>{ADDRESS.KO}</span>
       </div>
       <ContactAsk />
     </>

@@ -1,6 +1,8 @@
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import { LinkTo } from "@/src/components/common/LinkTo";
-import { MAIN_NAV, MENU_STRING } from "@/src/constants/main.ko";
+import { MAIN_NAV } from "@/src/constants/main.ko";
+import { Icon } from "./Icon";
+import { HambergerMenu } from "./Hamberger";
 
 const NavbarDesktop = () => {
   return (
@@ -32,11 +34,7 @@ const NavbarDesktop = () => {
 };
 
 const NavbarMobile = () => {
-  return (
-    <nav className="mb-6 mt-12 flex min-h-fit w-full justify-between px-4">
-      {MENU_STRING}
-    </nav>
-  );
+  return <HambergerMenu isMain={true} />;
 };
 
 export const Navbar = () => {
