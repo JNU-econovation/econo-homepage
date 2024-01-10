@@ -10,7 +10,7 @@ const HackathonPage = () => {
   const [isLoading, setIsLoading] = useAtom(loadingState);
   useEffect(() => {
     setIsLoading(false);
-  }, []);
+  }, [setIsLoading]);
 
   return (
     <>

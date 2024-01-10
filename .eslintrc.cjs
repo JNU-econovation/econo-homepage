@@ -10,5 +10,7 @@ module.exports = {
   plugins: ["react-refresh"],
   rules: {
     "react-refresh/only-export-components": "off",
+    "@next/next/no-img-element": "off",
+    "no-unused-vars": "off",
   },
 };

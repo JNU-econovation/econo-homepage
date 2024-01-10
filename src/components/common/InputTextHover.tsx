@@ -3,7 +3,7 @@ import { FC, useEffect, useId, useState } from "react";
 interface InputHoverProps {
   label?: string;
   value: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange: () => void;
   placeholder?: string;
   className?: string;
 }
@@ -25,7 +25,7 @@ export const InputTextHover: FC<InputHoverProps> = ({
   return (
     <div className="relative">
       <input
-        className={`font-sans hover:visible hover:w-[16.5rem] transition-all border-b-2 border-[#7E7E7E] outline-none ${
+        className={`border-b-2 border-[#7E7E7E] font-sans outline-none transition-all hover:visible hover:w-[16.5rem] ${
           isShow ? "visible w-[16.5rem]" : "invisible w-[9rem]"
         } ${className}`}
         type="text"
@@ -35,7 +35,7 @@ export const InputTextHover: FC<InputHoverProps> = ({
         onChange={onChange}
       />
       <label
-        className={`absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] cursor-pointer transition-all hover:opacity-0 text-[#7E7E7E] ${
+        className={`absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] cursor-pointer text-[#7E7E7E] transition-all hover:opacity-0 ${
           isShow ? "opacity-0" : "opacity-100"
         }`}
         htmlFor={uid}

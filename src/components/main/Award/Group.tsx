@@ -62,16 +62,15 @@ export const AwardGroup: FC<AwardGroupProps> = ({
     return () => {
       ctx.revert();
     };
-  }, []);
+  }, [awardYearProgressRef]);
   return (
-    <div className="flex flex-col border-l border-black pl-4 my-12">
+    <div className="my-12 flex flex-col border-l border-black pl-4">
       {data.DATA.map((data, index) => (
         <AwardGroupItem data={data} key={index} />
       ))}
       <div
-        className="translate-x-[15vw] border-b-[1px] border-black translate-y-6"
+        className="translate-x-[15vw] translate-y-6 border-b-[1px] border-black"
         ref={(el) =>
-          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
           (awardSplitRef.current[awardSplitRef.current.length] = el!)
         }
       ></div>

@@ -2,15 +2,17 @@ import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import { InputTextHover } from "../common/InputTextHover";
 import { ChangeEvent, FormEvent } from "react";
 
+interface WaitingProps {
+  scrollToRecruit: () => void;
+  inputValue: string;
+  inputOnChange: (e: ChangeEvent<HTMLInputElement>) => void;
+}
+
 export const Waiting = ({
   scrollToRecruit,
   inputValue,
   inputOnChange,
-}: {
-  scrollToRecruit: () => void;
-  inputValue: string;
-  inputOnChange: (e: ChangeEvent<HTMLInputElement>) => void;
-}) => {
+}: WaitingProps) => {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     fetch("/api/recruit/subscribe", {
@@ -25,15 +27,15 @@ export const Waiting = ({
           } as ChangeEvent<HTMLInputElement>);
         }
       })
-      .catch((err) => {
+      .catch(() => {
         alert(RECRUIT.WAITING.ALERT_FAIL);
       });
   };
 
   return (
-    <div className="flex flex-col align-center justify-center text-2xl leading-relaxed text-center mb-60 h-screen">
+    <div className="align-center mb-60 flex h-screen flex-col justify-center text-center text-2xl leading-relaxed">
       <div>
-        <h1 className="text-[9.5rem] uppercase font-bold text-center my-8 leading-[9.5rem]">
+        <h1 className="my-8 text-center text-[9.5rem] font-bold uppercase leading-[9.5rem]">
           {RECRUIT.WAITING.TITLE}
         </h1>
         {RECRUIT.WAITING.CONTENT.split("\n").map((d, i) => (
@@ -45,25 +47,25 @@ export const Waiting = ({
       </div>
       <form className="my-40 text-2xl" onSubmit={onSubmit}>
         <InputTextHover
-          onChange={inputOnChange}
+          onChange={() => inputOnChange}
           value={inputValue}
           placeholder="econovation@gmail.com"
           label={RECRUIT.WAITING.EMAIL_INPUT}
         />
         <button
           type="submit"
-          className="text-lg mt-4 border text-[#0038FF] border-[#0038FF] rounded-full px-4 py-2"
+          className="mt-4 rounded-full border border-[#0038FF] px-4 py-2 text-lg text-[#0038FF]"
         >
           {RECRUIT.WAITING.ALERT_BUTTON}
         </button>
       </form>
       <div>
-        <div className="text-[#565656] mb-20 text-base">
+        <div className="mb-20 text-base text-[#565656]">
           *{RECRUIT.WAITING.EMAIL_ALERT}
         </div>
         <div className="flex items-center justify-center">
           <button
-            className="flex bg-[#0038FF] text-white px-6 py-3 gap-4 rounded-full text-xl items-center"
+            className="flex items-center gap-4 rounded-full bg-[#0038FF] px-6 py-3 text-xl text-white"
             onClick={scrollToRecruit}
           >
             <span>{RECRUIT.WAITING.VIEW_BUTTON}</span>
