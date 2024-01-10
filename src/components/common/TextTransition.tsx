@@ -86,8 +86,9 @@ export const TextTransition: FC<PropsWithChildren<TextTransitionProps>> = ({
         <animated.div
           style={{ ...styles }}
           ref={item === children ? currentRef : undefined}
-          children={item}
-        />
+        >
+          {item}
+        </animated.div>
       ))}
     </animated.div>
   );

@@ -56,7 +56,7 @@ export const AwardGroupItem: FC<AwardGroupItemProps> = ({ data }) => {
       }, 300);
     }
     return () => clearInterval(intervalId.current);
-  }, [isStringChange]);
+  }, [isStringChange, awardTeamAndPeopleString.length]);
 
   const onHover = () => {
     setIsStringChange(true);
@@ -68,16 +68,13 @@ export const AwardGroupItem: FC<AwardGroupItemProps> = ({ data }) => {
 
   return (
     <div
-      className="translate-x-[15vw] flex justify-between text-2xl p-4 group hover:bg-[#0038FF] hover:text-white transition-colors duration-300"
-      ref={(el) =>
-        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-        (awardItemsRef.current[awardItemsRef.current.length] = el!)
-      }
+      className="group flex translate-x-[15vw] justify-between p-4 text-2xl transition-colors duration-300 hover:bg-[#0038FF] hover:text-white"
+      ref={(el) => (awardItemsRef.current[awardItemsRef.current.length] = el!)}
       onMouseEnter={onHover}
       onMouseLeave={onLeave}
     >
       <div className="font-light">{data.TITLE}</div>
-      <TextTransition className="font-normal flex-1 justify-end">
+      <TextTransition className="flex-1 justify-end font-normal">
         {
           awardTeamAndPeopleString[
             stringIndex % awardTeamAndPeopleString.length

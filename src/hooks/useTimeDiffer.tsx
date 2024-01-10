@@ -21,7 +21,7 @@ export const useTimeDiffer = (date: Date) => {
     return () => {
       clearInterval(timer);
     };
-  }, []);
+  }, [date]);
 
   return { days, hours, minutes, seconds };
 };

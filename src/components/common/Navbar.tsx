@@ -1,7 +1,6 @@
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import { LinkTo } from "@/src/components/common/LinkTo";
 import { MAIN_NAV } from "@/src/constants/main.ko";
-import { Icon } from "./Icon";
 import { HambergerMenu } from "./Hamberger";
 
 const NavbarDesktop = () => {
