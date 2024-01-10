@@ -117,7 +117,7 @@ export const PortfolioNavbar = () => {
   return (
     <>
       <div className="pointer-events-none fixed top-0 z-20 flex w-full justify-center bg-gradient-to-b from-white"></div>
-      <h1 className="portfolio-menu-cover fixed top-0 z-50 mt-12 flex w-full justify-center font-bold max-lg:mt-2 max-lg:scale-[.4]">
+      <h1 className="portfolio-menu-cover fixed top-0 z-20 mt-12 flex w-full justify-center font-bold max-lg:mt-2 max-lg:scale-[.4]">
         <button
           className="portfolio-menu-button flex items-center outline-none"
           onClick={togglePortfolioMenu}

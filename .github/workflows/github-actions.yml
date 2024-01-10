@@ -36,6 +36,7 @@ jobs:
       - uses: actions/cache@v3
         name: Setup pnpm cache
         with:
+          path: .pnpm-store
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
@@ -52,4 +53,4 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Build with Next.js
-        run: npm run build
+        run: pnpm run build

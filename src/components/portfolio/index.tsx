@@ -81,9 +81,12 @@ export const Portfolio = () => {
               {({ isActive }) => (
                 <button
                   onClick={() => showDetail(index)}
-                  className={cn("text-7xl uppercase", {
-                    "text-gray-400": !isActive,
-                  })}
+                  className={cn(
+                    "py-1 text-left text-7xl uppercase leading-none",
+                    {
+                      "text-gray-400": !isActive,
+                    }
+                  )}
                 >
                   <h2>{item.TITLE}</h2>
                 </button>
