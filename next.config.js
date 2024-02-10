@@ -2,6 +2,9 @@
 
 const nextConfig = {
   reactStrictMode: true,
+  compiler: {
+    removeConsole: true,
+  },
   async rewrites() {
     return [
       {

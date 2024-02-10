@@ -79,6 +79,10 @@ const URLS = {
     LINK: "/home",
     TEXT: "t-econo",
   },
+  EEOS: {
+    LINK: "https://econo.eeos.store",
+    TEXT: "EEOS",
+  },
 };
 
 export { URLS };

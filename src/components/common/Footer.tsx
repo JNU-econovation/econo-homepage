@@ -3,8 +3,8 @@
 import { FOOTER } from "@/src/constants/common.ko";
 import { LinkTo } from "./LinkTo";
 import Link from "next/link";
-import Image from "next/image";
 import { Icon } from "./Icon";
+import { Image } from "./Image";
 
 const FooterDesktop = () => {
   return (
