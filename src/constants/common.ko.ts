@@ -74,14 +74,9 @@ const SERVICES = {
   },
   OTHER: [
     {
-      TITLE: "econo beep",
-      TITLE_KO: "기자재 대여 및 관리 시스템",
-      LINK: "ECONO_BEEP",
-    },
-    {
-      TITLE: "t-econo",
-      TITLE_KO: "에코노베이션 테크 블로그",
-      LINK: "T_ECONO",
+      TITLE: "EEOS",
+      TITLE_KO: "에코노베이션 행사 관리 시스템",
+      LINK: "EEOS",
     },
   ],
 };
