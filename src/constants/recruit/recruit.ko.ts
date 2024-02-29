@@ -106,7 +106,7 @@ const RECRUIT_FLOAT = {
   HOUR: "hour",
   MINUTE: "minute",
   SECOND: "second",
-  RECRUIT_START_DATE: Date.UTC(2023, 8, 15, 15, 0, 0),
+  RECRUIT_START_DATE: Date.UTC(2024, 2, 15, 15, 0, 0),
 };
 
 export { RECRUIT, RECRUIT_FLOAT };
