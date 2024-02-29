@@ -2,20 +2,20 @@ const RECRUIT = {
   TITLE: "recruit",
   CONTENT:
     "에코노베이션에서 함께할 여러분을 모집합니다.\n에코노베이션은 지식의 선순환이 자연스럽게 이루어지는 환경을 만드는 것을 목표하고 있습니다.\n개발에 열정이 있다면 에코노베이션에 들어와 지식의 선순환을 일으켜주세요.",
-  IS_ON: false,
-  GENERTAION: 26,
+  IS_ON: true,
+  GENERTAION: 27,
   SCHEDULE: [
-    { TEXT: "서류 접수 시작", DATE: "9/4" },
-    { TEXT: "서류 접수 마감", DATE: "9/15" },
-    { TEXT: "인터뷰 진행", DATE: "9/20 - 22" },
-    { TEXT: "최종 합격 안내", DATE: "9/25" },
+    { TEXT: "서류 접수 시작", DATE: "3/4" },
+    { TEXT: "서류 접수 마감", DATE: "3/15" },
+    { TEXT: "면접 진행", DATE: "3/20 ~ 3/22" },
+    { TEXT: "최종 합격 안내", DATE: "3/25" },
   ],
   WAITING: {
     TITLE: "comming soon",
     CONTENT:
       "기 모집이 마감되었습니다.\n기 모집이 시작될 때 메일로 알려드릴게요.",
     EMAIL_ALERT: "입력한 정보의 보유기간은 모집 알림 전송시까지 보관됩니다.",
-    VIEW_BUTTON: "지난 모집 흁어보기",
+    VIEW_BUTTON: "지난 모집 훑어보기",
     EMAIL_INPUT: "이메일을 입력하기",
     ALERT_BUTTON: "알람 신청하기",
     ALERT_SUCCESS: "알람 신청이 완료되었습니다.",

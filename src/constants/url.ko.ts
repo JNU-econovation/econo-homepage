@@ -36,7 +36,7 @@ const URLS = {
     TEXT: "주간 발표 자료",
   },
   LAST_ANOUNCE_VIDEO: {
-    LINK: "https://www.youtube.com/watch?v=x_be9ecwZ2Y",
+    LINK: "https://www.youtube.com/live/vVuFdP8J4n4?si=HKf8Z0x7VnOt_781",
     TEXT: "최종 발표 영상",
   },
   KAKAO_LINK: {
