@@ -32,12 +32,12 @@ const RecruitPage = () => {
 
   return (
     <>
-      <div className="px-24 max-w-[1920px] m-auto">
+      <div className="m-auto max-w-[1920px] px-24">
         {!RECRUIT.IS_ON && (
           <section>
             <Waiting
               inputValue={emailInputValue}
-              inputOnChange={(e) => setEmailInputValue(e.target.value)}
+              onInputChange={(e) => setEmailInputValue(e.target.value)}
               scrollToRecruit={scrollToRecruit}
             />
           </section>

@@ -5,13 +5,13 @@ import { ChangeEvent, FormEvent } from "react";
 interface WaitingProps {
   scrollToRecruit: () => void;
   inputValue: string;
-  inputOnChange: (e: ChangeEvent<HTMLInputElement>) => void;
+  onInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Waiting = ({
   scrollToRecruit,
   inputValue,
-  inputOnChange,
+  onInputChange,
 }: WaitingProps) => {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,7 +22,7 @@ export const Waiting = ({
       .then((res) => {
         if (res.status === 200) {
           alert(RECRUIT.WAITING.ALERT_SUCCESS);
-          inputOnChange({
+          onInputChange({
             target: { value: "" },
           } as ChangeEvent<HTMLInputElement>);
         }
@@ -47,7 +47,7 @@ export const Waiting = ({
       </div>
       <form className="my-40 text-2xl" onSubmit={onSubmit}>
         <InputTextHover
-          onChange={() => inputOnChange}
+          onChange={onInputChange}
           value={inputValue}
           placeholder="econovation@gmail.com"
           label={RECRUIT.WAITING.EMAIL_INPUT}

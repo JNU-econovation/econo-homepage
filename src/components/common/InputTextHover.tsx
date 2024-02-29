@@ -1,9 +1,9 @@
-import { FC, useEffect, useId, useState } from "react";
+import { ChangeEvent, FC, useEffect, useId, useState } from "react";
 
 interface InputHoverProps {
   label?: string;
   value: string;
-  onChange: () => void;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   className?: string;
 }
