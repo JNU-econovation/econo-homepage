@@ -36,7 +36,7 @@ const URLS = {
     TEXT: "주간 발표 자료",
   },
   LAST_ANOUNCE_VIDEO: {
-    LINK: "https://www.youtube.com/live/vVuFdP8J4n4?si=HKf8Z0x7VnOt_781",
+    LINK: "https://www.youtube.com/live/vVuFdP8J4n4?si=iDW4W02S9L8jZVFQ",
     TEXT: "최종 발표 영상",
   },
   KAKAO_LINK: {
@@ -64,7 +64,7 @@ const URLS = {
     TEXT: "youtube",
   },
   APPLY_LINK: {
-    LINK: "/recruit",
+    LINK: "https://recruit.econovation.kr/application",
     TEXT: "지원하기",
   },
   ECONO_RECRUIT: {

@@ -4,7 +4,7 @@ import { FOOTER } from "@/src/constants/common.ko";
 import { LinkTo } from "./LinkTo";
 import Link from "next/link";
 import { Icon } from "./Icon";
-import { Image } from "./Image";
+import Image from "next/image";
 
 const FooterDesktop = () => {
   return (
