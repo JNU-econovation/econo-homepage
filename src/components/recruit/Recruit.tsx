@@ -19,22 +19,22 @@ export const Recruit = () => {
   }, []);
 
   return (
-    <div className="flex flex-col justify-center items-center text-xl leading-relaxed h-screen">
+    <div className="flex h-screen flex-col items-center justify-center text-xl leading-relaxed">
       <HambergerMenu />
       <div>
-        <h1 className="text-[9.5rem] uppercase font-bold text-center my-8 leading-[9.5rem]">
+        <h1 className="my-8 text-center text-[9.5rem] font-bold uppercase leading-[9.5rem]">
           {RECRUIT.TITLE}
         </h1>
-        <div className="text-center my-20">
+        <div className="my-20 text-center">
           {RECRUIT.CONTENT.split("\n").map((d, i) => (
             <div key={i}>{d}</div>
           ))}
         </div>
         {RECRUIT.IS_ON && (
-          <div className="flex items-center justify-center mt-24 mb-32">
-            <LinkTo
-              link="APPLY_LINK"
-              className="flex bg-[#0038FF] text-white px-6 py-3 gap-4 rounded-full text-xl items-center"
+          <div className="mb-32 mt-24 flex items-center justify-center">
+            <a
+              href="https://recruit.econovation.kr/application"
+              className="flex items-center gap-4 rounded-full bg-[#0038FF] px-6 py-3 text-xl text-white"
             >
               <span>{RECRUIT.GENERTAION}기 지원하기</span>
               <img
@@ -42,16 +42,16 @@ export const Recruit = () => {
                 src="/icons/right-arrow-circle-white.svg"
                 alt="right arrow"
               />
-            </LinkTo>
+            </a>
           </div>
         )}
       </div>
-      <div className="w-full grid grid-cols-[repeat(2,minmax(16rem,_1fr))] gap-16 xl:grid-cols-[repeat(4,minmax(16rem,_1fr))]">
+      <div className="grid w-full grid-cols-[repeat(2,minmax(16rem,_1fr))] gap-16 xl:grid-cols-[repeat(4,minmax(16rem,_1fr))]">
         {RECRUIT.SCHEDULE.map((d, i) => (
           <div className="w-full" key={i}>
-            <div className="text-6xl mb-6 tracking-tighter">{d.DATE}</div>
-            <div className="recruit-skedule-arrow  border-t-[0.5px] w-0 border-black relative after:border-t-[1px] after:border-r-[1px] after:rotate-45 after:right-[1px] after:-bottom-[6px] after:h-[12px] after:w-[12px] after:absolute after:border-black"></div>
-            <div className="text-lg mt-4">{d.TEXT}</div>
+            <div className="mb-6 text-6xl tracking-tighter">{d.DATE}</div>
+            <div className="recruit-skedule-arrow  relative w-0 border-t-[0.5px] border-black after:absolute after:-bottom-[6px] after:right-[1px] after:h-[12px] after:w-[12px] after:rotate-45 after:border-r-[1px] after:border-t-[1px] after:border-black"></div>
+            <div className="mt-4 text-lg">{d.TEXT}</div>
           </div>
         ))}
       </div>

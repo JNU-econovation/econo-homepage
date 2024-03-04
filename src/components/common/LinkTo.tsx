@@ -10,7 +10,7 @@ import Link from "next/link";
 import { cn } from "@/src/functions/util";
 
 interface LinkToProps {
-  link: string;
+  link: keyof typeof URLS;
   className?: string;
   children: ReactElement[] | ReactElement | string[] | string;
   onClick?: () => void;
@@ -27,16 +27,12 @@ export const LinkTo: FC<LinkToProps> = ({
   const setIsLoading = useSetAtom(loadingState);
   const router = useRouter();
   const viewLoading = debounce(() => {
-    router.push(URLS[link as keyof typeof URLS].LINK);
+    router.push(URLS[link].LINK);
   }, 600);
   return (
     <Link
-      href={URLS[link as keyof typeof URLS].LINK}
-      onClick={(e) => {
-        e.preventDefault();
-        if (target === "_blank") {
-          return window.open(URLS[link as keyof typeof URLS].LINK);
-        }
+      href={URLS[link].LINK}
+      onClick={() => {
         setIsLoading(true);
         onClick && onClick();
         viewLoading();

@@ -135,15 +135,13 @@ export const PortfolioNavbar = () => {
       <div className="portfolio-menu-subtitles fixed top-48 -z-10 flex w-full flex-col items-center gap-4 text-7xl font-bold opacity-0 max-lg:top-14 max-lg:scale-[.5]">
         {PORTFOLIO_MENU.map((menu, index) => (
           <LinkTo key={index} link={menu.LINK}>
-            {
-              <div
-                className={cn({
-                  "text-gray-400": !isUrlMatch(menu.LINK),
-                })}
-              >
-                {menu.NAME}
-              </div>
-            }
+            <div
+              className={cn({
+                "text-gray-400": !isUrlMatch(menu.LINK),
+              })}
+            >
+              {menu.NAME}
+            </div>
           </LinkTo>
         ))}
       </div>

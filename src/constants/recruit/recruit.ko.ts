@@ -1,3 +1,5 @@
+import { URLS } from "../url.ko";
+
 const RECRUIT = {
   TITLE: "recruit",
   CONTENT:
@@ -73,7 +75,7 @@ const RECRUIT = {
     CONTENTS: [
       {
         TITLE: "주간 발표 참석",
-        LINK: "WEEK_ANOUNCE_REFERENCE",
+        LINK: "WEEK_ANOUNCE_REFERENCE" as keyof typeof URLS,
         CONTENT:
           "에코노베이션 활동회원은 매주 금요일\n주간 발표에 필수로 참여해야 합니다.",
         SUBCONTENT:
@@ -81,7 +83,7 @@ const RECRUIT = {
       },
       {
         TITLE: "최종 발표 DEV",
-        LINK: "LAST_ANOUNCE_VIDEO",
+        LINK: "LAST_ANOUNCE_VIDEO" as keyof typeof URLS,
         CONTENT:
           "활동 회원은 1월, 7월에 진행하는\n최종발표인 DEV에 참여해야 합니다.",
         SUBCONTENT:
