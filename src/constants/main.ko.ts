@@ -5,6 +5,7 @@ import Head4 from "@/public/home/head_4.png";
 import Pation from "@/public/home/passion.jpg";
 import Communication from "@/public/home/communication.jpg";
 import Faithful from "@/public/home/faithful.jpg";
+import { URLS } from "./url.ko";
 
 const ECONOVATION = "econovation";
 
@@ -65,7 +66,13 @@ const MISSION = [
   },
 ];
 
-const MAIN_NAV = [
+interface MainNavType {
+  NAME: string;
+  LINK: keyof typeof URLS;
+  POSITION: "left" | "right";
+}
+
+const MAIN_NAV: MainNavType[] = [
   {
     NAME: "home",
     LINK: "HOME",

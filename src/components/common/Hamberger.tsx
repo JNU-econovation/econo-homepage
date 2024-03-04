@@ -8,9 +8,10 @@ import econovationWhiteLogo from "/public/images/econovation-white.svg";
 import { LinkTo } from "./LinkTo";
 import { cn } from "@/src/functions/util";
 import { Icon } from "./Icon";
+import { URLS } from "@/src/constants/url.ko";
 
 interface HambergerChildMenuProps {
-  hamburgerChildData: { NAME: string; LINK: string }[];
+  hamburgerChildData: { NAME: string; LINK: keyof typeof URLS }[];
   isOpen: boolean;
 }
 

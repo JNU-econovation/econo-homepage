@@ -1,3 +1,4 @@
+import { URLS } from "../url.ko";
 import { winter2020 } from "./ko/2019-2";
 import { summer2020 } from "./ko/2020-1";
 import { winter2021 } from "./ko/2020-2";
@@ -21,7 +22,12 @@ const PORTFOLIO = {
   ],
 };
 
-const PORTFOLIO_MENU = [
+interface PortfolioMenuType {
+  NAME: string;
+  LINK: keyof typeof URLS;
+}
+
+const PORTFOLIO_MENU: PortfolioMenuType[] = [
   { NAME: "DEV", LINK: "PORTFOLIO_DEV" },
   { NAME: "HACKATHON", LINK: "PORTFOLIO_HACKATHON" },
   { NAME: "SERVICE", LINK: "PORTFOLIO_SERVICE" },
