@@ -7,10 +7,10 @@ const RECRUIT = {
   IS_ON: false,
   GENERTAION: 28,
   SCHEDULE: [
-    { TEXT: "서류 접수 시작", DATE: "3/4" },
-    { TEXT: "서류 접수 마감", DATE: "3/15" },
-    { TEXT: "면접 진행", DATE: "3/20 ~ 3/22" },
-    { TEXT: "최종 합격 안내", DATE: "3/25" },
+    { TEXT: "서류 접수 시작", DATE: "9/2" },
+    { TEXT: "서류 접수 마감", DATE: "9/15" },
+    { TEXT: "면접 진행", DATE: "9/23 ~ 9/25" },
+    { TEXT: "최종 합격 안내", DATE: "9/30" },
   ],
   WAITING: {
     TITLE: "comming soon",
