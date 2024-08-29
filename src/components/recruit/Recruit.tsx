@@ -1,12 +1,16 @@
+"use client";
+
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import gsap from "gsap";
 import { HambergerMenu } from "../common/Hamberger";
+import useRecruitStatus from "../../hooks/useRecruitStatus";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export const Recruit = () => {
+  const { recruitStatus } = useRecruitStatus();
   useEffect(() => {
     gsap.to(".recruit-skedule-arrow", {
       width: "100%",
@@ -29,7 +33,7 @@ export const Recruit = () => {
             <div key={i}>{d}</div>
           ))}
         </div>
-        {RECRUIT.IS_ON && (
+        {recruitStatus === "OPEN" && (
           <div className="mb-32 mt-24 flex items-center justify-center">
             <a
               href="https://recruit.econovation.kr/application"
