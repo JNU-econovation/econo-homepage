@@ -35,6 +35,7 @@ const RecruitPage = () => {
         {recruitStatus !== "OPEN" && (
           <section>
             <Waiting
+              recruitStatus={recruitStatus}
               inputValue={emailInputValue}
               onInputChange={(e) => setEmailInputValue(e.target.value)}
               scrollToRecruit={scrollToRecruit}

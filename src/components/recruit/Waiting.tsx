@@ -1,10 +1,14 @@
-import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
+import {
+  RECRUIT,
+  type RecruitStatus,
+} from "@/src/constants/recruit/recruit.ko";
 import { InputTextHover } from "../common/InputTextHover";
 import { ChangeEvent, FormEvent } from "react";
 
 interface WaitingProps {
   scrollToRecruit: () => void;
   inputValue: string;
+  recruitStatus: RecruitStatus;
   onInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
@@ -12,6 +16,7 @@ export const Waiting = ({
   scrollToRecruit,
   inputValue,
   onInputChange,
+  recruitStatus,
 }: WaitingProps) => {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -40,7 +45,7 @@ export const Waiting = ({
         </h1>
         {RECRUIT.WAITING.CONTENT.split("\n").map((d, i) => (
           <div key={i}>
-            {RECRUIT.GENERTAION + i}
+            {RECRUIT.GENERTAION + i - (recruitStatus === "READY" ? 1 : 0)}
             {d}
           </div>
         ))}
