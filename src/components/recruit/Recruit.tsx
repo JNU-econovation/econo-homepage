@@ -1,5 +1,4 @@
 import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
-import { LinkTo } from "../common/LinkTo";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import gsap from "gsap";
