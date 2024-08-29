@@ -1,9 +1,9 @@
 "use client";
 
 import {
-  getRecruitJosaByRecruitStatus,
   RECRUIT,
   RECRUIT_FLOAT,
+  type RecruitStatus,
 } from "@/src/constants/recruit/recruit.ko";
 import Image from "next/image";
 import { LinkTo } from "../common/LinkTo";
@@ -12,6 +12,28 @@ import useFloatAnimation from "../../hooks/useFloatAnimation";
 import useRecruitStatus from "../../hooks/useRecruitStatus";
 import HoverText from "./RecruitFloat/HoverText";
 import RecruitTimer from "./RecruitFloat/RecruitTimer";
+import { exhaustiveError } from "../../functions/util";
+
+const renderwordByRecruitStatus = (recruitStatus: RecruitStatus) => {
+  switch (recruitStatus) {
+    case "READY":
+      return (
+        <span>
+          <span className="text-white">시작</span>까지
+        </span>
+      );
+    case "OPEN":
+      return (
+        <span>
+          <span className="text-white">마감</span>까지
+        </span>
+      );
+    case "CLOSED":
+      return <></>;
+    default:
+      exhaustiveError(recruitStatus);
+  }
+};
 
 export const RecruitFloat = () => {
   const recruitStartDate = new Date(RECRUIT.START_DATE);
@@ -49,9 +71,11 @@ export const RecruitFloat = () => {
               <div className="text-3xl uppercase">
                 {RECRUIT_FLOAT.ECONO_GENERTAION_RECRUIT_EN}
               </div>
-              <div>
-                {RECRUIT_FLOAT.ECONO_GENERTAION_RECRUIT_KR}{" "}
-                {getRecruitJosaByRecruitStatus(recruitStatus)}
+              <div className="text-neutral-300">
+                <span>에코노베이션</span>
+                <span className="text-white">` {RECRUIT.GENERTAION}기 `</span>
+                <span>신입 모집&nbsp;</span>
+                {renderwordByRecruitStatus(recruitStatus)}
               </div>
             </div>
             <div className="flex gap-8">

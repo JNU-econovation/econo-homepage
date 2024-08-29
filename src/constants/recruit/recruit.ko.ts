@@ -117,17 +117,4 @@ const RECRUIT_FLOAT = {
   SECOND: "second",
 };
 
-const getRecruitJosaByRecruitStatus = (status: RecruitStatus) => {
-  switch (status) {
-    case "OPEN":
-      return "마감 까지";
-    case "READY":
-      return "시작 까지";
-    case "CLOSED":
-      return "";
-    default:
-      exhaustiveError(status);
-  }
-};
-
-export { RECRUIT, RECRUIT_FLOAT, getRecruitJosaByRecruitStatus };
+export { RECRUIT, RECRUIT_FLOAT };
