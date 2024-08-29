@@ -42,10 +42,10 @@ export const RecruitFloat = () => {
     useFloatAnimation();
   const { days, hours, minutes, seconds } = useTimeDiffer(recruitStartDate);
   const {
-    days: eDays,
-    hours: eHours,
-    minutes: eMin,
-    seconds: eSec,
+    days: endDays,
+    hours: endHours,
+    minutes: endMinutes,
+    seconds: endSeconds,
   } = useTimeDiffer(recruitEndDate);
   const { recruitStatus } = useRecruitStatus();
 
@@ -81,10 +81,10 @@ export const RecruitFloat = () => {
             <div className="flex gap-8">
               {recruitStatus === "OPEN" && (
                 <RecruitTimer
-                  days={eDays}
-                  hours={eHours}
-                  minutes={eMin}
-                  seconds={eSec}
+                  days={endDays}
+                  hours={endHours}
+                  minutes={endMinutes}
+                  seconds={endSeconds}
                 />
               )}
               {recruitStatus === "READY" && (
