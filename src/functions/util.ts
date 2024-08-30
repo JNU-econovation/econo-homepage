@@ -27,3 +27,7 @@ export const isEmail = (email: string): boolean => {
 export const cn = (...inputs: ClassValue[]) => {
   return twMerge(clsx(inputs));
 };
+
+export const exhaustiveError = (x: never): never => {
+  throw new Error(`해당 값은 전달받을 수 없는 케이스 입니다. 값: ${x}`);
+};

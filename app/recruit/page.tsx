@@ -1,6 +1,4 @@
 "use client";
-
-import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import { Footer } from "@/src/components/common/Footer";
 import { Faq } from "@/src/components/recruit/Faq";
 import { Fileds } from "@/src/components/recruit/Fields";
@@ -8,11 +6,12 @@ import { Recruit } from "@/src/components/recruit/Recruit";
 import { Subscription } from "@/src/components/recruit/Subscription";
 import { Waiting } from "@/src/components/recruit/Waiting";
 import { useInsertionEffect, useRef, useState } from "react";
+import useRecruitStatus from "../../src/hooks/useRecruitStatus";
 
 const RecruitPage = () => {
   const [emailInputValue, setEmailInputValue] = useState("");
   const recruitRef = useRef<HTMLDivElement>(null);
-
+  const { recruitStatus } = useRecruitStatus();
   const scrollToRecruit = () =>
     window.scrollTo({
       top: recruitRef.current?.offsetTop,
@@ -33,9 +32,10 @@ const RecruitPage = () => {
   return (
     <>
       <div className="m-auto max-w-[1920px] px-24">
-        {!RECRUIT.IS_ON && (
+        {recruitStatus !== "OPEN" && (
           <section>
             <Waiting
+              recruitStatus={recruitStatus}
               inputValue={emailInputValue}
               onInputChange={(e) => setEmailInputValue(e.target.value)}
               scrollToRecruit={scrollToRecruit}

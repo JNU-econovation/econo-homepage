@@ -1,16 +1,21 @@
+import { exhaustiveError } from "../../functions/util";
 import { URLS } from "../url.ko";
+
+export type RecruitStatus = "READY" | "OPEN" | "CLOSED";
 
 const RECRUIT = {
   TITLE: "recruit",
   CONTENT:
     "에코노베이션에서 함께할 여러분을 모집합니다.\n에코노베이션은 지식의 선순환이 자연스럽게 이루어지는 환경을 만드는 것을 목표하고 있습니다.\n개발에 열정이 있다면 에코노베이션에 들어와 지식의 선순환을 일으켜주세요.",
-  IS_ON: false,
-  GENERTAION: 27,
+  IS_ON: true /** FIXME: This property was deprecated. */,
+  START_DATE: Date.UTC(2024, 8, 2, 9, 0, 0),
+  END_DATE: Date.UTC(2024, 8, 15, 23, 59, 59),
+  GENERTAION: 28,
   SCHEDULE: [
-    { TEXT: "서류 접수 시작", DATE: "3/4" },
-    { TEXT: "서류 접수 마감", DATE: "3/15" },
-    { TEXT: "면접 진행", DATE: "3/20 ~ 3/22" },
-    { TEXT: "최종 합격 안내", DATE: "3/25" },
+    { TEXT: "서류 접수 시작", DATE: "9/2" },
+    { TEXT: "서류 접수 마감", DATE: "9/15" },
+    { TEXT: "면접 진행", DATE: "9/23 ~ 9/25" },
+    { TEXT: "최종 합격 안내", DATE: "9/30" },
   ],
   WAITING: {
     TITLE: "comming soon",
@@ -100,15 +105,16 @@ const RECRUIT = {
   },
 };
 
+/** FIXME:  시간을 변경할 것 ! */
 const RECRUIT_FLOAT = {
   ECONO_IS_RECRUITING: "econovation은 지금 신입 모집 중!",
-  ECONO_GENERTAION_RECRUIT_EN: `econovation ${RECRUIT.GENERTAION} GENERTAION recruit`,
+  ECONO_READY_FOR_RECRUIT: "econovation 신입 모집 시작까지",
+  ECONO_GENERTAION_RECRUIT_EN: `econovation ${RECRUIT.GENERTAION}th recruit`,
   ECONO_GENERTAION_RECRUIT_KR: `에코노베이션 ${RECRUIT.GENERTAION}기 신입 모집`,
   DAY: "day",
   HOUR: "hour",
   MINUTE: "minute",
   SECOND: "second",
-  RECRUIT_START_DATE: Date.UTC(2024, 2, 15, 15, 0, 0),
 };
 
 export { RECRUIT, RECRUIT_FLOAT };

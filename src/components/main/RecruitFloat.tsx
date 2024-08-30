@@ -1,116 +1,115 @@
 "use client";
 
-import { RECRUIT_FLOAT } from "@/src/constants/recruit/recruit.ko";
-import gsap from "gsap";
+import {
+  RECRUIT,
+  RECRUIT_FLOAT,
+  type RecruitStatus,
+} from "@/src/constants/recruit/recruit.ko";
 import Image from "next/image";
-import { useRef } from "react";
 import { LinkTo } from "../common/LinkTo";
 import { useTimeDiffer } from "@/src/hooks/useTimeDiffer";
+import useFloatAnimation from "../../hooks/useFloatAnimation";
+import useRecruitStatus from "../../hooks/useRecruitStatus";
+import HoverText from "./RecruitFloat/HoverText";
+import RecruitTimer from "./RecruitFloat/RecruitTimer";
+import { exhaustiveError } from "../../functions/util";
+
+const renderwordByRecruitStatus = (recruitStatus: RecruitStatus) => {
+  switch (recruitStatus) {
+    case "READY":
+      return (
+        <span>
+          <span className="text-white">시작</span>까지
+        </span>
+      );
+    case "OPEN":
+      return (
+        <span>
+          <span className="text-white">마감</span>까지
+        </span>
+      );
+    case "CLOSED":
+      return <></>;
+    default:
+      exhaustiveError(recruitStatus);
+  }
+};
 
 export const RecruitFloat = () => {
-  const recruitDate = new Date(RECRUIT_FLOAT.RECRUIT_START_DATE);
-  const floatRef = useRef<HTMLDivElement>(null);
-  const floatDetailRef = useRef<HTMLDivElement>(null);
-  const { days, hours, minutes, seconds } = useTimeDiffer(recruitDate);
+  const recruitStartDate = new Date(RECRUIT.START_DATE);
+  const recruitEndDate = new Date(RECRUIT.END_DATE);
+  const { floatDetailRef, floatRef, showDetail, closeDetail } =
+    useFloatAnimation();
+  const { days, hours, minutes, seconds } = useTimeDiffer(recruitStartDate);
+  const {
+    days: endDays,
+    hours: endHours,
+    minutes: endMinutes,
+    seconds: endSeconds,
+  } = useTimeDiffer(recruitEndDate);
+  const { recruitStatus } = useRecruitStatus();
 
-  const showDetail = () => {
-    gsap.to(floatDetailRef.current, {
-      duration: 0.5,
-      bottom: "-1rem",
-      ease: "back.out",
-    });
-    gsap.to(floatRef.current, {
-      duration: 0.5,
-      bottom: "-150%",
-      ease: "back.in",
-    });
-  };
-
-  const closeDetail = () => {
-    gsap.to(floatDetailRef.current, {
-      duration: 0.5,
-      bottom: "-200%",
-      ease: "back.in",
-    });
-    gsap.to(floatRef.current, {
-      duration: 0.5,
-      bottom: "-1rem",
-      ease: "back.out",
-    });
-  };
-
-  return (
-    <div
-      className="fixed bottom-0 h-16 w-full max-w-[1600px] z-[200]"
-      onMouseEnter={showDetail}
-      onMouseLeave={closeDetail}
-    >
+  if (recruitStatus !== "CLOSED") {
+    return (
       <div
-        className="bg-black absolute -bottom-4 rounded-t-3xl text-white pt-4 pb-8 px-8 text-2xl uppercase group font-bold"
-        ref={floatRef}
+        className="fixed bottom-0 z-[200] h-16 w-full max-w-[1600px]"
+        onMouseEnter={showDetail}
+        onMouseLeave={closeDetail}
       >
-        {RECRUIT_FLOAT.ECONO_IS_RECRUITING}
-      </div>
-      <div
-        className="absolute -bottom-[200%] pb-8 pt-4 px-8 w-[calc(100%-6rem)] bg-black text-white rounded-t-3xl font-semibold"
-        ref={floatDetailRef}
-      >
-        <div className="pb-2 border-b-white border-b-2 flex justify-between px-4">
-          <div className="flex gap-4 items-baseline">
-            <div className="uppercase text-3xl">
-              {RECRUIT_FLOAT.ECONO_GENERTAION_RECRUIT_EN}
-            </div>
-            <div>{RECRUIT_FLOAT.ECONO_GENERTAION_RECRUIT_KR}</div>
-          </div>
-          <div className="flex gap-8">
-            <div className="flex gap-4">
-              <div className="flex flex-col items-center mr-4">
-                <div className="text-3xl">{days}</div>
-                <div className="text-[0.5rem] uppercase">
-                  {RECRUIT_FLOAT.DAY}
-                </div>
+        <div
+          className="group absolute -bottom-4 rounded-t-3xl bg-black px-8 pb-8 pt-4 text-2xl font-bold uppercase text-white"
+          ref={floatRef}
+        >
+          <HoverText status={recruitStatus} days={days} />
+        </div>
+        <div
+          className="absolute -bottom-[200%] w-[calc(100%-6rem)] rounded-t-3xl bg-black px-8 pb-8 pt-4 font-semibold text-white"
+          ref={floatDetailRef}
+        >
+          <div className="flex justify-between border-b-2 border-b-white px-4 pb-2">
+            <div className="flex items-baseline gap-4">
+              <div className="text-3xl uppercase">
+                {RECRUIT_FLOAT.ECONO_GENERTAION_RECRUIT_EN}
               </div>
-              <div className="flex flex-col items-center">
-                <div className="text-3xl opacity-90">{hours}</div>
-                <div className="text-[0.5rem] uppercase">
-                  {RECRUIT_FLOAT.HOUR}
-                </div>
-              </div>
-              <Image
-                className="mb-4"
-                src={require("/public/icons/colon.svg").default}
-                alt="colon"
-              />
-              <div className="flex flex-col items-center">
-                <div className="text-3xl opacity-90">{minutes}</div>
-                <div className="text-[0.5rem] uppercase">
-                  {RECRUIT_FLOAT.MINUTE}
-                </div>
-              </div>
-              <Image
-                className="mb-4"
-                src={require("/public/icons/colon.svg").default}
-                alt="colon"
-              />
-              <div className="flex flex-col items-center">
-                <div className="text-3xl opacity-90">{seconds}</div>
-                <div className="text-[0.5rem] uppercase">
-                  {RECRUIT_FLOAT.SECOND}
-                </div>
+              <div className="text-neutral-300">
+                <span>에코노베이션</span>
+                <span className="text-white">` {RECRUIT.GENERTAION}기 `</span>
+                <span>신입 모집&nbsp;</span>
+                {renderwordByRecruitStatus(recruitStatus)}
               </div>
             </div>
-            <LinkTo
-              link="RECRUIT"
-              className="bg-white rounded-full h-10 w-10 flex justify-center items-center"
-            >
-              <Image
-                src={require("/public/icons/right-arrow.svg").default}
-                alt="right-arrow"
-              />
-            </LinkTo>
+            <div className="flex gap-8">
+              {recruitStatus === "OPEN" && (
+                <RecruitTimer
+                  days={endDays}
+                  hours={endHours}
+                  minutes={endMinutes}
+                  seconds={endSeconds}
+                />
+              )}
+              {recruitStatus === "READY" && (
+                <RecruitTimer
+                  days={days}
+                  hours={hours}
+                  minutes={minutes}
+                  seconds={seconds}
+                />
+              )}
+
+              <LinkTo
+                link="RECRUIT"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-white"
+              >
+                <Image
+                  src={require("/public/icons/right-arrow.svg").default}
+                  alt="right-arrow"
+                />
+              </LinkTo>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
+  return <></>;
 };

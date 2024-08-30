@@ -4,14 +4,13 @@ import econovationBlackLogo from "/public/images/econovation-black.svg";
 import { InfinityAutoScroll } from "../common/InfinityAutoScroll";
 import { ABOUT, JOBS } from "@/src/constants/main.ko";
 import { Fragment } from "react";
-import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import { RecruitFloat } from "./RecruitFloat";
 import { cn } from "@/src/functions/util";
 
 export const Intro = () => {
   return (
     <>
-      {RECRUIT.IS_ON && <RecruitFloat />}
+      <RecruitFloat />
       <h1>
         <Image
           className="w-full"
