@@ -73,7 +73,7 @@ export const RecruitFloat = () => {
               </div>
               <div className="text-neutral-300">
                 <span>에코노베이션</span>
-                <span className="text-white">` {RECRUIT.GENERTAION}기 `</span>
+                <span className="text-white">{` ${RECRUIT.GENERTAION}기 `}</span>
                 <span>신입 모집&nbsp;</span>
                 {renderwordByRecruitStatus(recruitStatus)}
               </div>
