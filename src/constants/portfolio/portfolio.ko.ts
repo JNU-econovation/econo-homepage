@@ -5,14 +5,15 @@ import { winter2021 } from "./ko/2020-2";
 import { summer2021 } from "./ko/2021-1";
 import { winter2022 } from "./ko/2021-2";
 import { summer2022 } from "./ko/2022-1";
-import { winter2023 } from "./ko/2022-2";
 import { summer2023 } from "./ko/2023-1";
+import { winter2023 } from "./ko/2023-2";
 
 const PORTFOLIO = {
   TITLE: "portfolio",
   DATA: [
-    ...summer2023,
     ...winter2023,
+    ...summer2023,
+    ...winter2022,
     ...summer2022,
     ...winter2022,
     ...summer2021,
