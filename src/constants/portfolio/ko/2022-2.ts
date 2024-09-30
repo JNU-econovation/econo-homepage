@@ -1,4 +1,4 @@
-export const winter2022 = [
+export const winter2023 = [
   {
     TITLE: "AI COMPETITION",
     SUBTITLE:

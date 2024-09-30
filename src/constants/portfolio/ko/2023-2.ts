@@ -1,6 +1,4 @@
-//TODO: 타입 정의 필요
-//TODO: 사진 이름 의미있는 이름으로 변경 필요
-export const winter2023 = [
+export const winter2024 = [
   {
     TITLE: "너와그린기린그림",
     SUBTITLE: "",
@@ -34,19 +32,20 @@ export const winter2023 = [
     IDEA: "DACON에서 주최한 감귤 착과량 예측 AI 경진대회에서 감귤의 착과량을 높은 성능으로 예측할 수 있는 모델을 탐구하였습니다.",
     SKILLS:
       "#Machine Learning #Tabular #AI\nDACON에서 주최한 감귤 착과량 예측 AI 경진대회에 참여하여 두 가지 모델을 사용하였습니다.",
-    BG_IMAGE: require("/public/dev/2024_winter_dev/portfolio/a8t/bg.png")
-      .default,
+    BG_IMAGE:
+      require("/public/dev/2024_winter_dev/portfolio/a8t/competition/bg.png")
+        .default,
     YEAR: "2023-2",
     LINKS: null,
     INTRODUCTION: [
       {
         TYPE: "image",
-        LINK: require("/public/dev/2024_winter_dev/portfolio/a8t/1.png")
+        LINK: require("/public/dev/2024_winter_dev/portfolio/a8t/competition/1.png")
           .default,
       },
       {
         TYPE: "image",
-        LINK: require("/public/dev/2024_winter_dev/portfolio/a8t/2.png")
+        LINK: require("/public/dev/2024_winter_dev/portfolio/a8t/competition/2.png")
           .default,
       },
     ],
@@ -56,37 +55,38 @@ export const winter2023 = [
     SUBTITLE: "",
     TEAM_NAME: "A8T",
     PEOPLE: "김성빈, 서영우",
-    IDEA: "ECONOVATION CHATBOTIDEAECONOVATION CHATBOT은 동아리 문의를 신속하고 정확하게 해결하는 챗봇입니다. 에코노베이션에 대해 궁금한 점을 물어봐 보세요!",
+    IDEA: "ECONOVATION CHATBOTIDEAECONOVATION CHATBOT은 동아리 문의를 신속하고 정확하게 해결하는 챗봇입니다.\n에코노베이션에 대해 궁금한 점을 물어봐 보세요!",
     SKILLS:
       "Spython, chromadb, KR-SBERT, Faiss, langchain, openAI, aws, gradio, streamlit",
-    BG_IMAGE: require("/public/dev/2024_winter_dev/portfolio/a8t/bg.png")
-      .default,
+    BG_IMAGE:
+      require("/public/dev/2024_winter_dev/portfolio/a8t/chatbot/bg.png")
+        .default,
     YEAR: "2023-2",
     LINKS: null,
     INTRODUCTION: [
       {
         TYPE: "image",
-        LINK: require("/public/dev/2024_winter_dev/portfolio/a8t/4.png")
+        LINK: require("/public/dev/2024_winter_dev/portfolio/a8t/chatbot/4.png")
           .default,
       },
       {
         TYPE: "image",
-        LINK: require("/public/dev/2024_winter_dev/portfolio/a8t/5.png")
+        LINK: require("/public/dev/2024_winter_dev/portfolio/a8t/chatbot/5.png")
           .default,
       },
       {
         TYPE: "image",
-        LINK: require("/public/dev/2024_winter_dev/portfolio/a8t/6.png")
+        LINK: require("/public/dev/2024_winter_dev/portfolio/a8t/chatbot/6.png")
           .default,
       },
       {
         TYPE: "image",
-        LINK: require("/public/dev/2024_winter_dev/portfolio/a8t/7.png")
+        LINK: require("/public/dev/2024_winter_dev/portfolio/a8t/chatbot/7.png")
           .default,
       },
       {
         TYPE: "image",
-        LINK: require("/public/dev/2024_winter_dev/portfolio/a8t/8.png")
+        LINK: require("/public/dev/2024_winter_dev/portfolio/a8t/chatbot/8.png")
           .default,
       },
     ],
@@ -99,7 +99,7 @@ export const winter2023 = [
     IDEA: "RERE는 에빙 하우스의 망각 곡선에 기초하여 사용자가 학습한 내용을 장기 기억으로 저장할 수 있도록 돕는 서비스를 만드는 프로젝트입니다. \n카드를 뒤집어보며 정답과 답을 확인 할 수 있습니다.",
     SKILLS:
       "React, React Hook Form, styled-component, JavaScript, Spring Boot, Spring Scheduler, Spring Session, HicariCP, JPA",
-    BG_IMAGE: require("/public/dev/2024_winter_dev/portfolio/rere/1.png")
+    BG_IMAGE: require("/public/dev/2024_winter_dev/portfolio/rere/bg.png")
       .default,
     YEAR: "2023-2",
     LINKS: null,
@@ -179,7 +179,7 @@ export const winter2023 = [
     TITLE: "Hiit",
     SUBTITLE: "",
     TEAM_NAME: "히히",
-    PEOPLE: "강하은, 윤석호, 이장안, 최규민 ",
+    PEOPLE: "임수미, 김종준",
     IDEA: "파티원 모집과 신청 현황을 실시간으로 관리하여 빠르고 체계적인 팟 구하기 경험을 제공하는 웹 서비스입니다. \n최신 현황을 관리하는 데에 초점을 두어 마감된 모집에 신청하거나 연락하는 시간 낭비를 최소화하고 경쟁률과 대기자 수를 제공하므로써 신청 여부를 빠르게 결정하는 데에 도움을 줍니다.",
     SKILLS:
       "Kotlin, Coroutines, Android Studio, Jetpack Compose, Retrofit2, Okhttp3, SpringBoot, Data Jpa, MySql, Flyway, Swagger",
@@ -199,7 +199,7 @@ export const winter2023 = [
     TITLE: "EEOS",
     SUBTITLE: "",
     TEAM_NAME: "Black-Company",
-    PEOPLE: "박준수, 강바다, 김현지, 김수민, 박건규, 김종민, 김다애",
+    PEOPLE: "박준수, 강바다, 장현지, 김수민, 박건규, 김종민, 김다애",
     IDEA: "EEOS (Econovation Event Operation)란 에코노베이션의 종합 행사 관리 체계입니다.\nEEOS를 통해서 기존의 동아리 내의 여러 행사들을 보다 편리하게 관리할 수 있습니다.",
     SKILLS:
       "Next.js, Typescript, Tailwind, React-query, Spring, AndroidStudio, Kotlin, Jetpack, Compose, Python, TensorFlow, fast-api",
@@ -225,7 +225,7 @@ export const winter2023 = [
     TITLE: "EATceed",
     SUBTITLE: "",
     TEAM_NAME: "개발집 막내아들",
-    PEOPLE: "박준수, 강바다, 김현지, 김수민, 박건규, 김종민, 김다애",
+    PEOPLE: "박경준, 황대선, 김근성, 장홍준, 이진혁, 김성빈, 김채원",
     IDEA: "현재 국내 헬스 시장은 다이어트 서비스에 집중되어 있습니다. 이로 인해 저체중을 벗어나기 위해 노력하는 사람들은 관련 서비스가 부족한 상황입니다.\n이에 저체중인들이 하루 3끼 이상 규칙적인 식습관으로 건강한 체중 증량을 실현할 수 있도록 도와주는 서비스인 EATceed를 개발하였습니다",
     SKILLS:
       "Android studio, Jetpack Compose, Kotlin, Spring, JSON Web Tokens, AWS S3, MariaDB, FastAPI, ChatGPT, Pytorch, YOLO",
