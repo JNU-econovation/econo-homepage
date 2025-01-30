@@ -7,10 +7,14 @@ import { winter2022 } from "./ko/2021-2";
 import { summer2022 } from "./ko/2022-1";
 import { winter2023 } from "./ko/2022-2";
 import { summer2023 } from "./ko/2023-1";
+import { winter2024 } from "./ko/2023-2";
+import { summer2024 } from "./ko/2024-1";
 
 const PORTFOLIO = {
   TITLE: "portfolio",
   DATA: [
+    ...summer2024,
+    ...winter2024,
     ...summer2023,
     ...winter2023,
     ...summer2022,
