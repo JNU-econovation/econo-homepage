@@ -39,7 +39,7 @@ export const Recruit = () => {
               href="https://recruit.econovation.kr/application"
               className="flex items-center gap-4 rounded-full bg-[#0038FF] px-6 py-3 text-xl text-white"
             >
-              <span>{RECRUIT.GENERTAION}기 지원하기</span>
+              <span>{RECRUIT.GENERATION}기 지원하기</span>
               <img
                 className="h-6"
                 src="/icons/right-arrow-circle-white.svg"

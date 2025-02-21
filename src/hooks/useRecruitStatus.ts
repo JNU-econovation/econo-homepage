@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { RECRUIT, type RecruitStatus } from "../constants/recruit/recruit.ko";
 
 const useRecruitStatus = () => {
-  const [recruitStatus, setRecruitStatus] = useState<RecruitStatus>("CLOSED");
+  const [recruitStatus, setRecruitStatus] = useState<RecruitStatus>("READY");
   useEffect(() => {
     const intervalId = setInterval(() => {
       const recruitStartDate = new Date(RECRUIT.START_DATE);
@@ -23,7 +23,7 @@ const useRecruitStatus = () => {
       } else {
         setRecruitStatus("CLOSED");
       }
-    }, 1000);
+    }, 10);
     return () => {
       clearInterval(intervalId);
     };

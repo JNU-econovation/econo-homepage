@@ -45,7 +45,7 @@ export const Waiting = ({
         </h1>
         {RECRUIT.WAITING.CONTENT.split("\n").map((d, i) => (
           <div key={i}>
-            {RECRUIT.GENERTAION + i - (recruitStatus === "READY" ? 1 : 0)}
+            {RECRUIT.GENERATION + i - (recruitStatus === "READY" ? 1 : 0)}
             {d}
           </div>
         ))}

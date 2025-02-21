@@ -1,3 +1,5 @@
+import { RECRUIT } from "./recruit.ko";
+
 const FAQ = [
   {
     TYPE: "qualification",
@@ -47,7 +49,11 @@ const FAQ = [
       },
       {
         Q: "면접 결과는 언제 받아볼 수 있나요?",
-        A: "에코노베이션 28기 면접 결과는 9월 30일 중으로 메일을 통해서 개별 공지될 예정입니다. 면접 결과 발표시 문자로 메세지를 보내드릴 예정이오니 문자와 메일 확인에 신경 써주시길 부탁드립니다.",
+        A: `에코노베이션 ${RECRUIT.GENERATION}기 면접 결과는 ${
+          new Date(RECRUIT.ANNOUNCE_DATE).getMonth() + 1
+        }월 ${new Date(
+          RECRUIT.ANNOUNCE_DATE
+        ).getDate()}일 중으로 메일을 통해서 개별 공지될 예정입니다. 면접 결과 발표시 문자로 메세지를 보내드릴 예정이오니 문자와 메일 확인에 신경 써주시길 부탁드립니다.`,
       },
     ],
   },

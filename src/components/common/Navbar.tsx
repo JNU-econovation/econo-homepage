@@ -24,7 +24,7 @@ const NavbarDesktop = () => {
             key={data.LINK}
             link={data.LINK}
           >
-            {`${RECRUIT.GENERTAION}TH`} {data.NAME}
+            {`${RECRUIT.GENERATION}TH`} {data.NAME}
           </LinkTo>
         ))}
       </div>
