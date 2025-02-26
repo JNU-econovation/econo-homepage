@@ -6,7 +6,7 @@ export const summer2024 = [
     TITLE: "Buddy Bridge",
     SUBTITLE: "",
     TEAM_NAME: "Buddies",
-    PEOPLE: "노을, 심민보, 강명덕 정수인 정인재",
+    PEOPLE: "노을, 심민보, 강명덕, 정수인, 정인재",
     IDEA: "Buddy Bridege는 일상에서 도움이 필요한 장애인과 도움을 주고자 하는 지원자를 빠르고 간편하게 연결 해주는 맞춤형 웹 서비스입니다.\n누구나 일상에서 따뜻한 온기를, 소중한 마음을 전할 수 있습니다. 여러분도 Buddies가 되어 보시지 않을래요?",
     SKILLS:
       "Next.js, TypeScript, Scss + Module, QueryDSL, STOMP, Github Action, Nginx, Docker, Docker Compose, AWS EC2, MariaDB, Redis, Spring Boot, Spring Data JPA",
