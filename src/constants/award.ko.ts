@@ -9,9 +9,38 @@ export interface Award {
 
 const AWARDS: Award[] = [
   {
+    YEAR: "2025",
+    DATA: [
+      {
+        TITLE: "CNU 메타버시티 콘텐츠 경진대회",
+        AWARDS: ["우수상"],
+        PEOPLE: ["박현솔, 이재륜"],
+      },
+    ],
+  },
+  {
     YEAR: "2024",
     DATA: [
-      
+      {
+        TITLE: "제 6회 전남대학교 소프트웨어 경진대회",
+        AWARDS: ["대상"],
+        PEOPLE: ["김근성"],
+      },
+      {
+        TITLE: "AI 융합 문제발굴 산합 연계 해커톤",
+        AWARDS: ["대상"],
+        PEOPLE: ["김성빈, 기현명, 이다현"],
+      },
+      {
+        TITLE: "제 7회 SW 프로그래밍 경진대회 (호남 ∙ 제주권)",
+        AWARDS: ["장려상"],
+        PEOPLE: ["박현솔"],
+      },
+      {
+        TITLE: "2024학년도 2학기 산학협력프로젝트(캡스톤 디자인) 성과발표회",
+        AWARDS: ["은상(2위)"],
+        PEOPLE: ["유정빈"],
+      },
     ],
   },
   {
@@ -73,18 +102,18 @@ const AWARDS: Award[] = [
       {
         TITLE: "전남대학교 Google Cloud 기반 AI 인재양성 프로그램",
         AWARDS: ["2등"],
-        PEOPLE: ["서영우"]
+        PEOPLE: ["서영우"],
       },
       {
         TITLE: "ICTC 2023 학회",
-        AWARDS: ["우수논문상"], 
-        PEOPLE: ["권순찬"]
-      },   
+        AWARDS: ["우수논문상"],
+        PEOPLE: ["권순찬"],
+      },
       {
         TITLE: "카카오 테크캠퍼스 아이디어톤",
         AWARDS: ["최우수상", "은상", "동상"],
         PEOPLE: ["김가연, 김수민", "곽민준, 임채승", "곽민주"],
-      },    
+      },
       {
         TITLE: "제 9회 광주광역시 공공데이터 활용 창업경진대회",
         AWARDS: ["아이디어 기획 부문 장려상"],
