@@ -7,13 +7,14 @@ export const getNumberWithOrdinal = (n: number) => {
   return n + (s[(v - 20) % 10] || s[v] || s[0]);
 };
 
-export const timeDiff = (date1: Date, date2: Date) => {
-  const { abs, floor } = Math;
-  const diff = (date1.getTime() - date2.getTime()) / 1000;
-  const days = abs(floor(diff / 86400));
-  const hours = abs(floor(diff / 3600) % 24);
-  const minutes = abs(floor((diff - hours * 3600) / 60) % 60);
-  const seconds = abs(floor(diff - hours * 3600 - minutes * 60) % 60);
+export const getTimeDiff = (date: Date) => {
+  const now = new Date();
+  const diff = date.getTime() - now.getTime();
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
   return { days, hours, minutes, seconds };
 };
 

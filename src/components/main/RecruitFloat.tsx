@@ -111,5 +111,5 @@ export const RecruitFloat = () => {
       </div>
     );
   }
-  return <></>;
+  return null;
 };

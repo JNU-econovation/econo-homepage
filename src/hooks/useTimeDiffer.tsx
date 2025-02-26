@@ -1,27 +1,15 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { timeDiff } from "../functions/util";
+import { getTimeDiff } from "../functions/util";
 
 export const useTimeDiffer = (date: Date) => {
-  const [days, setDays] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [minutes, setMinuts] = useState(0);
-  const [seconds, setSeconds] = useState(0);
+  const [time, setTime] = useState(getTimeDiff(date));
 
   useEffect(() => {
-    const timer = setInterval(() => {
-      const { days, hours, minutes, seconds } = timeDiff(date, new Date());
-      setDays(days);
-      setHours(hours);
-      setMinuts(minutes);
-      setSeconds(seconds);
-    }, 1000);
-
-    return () => {
-      clearInterval(timer);
-    };
+    const timer = setInterval(() => setTime(getTimeDiff(date)), 1000);
+    return () => clearInterval(timer);
   }, [date]);
 
-  return { days, hours, minutes, seconds };
+  return { ...time };
 };
