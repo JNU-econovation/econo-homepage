@@ -25,8 +25,8 @@ const RECRUIT = {
     EMAIL_ALERT: "입력한 정보의 보유기간은 모집 알림 전송시까지 보관됩니다.",
     VIEW_BUTTON: "지난 모집 훑어보기",
     EMAIL_INPUT: "이메일을 입력하기",
-    ALERT_BUTTON: "알람 신청하기",
-    ALERT_SUCCESS: "알람 신청이 완료되었습니다.",
+    ALERT_BUTTON: "알림 신청하기",
+    ALERT_SUCCESS: "알림 신청이 완료되었습니다.",
     ALERT_FAIL: "알 수 없는 오류입니다. 관리자에게 문의해주세요.",
   },
   FIELDS: {
