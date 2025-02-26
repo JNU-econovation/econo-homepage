@@ -6,7 +6,7 @@ export const summer2024 = [
     TITLE: "Buddy Bridge",
     SUBTITLE: "",
     TEAM_NAME: "Buddies",
-    PEOPLE: "노을, 심민보, 강명덕",
+    PEOPLE: "노을, 심민보, 강명덕 정수인 정인재",
     IDEA: "Buddy Bridege는 일상에서 도움이 필요한 장애인과 도움을 주고자 하는 지원자를 빠르고 간편하게 연결 해주는 맞춤형 웹 서비스입니다.\n누구나 일상에서 따뜻한 온기를, 소중한 마음을 전할 수 있습니다. 여러분도 Buddies가 되어 보시지 않을래요?",
     SKILLS:
       "Next.js, TypeScript, Scss + Module, QueryDSL, STOMP, Github Action, Nginx, Docker, Docker Compose, AWS EC2, MariaDB, Redis, Spring Boot, Spring Data JPA",
@@ -15,9 +15,19 @@ export const summer2024 = [
     YEAR: "2024-1",
     LINKS: null,
     INTRODUCTION: [
+      // {
+      //   TYPE: "image",
+      //   LINK: require("/public/dev/2024_summer_dev/portfolio/Buddies/2.png")
+      //     .default,
+      // },
       {
         TYPE: "image",
         LINK: require("/public/dev/2024_summer_dev/portfolio/Buddies/1.png")
+          .default,
+      },
+      {
+        TYPE: "image",
+        LINK: require("/public/dev/2024_summer_dev/portfolio/Buddies/3.png")
           .default,
       },
     ],
@@ -46,7 +56,7 @@ export const summer2024 = [
     TITLE: "GYMMI",
     SUBTITLE: "",
     TEAM_NAME: "지미지기",
-    PEOPLE: "조인식, 백경환, 김가현",
+    PEOPLE: "조인식, 백경환, 김가현, 정승현",
     IDEA: "GYMMI(지미)는 헬스 의욕을 활성화 해주는 서비스입니다. 요술램프 지니 와 비슷한 발음을 유도하여 소원을 들어주는 지니처럼 우리 지미가 마음처럼 안되는 일을 흥미를 갖고 할 수 있도록 도와준다는 의미를 내포하고 있습니다.",
     SKILLS: "Next.js, Ts, PWA, Java, Spring, JPA, Ps, Figma, Notion",
     BG_IMAGE: require("/public/dev/2024_summer_dev/portfolio/GYMMI/bg.png")
