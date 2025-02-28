@@ -62,23 +62,25 @@ export const RecruitFloat = () => {
         >
           <HoverText status={recruitStatus} days={days} />
         </div>
+
+        {/* / */}
         <div
-          className="absolute -bottom-[200%] w-[calc(100%-6rem)] rounded-t-3xl bg-black px-8 pb-8 pt-4 font-semibold text-white"
+          className="absolute -bottom-[200%] w-full rounded-t-3xl bg-black px-8 pb-8 pt-4 font-semibold text-white lg:w-[calc(100%-6rem)]"
           ref={floatDetailRef}
         >
-          <div className="flex justify-between border-b-2 border-b-white px-4 pb-2">
+          <div className="justify-between border-b-2 border-b-white px-4 pb-2 md:flex">
             <div className="flex items-baseline gap-4">
-              <div className="text-3xl uppercase">
+              <div className="hidden text-3xl uppercase md:block">
                 {RECRUIT_FLOAT.ECONO_GENERTAION_RECRUIT_EN}
               </div>
               <div className="text-neutral-300">
-                <span>에코노베이션</span>
+                <span className="hidden md:inline">에코노베이션</span>
                 <span className="text-white">{` ${RECRUIT.GENERATION}기 `}</span>
                 <span>신입 모집&nbsp;</span>
                 {renderwordByRecruitStatus(recruitStatus)}
               </div>
             </div>
-            <div className="flex gap-8">
+            <div className="flex justify-between gap-8">
               {recruitStatus === "OPEN" && (
                 <RecruitTimer
                   days={endDays}
