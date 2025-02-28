@@ -81,7 +81,7 @@ export const winter2025 = [
     SUBTITLE: "",
     TEAM_NAME: "비빔핑",
     PEOPLE: "박세인, 정의찬, 홍민경",
-    IDEA: "온전을 통해 여러분의 행사를 홍보하세요. 큐레이팅 서비스를 이용하여 전남대학교의 전시, 공연, 공모전 등의 정보를한눈에 볼수있어요.",
+    IDEA: "전남대학교의 여러 공지를 하나로 모아놓은 웹.\n사업단, 학사 공지를 간편하게 확인해 보세요!",
     SKILLS:
       "HTML, CSS, JavaScript, AWS, Spring-Boot, MySQL, Redis, Oracle-cloud, Python, flask",
     BG_IMAGE: require("/public/dev/2025_winter_dev/portfolio/bibimPing/bg.png")
