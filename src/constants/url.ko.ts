@@ -80,7 +80,7 @@ const URLS = {
     TEXT: "t-econo",
   },
   EEOS: {
-    LINK: "https://eeos.co.kr/",
+    LINK: "https://www.eeos.co.kr/",
     TEXT: "EEOS",
   },
 };
