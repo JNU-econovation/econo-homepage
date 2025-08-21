@@ -24,24 +24,19 @@ const FOOTER = {
   TO_TOP: "back to top",
   SPONSOR: [
     {
-      IMAGE: require("/public/images/impact.campus.png").default,
-      ALT: "impact campus",
-      HREF: "https://impactcampus.campaignus.me/",
-    },
-    {
       IMAGE: require("/public/images/codeit.png").default,
       ALT: "codeit",
       HREF: "https://www.codeit.kr/",
     },
     {
-      IMAGE: require("/public/images/sparta.png").default,
-      ALT: "team sparta",
-      HREF: "https://spartacodingclub.kr/",
+      IMAGE: require("/public/images/sojoong.png").default,
+      ALT: "sojoong",
+      HREF: "https://www.sojoong.kr/www/",
     },
     {
-      IMAGE: require("/public/images/NDS.jpg").default,
-      ALT: "nongshim nds",
-      HREF: "https://nds.nongshim.co.kr/main.do",
+      IMAGE: require("/public/images/informationCenter.png").default,
+      ALT: "informationCenter",
+      HREF: "https://ucc.jnu.ac.kr/ucc/index.do",
     },
   ],
 };
