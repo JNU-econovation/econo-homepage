@@ -12,6 +12,16 @@ const AWARDS: Award[] = [
     YEAR: "2025",
     DATA: [
       {
+        TITLE: "카카오테크캠퍼스 아이디어톤",
+        AWARDS: ["우수상"],
+        PEOPLE: ["김현규"],
+      },
+      {
+        TITLE: "광주자치경찰 「청년 서포터즈 112」 제 8기 활동",
+        AWARDS: ["우수 서포터즈"],
+        PEOPLE: ["안성준"],
+      },
+      {
         TITLE: "CNU 메타버시티 콘텐츠 경진대회",
         AWARDS: ["우수상"],
         PEOPLE: ["박현솔, 이재륜"],
