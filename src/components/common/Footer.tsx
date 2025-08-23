@@ -49,7 +49,11 @@ const FooterDesktop = () => {
             href={sponser.HREF}
             target="_blank"
           >
-            <Image className="w-[6rem]" alt={sponser.ALT} src={sponser.IMAGE} />
+            <Image
+              className="w-[11rem]"
+              alt={sponser.ALT}
+              src={sponser.IMAGE}
+            />
           </Link>
         ))}
       </div>
