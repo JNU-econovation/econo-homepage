@@ -10,10 +10,12 @@ import { summer2023 } from "./ko/2023-1";
 import { winter2024 } from "./ko/2023-2";
 import { summer2024 } from "./ko/2024-1";
 import { winter2025 } from "./ko/2024-2";
+import { summer2025 } from "./ko/2025-1";
 
 const PORTFOLIO = {
   TITLE: "portfolio",
   DATA: [
+    ...summer2025,
     ...winter2025,
     ...summer2024,
     ...winter2024,
