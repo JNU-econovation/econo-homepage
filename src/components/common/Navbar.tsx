@@ -5,7 +5,7 @@ import { HambergerMenu } from "./Hamberger";
 
 const NavbarDesktop = () => {
   return (
-    <nav className="my-12 flex min-h-fit w-full justify-between px-12 text-xl max-lg:text-lg ">
+    <nav className="my-12 flex min-h-fit w-full justify-between px-12 text-xl max-lg:text-lg">
       <div>
         {MAIN_NAV.filter((data) => data.POSITION === "left").map((data) => (
           <LinkTo
