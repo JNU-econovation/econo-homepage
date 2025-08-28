@@ -155,7 +155,7 @@ export const summer2025 = [
     TEAM_NAME: "융융융",
     PEOPLE: "박봄, 신준현, 조해서",
     IDEA: "성별, 나이, 카페인·알코올 섭취량과 걸음 수를 기반으로 회귀 모델을 통해 적정 수면 시간을 탐색하여, 개인 맞춤형 최적 수면 시간을 추천하는 알고리즘입니다.",
-    SKILLS: "기술 스택이 추가될 예정입니다.",
+    SKILLS: "python",
     BG_IMAGE:
       require("/public/dev/2025_summer_dev/portfolio/yungyungyung/bg.png")
         .default,
