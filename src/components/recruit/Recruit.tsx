@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { HambergerMenu } from "../common/Hamberger";
 import useRecruitStatus from "../../hooks/useRecruitStatus";
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,8 +36,9 @@ export const Recruit = () => {
         </div>
         {recruitStatus === "OPEN" && (
           <div className="mb-32 mt-24 flex items-center justify-center">
-            <a
+            <Link
               href="https://recruit.econovation.kr/application"
+              target="_blank"
               className="flex items-center gap-4 rounded-full bg-[#0038FF] px-6 py-3 text-xl text-white"
             >
               <span>{RECRUIT.GENERATION}기 지원하기</span>
@@ -45,7 +47,7 @@ export const Recruit = () => {
                 src="/icons/right-arrow-circle-white.svg"
                 alt="right arrow"
               />
-            </a>
+            </Link>
           </div>
         )}
       </div>
