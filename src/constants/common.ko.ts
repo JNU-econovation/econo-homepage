@@ -31,7 +31,7 @@ const FOOTER = {
     {
       IMAGE: require("/public/images/sojoong.png").default,
       ALT: "sojoong",
-      HREF: "https://www.sojoong.kr/www/",
+      HREF: "https://sojoong.kr/",
     },
     {
       IMAGE: require("/public/images/informationCenter.png").default,
