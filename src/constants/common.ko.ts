@@ -14,7 +14,7 @@ const FOOTER = {
   SOCIAL: [
     { NAME: "instagram", LINK: "INSTAGRAM_LINK" },
     { NAME: "facebook", LINK: "FACEBOOK_LINK" },
-    { NAME: "medium", LINK: "MEDIUM_LINK" },
+    { NAME: "blog", LINK: "BLOG_LINK" },
     { NAME: "youtube", LINK: "YOUTUBE_LINK" },
   ] as { NAME: string; LINK: keyof typeof URLS }[],
   ADDRESS: {

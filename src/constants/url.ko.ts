@@ -55,6 +55,10 @@ const URLS = {
     LINK: "https://www.facebook.com/econo.jnu.ac.kr/",
     TEXT: "facebook",
   },
+  BLOG_LINK: {
+    LINK: "https://jnu-econovation.github.io/",
+    TEXT: "blog",
+  },
   MEDIUM_LINK: {
     LINK: "https://medium.com/econovation",
     TEXT: "medium",
