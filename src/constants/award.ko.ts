@@ -12,6 +12,46 @@ const AWARDS: Award[] = [
     YEAR: "2025",
     DATA: [
       {
+        TITLE: "2025 AI융합 문제발굴 산학연계 해커톤",
+        AWARDS: ["장려상"],
+        PEOPLE: ["기현명, 이은서, 안성준, 최영현"],
+      },
+      {
+        TITLE: "2025 Google Student Ambassador",
+        AWARDS: ["Best Activity Team 3th"],
+        PEOPLE: ["안성준"],
+      },
+      {
+        TITLE: "2025 전남대학교 창업아이템 경진대회",
+        AWARDS: ["입상"],
+        PEOPLE: ["이은서, 안성준, 정우재, 정승현, 조인식, 백경환"],
+      },
+      {
+        TITLE: "2025 디지털창업경진대회",
+        AWARDS: ["대상"],
+        PEOPLE: ["이은서, 안성준, 정우재, 정승현, 조인식, 백경환"],
+      },
+      {
+        TITLE: "2025 데이터 크리에이터 캠프",
+        AWARDS: ["장려상"],
+        PEOPLE: ["안성준"],
+      },
+      {
+        TITLE: "제2회 호남권 SW 창업 아이디어 경진대회",
+        AWARDS: ["대상"],
+        PEOPLE: ["기현명, 김성빈, 김가연, 이다현, 정서윤"],
+      },
+      {
+        TITLE: "2025 빛가람 에너지 밸리 소프트웨어 작품 경진대회",
+        AWARDS: ["우수상"],
+        PEOPLE: ["기현명, 김성빈, 김가연, 이다현, 정서윤"],
+      },
+      {
+        TITLE: "2025 LLM Safety Challenge",
+        AWARDS: ["우수상"],
+        PEOPLE: ["유정빈, 최영현, 이상현, 김수랑"],
+      },
+      {
         TITLE: "카카오테크캠퍼스 아이디어톤",
         AWARDS: ["우수상"],
         PEOPLE: ["김현규"],
