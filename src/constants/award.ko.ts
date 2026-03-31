@@ -9,8 +9,38 @@ export interface Award {
 
 const AWARDS: Award[] = [
   {
+    YEAR: "2026",
+    DATA: [
+      {
+        TITLE: "2026 전국 GoogleCloud 기반 AI 융합 경진대회",
+        AWARDS: ["우수상"],
+        PEOPLE: ["박현솔"],
+      },
+      {
+        TITLE: "AICOSS 독일 THU 캡스톤 프로젝트",
+        AWARDS: ["Best Project Team Award (대상)"],
+        PEOPLE: ["기현명"],
+      },
+      {
+        TITLE: "2025 We-Meet 프로젝트",
+        AWARDS: ["한국연구재단 이사장상"],
+        PEOPLE: ["기현명, 이다현, 정서윤, 김가연"],
+      },
+      {
+        TITLE: "한전KDN 국민소통 청년 참여단",
+        AWARDS: ["최우수상"],
+        PEOPLE: ["안성준"],
+      },
+    ],
+  },
+  {
     YEAR: "2025",
     DATA: [
+      {
+        TITLE: "공학교육혁신센터 AI리터러시 단기 프로그램",
+        AWARDS: ["우수상"],
+        PEOPLE: ["기현명"],
+      },
       {
         TITLE: "2025 AI융합 문제발굴 산학연계 해커톤",
         AWARDS: ["장려상"],
