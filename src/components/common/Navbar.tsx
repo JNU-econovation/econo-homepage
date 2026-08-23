@@ -1,4 +1,4 @@
-import { RECRUIT } from "@/src/constants/recruit/recruit.ko";
+import { formatOrdinal, RECRUIT } from "@/src/constants/recruit/recruit.ko";
 import { LinkTo } from "@/src/components/common/LinkTo";
 import { MAIN_NAV } from "@/src/constants/main.ko";
 import { HambergerMenu } from "./Hamberger";
@@ -24,7 +24,7 @@ const NavbarDesktop = () => {
             key={data.LINK}
             link={data.LINK}
           >
-            {`${RECRUIT.GENERATION}ST`} {data.NAME}
+            {formatOrdinal(RECRUIT.GENERATION)} {data.NAME}
           </LinkTo>
         ))}
       </div>
