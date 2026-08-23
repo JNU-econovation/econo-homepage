@@ -8,15 +8,15 @@ const RECRUIT = {
   CONTENT:
     "에코노베이션에서 함께할 여러분을 모집합니다.\n에코노베이션은 지식의 선순환이 자연스럽게 이루어지는 환경을 만드는 것을 목표하고 있습니다.\n개발에 열정이 있다면 에코노베이션에 들어와 지식의 선순환을 일으켜주세요.",
   IS_ON: true /** FIXME: This property was deprecated. */,
-  START_DATE: Date.UTC(2026, 1, 28, 15, 0, 0),
-  END_DATE: Date.UTC(2026, 2, 10, 14, 59, 59),
-  ANNOUNCE_DATE: Date.UTC(2025, 8, 12, 0, 0, 0),
-  GENERATION: 31,
+  START_DATE: Date.UTC(2026, 7, 27, 15, 0, 0),
+  END_DATE: Date.UTC(2026, 8, 9, 14, 59, 59),
+  ANNOUNCE_DATE: Date.UTC(2026, 8, 21, 0, 0, 0),
+  GENERATION: 32,
   SCHEDULE: [
-    { TEXT: "서류 접수 시작", DATE: "3/1" },
-    { TEXT: "서류 접수 마감", DATE: "3/10" },
-    { TEXT: "면접 진행", DATE: "3/17 ~ 3/19" },
-    { TEXT: "최종 합격 안내", DATE: "3/23" },
+    { TEXT: "서류 접수 시작", DATE: "8/28" },
+    { TEXT: "서류 접수 마감", DATE: "9/9" },
+    { TEXT: "면접 진행", DATE: "9/15 ~ 9/18" },
+    { TEXT: "최종 합격 안내", DATE: "9/21" },
   ],
   WAITING: {
     TITLE: "comming soon",
