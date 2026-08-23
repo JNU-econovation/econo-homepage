@@ -3,6 +3,23 @@ import { URLS } from "../url.ko";
 
 export type RecruitStatus = "READY" | "OPEN" | "CLOSED";
 
+const formatOrdinal = (value: number) => {
+  const remainder = value % 100;
+
+  if (remainder >= 11 && remainder <= 13) return `${value}th`;
+
+  switch (value % 10) {
+    case 1:
+      return `${value}st`;
+    case 2:
+      return `${value}nd`;
+    case 3:
+      return `${value}rd`;
+    default:
+      return `${value}th`;
+  }
+};
+
 const RECRUIT = {
   TITLE: "recruit",
   CONTENT:
@@ -110,7 +127,9 @@ const RECRUIT = {
 const RECRUIT_FLOAT = {
   ECONO_IS_RECRUITING: "econovation은 지금 신입 모집 중!",
   ECONO_READY_FOR_RECRUIT: "econovation 신입 모집 시작까지",
-  ECONO_GENERTAION_RECRUIT_EN: `econovation ${RECRUIT.GENERATION}th recruit`,
+  ECONO_GENERTAION_RECRUIT_EN: `econovation ${formatOrdinal(
+    RECRUIT.GENERATION
+  )} recruit`,
   ECONO_GENERTAION_RECRUIT_KR: `에코노베이션 ${RECRUIT.GENERATION}기 신입 모집`,
   DAY: "day",
   HOUR: "hour",
@@ -118,4 +137,4 @@ const RECRUIT_FLOAT = {
   SECOND: "second",
 };
 
-export { RECRUIT, RECRUIT_FLOAT };
+export { RECRUIT, RECRUIT_FLOAT, formatOrdinal };
