@@ -23,7 +23,7 @@ const useRecruitStatus = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setRecruitStatus(getRecruitStatus());
-    }, 0);
+    }, 1000);
     return () => {
       clearInterval(intervalId);
     };
