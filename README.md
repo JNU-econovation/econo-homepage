@@ -23,7 +23,7 @@ pnpm install
 pnpm run build && pnpm run start
 ```
 
-### Deply
+### Deploy
 
 ```bash
 ssh <이름>@<IP> -p <포트명>
@@ -43,7 +43,7 @@ pnpm run build && pnpm run start
 모든 데이터는 `constants`폴더 안에 있는 데이터로 변경 할 수 있습니다.  
 자세한 내용은 docs에서 각각 서술하도록 하겠습니다.
 
-### static데이터를 넣는 방법
+### static 데이터를 넣는 방법
 
 이미지들을 Next에서 관리하여 가장 적당한 이미 크기 전달 가능합니다.  
 그렇기 때문에 가장 좋은 화질의 이미지를 전달하면 좋습니다.  
@@ -51,5 +51,5 @@ dev별로, 해커톤 별로, 리크루트 별로 사진을 나누어 저장하�
 
 ### Database
 
-Sqlite를 이용하여 간단한 서버 역활도 합니다.  
+Sqlite를 이용하여 간단한 서버 역할도 합니다.  
 질문이나 구독을 하기 위해서 사용합니다.
