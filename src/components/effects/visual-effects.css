@@ -1,0 +1,80 @@
+/* Pointer overlay only. No selectors modify the original page elements. */
+.econo-fx-surface {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  pointer-events: none;
+  overflow: hidden;
+  contain: strict;
+}
+.econo-fx-surface[hidden] {
+  display: none;
+}
+.econo-fx-surface canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.econo-fx-toggle {
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  z-index: 210;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 42px;
+  padding: 10px 15px;
+  border: 1px solid rgba(116, 143, 204, 0.25);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #43546c;
+  box-shadow:
+    0 3px 18px rgba(59, 88, 151, 0.08),
+    inset 0 1px 0 #fff;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font:
+    12px/1.4 -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    "Malgun Gothic",
+    sans-serif;
+  cursor: pointer;
+}
+.econo-fx-toggle[aria-pressed="true"] {
+  color: #254fe1;
+}
+.econo-fx-toggle:hover:not(:disabled) {
+  border-color: #90a6e5;
+  box-shadow: 0 5px 25px #6985d924;
+}
+.econo-fx-toggle:focus-visible {
+  outline: 2px solid #0038ff;
+  outline-offset: 4px;
+}
+.econo-fx-toggle:disabled {
+  cursor: default;
+  color: #687283;
+}
+.econo-fx-toggle-state {
+  margin-left: 3px;
+  font-size: 10px;
+  letter-spacing: 0.6px;
+}
+@media (max-width: 640px) {
+  .econo-fx-toggle {
+    right: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
+    min-height: 44px;
+    padding: 9px 13px;
+    font-size: 11px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .econo-fx-surface {
+    display: none !important;
+  }
+}

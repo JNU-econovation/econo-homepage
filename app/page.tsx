@@ -4,10 +4,12 @@ import { Service } from "@/src/components/main/Service";
 import { Intro } from "@/src/components/main/Intro";
 import { Awards } from "@/src/components/main/Award/Awards";
 import { Missions } from "@/src/components/main/Missions";
+import { VisualEffects } from "@/src/components/effects/VisualEffects";
 
 const MainPage = () => {
   return (
     <>
+      <VisualEffects />
       <Navbar />
       <main className="m-auto max-w-[1600px] overflow-hidden px-12 max-md:px-4">
         <Intro />
