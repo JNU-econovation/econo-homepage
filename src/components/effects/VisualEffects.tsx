@@ -3,7 +3,6 @@
 import { useEffect, useRef, useState } from "react";
 import "./visual-effects.css";
 
-const STORAGE_KEY = "econovation:starlight";
 const COLORS = [
   "95, 132, 245",
   "158, 119, 218",
@@ -25,30 +24,20 @@ type Particle = {
 /** Pointer decoration only; the original page content and styles are untouched. */
 export function VisualEffects() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [enabled, setEnabled] = useState(false);
-  const [reducedMotion, setReducedMotion] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(true);
 
   useEffect(() => {
     const preference = window.matchMedia("(prefers-reduced-motion: reduce)");
     const sync = () => {
       setReducedMotion(preference.matches);
-      let saved: string | null = null;
-      try {
-        saved = localStorage.getItem(STORAGE_KEY);
-      } catch {
-        /* Storage is optional. */
-      }
-      setEnabled(!preference.matches && saved !== "off");
     };
     sync();
-    setMounted(true);
     preference.addEventListener("change", sync);
     return () => preference.removeEventListener("change", sync);
   }, []);
 
   useEffect(() => {
-    if (!enabled || reducedMotion) return;
+    if (reducedMotion) return;
     const canvas = canvasRef.current;
     if (!canvas) return;
     const context = canvas.getContext("2d", { alpha: true });
@@ -171,12 +160,7 @@ export function VisualEffects() {
       }
     };
     const onPress = (event: PointerEvent) => {
-      if (
-        event.button !== 0 ||
-        !(event.target instanceof Element) ||
-        event.target.closest("[data-fx-toggle]")
-      )
-        return;
+      if (event.button !== 0) return;
       emit(
         event.clientX,
         event.clientY,
@@ -200,67 +184,11 @@ export function VisualEffects() {
       window.removeEventListener("blur", reset);
       document.removeEventListener("visibilitychange", reset);
     };
-  }, [enabled, reducedMotion]);
-
-  const toggle = () => {
-    if (reducedMotion) return;
-    const next = !enabled;
-    try {
-      localStorage.setItem(STORAGE_KEY, next ? "on" : "off");
-    } catch {
-      /* Storage is optional. */
-    }
-    setEnabled(next);
-  };
+  }, [reducedMotion]);
 
   return (
-    <>
-      <div
-        className="econo-fx-surface"
-        aria-hidden="true"
-        hidden={!enabled || reducedMotion}
-      >
-        <canvas ref={canvasRef} />
-      </div>
-      <button
-        className="econo-fx-toggle"
-        type="button"
-        data-fx-toggle
-        aria-pressed={enabled}
-        aria-label={
-          reducedMotion
-            ? "기기의 모션 줄이기 설정으로 마우스 효과가 꺼져 있습니다"
-            : enabled
-              ? "마우스 효과 끄기"
-              : "마우스 효과 켜기"
-        }
-        disabled={!mounted || reducedMotion}
-        onClick={toggle}
-      >
-        <svg
-          width="18"
-          height="18"
-          viewBox="0 0 24 24"
-          fill="none"
-          aria-hidden="true"
-        >
-          <path
-            d="M12 3c.7 6.3 2.7 8.3 9 9-6.3.7-8.3 2.7-9 9-.7-6.3-2.7-8.3-9-9 6.3-.7 8.3-2.7 9-9Z"
-            stroke="currentColor"
-            strokeWidth="1.3"
-          />
-          <path
-            d="m20 2 .7 2.3L23 5l-2.3.7L20 8l-.7-2.3L17 5l2.3-.7L20 2Z"
-            fill="currentColor"
-          />
-        </svg>
-        <span>
-          마우스 효과{" "}
-          <span className="econo-fx-toggle-state">
-            {enabled ? "ON" : "OFF"}
-          </span>
-        </span>
-      </button>
-    </>
+    <div className="econo-fx-surface" aria-hidden="true" hidden={reducedMotion}>
+      <canvas ref={canvasRef} />
+    </div>
   );
 }
